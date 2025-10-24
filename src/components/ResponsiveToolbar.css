@@ -105,6 +105,12 @@
   opacity: 0.8;
 }
 
+.responsive-toolbar-area-tag.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* Map Thumbnail */
 .responsive-toolbar-map-thumb {
   width: 358.5px;

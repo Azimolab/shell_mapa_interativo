@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { getSVGByYear } from '../assets/mapas/index.js';
+import { getSVGByZoneAndYear } from '../assets/mapas/index.js';
 
-function SVGMap({ selectedYear = '2025', activeLegendItems }) {
+function SVGMap({ selectedYear = '2025', selectedZone = 'rio', activeLegendItems }) {
   const [svgContent, setSvgContent] = useState('');
 
   useEffect(() => {
-    console.log('Carregando SVG para o ano:', selectedYear);
+    console.log('Carregando SVG para zona:', selectedZone, 'ano:', selectedYear);
     
-      let svgText = getSVGByYear(selectedYear);
+      let svgText = getSVGByZoneAndYear(selectedZone, selectedYear);
       
       if (!svgText) {
         throw new Error('SVG não encontrado');
@@ -30,7 +30,7 @@ function SVGMap({ selectedYear = '2025', activeLegendItems }) {
       
       console.log('SVG carregado com sucesso, tamanho:', svgText.length);
       setSvgContent(svgText);
-  }, [selectedYear]);
+  }, [selectedYear, selectedZone]);
 
   // Aplicar visibilidade dos pins baseado nos filtros da legenda
   useEffect(() => {

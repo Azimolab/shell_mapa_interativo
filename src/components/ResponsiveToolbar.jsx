@@ -3,6 +3,7 @@ import './ResponsiveToolbar.css';
 
 function ResponsiveToolbar({
   selectedArea = 'rio',
+  selectedYear = '2025',
   onAreaSelect,
   onLegendToggle,
   activeLegendItems = {
@@ -10,7 +11,8 @@ function ResponsiveToolbar({
     production: true,
     development: true,
     exploration: true
-  }
+  },
+  isZoneAvailable = () => true
 }) {
   const [currentArea, setCurrentArea] = useState(selectedArea);
 
@@ -22,8 +24,11 @@ function ResponsiveToolbar({
   ];
 
   const handleAreaClick = (areaId) => {
-    setCurrentArea(areaId);
-    onAreaSelect?.(areaId);
+    // Only allow click if zone is available
+    if (isZoneAvailable(areaId, selectedYear)) {
+      setCurrentArea(areaId);
+      onAreaSelect?.(areaId);
+    }
   };
 
   const handleLegendToggle = (itemId) => {
@@ -39,11 +44,13 @@ function ResponsiveToolbar({
           <div className="responsive-toolbar-area-menu">
             {areas.map((area) => {
               const isActive = area.id === currentArea;
+              const isAvailable = isZoneAvailable(area.id, selectedYear);
               return (
                 <button
                   key={area.id}
-                  className={`responsive-toolbar-area-tag ${isActive ? 'active' : 'inactive'}`}
+                  className={`responsive-toolbar-area-tag ${isActive ? 'active' : 'inactive'} ${!isAvailable ? 'disabled' : ''}`}
                   onClick={() => handleAreaClick(area.id)}
+                  disabled={!isAvailable}
                 >
                   {area.label}
                 </button>

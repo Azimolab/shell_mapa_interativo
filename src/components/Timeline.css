@@ -121,6 +121,12 @@
   transform: scale(0.98);
 }
 
+.timeline-year-button.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .timeline-speed-section {
   display: flex;
   padding: 24px;

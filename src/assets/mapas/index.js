@@ -15,7 +15,12 @@ import svg2023 from './2023.svg?raw';
 import svg2024 from './2024.svg?raw';
 import svg2025 from './2025.svg?raw';
 
-// Exportar mapeamento de anos para conteúdo SVG
+// Importar funções de outras zonas
+import * as barreirinhasSVGs from './barreirinhas/index.js';
+import * as pelotasSVGs from './pelotas/index.js';
+import * as potiguarSVGs from './potiguar/index.js';
+
+// Exportar mapeamento de anos para conteúdo SVG (zona Rio)
 export const svgFiles = {
   'PRÉ 2013': Pre2013,
   '2013': svg2013,
@@ -31,8 +36,36 @@ export const svgFiles = {
   '2025': svg2025
 };
 
-// Função auxiliar para obter SVG por ano
+// Função auxiliar para obter SVG por ano (zona Rio)
 export const getSVGByYear = (year) => {
   return svgFiles[year] || svgFiles['2025'];
+};
+
+// Função para obter SVG por zona e ano
+export const getSVGByZoneAndYear = (zone, year) => {
+  const zoneMap = {
+    'rio': { getSVGByYear: getSVGByYear },
+    'barreirinhas': barreirinhasSVGs,
+    'pelotas': pelotasSVGs,
+    'potiguar': potiguarSVGs
+  };
+  
+  const zoneSVGs = zoneMap[zone] || zoneMap['rio'];
+  return zoneSVGs.getSVGByYear(year);
+};
+
+// Função para verificar se SVG está disponível para zona e ano
+export const isSVGAvailable = (zone, year) => {
+  const zoneMap = {
+    'rio': svgFiles,
+    'barreirinhas': barreirinhasSVGs.svgFiles,
+    'pelotas': pelotasSVGs.svgFiles,
+    'potiguar': potiguarSVGs.svgFiles
+  };
+  
+  const zoneSVGFiles = zoneMap[zone];
+  if (!zoneSVGFiles) return false;
+  
+  return !!zoneSVGFiles[year];
 };
 

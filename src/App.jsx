@@ -4,6 +4,7 @@ import Toolbar from './components/ResponsiveToolbar';
 import ShellAllType from './components/ShellAllType';
 import SVGMap from './components/SVGMap';
 import PinInteractionManager from './components/PinInteractionManager';
+import { isSVGAvailable } from './assets/mapas/index.js';
 
 function App() {
   const [selectedZone, setSelectedZone] = useState('rio');
@@ -62,20 +63,12 @@ function App() {
 
   // Function to check if a zone is available based on year
   const isZoneAvailable = (zone, year) => {
-    const numericYear = year === 'PRÉ 2013' ? 2012 : parseInt(year);
+    return isSVGAvailable(zone, year);
+  };
 
-    switch (zone) {
-      case 'barreirinhas':
-        return numericYear >= 2016;
-      case 'potiguar':
-        return numericYear >= 2018;
-      case 'pelotas':
-        return numericYear >= 2023;
-      case 'rio':
-        return true; // Always available
-      default:
-        return true;
-    }
+  // Function to check if a year is available based on current zone
+  const isYearAvailable = (year) => {
+    return isSVGAvailable(selectedZone, year);
   };
 
   const handleYearSelect = (year) => {
@@ -137,6 +130,7 @@ function App() {
         {/* SVG Map - ocupa toda a tela */}
         <SVGMap
           selectedYear={selectedYear}
+          selectedZone={selectedZone}
           activeLegendItems={activeLegendItems}
         />
 
@@ -168,6 +162,7 @@ function App() {
             speed={playSpeed}
             onSpeedChange={handleSpeedChange}
             onLanguageChange={handleLanguageChange}
+            isYearAvailable={isYearAvailable}
           />
         </div>
       </div>

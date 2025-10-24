@@ -10,7 +10,8 @@ function Timeline({
   onSpeedChange,
   speed = '0.5x',
   language = 'POR',
-  onLanguageChange
+  onLanguageChange,
+  isYearAvailable = () => true
 }) {
   const [currentSelected, setCurrentSelected] = useState(selectedYear);
 
@@ -68,15 +69,19 @@ function Timeline({
 
       <div className="timeline-years-section">
         <div className="timeline-years-wrapper">
-          {years.map((year) => (
-            <button
-              key={year}
-              className={`timeline-year-button ${currentSelected === year ? 'selected' : 'inactive'}`}
-              onClick={() => handleYearClick(year)}
-            >
-              {year}
-            </button>
-          ))}
+          {years.map((year) => {
+            const available = isYearAvailable(year);
+            return (
+              <button
+                key={year}
+                className={`timeline-year-button ${currentSelected === year ? 'selected' : 'inactive'} ${!available ? 'disabled' : ''}`}
+                onClick={() => handleYearClick(year)}
+                disabled={!available}
+              >
+                {year}
+              </button>
+            );
+          })}
         </div>
       </div>
 

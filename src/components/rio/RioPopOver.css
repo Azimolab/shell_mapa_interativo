@@ -1,0 +1,314 @@
+/* RioPopOver Component Styles */
+.rio-popover-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rio-popover-container {
+  position: relative;
+  max-width: 484px;
+  width: 100%;
+}
+
+.rio-popover-arrow {
+  position: absolute;
+  bottom: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 20px solid #FFF;
+  z-index: 1001;
+}
+
+.rio-popover-card {
+  background: #FFF;
+  border-radius: 16px;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.rio-popover-content {
+  padding: 18px 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rio-popover-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rio-popover-location-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rio-popover-location-icon {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  background: #E0E0E0;
+  border-radius: 6px;
+  width: 34px;
+  height: 34px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.rio-popover-badge-text {
+  color: #343434;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rio-popover-title {
+  color: #343434;
+  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.rio-popover-image {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.rio-popover-ventures {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rio-popover-ventures-title {
+  color: #616161;
+  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.rio-popover-venture-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rio-popover-venture-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid #E0E0E0;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.rio-popover-venture-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.rio-popover-venture-name {
+  color: #343434;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.rio-popover-venture-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.rio-popover-facility-info,
+.rio-popover-ownership-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rio-popover-facility-text,
+.rio-popover-ownership-text {
+  color: #616161;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rio-popover-ownership-text {
+  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.rio-popover-separator {
+  color: #616161;
+  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.rio-popover-close-button {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  border: 2px solid #919191;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #343434;
+  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.rio-popover-close-button:hover {
+  background: #f5f5f5;
+  border-color: #616161;
+}
+
+.rio-popover-close-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rio-popover-overlay {
+    padding: 10px;
+  }
+  
+  .rio-popover-content {
+    padding: 24px 30px;
+    gap: 24px;
+  }
+  
+  .rio-popover-title {
+    font-size: 36px;
+  }
+  
+  .rio-popover-badge-text,
+  .rio-popover-ventures-title,
+  .rio-popover-facility-text,
+  .rio-popover-ownership-text,
+  .rio-popover-separator {
+    font-size: 20px;
+  }
+  
+  .rio-popover-venture-name {
+    font-size: 24px;
+  }
+  
+  .rio-popover-close-button {
+    font-size: 28px;
+    padding: 20px;
+  }
+  
+  .rio-popover-location-icon {
+    width: 56px;
+    height: 56px;
+    padding: 12px;
+  }
+  
+  .rio-popover-location-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .rio-popover-venture-logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .rio-popover-venture-item {
+    gap: 16px;
+  }
+  
+  .rio-popover-venture-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .rio-popover-separator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .rio-popover-content {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .rio-popover-title {
+    font-size: 28px;
+  }
+  
+  .rio-popover-badge-text,
+  .rio-popover-ventures-title {
+    font-size: 18px;
+  }
+  
+  .rio-popover-venture-name {
+    font-size: 20px;
+  }
+  
+  .rio-popover-facility-text,
+  .rio-popover-ownership-text {
+    font-size: 16px;
+  }
+  
+  .rio-popover-close-button {
+    font-size: 24px;
+    padding: 16px;
+  }
+  
+  .rio-popover-location-badge {
+    gap: 12px;
+  }
+  
+  .rio-popover-location-icon {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+  }
+  
+  .rio-popover-location-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
