@@ -1,0 +1,99 @@
+/**
+ * Shell Library - Color Variables
+ * Importado do Figma: https://www.figma.com/design/QstgoMsgyKyiltrQhAjdI3/ShellLibrary
+ */
+
+:root {
+  /* Gray - Default */
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
+
+  /* Blue - Primary */
+  --color-blue-50: #EFF6FF;
+  --color-blue-100: #DBEAFE;
+  --color-blue-200: #BFDBFE;
+  --color-blue-300: #93C5FD;
+  --color-blue-400: #60A5FA; /* Main */
+  --color-blue-500: #3B82F6;
+  --color-blue-600: #2563EB;
+  --color-blue-700: #1D4ED8;
+  --color-blue-800: #1E40AF;
+  --color-blue-900: #1E3A8A;
+
+  /* Sky - Info */
+  --color-sky-50: #F0F9FF;
+  --color-sky-100: #E0F2FE;
+  --color-sky-200: #BAE6FD;
+  --color-sky-300: #7DD3FC;
+  --color-sky-400: #38BDF8; /* Main */
+  --color-sky-500: #0EA5E9;
+  --color-sky-600: #0284C7;
+  --color-sky-700: #0369A1;
+  --color-sky-800: #075985;
+  --color-sky-900: #0C4A6E;
+
+  /* Forest - Success/Green */
+  --color-forest-50: #ECFDF5;
+  --color-forest-100: #D1FAE5;
+  --color-forest-200: #A7F3D0;
+  --color-forest-300: #6EE7B7;
+  --color-forest-400: #34D399;
+  --color-forest-500: #10B981;
+  --color-forest-600: #059669;
+  --color-forest-700: #047857;
+  --color-forest-800: #065F46;
+  --color-forest-900: #064E3B;
+
+  /* Yellow - Warning */
+  --color-yellow-50: #FEFCE8;
+  --color-yellow-100: #FEF9C3;
+  --color-yellow-200: #FEF08A; /* Main */
+  --color-yellow-300: #FDE047;
+  --color-yellow-400: #FACC15;
+  --color-yellow-500: #EAB308;
+  --color-yellow-600: #CA8A04;
+  --color-yellow-700: #A16207;
+  --color-yellow-800: #854D0E;
+  --color-yellow-900: #713F12;
+
+  /* Sunrise - Orange/Danger */
+  --color-sunrise-50: #FFF7ED;
+  --color-sunrise-100: #FFEDD5;
+  --color-sunrise-200: #FED7AA;
+  --color-sunrise-300: #FDBA74;
+  --color-sunrise-400: #FB923C;
+  --color-sunrise-500: #F97316; /* Main */
+  --color-sunrise-600: #EA580C;
+  --color-sunrise-700: #C2410C;
+  --color-sunrise-800: #9A3412;
+  --color-sunrise-900: #7C2D12;
+
+  /* Red - Danger */
+  --color-red-50: #FEF2F2;
+  --color-red-100: #FEE2E2;
+  --color-red-200: #FECACA;
+  --color-red-300: #FCA5A5;
+  --color-red-400: #F87171;
+  --color-red-500: #EF4444; /* Main */
+  --color-red-600: #DC2626;
+  --color-red-700: #B91C1C;
+  --color-red-800: #991B1B;
+  --color-red-900: #7F1D1D;
+
+  /* Semantic Aliases */
+  --color-primary: var(--color-blue-400);
+  --color-info: var(--color-sky-400);
+  --color-success: var(--color-forest-500);
+  --color-warning: var(--color-yellow-200);
+  --color-danger: var(--color-red-500);
+  --color-error: var(--color-red-500);
+}
+

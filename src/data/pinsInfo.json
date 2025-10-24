@@ -1,0 +1,297 @@
+{
+  "pins": {
+    "exp1": {
+      "popoverType": "exploration_type1",
+      "title": "BM-S-11A - Iara",
+      "status": "Em exploração",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "~1.720-2.050m",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 50,
+          "color": "#DD1D21",
+          "isOperator": true
+        },
+        {
+          "id": "chevron",
+          "name": "Chevron",
+          "percentage": 30,
+          "color": "#616161",
+          "isOperator": false
+        },
+        {
+          "id": "qatar",
+          "name": "Qatar Petroleum",
+          "percentage": 20,
+          "color": "#616161",
+          "isOperator": false
+        }
+      ]
+    },
+    "exp2": {
+      "popoverType": "exploration_type1",
+      "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+      "status": "Em exploração",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "A definir",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 70,
+          "color": "#DD1D21",
+          "isOperator": true
+        },
+        {
+          "id": "ecopetrol",
+          "name": "Ecopetrol",
+          "percentage": 30,
+          "color": "#616161",
+          "isOperator": false
+        }
+      ]
+    },
+    "exp3": {
+      "popoverType": "exploration_type1",
+      "title": "S-M-1821, S-M-1819, S-M-1914, S-M-1912",
+      "status": "Em exploração",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "A definir",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 100,
+          "color": "#DD1D21",
+          "isOperator": true
+        }
+      ]
+    },
+    "prod1": {
+      "popoverType": "production_type1",
+      "title": "Bijupirá & Salema",
+      "status": "Em produção",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "~400-870m",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 80,
+          "color": "#DD1D21",
+          "isOperator": true
+        },
+        {
+          "id": "chevron",
+          "name": "Chevron",
+          "percentage": 20,
+          "color": "#616161",
+          "isOperator": false
+        }
+      ],
+      "infrastructure": {
+        "fpsoCount": 1,
+        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+        "items": [
+          {
+            "number": 1,
+            "name": "Fluminense"
+          }
+        ]
+      }
+    },
+    "prod2": {
+      "popoverType": "production_type1",
+      "title": "Parque das Conchas",
+      "status": "Em produção",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "~1.780m",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 50,
+          "color": "#DD1D21",
+          "isOperator": true
+        },
+        {
+          "id": "ongc",
+          "name": "ONGC",
+          "percentage": 27,
+          "color": "#616161",
+          "isOperator": false
+        },
+        {
+          "id": "qatar",
+          "name": "Qatar Petroleum",
+          "percentage": 23,
+          "color": "#616161",
+          "isOperator": false
+        }
+      ],
+      "infrastructure": {
+        "fpsoCount": 1,
+        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+        "items": [
+          {
+            "number": 1,
+            "name": "Espírito Santo"
+          }
+        ]
+      }
+    },
+    "pel_exp1": {
+      "popoverType": "exploration_type1",
+      "title": "Pelotas - Grupo 1",
+      "status": "Em exploração",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "A definir",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 100,
+          "color": "#DD1D21",
+          "isOperator": true
+        }
+      ]
+    },
+    "pel_exp2": {
+      "popoverType": "exploration_type1",
+      "title": "Pelotas - Grupo 2",
+      "status": "Em exploração",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "A definir",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 100,
+          "color": "#DD1D21",
+          "isOperator": true
+        }
+      ]
+    },
+    "pot_exp1": {
+      "popoverType": "exploration_type1",
+      "title": "Potiguar - Bloco 1",
+      "status": "Em exploração",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "A definir",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 100,
+          "color": "#DD1D21",
+          "isOperator": true
+        }
+      ]
+    },
+    "pot_exp2": {
+      "popoverType": "exploration_type1",
+      "title": "Potiguar - Bloco 2",
+      "status": "Em exploração",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "A definir",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 100,
+          "color": "#DD1D21",
+          "isOperator": true
+        }
+      ]
+    },
+    "barr_exp1": {
+      "popoverType": "exploration_type1",
+      "title": "Barreirinhas - Grupo 1",
+      "status": "Em exploração",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "A definir",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 100,
+          "color": "#DD1D21",
+          "isOperator": true
+        }
+      ]
+    },
+    "barr_exp2": {
+      "popoverType": "exploration_type1",
+      "title": "Barreirinhas - Grupo 2",
+      "status": "Em exploração",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "A definir",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 100,
+          "color": "#DD1D21",
+          "isOperator": true
+        }
+      ]
+    },
+    "barr_exp3": {
+      "popoverType": "exploration_type1",
+      "title": "Barreirinhas - Grupo 3",
+      "status": "Em exploração",
+      "operator": "Shell",
+      "operatorDescription": "Responsável pela administração do campo",
+      "depth": "A definir",
+      "depthDescription": "Distância da superfície do mar até o fundo",
+      "companies": [
+        {
+          "id": "shell",
+          "name": "Shell*",
+          "percentage": 100,
+          "color": "#DD1D21",
+          "isOperator": true
+        }
+      ]
+    }
+  },
+  "locations": {
+    "location_sp": {
+      "popoverType": "location_sp",
+      "name": "São Paulo"
+    },
+    "location_rio": {
+      "popoverType": "location_rio",
+      "name": "Rio de Janeiro"
+    },
+    "location_macae": {
+      "popoverType": "location_macae",
+      "name": "Macaé"
+    }
+  }
+}
+

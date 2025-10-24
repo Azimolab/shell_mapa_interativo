@@ -1,0 +1,3116 @@
+{
+  "2013": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        }
+      ]
+    }
+  },
+  "2016": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        },
+        {
+          "id": "exp4",
+          "x": 29.7,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "exp5",
+          "x": 34.32,
+          "y": 38.28,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        },
+        {
+          "id": "prod5",
+          "x": 47.52,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod6",
+          "x": 49.5,
+          "y": 49.5,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [
+        {
+          "id": "oil1",
+          "type": "oil",
+          "points": [
+            [
+              50.16,
+              33
+            ],
+            [
+              47.52,
+              42.9
+            ],
+            [
+              44.88,
+              49.5
+            ]
+          ],
+          "label": "A1 - A2 - Abalone - BC10",
+          "labelPos": [
+            50.16,
+            29.7
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        },
+        {
+          "id": "macae",
+          "x": 46.2,
+          "y": 27.72,
+          "name": "Macaé",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        },
+        {
+          "id": "gasline2",
+          "start": [
+            34.32,
+            44.88
+          ],
+          "end": [
+            44.88,
+            51.48
+          ],
+          "labels": [
+            "Uruguá - Mexilhão"
+          ]
+        }
+      ]
+    },
+    "barreirinhas": {
+      "explorationPins": [
+        {
+          "id": "barr_exp1",
+          "x": 19.8,
+          "y": 16.5,
+          "number": null
+        },
+        {
+          "id": "barr_exp2",
+          "x": 23.1,
+          "y": 19.8,
+          "number": 3
+        }
+      ],
+      "productionPins": [],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    }
+  },
+  "2017": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        },
+        {
+          "id": "exp4",
+          "x": 29.7,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "exp5",
+          "x": 34.32,
+          "y": 38.28,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        },
+        {
+          "id": "prod5",
+          "x": 47.52,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod6",
+          "x": 49.5,
+          "y": 49.5,
+          "number": null
+        },
+        {
+          "id": "prod7",
+          "x": 51.48,
+          "y": 51.48,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [
+        {
+          "id": "oil1",
+          "type": "oil",
+          "points": [
+            [
+              50.16,
+              33
+            ],
+            [
+              47.52,
+              42.9
+            ],
+            [
+              44.88,
+              49.5
+            ]
+          ],
+          "label": "A1 - A2 - Abalone - BC10",
+          "labelPos": [
+            50.16,
+            29.7
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        },
+        {
+          "id": "macae",
+          "x": 46.2,
+          "y": 27.72,
+          "name": "Macaé",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        },
+        {
+          "id": "gasline2",
+          "start": [
+            34.32,
+            44.88
+          ],
+          "end": [
+            44.88,
+            51.48
+          ],
+          "labels": [
+            "Uruguá - Mexilhão"
+          ]
+        }
+      ]
+    },
+    "barreirinhas": {
+      "explorationPins": [
+        {
+          "id": "barr_exp1",
+          "x": 19.8,
+          "y": 16.5,
+          "number": null
+        },
+        {
+          "id": "barr_exp2",
+          "x": 23.1,
+          "y": 19.8,
+          "number": 3
+        },
+        {
+          "id": "barr_exp3",
+          "x": 26.4,
+          "y": 18.48,
+          "number": null
+        }
+      ],
+      "productionPins": [],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    }
+  },
+  "2018": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        },
+        {
+          "id": "exp4",
+          "x": 29.7,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "exp5",
+          "x": 34.32,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "exp6",
+          "x": 31.68,
+          "y": 47.52,
+          "number": 5
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        },
+        {
+          "id": "prod5",
+          "x": 47.52,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod6",
+          "x": 49.5,
+          "y": 49.5,
+          "number": null
+        },
+        {
+          "id": "prod7",
+          "x": 51.48,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod8",
+          "x": 54.12,
+          "y": 47.52,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [
+        {
+          "id": "oil1",
+          "type": "oil",
+          "points": [
+            [
+              50.16,
+              33
+            ],
+            [
+              47.52,
+              42.9
+            ],
+            [
+              44.88,
+              49.5
+            ]
+          ],
+          "label": "A1 - A2 - Abalone - BC10",
+          "labelPos": [
+            50.16,
+            29.7
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        },
+        {
+          "id": "macae",
+          "x": 46.2,
+          "y": 27.72,
+          "name": "Macaé",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        },
+        {
+          "id": "gasline2",
+          "start": [
+            34.32,
+            44.88
+          ],
+          "end": [
+            44.88,
+            51.48
+          ],
+          "labels": [
+            "Uruguá - Mexilhão"
+          ]
+        },
+        {
+          "id": "gasline3",
+          "start": [
+            25.08,
+            51.48
+          ],
+          "end": [
+            56.1,
+            56.1
+          ],
+          "labels": [
+            "Lula - Mexilhão (Rota 1)",
+            "Participação Shell: 25%"
+          ]
+        }
+      ]
+    },
+    "barreirinhas": {
+      "explorationPins": [
+        {
+          "id": "barr_exp1",
+          "x": 19.8,
+          "y": 16.5,
+          "number": null
+        },
+        {
+          "id": "barr_exp2",
+          "x": 23.1,
+          "y": 19.8,
+          "number": 3
+        },
+        {
+          "id": "barr_exp3",
+          "x": 26.4,
+          "y": 18.48,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "barr_prod1",
+          "x": 21.12,
+          "y": 23.1,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    },
+    "potiguar": {
+      "explorationPins": [
+        {
+          "id": "pot_exp1",
+          "x": 29.7,
+          "y": 23.1,
+          "number": null
+        },
+        {
+          "id": "pot_exp2",
+          "x": 33,
+          "y": 26.4,
+          "number": 2
+        }
+      ],
+      "productionPins": [],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    }
+  },
+  "2019": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        },
+        {
+          "id": "exp4",
+          "x": 29.7,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "exp5",
+          "x": 34.32,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "exp6",
+          "x": 31.68,
+          "y": 47.52,
+          "number": 5
+        },
+        {
+          "id": "exp7",
+          "x": 27.72,
+          "y": 49.5,
+          "number": 6
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        },
+        {
+          "id": "prod5",
+          "x": 47.52,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod6",
+          "x": 49.5,
+          "y": 49.5,
+          "number": null
+        },
+        {
+          "id": "prod7",
+          "x": 51.48,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod8",
+          "x": 54.12,
+          "y": 47.52,
+          "number": null
+        },
+        {
+          "id": "prod9",
+          "x": 52.14,
+          "y": 44.88,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [
+        {
+          "id": "gas1",
+          "type": "gas",
+          "points": [
+            [
+              58.08,
+              23.1
+            ],
+            [
+              56.1,
+              39.6
+            ],
+            [
+              49.5,
+              49.5
+            ],
+            [
+              42.9,
+              56.1
+            ]
+          ],
+          "label": "BC10",
+          "labelPos": [
+            58.08,
+            19.8
+          ]
+        },
+        {
+          "id": "oil1",
+          "type": "oil",
+          "points": [
+            [
+              50.16,
+              33
+            ],
+            [
+              47.52,
+              42.9
+            ],
+            [
+              44.88,
+              49.5
+            ]
+          ],
+          "label": "A1 - A2 - Abalone - BC10",
+          "labelPos": [
+            50.16,
+            29.7
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        },
+        {
+          "id": "macae",
+          "x": 46.2,
+          "y": 27.72,
+          "name": "Macaé",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        },
+        {
+          "id": "gasline2",
+          "start": [
+            34.32,
+            44.88
+          ],
+          "end": [
+            44.88,
+            51.48
+          ],
+          "labels": [
+            "Uruguá - Mexilhão"
+          ]
+        },
+        {
+          "id": "gasline3",
+          "start": [
+            25.08,
+            51.48
+          ],
+          "end": [
+            56.1,
+            56.1
+          ],
+          "labels": [
+            "Lula - Mexilhão (Rota 1)",
+            "Participação Shell: 25%"
+          ]
+        }
+      ]
+    },
+    "barreirinhas": {
+      "explorationPins": [
+        {
+          "id": "barr_exp1",
+          "x": 19.8,
+          "y": 16.5,
+          "number": null
+        },
+        {
+          "id": "barr_exp2",
+          "x": 23.1,
+          "y": 19.8,
+          "number": 3
+        },
+        {
+          "id": "barr_exp3",
+          "x": 26.4,
+          "y": 18.48,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "barr_prod1",
+          "x": 21.12,
+          "y": 23.1,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    },
+    "potiguar": {
+      "explorationPins": [
+        {
+          "id": "pot_exp1",
+          "x": 29.7,
+          "y": 23.1,
+          "number": null
+        },
+        {
+          "id": "pot_exp2",
+          "x": 33,
+          "y": 26.4,
+          "number": 2
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "pot_prod1",
+          "x": 31.68,
+          "y": 27.72,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    }
+  },
+  "2020": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        },
+        {
+          "id": "exp4",
+          "x": 29.7,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "exp5",
+          "x": 34.32,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "exp6",
+          "x": 31.68,
+          "y": 47.52,
+          "number": 5
+        },
+        {
+          "id": "exp7",
+          "x": 27.72,
+          "y": 49.5,
+          "number": 6
+        },
+        {
+          "id": "exp8",
+          "x": 30.36,
+          "y": 52.8,
+          "number": 4
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        },
+        {
+          "id": "prod5",
+          "x": 47.52,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod6",
+          "x": 49.5,
+          "y": 49.5,
+          "number": null
+        },
+        {
+          "id": "prod7",
+          "x": 51.48,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod8",
+          "x": 54.12,
+          "y": 47.52,
+          "number": null
+        },
+        {
+          "id": "prod9",
+          "x": 52.14,
+          "y": 44.88,
+          "number": null
+        },
+        {
+          "id": "prod10",
+          "x": 58.08,
+          "y": 42.9,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [
+        {
+          "id": "gas1",
+          "type": "gas",
+          "points": [
+            [
+              58.08,
+              23.1
+            ],
+            [
+              56.1,
+              39.6
+            ],
+            [
+              49.5,
+              49.5
+            ],
+            [
+              42.9,
+              56.1
+            ]
+          ],
+          "label": "BC10",
+          "labelPos": [
+            58.08,
+            19.8
+          ]
+        },
+        {
+          "id": "oil1",
+          "type": "oil",
+          "points": [
+            [
+              50.16,
+              33
+            ],
+            [
+              47.52,
+              42.9
+            ],
+            [
+              44.88,
+              49.5
+            ]
+          ],
+          "label": "A1 - A2 - Abalone - BC10",
+          "labelPos": [
+            50.16,
+            29.7
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        },
+        {
+          "id": "macae",
+          "x": 46.2,
+          "y": 27.72,
+          "name": "Macaé",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        },
+        {
+          "id": "gasline2",
+          "start": [
+            34.32,
+            44.88
+          ],
+          "end": [
+            44.88,
+            51.48
+          ],
+          "labels": [
+            "Uruguá - Mexilhão"
+          ]
+        },
+        {
+          "id": "gasline3",
+          "start": [
+            25.08,
+            51.48
+          ],
+          "end": [
+            56.1,
+            56.1
+          ],
+          "labels": [
+            "Lula - Mexilhão (Rota 1)",
+            "Participação Shell: 25%"
+          ]
+        },
+        {
+          "id": "gasline4",
+          "start": [
+            42.9,
+            42.9
+          ],
+          "end": [
+            58.08,
+            42.9
+          ],
+          "labels": [
+            "Rota 2 Tecab",
+            "Participação Shell: 25%"
+          ]
+        }
+      ]
+    },
+    "barreirinhas": {
+      "explorationPins": [
+        {
+          "id": "barr_exp1",
+          "x": 19.8,
+          "y": 16.5,
+          "number": null
+        },
+        {
+          "id": "barr_exp2",
+          "x": 23.1,
+          "y": 19.8,
+          "number": 3
+        },
+        {
+          "id": "barr_exp3",
+          "x": 26.4,
+          "y": 18.48,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "barr_prod1",
+          "x": 21.12,
+          "y": 23.1,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    },
+    "potiguar": {
+      "explorationPins": [
+        {
+          "id": "pot_exp1",
+          "x": 29.7,
+          "y": 23.1,
+          "number": null
+        },
+        {
+          "id": "pot_exp2",
+          "x": 33,
+          "y": 26.4,
+          "number": 2
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "pot_prod1",
+          "x": 31.68,
+          "y": 27.72,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    }
+  },
+  "2021": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        },
+        {
+          "id": "exp4",
+          "x": 29.7,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "exp5",
+          "x": 34.32,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "exp6",
+          "x": 31.68,
+          "y": 47.52,
+          "number": 5
+        },
+        {
+          "id": "exp7",
+          "x": 27.72,
+          "y": 49.5,
+          "number": 6
+        },
+        {
+          "id": "exp8",
+          "x": 30.36,
+          "y": 52.8,
+          "number": 4
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        },
+        {
+          "id": "prod5",
+          "x": 47.52,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod6",
+          "x": 49.5,
+          "y": 49.5,
+          "number": null
+        },
+        {
+          "id": "prod7",
+          "x": 51.48,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod8",
+          "x": 54.12,
+          "y": 47.52,
+          "number": null
+        },
+        {
+          "id": "prod9",
+          "x": 52.14,
+          "y": 44.88,
+          "number": null
+        },
+        {
+          "id": "prod10",
+          "x": 58.08,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "prod11",
+          "x": 56.1,
+          "y": 38.28,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [
+        {
+          "id": "gas1",
+          "type": "gas",
+          "points": [
+            [
+              58.08,
+              23.1
+            ],
+            [
+              56.1,
+              39.6
+            ],
+            [
+              49.5,
+              49.5
+            ],
+            [
+              42.9,
+              56.1
+            ]
+          ],
+          "label": "BC10",
+          "labelPos": [
+            58.08,
+            19.8
+          ]
+        },
+        {
+          "id": "oil1",
+          "type": "oil",
+          "points": [
+            [
+              50.16,
+              33
+            ],
+            [
+              47.52,
+              42.9
+            ],
+            [
+              44.88,
+              49.5
+            ]
+          ],
+          "label": "A1 - A2 - Abalone - BC10",
+          "labelPos": [
+            50.16,
+            29.7
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        },
+        {
+          "id": "macae",
+          "x": 46.2,
+          "y": 27.72,
+          "name": "Macaé",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        },
+        {
+          "id": "gasline2",
+          "start": [
+            34.32,
+            44.88
+          ],
+          "end": [
+            44.88,
+            51.48
+          ],
+          "labels": [
+            "Uruguá - Mexilhão"
+          ]
+        },
+        {
+          "id": "gasline3",
+          "start": [
+            25.08,
+            51.48
+          ],
+          "end": [
+            56.1,
+            56.1
+          ],
+          "labels": [
+            "Lula - Mexilhão (Rota 1)",
+            "Participação Shell: 25%"
+          ]
+        },
+        {
+          "id": "gasline4",
+          "start": [
+            42.9,
+            42.9
+          ],
+          "end": [
+            58.08,
+            42.9
+          ],
+          "labels": [
+            "Rota 2 Tecab",
+            "Participação Shell: 25%"
+          ]
+        }
+      ]
+    },
+    "barreirinhas": {
+      "explorationPins": [
+        {
+          "id": "barr_exp1",
+          "x": 19.8,
+          "y": 16.5,
+          "number": null
+        },
+        {
+          "id": "barr_exp2",
+          "x": 23.1,
+          "y": 19.8,
+          "number": 3
+        },
+        {
+          "id": "barr_exp3",
+          "x": 26.4,
+          "y": 18.48,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "barr_prod1",
+          "x": 21.12,
+          "y": 23.1,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    },
+    "potiguar": {
+      "explorationPins": [
+        {
+          "id": "pot_exp1",
+          "x": 29.7,
+          "y": 23.1,
+          "number": null
+        },
+        {
+          "id": "pot_exp2",
+          "x": 33,
+          "y": 26.4,
+          "number": 2
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "pot_prod1",
+          "x": 31.68,
+          "y": 27.72,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    }
+  },
+  "2022": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        },
+        {
+          "id": "exp4",
+          "x": 29.7,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "exp5",
+          "x": 34.32,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "exp6",
+          "x": 31.68,
+          "y": 47.52,
+          "number": 5
+        },
+        {
+          "id": "exp7",
+          "x": 27.72,
+          "y": 49.5,
+          "number": 6
+        },
+        {
+          "id": "exp8",
+          "x": 30.36,
+          "y": 52.8,
+          "number": 4
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        },
+        {
+          "id": "prod5",
+          "x": 47.52,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod6",
+          "x": 49.5,
+          "y": 49.5,
+          "number": null
+        },
+        {
+          "id": "prod7",
+          "x": 51.48,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod8",
+          "x": 54.12,
+          "y": 47.52,
+          "number": null
+        },
+        {
+          "id": "prod9",
+          "x": 52.14,
+          "y": 44.88,
+          "number": null
+        },
+        {
+          "id": "prod10",
+          "x": 58.08,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "prod11",
+          "x": 56.1,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "prod12",
+          "x": 60.72,
+          "y": 29.7,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [
+        {
+          "id": "gas1",
+          "type": "gas",
+          "points": [
+            [
+              58.08,
+              23.1
+            ],
+            [
+              56.1,
+              39.6
+            ],
+            [
+              49.5,
+              49.5
+            ],
+            [
+              42.9,
+              56.1
+            ]
+          ],
+          "label": "BC10",
+          "labelPos": [
+            58.08,
+            19.8
+          ]
+        },
+        {
+          "id": "oil1",
+          "type": "oil",
+          "points": [
+            [
+              50.16,
+              33
+            ],
+            [
+              47.52,
+              42.9
+            ],
+            [
+              44.88,
+              49.5
+            ]
+          ],
+          "label": "A1 - A2 - Abalone - BC10",
+          "labelPos": [
+            50.16,
+            29.7
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        },
+        {
+          "id": "macae",
+          "x": 46.2,
+          "y": 27.72,
+          "name": "Macaé",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        },
+        {
+          "id": "gasline2",
+          "start": [
+            34.32,
+            44.88
+          ],
+          "end": [
+            44.88,
+            51.48
+          ],
+          "labels": [
+            "Uruguá - Mexilhão"
+          ]
+        },
+        {
+          "id": "gasline3",
+          "start": [
+            25.08,
+            51.48
+          ],
+          "end": [
+            56.1,
+            56.1
+          ],
+          "labels": [
+            "Lula - Mexilhão (Rota 1)",
+            "Participação Shell: 25%"
+          ]
+        },
+        {
+          "id": "gasline4",
+          "start": [
+            42.9,
+            42.9
+          ],
+          "end": [
+            58.08,
+            42.9
+          ],
+          "labels": [
+            "Rota 2 Tecab",
+            "Participação Shell: 25%"
+          ]
+        }
+      ]
+    },
+    "barreirinhas": {
+      "explorationPins": [
+        {
+          "id": "barr_exp1",
+          "x": 19.8,
+          "y": 16.5,
+          "number": null
+        },
+        {
+          "id": "barr_exp2",
+          "x": 23.1,
+          "y": 19.8,
+          "number": 3
+        },
+        {
+          "id": "barr_exp3",
+          "x": 26.4,
+          "y": 18.48,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "barr_prod1",
+          "x": 21.12,
+          "y": 23.1,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    },
+    "potiguar": {
+      "explorationPins": [
+        {
+          "id": "pot_exp1",
+          "x": 29.7,
+          "y": 23.1,
+          "number": null
+        },
+        {
+          "id": "pot_exp2",
+          "x": 33,
+          "y": 26.4,
+          "number": 2
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "pot_prod1",
+          "x": 31.68,
+          "y": 27.72,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    }
+  },
+  "2023": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        },
+        {
+          "id": "exp4",
+          "x": 29.7,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "exp5",
+          "x": 34.32,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "exp6",
+          "x": 31.68,
+          "y": 47.52,
+          "number": 5
+        },
+        {
+          "id": "exp7",
+          "x": 27.72,
+          "y": 49.5,
+          "number": 6
+        },
+        {
+          "id": "exp8",
+          "x": 30.36,
+          "y": 52.8,
+          "number": 4
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        },
+        {
+          "id": "prod5",
+          "x": 47.52,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod6",
+          "x": 49.5,
+          "y": 49.5,
+          "number": null
+        },
+        {
+          "id": "prod7",
+          "x": 51.48,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod8",
+          "x": 54.12,
+          "y": 47.52,
+          "number": null
+        },
+        {
+          "id": "prod9",
+          "x": 52.14,
+          "y": 44.88,
+          "number": null
+        },
+        {
+          "id": "prod10",
+          "x": 58.08,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "prod11",
+          "x": 56.1,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "prod12",
+          "x": 60.72,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "prod13",
+          "x": 59.4,
+          "y": 27.72,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [
+        {
+          "id": "decomm1",
+          "x": 48.84,
+          "y": 25.08,
+          "number": null
+        }
+      ],
+      "pipelines": [
+        {
+          "id": "gas1",
+          "type": "gas",
+          "points": [
+            [
+              58.08,
+              23.1
+            ],
+            [
+              56.1,
+              39.6
+            ],
+            [
+              49.5,
+              49.5
+            ],
+            [
+              42.9,
+              56.1
+            ]
+          ],
+          "label": "BC10",
+          "labelPos": [
+            58.08,
+            19.8
+          ]
+        },
+        {
+          "id": "oil1",
+          "type": "oil",
+          "points": [
+            [
+              50.16,
+              33
+            ],
+            [
+              47.52,
+              42.9
+            ],
+            [
+              44.88,
+              49.5
+            ]
+          ],
+          "label": "A1 - A2 - Abalone - BC10",
+          "labelPos": [
+            50.16,
+            29.7
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        },
+        {
+          "id": "macae",
+          "x": 46.2,
+          "y": 27.72,
+          "name": "Macaé",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        },
+        {
+          "id": "gasline2",
+          "start": [
+            34.32,
+            44.88
+          ],
+          "end": [
+            44.88,
+            51.48
+          ],
+          "labels": [
+            "Uruguá - Mexilhão"
+          ]
+        },
+        {
+          "id": "gasline3",
+          "start": [
+            25.08,
+            51.48
+          ],
+          "end": [
+            56.1,
+            56.1
+          ],
+          "labels": [
+            "Lula - Mexilhão (Rota 1)",
+            "Participação Shell: 25%"
+          ]
+        },
+        {
+          "id": "gasline4",
+          "start": [
+            42.9,
+            42.9
+          ],
+          "end": [
+            58.08,
+            42.9
+          ],
+          "labels": [
+            "Rota 2 Tecab",
+            "Participação Shell: 25%"
+          ]
+        },
+        {
+          "id": "gasline5",
+          "start": [
+            49.5,
+            52.8
+          ],
+          "end": [
+            62.7,
+            54.12
+          ],
+          "labels": [
+            "Sapinho - Lula"
+          ]
+        }
+      ]
+    },
+    "barreirinhas": {
+      "explorationPins": [
+        {
+          "id": "barr_exp1",
+          "x": 19.8,
+          "y": 16.5,
+          "number": null
+        },
+        {
+          "id": "barr_exp2",
+          "x": 23.1,
+          "y": 19.8,
+          "number": 3
+        },
+        {
+          "id": "barr_exp3",
+          "x": 26.4,
+          "y": 18.48,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "barr_prod1",
+          "x": 21.12,
+          "y": 23.1,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    },
+    "potiguar": {
+      "explorationPins": [
+        {
+          "id": "pot_exp1",
+          "x": 29.7,
+          "y": 23.1,
+          "number": null
+        },
+        {
+          "id": "pot_exp2",
+          "x": 33,
+          "y": 26.4,
+          "number": 2
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "pot_prod1",
+          "x": 31.68,
+          "y": 27.72,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    }
+  },
+  "2024": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        },
+        {
+          "id": "exp4",
+          "x": 29.7,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "exp5",
+          "x": 34.32,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "exp6",
+          "x": 31.68,
+          "y": 47.52,
+          "number": 5
+        },
+        {
+          "id": "exp7",
+          "x": 27.72,
+          "y": 49.5,
+          "number": 6
+        },
+        {
+          "id": "exp8",
+          "x": 30.36,
+          "y": 52.8,
+          "number": 4
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        },
+        {
+          "id": "prod5",
+          "x": 47.52,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod6",
+          "x": 49.5,
+          "y": 49.5,
+          "number": null
+        },
+        {
+          "id": "prod7",
+          "x": 51.48,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod8",
+          "x": 54.12,
+          "y": 47.52,
+          "number": null
+        },
+        {
+          "id": "prod9",
+          "x": 52.14,
+          "y": 44.88,
+          "number": null
+        },
+        {
+          "id": "prod10",
+          "x": 58.08,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "prod11",
+          "x": 56.1,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "prod12",
+          "x": 60.72,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "prod13",
+          "x": 59.4,
+          "y": 27.72,
+          "number": null
+        },
+        {
+          "id": "prod14",
+          "x": 62.7,
+          "y": 31.68,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [
+        {
+          "id": "decomm1",
+          "x": 48.84,
+          "y": 25.08,
+          "number": null
+        },
+        {
+          "id": "decomm2",
+          "x": 50.16,
+          "y": 27.06,
+          "number": null
+        }
+      ],
+      "pipelines": [
+        {
+          "id": "gas1",
+          "type": "gas",
+          "points": [
+            [
+              58.08,
+              23.1
+            ],
+            [
+              56.1,
+              39.6
+            ],
+            [
+              49.5,
+              49.5
+            ],
+            [
+              42.9,
+              56.1
+            ]
+          ],
+          "label": "BC10",
+          "labelPos": [
+            58.08,
+            19.8
+          ]
+        },
+        {
+          "id": "oil1",
+          "type": "oil",
+          "points": [
+            [
+              50.16,
+              33
+            ],
+            [
+              47.52,
+              42.9
+            ],
+            [
+              44.88,
+              49.5
+            ]
+          ],
+          "label": "A1 - A2 - Abalone - BC10",
+          "labelPos": [
+            50.16,
+            29.7
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        },
+        {
+          "id": "macae",
+          "x": 46.2,
+          "y": 27.72,
+          "name": "Macaé",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        },
+        {
+          "id": "gasline2",
+          "start": [
+            34.32,
+            44.88
+          ],
+          "end": [
+            44.88,
+            51.48
+          ],
+          "labels": [
+            "Uruguá - Mexilhão"
+          ]
+        },
+        {
+          "id": "gasline3",
+          "start": [
+            25.08,
+            51.48
+          ],
+          "end": [
+            56.1,
+            56.1
+          ],
+          "labels": [
+            "Lula - Mexilhão (Rota 1)",
+            "Participação Shell: 25%"
+          ]
+        },
+        {
+          "id": "gasline4",
+          "start": [
+            42.9,
+            42.9
+          ],
+          "end": [
+            58.08,
+            42.9
+          ],
+          "labels": [
+            "Rota 2 Tecab",
+            "Participação Shell: 25%"
+          ]
+        },
+        {
+          "id": "gasline5",
+          "start": [
+            49.5,
+            52.8
+          ],
+          "end": [
+            62.7,
+            54.12
+          ],
+          "labels": [
+            "Sapinho - Lula"
+          ]
+        }
+      ]
+    },
+    "barreirinhas": {
+      "explorationPins": [
+        {
+          "id": "barr_exp1",
+          "x": 19.8,
+          "y": 16.5,
+          "number": null
+        },
+        {
+          "id": "barr_exp2",
+          "x": 23.1,
+          "y": 19.8,
+          "number": 3
+        },
+        {
+          "id": "barr_exp3",
+          "x": 26.4,
+          "y": 18.48,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "barr_prod1",
+          "x": 21.12,
+          "y": 23.1,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    },
+    "potiguar": {
+      "explorationPins": [
+        {
+          "id": "pot_exp1",
+          "x": 29.7,
+          "y": 23.1,
+          "number": null
+        },
+        {
+          "id": "pot_exp2",
+          "x": 33,
+          "y": 26.4,
+          "number": 2
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "pot_prod1",
+          "x": 31.68,
+          "y": 27.72,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    },
+    "pelotas": {
+      "explorationPins": [
+        {
+          "id": "pel_exp1",
+          "x": 16.5,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "pel_exp2",
+          "x": 19.8,
+          "y": 58.08,
+          "number": 2
+        }
+      ],
+      "productionPins": [],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    }
+  },
+  "2025": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        },
+        {
+          "id": "exp3",
+          "x": 46.86,
+          "y": 31.68,
+          "number": null
+        },
+        {
+          "id": "exp4",
+          "x": 29.7,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "exp5",
+          "x": 34.32,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "exp6",
+          "x": 31.68,
+          "y": 47.52,
+          "number": 5
+        },
+        {
+          "id": "exp7",
+          "x": 27.72,
+          "y": 49.5,
+          "number": 6
+        },
+        {
+          "id": "exp8",
+          "x": 30.36,
+          "y": 52.8,
+          "number": 4
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod4",
+          "x": 44.88,
+          "y": 52.14,
+          "number": null
+        },
+        {
+          "id": "prod5",
+          "x": 47.52,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod6",
+          "x": 49.5,
+          "y": 49.5,
+          "number": null
+        },
+        {
+          "id": "prod7",
+          "x": 51.48,
+          "y": 51.48,
+          "number": null
+        },
+        {
+          "id": "prod8",
+          "x": 54.12,
+          "y": 47.52,
+          "number": null
+        },
+        {
+          "id": "prod9",
+          "x": 52.14,
+          "y": 44.88,
+          "number": null
+        },
+        {
+          "id": "prod10",
+          "x": 58.08,
+          "y": 42.9,
+          "number": null
+        },
+        {
+          "id": "prod11",
+          "x": 56.1,
+          "y": 38.28,
+          "number": null
+        },
+        {
+          "id": "prod12",
+          "x": 60.72,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "prod13",
+          "x": 59.4,
+          "y": 27.72,
+          "number": null
+        },
+        {
+          "id": "prod14",
+          "x": 62.7,
+          "y": 31.68,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [
+        {
+          "id": "decomm1",
+          "x": 48.84,
+          "y": 25.08,
+          "number": null
+        },
+        {
+          "id": "decomm2",
+          "x": 50.16,
+          "y": 27.06,
+          "number": null
+        }
+      ],
+      "pipelines": [
+        {
+          "id": "gas1",
+          "type": "gas",
+          "points": [
+            [
+              58.08,
+              23.1
+            ],
+            [
+              56.1,
+              39.6
+            ],
+            [
+              49.5,
+              49.5
+            ],
+            [
+              42.9,
+              56.1
+            ]
+          ],
+          "label": "BC10",
+          "labelPos": [
+            58.08,
+            19.8
+          ]
+        },
+        {
+          "id": "oil1",
+          "type": "oil",
+          "points": [
+            [
+              50.16,
+              33
+            ],
+            [
+              47.52,
+              42.9
+            ],
+            [
+              44.88,
+              49.5
+            ]
+          ],
+          "label": "A1 - A2 - Abalone - BC10",
+          "labelPos": [
+            50.16,
+            29.7
+          ]
+        }
+      ],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        },
+        {
+          "id": "macae",
+          "x": 46.2,
+          "y": 27.72,
+          "name": "Macaé",
+          "type": "office"
+        }
+      ],
+      "gasLines": [
+        {
+          "id": "gasline1",
+          "start": [
+            29.7,
+            56.1
+          ],
+          "end": [
+            49.5,
+            47.52
+          ],
+          "labels": [
+            "Carioca (Lapa)"
+          ]
+        },
+        {
+          "id": "gasline2",
+          "start": [
+            34.32,
+            44.88
+          ],
+          "end": [
+            44.88,
+            51.48
+          ],
+          "labels": [
+            "Uruguá - Mexilhão"
+          ]
+        },
+        {
+          "id": "gasline3",
+          "start": [
+            25.08,
+            51.48
+          ],
+          "end": [
+            56.1,
+            56.1
+          ],
+          "labels": [
+            "Lula - Mexilhão (Rota 1)",
+            "Participação Shell: 25%"
+          ]
+        },
+        {
+          "id": "gasline4",
+          "start": [
+            42.9,
+            42.9
+          ],
+          "end": [
+            58.08,
+            42.9
+          ],
+          "labels": [
+            "Rota 2 Tecab",
+            "Participação Shell: 25%"
+          ]
+        },
+        {
+          "id": "gasline5",
+          "start": [
+            49.5,
+            52.8
+          ],
+          "end": [
+            62.7,
+            54.12
+          ],
+          "labels": [
+            "Sapinho - Lula"
+          ]
+        }
+      ]
+    },
+    "barreirinhas": {
+      "explorationPins": [
+        {
+          "id": "barr_exp1",
+          "x": 19.8,
+          "y": 16.5,
+          "number": null
+        },
+        {
+          "id": "barr_exp2",
+          "x": 23.1,
+          "y": 19.8,
+          "number": 3
+        },
+        {
+          "id": "barr_exp3",
+          "x": 26.4,
+          "y": 18.48,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "barr_prod1",
+          "x": 21.12,
+          "y": 23.1,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    },
+    "potiguar": {
+      "explorationPins": [
+        {
+          "id": "pot_exp1",
+          "x": 29.7,
+          "y": 23.1,
+          "number": null
+        },
+        {
+          "id": "pot_exp2",
+          "x": 33,
+          "y": 26.4,
+          "number": 2
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "pot_prod1",
+          "x": 31.68,
+          "y": 27.72,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    },
+    "pelotas": {
+      "explorationPins": [
+        {
+          "id": "pel_exp1",
+          "x": 16.5,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "pel_exp2",
+          "x": 19.8,
+          "y": 58.08,
+          "number": 2
+        }
+      ],
+      "productionPins": [],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [],
+      "gasLines": []
+    }
+  },
+  "PRÉ 2013": {
+    "rio": {
+      "explorationPins": [
+        {
+          "id": "exp1",
+          "x": 42.9,
+          "y": 29.7,
+          "number": null
+        },
+        {
+          "id": "exp2",
+          "x": 44.88,
+          "y": 34.32,
+          "number": null
+        }
+      ],
+      "productionPins": [
+        {
+          "id": "prod1",
+          "x": 40.92,
+          "y": 56.1,
+          "number": null
+        },
+        {
+          "id": "prod2",
+          "x": 42.9,
+          "y": 54.12,
+          "number": null
+        },
+        {
+          "id": "prod3",
+          "x": 38.28,
+          "y": 51.48,
+          "number": null
+        }
+      ],
+      "decommissioningPins": [],
+      "pipelines": [],
+      "locations": [
+        {
+          "id": "rj",
+          "x": 34.32,
+          "y": 38.28,
+          "name": "Rio de Janeiro",
+          "type": "headquarter"
+        },
+        {
+          "id": "sp",
+          "x": 23.1,
+          "y": 47.52,
+          "name": "São Paulo",
+          "type": "office"
+        }
+      ],
+      "gasLines": []
+    }
+  }
+}

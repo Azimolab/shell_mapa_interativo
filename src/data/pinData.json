@@ -1,0 +1,193 @@
+{
+  "locations": {
+    "sp": {
+      "id": "sp",
+      "name": "São Paulo",
+      "type": "filial",
+      "badge": "Filial Shell",
+      "description": "Filial Shell em São Paulo",
+      "subsidiaries": [
+        {
+          "id": "shell-trading",
+          "name": "Shell Trading Brasil",
+          "logo": "/shell-trading.png",
+          "business": "Comércio de Petróleo Cru Doméstico",
+          "ownership": "100% Shell"
+        },
+        {
+          "id": "sebg",
+          "name": "Shell Energy Brasil Gás (SEBG)",
+          "logo": "/sebg.png",
+          "business": "Comércio de Gás e Líquidos",
+          "ownership": "100% Shell"
+        },
+        {
+          "id": "seb",
+          "name": "Shell Energy Brasil (SEB)",
+          "logo": "/seb.png",
+          "business": "Comércio de Energia Elétrica",
+          "ownership": "100% Shell"
+        },
+        {
+          "id": "prime-energy",
+          "name": "Prime Energy",
+          "logo": "/prime-energy.png",
+          "business": "Mercado de Energia",
+          "ownership": "100% Shell"
+        },
+        {
+          "id": "carbonext",
+          "name": "Carbonext",
+          "logo": "/carbonext.png",
+          "business": "Soluções baseadas na Natureza",
+          "ownership": "100% Shell"
+        }
+      ],
+      "jointVentures": [
+        {
+          "id": "raizen-jv",
+          "name": "Raízen JV",
+          "logo": "/raizen-jv.png",
+          "business": "Biocombustíveis e Varejo",
+          "ownership": "44% Shell"
+        }
+      ]
+    },
+    "rio": {
+      "id": "rio",
+      "name": "Rio de Janeiro",
+      "type": "headquarter",
+      "badge": "Headquarter",
+      "description": "Sede da Shell no Brasil",
+      "image": "/rio-popover-image.png",
+      "imageAlt": "Instalação industrial no Rio de Janeiro",
+      "width": "484px",
+      "venture": {
+        "logo": "/rio-popover-venture-logo.png",
+        "name": "Raízen JV Lubricants",
+        "business": "Planta de Mistura de Óleos Lubrificantes",
+        "ownership": "50% Shell"
+      }
+    },
+    "macae": {
+      "id": "macae",
+      "name": "Macaé",
+      "type": "office",
+      "badge": "Filial Shell",
+      "description": "Escritório Shell em Macaé",
+      "image": "/macae-popover-image.png",
+      "imageAlt": "Instalação industrial em Macaé",
+      "width": "475px",
+      "venture": {
+        "logo": "/macae-popover-venture-logo.png",
+        "name": "Arke Energia",
+        "business": "Usina Termelétrica",
+        "ownership": "29,9% Shell"
+      },
+      "partnershipText": "Em parceria com a Pátria Investimentos e Mitsubishi Power"
+    }
+  },
+  "explorationBlocks": {
+    "2025": {
+      "rio": [
+        {
+          "id": "exp1",
+          "name": "Bloco de Exploração 1",
+          "operator": "Shell",
+          "participation": "100%",
+          "depth": "2000m",
+          "status": "Em exploração"
+        },
+        {
+          "id": "exp2",
+          "name": "Bloco de Exploração 2",
+          "operator": "Shell",
+          "participation": "50%",
+          "depth": "2500m",
+          "status": "Em exploração"
+        }
+      ],
+      "barreirinhas": [
+        {
+          "id": "barr_exp1",
+          "name": "Barreirinhas - Grupo 1",
+          "operator": "Shell",
+          "participation": "100%",
+          "blocks": 2,
+          "status": "Em exploração"
+        },
+        {
+          "id": "barr_exp2",
+          "name": "Barreirinhas - Grupo 2",
+          "operator": "Shell",
+          "participation": "100%",
+          "blocks": 4,
+          "status": "Em exploração"
+        }
+      ],
+      "potiguar": [
+        {
+          "id": "pot_exp1",
+          "name": "Potiguar - Bloco 1",
+          "operator": "Shell",
+          "participation": "100%",
+          "blocks": 1,
+          "status": "Em exploração"
+        }
+      ],
+      "pelotas": [
+        {
+          "id": "pel_exp1",
+          "name": "Pelotas - Grupo 1",
+          "operator": "Shell",
+          "participation": "100%",
+          "blocks": 26,
+          "status": "Em exploração"
+        }
+      ]
+    }
+  },
+  "productionBlocks": {
+    "2025": {
+      "rio": [
+        {
+          "id": "prod1",
+          "name": "Campo de Produção 1",
+          "operator": "Petrobras",
+          "participation": "25%",
+          "production": "50.000 bpd",
+          "depth": "2000m",
+          "status": "Em produção"
+        },
+        {
+          "id": "prod2",
+          "name": "Campo de Produção 2",
+          "operator": "Shell",
+          "participation": "100%",
+          "production": "30.000 bpd",
+          "depth": "1800m",
+          "status": "Em produção"
+        }
+      ]
+    }
+  },
+  "infrastructure": {
+    "pipelines": [
+      {
+        "id": "pipe1",
+        "name": "Gasoduto Lula-Mexilhão",
+        "type": "gas",
+        "participation": "25% Shell",
+        "length": "355 km"
+      },
+      {
+        "id": "pipe2",
+        "name": "Oleoduto BC-10",
+        "type": "oil",
+        "participation": "50% Shell",
+        "length": "180 km"
+      }
+    ]
+  }
+}
+

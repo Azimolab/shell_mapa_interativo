@@ -1,0 +1,423 @@
+/* exploration-popover Component Styles */
+.exploration-popover-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.exploration-popover-container {
+  position: relative;
+  max-width: 650px;
+  width: 100%;
+}
+
+.exploration-popover-arrow {
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 14px solid #FFF;
+  z-index: 1001;
+}
+
+.exploration-popover-card {
+  background: #FFF;
+  border-radius: 16px;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-height: 75vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.exploration-popover-content {
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exploration-popover-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.exploration-popover-status-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exploration-popover-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.exploration-popover-status-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #DD1D21;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.exploration-popover-status-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.exploration-popover-status-text {
+  color: #343434;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.exploration-popover-title {
+  color: #343434;
+  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.exploration-popover-info-grid {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.exploration-popover-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.exploration-popover-info-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exploration-popover-info-icon {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid #E0E0E0;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.exploration-popover-info-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.exploration-popover-info-label-text {
+  color: #343434;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.exploration-popover-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exploration-popover-info-value {
+  color: #343434;
+  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.exploration-popover-info-description {
+  color: #616161;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.exploration-popover-participation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.exploration-popover-participation-title {
+  color: #616161;
+  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.exploration-popover-companies {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exploration-popover-company {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exploration-popover-company-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.exploration-popover-company-name {
+  color: #343434;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  flex: 1;
+}
+
+.exploration-popover-company-name.operator {
+  font-family: 'ShellHeavy', -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.exploration-popover-company-percentage {
+  color: #343434;
+  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: right;
+}
+
+.exploration-popover-progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #E0E0E0;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.exploration-popover-progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.exploration-popover-close-button {
+  display: flex;
+  width: 100%;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid #919191;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #343434;
+  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.exploration-popover-close-button:hover {
+  background: #f5f5f5;
+  border-color: #616161;
+}
+
+.exploration-popover-close-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .exploration-popover-overlay {
+    padding: 10px;
+  }
+  
+  .exploration-popover-content {
+    padding: 24px 30px;
+    gap: 24px;
+  }
+  
+  .exploration-popover-title {
+    font-size: 36px;
+  }
+  
+  .exploration-popover-status-text,
+  .exploration-popover-info-label-text,
+  .exploration-popover-info-value,
+  .exploration-popover-participation-title,
+  .exploration-popover-company-name,
+  .exploration-popover-company-percentage {
+    font-size: 20px;
+  }
+  
+  .exploration-popover-info-description {
+    font-size: 18px;
+  }
+  
+  .exploration-popover-close-button {
+    font-size: 28px;
+    padding: 20px;
+  }
+  
+  .exploration-popover-status-icon {
+    width: 56px;
+    height: 56px;
+    padding: 12px;
+  }
+  
+  .exploration-popover-status-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .exploration-popover-info-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .exploration-popover-info-icon {
+    padding: 10px;
+  }
+  
+  .exploration-popover-info-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exploration-popover-content {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .exploration-popover-title {
+    font-size: 28px;
+  }
+  
+  .exploration-popover-status-text,
+  .exploration-popover-info-label-text,
+  .exploration-popover-participation-title {
+    font-size: 18px;
+  }
+  
+  .exploration-popover-info-value,
+  .exploration-popover-company-name,
+  .exploration-popover-company-percentage {
+    font-size: 18px;
+  }
+  
+  .exploration-popover-info-description {
+    font-size: 16px;
+  }
+  
+  .exploration-popover-close-button {
+    font-size: 24px;
+    padding: 16px;
+  }
+  
+  .exploration-popover-status-badge {
+    gap: 12px;
+  }
+  
+  .exploration-popover-status-icon {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+  }
+  
+  .exploration-popover-status-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .exploration-popover-info-label {
+    gap: 12px;
+  }
+  
+  .exploration-popover-info-icon {
+    padding: 8px;
+  }
+  
+  .exploration-popover-info-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .exploration-popover-progress-bar {
+    height: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .exploration-popover-content {
+    padding: 16px;
+  }
+  
+  .exploration-popover-title {
+    font-size: 24px;
+  }
+  
+  .exploration-popover-status-text,
+  .exploration-popover-info-label-text,
+  .exploration-popover-participation-title {
+    font-size: 16px;
+  }
+  
+  .exploration-popover-info-value,
+  .exploration-popover-company-name,
+  .exploration-popover-company-percentage {
+    font-size: 16px;
+  }
+  
+  .exploration-popover-info-description {
+    font-size: 14px;
+  }
+  
+  .exploration-popover-close-button {
+    font-size: 20px;
+    padding: 14px;
+  }
+}

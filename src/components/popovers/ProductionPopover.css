@@ -1,0 +1,550 @@
+/* production-popover Component Styles */
+.production-popover-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.production-popover-container {
+  position: relative;
+  max-width: 650px;
+  width: 100%;
+}
+
+.production-popover-arrow {
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 14px solid #FFF;
+  z-index: 1001;
+}
+
+.production-popover-card {
+  background: #FFF;
+  border-radius: 12px;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-height: 75vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.production-popover-content {
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.production-popover-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.production-popover-status-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.production-popover-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.production-popover-status-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #008557;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.production-popover-status-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.production-popover-status-text {
+  color: #343434;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.production-popover-title {
+  color: #343434;
+  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.production-popover-info-grid {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.production-popover-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.production-popover-info-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.production-popover-info-icon {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 2px solid #E0E0E0;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.production-popover-info-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.production-popover-info-label-text {
+  color: #343434;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.production-popover-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.production-popover-info-value {
+  color: #343434;
+  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.production-popover-info-description {
+  color: #616161;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.production-popover-divider {
+  width: 100%;
+  height: 1px;
+  background: #E0E0E0;
+  border: none;
+  margin: 0;
+}
+
+.production-popover-participation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.production-popover-participation-title {
+  color: #616161;
+  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.production-popover-companies {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.production-popover-company {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.production-popover-company-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.production-popover-company-name {
+  color: #343434;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  flex: 1;
+}
+
+.production-popover-company-name.operator {
+  font-family: 'ShellHeavy', -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.production-popover-company-percentage {
+  color: #343434;
+  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: right;
+}
+
+.production-popover-progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #E0E0E0;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.production-popover-progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.production-popover-infrastructure {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.production-popover-infrastructure-title {
+  color: #616161;
+  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.production-popover-infrastructure-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.production-popover-fpso-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.production-popover-fpso-title {
+  color: #343434;
+  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.production-popover-fpso-description {
+  color: #616161;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.production-popover-bullet-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.production-popover-bullet-number {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 2px solid #E0E0E0;
+  background: transparent;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.production-popover-bullet-number span {
+  color: #343434;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.production-popover-bullet-text {
+  color: #343434;
+  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.production-popover-close-button {
+  display: flex;
+  width: 100%;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid #919191;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #343434;
+  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.production-popover-close-button:hover {
+  background: #f5f5f5;
+  border-color: #616161;
+}
+
+.production-popover-close-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .production-popover-overlay {
+    padding: 10px;
+  }
+  
+  .production-popover-content {
+    padding: 24px 30px;
+    gap: 12px;
+  }
+  
+  .production-popover-title {
+    font-size: 18px;
+  }
+  
+  .production-popover-status-text,
+  .production-popover-info-label-text,
+  .production-popover-info-value,
+  .production-popover-participation-title,
+  .production-popover-infrastructure-title,
+  .production-popover-fpso-title,
+  .production-popover-company-name,
+  .production-popover-company-percentage,
+  .production-popover-bullet-text {
+    font-size: 20px;
+  }
+  
+  .production-popover-bullet-number span {
+    font-size: 20px;
+  }
+  
+  .production-popover-info-description,
+  .production-popover-fpso-description {
+    font-size: 18px;
+  }
+  
+  .production-popover-close-button {
+    font-size: 28px;
+    padding: 20px;
+  }
+  
+  .production-popover-status-icon {
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+  }
+  
+  .production-popover-status-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .production-popover-info-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .production-popover-info-icon {
+    padding: 10px;
+  }
+  
+  .production-popover-info-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .production-popover-bullet-number {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .production-popover-content {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .production-popover-title {
+    font-size: 28px;
+  }
+  
+  .production-popover-status-text,
+  .production-popover-info-label-text,
+  .production-popover-participation-title,
+  .production-popover-infrastructure-title {
+    font-size: 18px;
+  }
+  
+  .production-popover-info-value,
+  .production-popover-fpso-title,
+  .production-popover-company-name,
+  .production-popover-company-percentage,
+  .production-popover-bullet-text {
+    font-size: 18px;
+  }
+  
+  .production-popover-bullet-number span {
+    font-size: 18px;
+  }
+  
+  .production-popover-info-description,
+  .production-popover-fpso-description {
+    font-size: 16px;
+  }
+  
+  .production-popover-close-button {
+    font-size: 24px;
+    padding: 10px;
+  }
+  
+  .production-popover-status-badge {
+    gap: 12px;
+  }
+  
+  .production-popover-status-icon {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+  }
+  
+  .production-popover-status-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .production-popover-info-label {
+    gap: 12px;
+  }
+  
+  .production-popover-info-icon {
+    padding: 8px;
+  }
+  
+  .production-popover-info-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .production-popover-progress-bar {
+    height: 12px;
+  }
+  
+  .production-popover-bullet-number {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+  
+  .production-popover-bullet-item {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .production-popover-content {
+    padding: 10px;
+  }
+  
+  .production-popover-title {
+    font-size: 24px;
+  }
+  
+  .production-popover-status-text,
+  .production-popover-info-label-text,
+  .production-popover-participation-title,
+  .production-popover-infrastructure-title {
+    font-size: 16px;
+  }
+  
+  .production-popover-info-value,
+  .production-popover-fpso-title,
+  .production-popover-company-name,
+  .production-popover-company-percentage,
+  .production-popover-bullet-text {
+    font-size: 16px;
+  }
+  
+  .production-popover-bullet-number span {
+    font-size: 16px;
+  }
+  
+  .production-popover-info-description,
+  .production-popover-fpso-description {
+    font-size: 14px;
+  }
+  
+  .production-popover-close-button {
+    font-size: 20px;
+    padding: 14px;
+  }
+}
