@@ -1,16 +1,16 @@
 import React from 'react';
 import LocationPopover from './LocationPopover';
-import pinData from '@/data/pinData.json';
+import locationsData from '@/data/locationsData.json';
 
 function MacaeLocationPopover({ isOpen, anchorEl, onClose }) {
   const locationData = {
-    title: pinData.locations.macae.name,
-    badge: pinData.locations.macae.badge,
-    image: pinData.locations.macae.image,
-    imageAlt: pinData.locations.macae.imageAlt,
-    width: pinData.locations.macae.width,
-    venture: pinData.locations.macae.venture,
-    partnershipText: pinData.locations.macae.partnershipText
+    title: locationsData.locations.macae.name,
+    badge: locationsData.locations.macae.badge,
+    image: locationsData.locations.macae.image,
+    imageAlt: locationsData.locations.macae.imageAlt,
+    width: locationsData.locations.macae.width,
+    venture: locationsData.locations.macae.venture,
+    partnershipText: locationsData.locations.macae.partnershipText
   };
 
   return (

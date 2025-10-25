@@ -89,7 +89,7 @@
 
 .production-popover-status-text {
   color: #343434;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
@@ -97,7 +97,7 @@
 
 .production-popover-title {
   color: #343434;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 28px;
   font-weight: 700;
   line-height: normal;
@@ -141,7 +141,7 @@
 
 .production-popover-info-label-text {
   color: #343434;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
@@ -155,7 +155,7 @@
 
 .production-popover-info-value {
   color: #343434;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
@@ -163,7 +163,7 @@
 
 .production-popover-info-description {
   color: #616161;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
@@ -185,7 +185,7 @@
 
 .production-popover-participation-title {
   color: #616161;
-  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellMedium';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -213,7 +213,7 @@
 
 .production-popover-company-name {
   color: #343434;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
@@ -221,13 +221,13 @@
 }
 
 .production-popover-company-name.operator {
-  font-family: 'ShellHeavy', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellHeavy';
   font-weight: 600;
 }
 
 .production-popover-company-percentage {
   color: #343434;
-  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellMedium';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -257,7 +257,7 @@
 
 .production-popover-infrastructure-title {
   color: #616161;
-  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellMedium';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -278,7 +278,7 @@
 
 .production-popover-fpso-title {
   color: #343434;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
@@ -286,7 +286,7 @@
 
 .production-popover-fpso-description {
   color: #616161;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
@@ -314,7 +314,7 @@
 
 .production-popover-bullet-number span {
   color: #343434;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
@@ -322,7 +322,7 @@
 
 .production-popover-bullet-text {
   color: #343434;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
@@ -340,7 +340,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   color: #343434;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 18px;
   font-weight: 700;
   line-height: normal;

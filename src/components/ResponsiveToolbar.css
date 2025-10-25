@@ -55,7 +55,7 @@
 .responsive-toolbar-section-title {
   align-self: stretch;
   color: var(--grey-600);
-  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellMedium';
   font-size: 10px;
   font-style: normal;
   font-weight: 500;
@@ -80,7 +80,7 @@
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 11px;
   font-style: normal;
   font-weight: 700;
@@ -134,7 +134,7 @@
 
 .responsive-toolbar-map-title {
   color: var(--grey-800);
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -268,7 +268,7 @@
 
 .responsive-toolbar-legend-title {
   color: var(--grey-800);
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -318,7 +318,7 @@
 .responsive-toolbar-block-description {
   align-self: stretch;
   color: #666;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 11px;
   font-style: normal;
   font-weight: 400;

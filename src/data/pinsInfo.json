@@ -278,20 +278,6 @@
         }
       ]
     }
-  },
-  "locations": {
-    "location_sp": {
-      "popoverType": "location_sp",
-      "name": "São Paulo"
-    },
-    "location_rio": {
-      "popoverType": "location_rio",
-      "name": "Rio de Janeiro"
-    },
-    "location_macae": {
-      "popoverType": "location_macae",
-      "name": "Macaé"
-    }
   }
 }
 
