@@ -122,10 +122,10 @@ function App() {
   return (
     <div className="w-full h-full relative overflow-hidden">
       {/* Background dividido em duas metades */}
-      <div className="absolute inset-0 flex">
+      {/* <div className="absolute inset-0 flex">
         <div className="w-1/2 bg-grass"></div>
         <div className="w-1/2 bg-ocean-100"></div>
-      </div>
+      </div> */}
       
       <div className="relative w-screen h-screen overflow-hidden">
         {/* SVG Map - ocupa toda a tela */}

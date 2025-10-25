@@ -136,7 +136,7 @@ function LocationPopover({
 
   // Renderiza popover posicionado se houver anchorEl
   return createPortal(
-    <Popover open={isOpen} onOpenChange={(open) => !open && onClose()}>
+    <Popover key={`location-popover-${triggerPosition?.left}-${triggerPosition?.top}`} open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <PopoverTrigger asChild>
         <div 
           style={{

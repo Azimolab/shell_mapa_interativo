@@ -149,6 +149,9 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       element.style.cursor = 'pointer';
       element.style.pointerEvents = 'auto';
       
+      // Remover listener existente (se houver) para evitar duplicação
+      element.removeEventListener('click', handlePinClick);
+      
       // Adicionar event listener
       element.addEventListener('click', handlePinClick);
       
