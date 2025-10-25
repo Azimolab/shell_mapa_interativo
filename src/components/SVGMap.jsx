@@ -2,12 +2,86 @@ import React, { useState, useEffect } from 'react';
 import { getSVGByZoneAndYear } from '../assets/mapas/index.js';
 import './SVGMap.css';
 
+/**
+ * Aplica regras de visibilidade aos pins dentro de um container DOM
+ * @param {HTMLElement} container - Container com o SVG
+ * @param {Object} legendItems - Objeto com estado de visibilidade dos itens da legenda
+ */
+function applyPinVisibilityRules(container, legendItems) {
+  // Red pins (exploration)
+  const redPinSelectors = [
+    '[class*="RedPin"]',
+    '[class*="redPin"]', 
+    '[class*="red-pin"]',
+    '[class*="Exploration"]',
+    '[class*="exploration"]',
+    '[id*="red"]',
+    '[id*="Red"]',
+    '[id*="exploration"]',
+    '[id*="Exploration"]'
+  ];
+  
+  redPinSelectors.forEach(selector => {
+    const pins = container.querySelectorAll(selector);
+    pins.forEach(pin => {
+      if (pin.closest('svg') && pin.tagName !== 'svg') {
+        pin.style.display = legendItems.exploration ? 'block' : 'none';
+      }
+    });
+  });
+
+  // Green pins (production)
+  const greenPinSelectors = [
+    '[class*="GreenPin"]',
+    '[class*="greenPin"]',
+    '[class*="green-pin"]',
+    '[class*="Production"]',
+    '[class*="production"]',
+    '[id*="green"]',
+    '[id*="Green"]',
+    '[id*="production"]',
+    '[id*="Production"]'
+  ];
+  
+  greenPinSelectors.forEach(selector => {
+    const pins = container.querySelectorAll(selector);
+    pins.forEach(pin => {
+      if (pin.closest('svg') && pin.tagName !== 'svg') {
+        pin.style.display = legendItems.production ? 'block' : 'none';
+      }
+    });
+  });
+
+  // Gray/decommissioning pins
+  const grayPinSelectors = [
+    '[class*="GrayPin"]',
+    '[class*="grayPin"]',
+    '[class*="gray-pin"]',
+    '[class*="DecommissionPin"]',
+    '[class*="Decommission"]',
+    '[class*="decommission"]',
+    '[id*="gray"]',
+    '[id*="Gray"]',
+    '[id*="decommission"]',
+    '[id*="Decommission"]'
+  ];
+  
+  grayPinSelectors.forEach(selector => {
+    const pins = container.querySelectorAll(selector);
+    pins.forEach(pin => {
+      if (pin.closest('svg') && pin.tagName !== 'svg') {
+        pin.style.display = legendItems.decommissioning ? 'block' : 'none';
+      }
+    });
+  });
+}
+
 function SVGMap({ selectedYear = '2025', selectedZone = 'rio', activeLegendItems }) {
   const [svgContent, setSvgContent] = useState('');
-  const [nextSvgContent, setNextSvgContent] = useState('');
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
+    setIsTransitioning(true);
     console.log('Carregando SVG para zona:', selectedZone, 'ano:', selectedYear);
     
     let svgText = getSVGByZoneAndYear(selectedZone, selectedYear);
@@ -31,127 +105,47 @@ function SVGMap({ selectedYear = '2025', selectedZone = 'rio', activeLegendItems
       }
     );
     
-    console.log('SVG carregado com sucesso, tamanho:', svgText.length);
+    // Criar container temporário off-screen para pre-processar o SVG
+    const tempDiv = document.createElement('div');
+    tempDiv.style.position = 'absolute';
+    tempDiv.style.left = '-9999px';
+    tempDiv.style.top = '-9999px';
+    tempDiv.style.visibility = 'hidden';
+    tempDiv.innerHTML = svgText;
+    document.body.appendChild(tempDiv);
     
-    // Se já existe conteúdo e é diferente, fazer transição
-    if (svgContent && svgText !== svgContent) {
-      setIsTransitioning(true);
-      setNextSvgContent(svgText);
+    try {
+      // Aplicar regras de visibilidade ANTES de exibir
+      applyPinVisibilityRules(tempDiv, activeLegendItems);
       
-      // Após 500ms (metade da animação de 1000ms), trocar os conteúdos
-      setTimeout(() => {
-        setSvgContent(svgText);
+      // Capturar o HTML processado
+      const processedSvg = tempDiv.innerHTML;
+      
+      console.log('SVG carregado e processado com sucesso, tamanho:', processedSvg.length);
+      
+      // Atualizar o SVG exibido com transição suave
+      setSvgContent(processedSvg);
+      
+      // Pequeno delay para garantir smooth transition
+      requestAnimationFrame(() => {
         setIsTransitioning(false);
-        setNextSvgContent('');
-      }, 500);
-    } else {
-      // Primeira carga ou mesmo conteúdo
-      setSvgContent(svgText);
+      });
+    } finally {
+      // Limpar o container temporário
+      document.body.removeChild(tempDiv);
     }
-  }, [selectedYear, selectedZone]);
-
-  // Aplicar visibilidade dos pins baseado nos filtros da legenda
-  useEffect(() => {
-    if (!svgContent) return;
-
-    // Pequeno delay para garantir que o DOM foi atualizado
-    setTimeout(() => {
-      // Red pins (exploration) - procurar por elementos com classes que contenham "Red", "red", "exploration", "Exploration"
-      const redPinSelectors = [
-        '[class*="RedPin"]',
-        '[class*="redPin"]', 
-        '[class*="red-pin"]',
-        '[class*="Exploration"]',
-        '[class*="exploration"]',
-        '[id*="red"]',
-        '[id*="Red"]',
-        '[id*="exploration"]',
-        '[id*="Exploration"]'
-      ];
-      
-      redPinSelectors.forEach(selector => {
-        const pins = document.querySelectorAll(selector);
-        pins.forEach(pin => {
-          if (pin.closest('svg') && pin.tagName !== 'svg') {
-            pin.style.display = activeLegendItems.exploration ? 'block' : 'none';
-          }
-        });
-      });
-
-      // Green pins (production) - procurar por elementos com classes que contenham "Green", "green", "production", "Production"
-      const greenPinSelectors = [
-        '[class*="GreenPin"]',
-        '[class*="greenPin"]',
-        '[class*="green-pin"]',
-        '[class*="Production"]',
-        '[class*="production"]',
-        '[id*="green"]',
-        '[id*="Green"]',
-        '[id*="production"]',
-        '[id*="Production"]'
-      ];
-      
-      greenPinSelectors.forEach(selector => {
-        const pins = document.querySelectorAll(selector);
-        pins.forEach(pin => {
-          if (pin.closest('svg') && pin.tagName !== 'svg') {
-            pin.style.display = activeLegendItems.production ? 'block' : 'none';
-          }
-        });
-      });
-
-      // Gray/decommissioning pins
-      const grayPinSelectors = [
-        '[class*="GrayPin"]',
-        '[class*="grayPin"]',
-        '[class*="gray-pin"]',
-        '[class*="DecommissionPin"]',
-        '[class*="Decommission"]',
-        '[class*="decommission"]',
-        '[id*="gray"]',
-        '[id*="Gray"]',
-        '[id*="decommission"]',
-        '[id*="Decommission"]'
-      ];
-      
-      grayPinSelectors.forEach(selector => {
-        const pins = document.querySelectorAll(selector);
-        pins.forEach(pin => {
-          if (pin.closest('svg') && pin.tagName !== 'svg') {
-            pin.style.display = activeLegendItems.decommissioning ? 'block' : 'none';
-          }
-        });
-      });
-    }, 100);
-  }, [svgContent, activeLegendItems]);
+  }, [selectedYear, selectedZone, activeLegendItems]);
 
   return (
     <div className="svg-map-container fixed inset-0 w-full h-full overflow-hidden z-[1]">
-      {isTransitioning ? (
-        // Renderizar dois mapas durante a transição
-        <div className="svg-transition-container">
-          {/* Mapa atual (fade-out) */}
-          <div className="svg-transition-layer svg-map-fade-out">
-            <div 
-              className="svg-map-content w-full h-full [&_svg]:w-full [&_svg]:h-full [&_svg]:block [&_[class*='pin']]:cursor-pointer [&_[class*='Pin']]:cursor-pointer [&_g[class*='pin']]:pointer-events-auto [&_g[class*='Pin']]:pointer-events-auto [&_g[id*='pin']]:pointer-events-auto [&_g[id*='Pin']]:pointer-events-auto"
-              dangerouslySetInnerHTML={{ __html: svgContent }}
-            />
-          </div>
-          {/* Próximo mapa (fade-in) */}
-          <div className="svg-transition-layer svg-map-fade-in">
-            <div 
-              className="svg-map-content w-full h-full [&_svg]:w-full [&_svg]:h-full [&_svg]:block [&_[class*='pin']]:cursor-pointer [&_[class*='Pin']]:cursor-pointer [&_g[class*='pin']]:pointer-events-auto [&_g[class*='Pin']]:pointer-events-auto [&_g[id*='pin']]:pointer-events-auto [&_g[id*='Pin']]:pointer-events-auto"
-              dangerouslySetInnerHTML={{ __html: nextSvgContent }}
-            />
-          </div>
-        </div>
-      ) : (
-        // Renderizar apenas o mapa atual (sem transição)
-        <div 
-          className="svg-map-content w-full h-full [&_svg]:w-full [&_svg]:h-full [&_svg]:block [&_[class*='pin']]:cursor-pointer [&_[class*='Pin']]:cursor-pointer [&_g[class*='pin']]:pointer-events-auto [&_g[class*='Pin']]:pointer-events-auto [&_g[id*='pin']]:pointer-events-auto [&_g[id*='Pin']]:pointer-events-auto"
-          dangerouslySetInnerHTML={{ __html: svgContent }}
-        />
-      )}
+      <div 
+        className="svg-map-content w-full h-full [&_svg]:w-full [&_svg]:h-full [&_svg]:block [&_[class*='pin']]:cursor-pointer [&_[class*='Pin']]:cursor-pointer [&_g[class*='pin']]:pointer-events-auto [&_g[class*='Pin']]:pointer-events-auto [&_g[id*='pin']]:pointer-events-auto [&_g[id*='Pin']]:pointer-events-auto"
+        style={{
+          opacity: isTransitioning ? 0.7 : 1,
+          transition: 'opacity 0.3s ease-in-out'
+        }}
+        dangerouslySetInnerHTML={{ __html: svgContent }}
+      />
     </div>
   );
 }
