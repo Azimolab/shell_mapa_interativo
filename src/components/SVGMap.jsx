@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getSVGByZoneAndYear } from '../assets/mapas/index.js';
+import './SVGMap.css';
 
 /**
  * Aplica regras de visibilidade aos pins dentro de um container DOM
@@ -76,11 +77,11 @@ function applyPinVisibilityRules(container, legendItems) {
 }
 
 function SVGMap({ selectedYear = '2025', selectedZone = 'rio', activeLegendItems }) {
-  const [svgContent, setSvgContent] = useState('');
+  const [currentSvgContent, setCurrentSvgContent] = useState('');
+  const [prevSvgContent, setPrevSvgContent] = useState('');
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
-    setIsTransitioning(true);
     console.log('Carregando SVG para zona:', selectedZone, 'ano:', selectedYear);
     
     let svgText = getSVGByZoneAndYear(selectedZone, selectedYear);
@@ -122,13 +123,23 @@ function SVGMap({ selectedYear = '2025', selectedZone = 'rio', activeLegendItems
       
       console.log('SVG carregado e processado com sucesso, tamanho:', processedSvg.length);
       
-      // Atualizar o SVG exibido com transição suave
-      setSvgContent(processedSvg);
+      // Sistema de duplo buffer para crossfade suave
+      // Salvar o SVG atual como anterior (se existir)
+      if (currentSvgContent) {
+        setPrevSvgContent(currentSvgContent);
+        setIsTransitioning(true);
+      }
       
-      // Pequeno delay para garantir smooth transition
-      requestAnimationFrame(() => {
-        setIsTransitioning(false);
-      });
+      // Atualizar o SVG atual
+      setCurrentSvgContent(processedSvg);
+      
+      // Limpar o SVG anterior após a transição (1000ms)
+      if (currentSvgContent) {
+        setTimeout(() => {
+          setPrevSvgContent('');
+          setIsTransitioning(false);
+        }, 1000);
+      }
     } finally {
       // Limpar o container temporário
       document.body.removeChild(tempDiv);
@@ -137,14 +148,31 @@ function SVGMap({ selectedYear = '2025', selectedZone = 'rio', activeLegendItems
 
   return (
     <div className="svg-map-container fixed inset-0 w-full h-full overflow-hidden z-[1]">
-      <div 
-        className="svg-map-content w-full h-full [&_svg]:w-full [&_svg]:h-full [&_svg]:block [&_[class*='pin']]:cursor-pointer [&_[class*='Pin']]:cursor-pointer [&_g[class*='pin']]:pointer-events-auto [&_g[class*='Pin']]:pointer-events-auto [&_g[id*='pin']]:pointer-events-auto [&_g[id*='Pin']]:pointer-events-auto"
-        style={{
-          opacity: isTransitioning ? 0.7 : 1,
-          transition: 'opacity 0.3s ease-in-out'
-        }}
-        dangerouslySetInnerHTML={{ __html: svgContent }}
-      />
+      <div className="svg-transition-container">
+        {/* SVG anterior (fade-out) */}
+        {prevSvgContent && isTransitioning && (
+          <div 
+            className="svg-transition-layer svg-map-fade-out"
+            style={{ zIndex: 1 }}
+          >
+            <div 
+              className="svg-map-content w-full h-full [&_svg]:w-full [&_svg]:h-full [&_svg]:block [&_[class*='pin']]:cursor-pointer [&_[class*='Pin']]:cursor-pointer [&_g[class*='pin']]:pointer-events-auto [&_g[class*='Pin']]:pointer-events-auto [&_g[id*='pin']]:pointer-events-auto [&_g[id*='Pin']]:pointer-events-auto"
+              dangerouslySetInnerHTML={{ __html: prevSvgContent }}
+            />
+          </div>
+        )}
+        
+        {/* SVG atual (fade-in) */}
+        <div 
+          className={`svg-transition-layer ${isTransitioning ? 'svg-map-fade-in' : ''}`}
+          style={{ zIndex: 2 }}
+        >
+          <div 
+            className="svg-map-content w-full h-full [&_svg]:w-full [&_svg]:h-full [&_svg]:block [&_[class*='pin']]:cursor-pointer [&_[class*='Pin']]:cursor-pointer [&_g[class*='pin']]:pointer-events-auto [&_g[class*='Pin']]:pointer-events-auto [&_g[id*='pin']]:pointer-events-auto [&_g[id*='Pin']]:pointer-events-auto"
+            dangerouslySetInnerHTML={{ __html: currentSvgContent }}
+          />
+        </div>
+      </div>
     </div>
   );
 }

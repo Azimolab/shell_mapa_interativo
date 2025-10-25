@@ -150,7 +150,7 @@ function SPLocationPopover({ isOpen, anchorEl, onClose, centered = false }) {
 
   // Renderiza popover posicionado se houver anchorEl
   return createPortal(
-    <Popover open={isOpen} onOpenChange={(open) => !open && onClose()}>
+    <Popover key={`sp-popover-${triggerPosition?.left}-${triggerPosition?.top}`} open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <PopoverTrigger asChild>
         <div 
           style={{
