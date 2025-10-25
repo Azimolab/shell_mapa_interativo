@@ -51,6 +51,28 @@ function applyPinVisibilityRules(container, legendItems) {
     });
   });
 
+  // Purple pins (development)
+  const purplePinSelectors = [
+    '[class*="PurplePin"]',
+    '[class*="purplePin"]',
+    '[class*="purple-pin"]',
+    '[class*="Development"]',
+    '[class*="development"]',
+    '[id*="purple"]',
+    '[id*="Purple"]',
+    '[id*="development"]',
+    '[id*="Development"]'
+  ];
+  
+  purplePinSelectors.forEach(selector => {
+    const pins = container.querySelectorAll(selector);
+    pins.forEach(pin => {
+      if (pin.closest('svg') && pin.tagName !== 'svg') {
+        pin.style.display = legendItems.development ? 'block' : 'none';
+      }
+    });
+  });
+
   // Gray/decommissioning pins
   const grayPinSelectors = [
     '[class*="GrayPin"]',
