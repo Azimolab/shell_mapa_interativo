@@ -54,11 +54,11 @@
   --color-red-500: #DD1D21;
   
   /* Fontes personalizadas */
-  --font-family-shell-light: 'ShellLight', 'Arial', 'Helvetica', sans-serif;
-  --font-family-shell-book: 'ShellBook', 'Arial', 'Helvetica', sans-serif;
-  --font-family-shell-medium: 'ShellMedium', 'Arial', 'Helvetica', sans-serif;
-  --font-family-shell-bold: 'ShellBold', 'Arial', 'Helvetica', sans-serif;
-  --font-family-shell-heavy: 'ShellHeavy', 'Arial', 'Helvetica', sans-serif;
+  --font-family-shell-light: 'ShellLight';
+  --font-family-shell-book: 'ShellBook';
+  --font-family-shell-medium: 'ShellMedium';
+  --font-family-shell-bold: 'ShellBold';
+  --font-family-shell-heavy: 'ShellHeavy';
 }
 
 @font-face {
@@ -97,7 +97,7 @@
 }
 
 :root {
-  font-family: 'ShellBook', 'Arial', 'Helvetica', sans-serif;
+  font-family: 'ShellBook';
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light;
@@ -121,7 +121,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
-  font-family: 'ShellBook', 'Arial', 'Helvetica', sans-serif;
+  font-family: 'ShellBook';
 }
 
 #root {

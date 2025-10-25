@@ -5,7 +5,7 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
-import pinData from '@/data/pinData.json';
+import locationsData from '@/data/locationsData.json';
 
 function SPLocationPopover({ isOpen, anchorEl, onClose, centered = false }) {
   const [triggerPosition, setTriggerPosition] = useState(null);
@@ -20,7 +20,7 @@ function SPLocationPopover({ isOpen, anchorEl, onClose, centered = false }) {
     }
   }, [anchorEl, isOpen, centered]);
 
-  const locationData = pinData.locations.sp;
+  const locationData = locationsData.locations.sp;
   const subsidiaries = locationData.subsidiaries;
   const jointVentures = locationData.jointVentures;
 

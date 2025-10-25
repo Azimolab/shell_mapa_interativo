@@ -41,33 +41,21 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       
       console.log('Mapped ID:', mappedId);
 
-      // Buscar dados do pin no JSON
+      // Buscar dados do pin no JSON (apenas em pins)
       let pinData = null;
       
-      // Tentar buscar em pins primeiro
+      // Tentar buscar com ID mapeado
       pinData = pinsInfo.pins[mappedId];
       
-      // Se não encontrou, tentar em locations
-      if (!pinData) {
-        // Tentar com location_ prefix
-        pinData = pinsInfo.locations[`location_${mappedId}`];
-        
-        // Tentar sem prefix
-        if (!pinData) {
-          pinData = pinsInfo.locations[mappedId];
-        }
-      }
-      
-      // Se ainda não encontrou, tentar com ID original
+      // Se não encontrou, tentar com ID original limpo
       if (!pinData) {
         let cleanId = pinId.replace(/^(pin_|pin-|location_|location-)/i, '');
-        pinData = pinsInfo.pins[cleanId] || pinsInfo.locations[`location_${cleanId}`] || pinsInfo.locations[cleanId];
+        pinData = pinsInfo.pins[cleanId];
       }
       
       console.log('Search results:', {
         mappedId,
         foundInPins: !!pinsInfo.pins[mappedId],
-        foundInLocations: !!(pinsInfo.locations[`location_${mappedId}`] || pinsInfo.locations[mappedId]),
         pinData
       });
       

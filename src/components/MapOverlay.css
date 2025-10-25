@@ -68,7 +68,7 @@
   justify-content: center;
   color: #FFF;
   text-align: center;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -154,7 +154,7 @@
 
 .location-name {
   color: #343434;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -164,7 +164,7 @@
 
 .location-type {
   color: #616161;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 10.5px;
   font-style: normal;
   font-weight: 500;
@@ -221,7 +221,7 @@
 }
 
 .pipeline-label {
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 14px;
   font-weight: 700;
   dominant-baseline: middle;
@@ -248,7 +248,7 @@
 
 .gas-line-label .main-label {
   color: #FFF;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 13px;
   font-style: normal;
   font-weight: 700;
@@ -257,7 +257,7 @@
 
 .gas-line-label .sub-label {
   color: #FFF;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 13px;
   font-style: normal;
   font-weight: 500;

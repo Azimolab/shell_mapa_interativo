@@ -3,18 +3,6 @@ import './MapOverlay.css';
 import RioLocationPopover from './rio/RioLocationPopover';
 import MacaeLocationPopover from './rio/MacaeLocationPopover';
 import SPLocationPopover from './rio/SPLocationPopover';
-import RioExploration1 from './rio/exploration_1';
-import RioExploration2 from './rio/exploration_2';
-import RioExploration3 from './rio/exploration_3';
-import RioProduction1 from './rio/production_1';
-import RioProduction2 from './rio/production_2';
-import PelotasExploration1 from './pelotas/exploration_1';
-import PelotasExploration2 from './pelotas/exploration_2';
-import PotiguarExploration1 from './potiguar/exploration_1';
-import PotiguarExploration2 from './potiguar/exploration_2';
-import BarreirinhasExploration1 from './barreirinhas/exploration_1';
-import BarreirinhasExploration2 from './barreirinhas/exploration_2';
-import BarreirinhasExploration3 from './barreirinhas/exploration_3';
 import mapData from '../data/mapData.json';
 
 function MapOverlay({ selectedZone = 'rio', selectedYear = '2025', activeLegendItems = {} }) {

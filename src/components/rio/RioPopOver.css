@@ -74,7 +74,7 @@
 
 .rio-popover-badge-text {
   color: #343434;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 13px;
   font-weight: 400;
   line-height: normal;
@@ -82,7 +82,7 @@
 
 .rio-popover-title {
   color: #343434;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 24px;
   font-weight: 700;
   line-height: normal;
@@ -104,7 +104,7 @@
 
 .rio-popover-ventures-title {
   color: #616161;
-  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellMedium';
   font-size: 13px;
   font-weight: 500;
   line-height: normal;
@@ -135,7 +135,7 @@
 
 .rio-popover-venture-name {
   color: #343434;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
@@ -159,20 +159,20 @@
 .rio-popover-facility-text,
 .rio-popover-ownership-text {
   color: #616161;
-  font-family: 'ShellBook', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBook';
   font-size: 13px;
   font-weight: 400;
   line-height: normal;
 }
 
 .rio-popover-ownership-text {
-  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellMedium';
   font-weight: 500;
 }
 
 .rio-popover-separator {
   color: #616161;
-  font-family: 'ShellMedium', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellMedium';
   font-size: 13px;
   font-weight: 500;
   opacity: 0.5;
@@ -190,7 +190,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   color: #343434;
-  font-family: 'ShellBold', -apple-system, Roboto, Helvetica, sans-serif;
+  font-family: 'ShellBold';
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
