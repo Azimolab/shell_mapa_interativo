@@ -12,6 +12,7 @@ function App() {
   const [activeLegendItems, setActiveLegendItems] = useState({
     exploration: true,
     production: true,
+    development: true,
     decommissioning: true
   });
   const [isPlaying, setIsPlaying] = useState(false);
@@ -138,6 +139,9 @@ function App() {
         <PinInteractionManager
           selectedZone={selectedZone}
           selectedYear={selectedYear}
+          activeLegendItems={activeLegendItems}
+          isPlaying={isPlaying}
+          onPauseTimeline={() => setIsPlaying(false)}
         />
 
         {/* Toolbar positioned middle-right */}
