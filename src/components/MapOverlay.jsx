@@ -14,25 +14,12 @@ function MapOverlay({ selectedZone = 'rio', selectedYear = '2025', activeLegendI
   const [isRioExploration3Open, setIsRioExploration3Open] = useState(false);
   const [isRioProduction1Open, setIsRioProduction1Open] = useState(false);
   const [isRioProduction2Open, setIsRioProduction2Open] = useState(false);
-  const [isPelotasExploration1Open, setIsPelotasExploration1Open] = useState(false);
-  const [isPelotasExploration2Open, setIsPelotasExploration2Open] = useState(false);
-  const [isPotiguarExploration1Open, setIsPotiguarExploration1Open] = useState(false);
-  const [isPotiguarExploration2Open, setIsPotiguarExploration2Open] = useState(false);
-  const [isBarreirinhasExploration1Open, setIsBarreirinhasExploration1Open] = useState(false);
-  const [isBarreirinhasExploration2Open, setIsBarreirinhasExploration2Open] = useState(false);
-  const [isBarreirinhasExploration3Open, setIsBarreirinhasExploration3Open] = useState(false);
 
   // Return null if no data available for the selected zone/year
   const currentData = mapData[selectedYear]?.[selectedZone] || mapData['2025']?.rio || {};
 
   // Only show Rio popover when zone is 'rio'
   const showRioPopovers = selectedZone === 'rio';
-  // Show Pelotas popovers when zone is 'pelotas'
-  const showPelotasPopovers = selectedZone === 'pelotas';
-  // Show Potiguar popovers when zone is 'potiguar'
-  const showPotiguarPopovers = selectedZone === 'potiguar';
-  // Show Barreirinhas popovers when zone is 'barreirinhas'
-  const showBarreirinhasPopovers = selectedZone === 'barreirinhas';
 
   const handlePinClick = (pin, type) => {
     if (selectedZone === 'rio') {
@@ -52,32 +39,6 @@ function MapOverlay({ selectedZone = 'rio', selectedYear = '2025', activeLegendI
           setIsRioProduction2Open(true);
         }
       }
-    } else if (selectedZone === 'pelotas' && type === 'exploration') {
-      console.log('Pelotas pin clicked:', pin.id, pin.number);
-      // For Pelotas exploration pins, open specific exploration component based on pin id
-      if (pin.id === 'pel_exp1') {
-        setIsPelotasExploration1Open(true);
-      } else if (pin.id === 'pel_exp2') {
-        setIsPelotasExploration2Open(true);
-      }
-    } else if (selectedZone === 'potiguar' && type === 'exploration') {
-      console.log('Potiguar pin clicked:', pin.id, pin.number);
-      // For Potiguar exploration pins, open specific exploration component based on pin id
-      if (pin.id === 'pot_exp1') {
-        setIsPotiguarExploration1Open(true);
-      } else if (pin.id === 'pot_exp2') {
-        setIsPotiguarExploration2Open(true);
-      }
-    } else if (selectedZone === 'barreirinhas' && type === 'exploration') {
-      console.log('Barreirinhas pin clicked:', pin.id, pin.number);
-      // For Barreirinhas exploration pins, open specific exploration component based on pin id
-      if (pin.id === 'barr_exp1') {
-        setIsBarreirinhasExploration1Open(true);
-      } else if (pin.id === 'barr_exp2') {
-        setIsBarreirinhasExploration2Open(true);
-      } else if (pin.id === 'barr_exp3') {
-        setIsBarreirinhasExploration3Open(true);
-      }
     }
   };
 
@@ -85,8 +46,7 @@ function MapOverlay({ selectedZone = 'rio', selectedYear = '2025', activeLegendI
     if (!visible) return null;
 
     const isClickable = 
-      (selectedZone === 'rio' && (type === 'exploration' || type === 'production')) ||
-      ((selectedZone === 'pelotas' || selectedZone === 'potiguar' || selectedZone === 'barreirinhas') && type === 'exploration');
+      (selectedZone === 'rio' && (type === 'exploration' || type === 'production'));
 
     return (
       <div
@@ -321,56 +281,6 @@ function MapOverlay({ selectedZone = 'rio', selectedYear = '2025', activeLegendI
           <RioProduction2
             isOpen={isRioProduction2Open}
             onClose={() => setIsRioProduction2Open(false)}
-          />
-        </>
-      )}
-
-      {/* Pelotas-specific Exploration Components - only render for Pelotas zone */}
-      {showPelotasPopovers && (
-        <>
-          <PelotasExploration1
-            isOpen={isPelotasExploration1Open}
-            onClose={() => setIsPelotasExploration1Open(false)}
-          />
-
-          <PelotasExploration2
-            isOpen={isPelotasExploration2Open}
-            onClose={() => setIsPelotasExploration2Open(false)}
-          />
-        </>
-      )}
-
-      {/* Potiguar-specific Exploration Components - only render for Potiguar zone */}
-      {showPotiguarPopovers && (
-        <>
-          <PotiguarExploration1
-            isOpen={isPotiguarExploration1Open}
-            onClose={() => setIsPotiguarExploration1Open(false)}
-          />
-
-          <PotiguarExploration2
-            isOpen={isPotiguarExploration2Open}
-            onClose={() => setIsPotiguarExploration2Open(false)}
-          />
-        </>
-      )}
-
-      {/* Barreirinhas-specific Exploration Components - only render for Barreirinhas zone */}
-      {showBarreirinhasPopovers && (
-        <>
-          <BarreirinhasExploration1
-            isOpen={isBarreirinhasExploration1Open}
-            onClose={() => setIsBarreirinhasExploration1Open(false)}
-          />
-
-          <BarreirinhasExploration2
-            isOpen={isBarreirinhasExploration2Open}
-            onClose={() => setIsBarreirinhasExploration2Open(false)}
-          />
-
-          <BarreirinhasExploration3
-            isOpen={isBarreirinhasExploration3Open}
-            onClose={() => setIsBarreirinhasExploration3Open(false)}
           />
         </>
       )}
