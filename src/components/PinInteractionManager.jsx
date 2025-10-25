@@ -95,20 +95,39 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       console.log('⏳ Timeline foi pausada, aguardando SVG estabilizar...');
       setTimeout(() => {
         // Re-buscar o elemento pelo ID para garantir que temos a referência correta
-        const svgElement = document.querySelector('.svg-map-content svg');
-        if (svgElement && pinId) {
-          const freshElement = svgElement.querySelector(`#${CSS.escape(pinId)}`);
-          if (freshElement) {
-            console.log('✅ Elemento re-encontrado após pausa da timeline');
-            processPin(freshElement);
+        // Considerar múltiplos containers durante transição
+        const svgContainers = document.querySelectorAll('.svg-map-content');
+        
+        if (svgContainers.length > 0 && pinId) {
+          // Pegar o container correto (z-index 2 se houver múltiplos)
+          let targetContainer = svgContainers[svgContainers.length - 1];
+          if (svgContainers.length > 1) {
+            for (const container of svgContainers) {
+              const parent = container.parentElement;
+              if (parent && getComputedStyle(parent).zIndex === '2') {
+                targetContainer = container;
+                break;
+              }
+            }
+          }
+          
+          const svgElement = targetContainer.querySelector('svg');
+          if (svgElement) {
+            const freshElement = svgElement.querySelector(`#${CSS.escape(pinId)}`);
+            if (freshElement) {
+              console.log('✅ Elemento re-encontrado após pausa da timeline');
+              processPin(freshElement);
+            } else {
+              console.warn('⚠️ Elemento não encontrado, usando elemento original');
+              processPin(element);
+            }
           } else {
-            console.warn('⚠️ Elemento não encontrado, usando elemento original');
             processPin(element);
           }
         } else {
           processPin(element);
         }
-      }, 150);
+      }, 150); // 1300ms para aguardar a transição do SVGMap (1000ms) + margem
     } else {
       // Timeline já estava pausada, processar imediatamente
       processPin(element);
@@ -116,7 +135,30 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
   }, [isPlaying, onPauseTimeline]);
 
   const setupPinListeners = useCallback(() => {
-    const svgElement = document.querySelector('.svg-map-content svg');
+    // IMPORTANTE: Há dois .svg-map-content durante a transição (fade-in e fade-out)
+    // Precisamos pegar o SVG correto (z-index 2, o que está fazendo fade-in)
+    const svgContainers = document.querySelectorAll('.svg-map-content');
+    
+    if (svgContainers.length === 0) {
+      console.warn('⚠️ Nenhum container SVG encontrado');
+      return;
+    }
+    
+    // Se há múltiplos containers (durante transição), pegar o com z-index maior (o novo)
+    let targetContainer = svgContainers[0];
+    if (svgContainers.length > 1) {
+      // Pegar o container cujo pai tem z-index 2
+      for (const container of svgContainers) {
+        const parent = container.parentElement;
+        if (parent && getComputedStyle(parent).zIndex === '2') {
+          targetContainer = container;
+          console.log('🎯 Usando SVG com z-index 2 (novo SVG)');
+          break;
+        }
+      }
+    }
+    
+    const svgElement = targetContainer.querySelector('svg');
     if (!svgElement) {
       console.warn('⚠️ SVG element not found for pin listeners.');
       return;
@@ -138,35 +180,49 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     
     const pinElements = svgElement.querySelectorAll(selectors.join(', '));
     
-    console.log(`📍 Found ${pinElements.length} interactive pin elements`);
+    console.log(`📍 Found ${pinElements.length} interactive pin elements (containers: ${svgContainers.length})`);
 
     let listenersAdded = 0;
     pinElements.forEach((element) => {
       // Remover listener antigo se existir (previne duplicação)
       element.removeEventListener('click', handlePinClick);
       
-      // Adicionar cursor pointer
+      // Adicionar cursor pointer e garantir que o elemento é clicável
       element.style.cursor = 'pointer';
       element.style.pointerEvents = 'auto';
       
-      // Remover listener existente (se houver) para evitar duplicação
-      element.removeEventListener('click', handlePinClick);
-      
       // Adicionar event listener
-      element.addEventListener('click', handlePinClick);
+      element.addEventListener('click', handlePinClick, { passive: false });
       
       // Marcar como processado para debug
       element.dataset.listenerAdded = 'true';
+      element.dataset.listenerAddedAt = Date.now();
       
       listenersAdded++;
     });
     
-    console.log(`✅ ${listenersAdded} listeners adicionados com sucesso`);
+    console.log(`✅ ${listenersAdded} listeners adicionados com sucesso em`, new Date().toISOString());
+    
+    // Verificação final: testar se pelo menos um elemento tem o listener
+    if (listenersAdded > 0) {
+      const firstPin = pinElements[0];
+      console.log('🔍 Primeiro pin configurado:', {
+        id: firstPin.id,
+        hasListener: firstPin.dataset.listenerAdded === 'true',
+        cursor: firstPin.style.cursor,
+        pointerEvents: firstPin.style.pointerEvents
+      });
+    }
   }, [handlePinClick]);
 
   const removePinListeners = useCallback(() => {
-    const svgElement = document.querySelector('.svg-map-content svg');
-    if (!svgElement) return;
+    // Remover listeners de TODOS os containers SVG (pode haver 2 durante transição)
+    const svgContainers = document.querySelectorAll('.svg-map-content');
+    
+    if (svgContainers.length === 0) {
+      console.log('⚠️ removePinListeners: Nenhum container SVG encontrado');
+      return;
+    }
 
     const selectors = [
       'g[id^="Pin_"]',
@@ -180,12 +236,27 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       'g[class*="GrayPin"]'
     ];
     
-    const pinElements = svgElement.querySelectorAll(selectors.join(', '));
-
-    pinElements.forEach((element) => {
-      element.removeEventListener('click', handlePinClick);
-      delete element.dataset.listenerAdded;
+    let totalListenersRemoved = 0;
+    
+    svgContainers.forEach((container, index) => {
+      const svgElement = container.querySelector('svg');
+      if (!svgElement) return;
+      
+      const pinElements = svgElement.querySelectorAll(selectors.join(', '));
+      
+      pinElements.forEach((element) => {
+        if (element.dataset.listenerAdded === 'true') {
+          totalListenersRemoved++;
+        }
+        element.removeEventListener('click', handlePinClick);
+        delete element.dataset.listenerAdded;
+        delete element.dataset.listenerAddedAt;
+      });
     });
+    
+    if (totalListenersRemoved > 0) {
+      console.log(`🗑️ ${totalListenersRemoved} listeners removidos de ${svgContainers.length} container(s)`);
+    }
   }, [handlePinClick]);
 
   // useEffect principal para gerenciar os listeners
@@ -197,33 +268,87 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       activeLegendItems 
     });
 
+    // Limpar listeners existentes imediatamente
+    removePinListeners();
+
     // Função para tentar adicionar os listeners com retry
     let attempts = 0;
-    const maxAttempts = 15;
+    const maxAttempts = 20; // Aumentado para lidar com transições durante play
     let timerId = null;
     let isCleanedUp = false;
 
     const trySetupListeners = () => {
       if (isCleanedUp) return;
       
-      const svgElement = document.querySelector('.svg-map-content svg');
+      // Buscar todos os containers (pode haver 2 durante transição)
+      const svgContainers = document.querySelectorAll('.svg-map-content');
+      
+      if (svgContainers.length === 0) {
+        // Nenhum container encontrado, tentar novamente
+        attempts++;
+        if (attempts < maxAttempts) {
+          console.log('⏳ Tentativa', attempts, 'de', maxAttempts, '- Nenhum container encontrado');
+          timerId = setTimeout(trySetupListeners, 150);
+        } else {
+          console.warn('❌ Não foi possível encontrar o SVG após', maxAttempts, 'tentativas');
+        }
+        return;
+      }
+      
+      // Se houver múltiplos, pegar o com z-index 2 (novo)
+      let targetContainer = svgContainers[svgContainers.length - 1]; // Por padrão, o último
+      if (svgContainers.length > 1) {
+        for (const container of svgContainers) {
+          const parent = container.parentElement;
+          if (parent && getComputedStyle(parent).zIndex === '2') {
+            targetContainer = container;
+            break;
+          }
+        }
+      }
+      
+      const svgElement = targetContainer.querySelector('svg');
       
       if (svgElement && svgElement.querySelector('g')) {
         // SVG está pronto e tem elementos dentro
-        console.log('✅ SVG pronto, configurando listeners (tentativa:', attempts + 1, ')');
-        setupPinListeners();
+        console.log('✅ SVG pronto, configurando listeners (tentativa:', attempts + 1, ', containers:', svgContainers.length, ')');
+        
+        // Verificar se os elementos realmente existem antes de adicionar listeners
+        const testSelectors = [
+          'g[id^="Pin_"]',
+          'g[id^="GreenPin"]',
+          'g[id^="RedPin"]',
+          'g[id^="PurplePin"]',
+          'g[id^="GrayPin"]'
+        ];
+        
+        const hasElements = testSelectors.some(selector => 
+          svgElement.querySelector(selector) !== null
+        );
+        
+        if (hasElements) {
+          setupPinListeners();
+        } else {
+          console.log('⚠️ SVG existe mas não tem pins, tentando novamente...');
+          attempts++;
+          if (attempts < maxAttempts) {
+            timerId = setTimeout(trySetupListeners, 100);
+          }
+        }
       } else if (attempts < maxAttempts) {
         // Tentar novamente após um delay
         attempts++;
         console.log('⏳ Tentativa', attempts, 'de', maxAttempts);
-        timerId = setTimeout(trySetupListeners, 100);
+        timerId = setTimeout(trySetupListeners, 150);
       } else {
         console.warn('❌ Não foi possível encontrar o SVG após', maxAttempts, 'tentativas');
       }
     };
 
-    // Aguardar um pouco antes de começar as tentativas
-    const initialTimer = setTimeout(trySetupListeners, 100);
+    // Delay inicial: aguardar a transição do SVGMap terminar (1000ms) + margem de segurança
+    // O SVGMap faz crossfade por 1000ms, então precisamos aguardar isso
+    const initialDelay = 1200; // 1200ms para garantir que a transição terminou
+    const initialTimer = setTimeout(trySetupListeners, initialDelay);
 
     return () => {
       console.log('🧹 Cleanup do PinInteractionManager');
