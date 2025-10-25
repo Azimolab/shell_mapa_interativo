@@ -16,6 +16,11 @@ function PinInteractionManager({ selectedYear, selectedZone }) {
   const [anchorEl, setAnchorEl] = useState(null);
 
   useEffect(() => {
+    // Resetar estado do popover quando ano ou zona mudar
+    setActivePopover(null);
+    setPopoverData(null);
+    setAnchorEl(null);
+
     // Aguardar a renderização do SVG
     const timer = setTimeout(() => {
       setupPinListeners();
@@ -75,16 +80,11 @@ function PinInteractionManager({ selectedYear, selectedZone }) {
     console.log(`Found ${pinElements.length} interactive pin elements`);
 
     pinElements.forEach((element) => {
-      // Evitar adicionar listener múltiplas vezes
-      if (element.dataset.listenerAdded === 'true') {
-        return;
-      }
-      
-      // Marcar como processado
-      element.dataset.listenerAdded = 'true';
-      
       // Adicionar cursor pointer
       element.style.cursor = 'pointer';
+      
+      // Remover listener existente (se houver) para evitar duplicação
+      element.removeEventListener('click', handlePinClick);
       
       // Adicionar event listener
       element.addEventListener('click', handlePinClick);
@@ -111,7 +111,6 @@ function PinInteractionManager({ selectedYear, selectedZone }) {
 
     pinElements.forEach((element) => {
       element.removeEventListener('click', handlePinClick);
-      element.dataset.listenerAdded = 'false';
     });
   };
 

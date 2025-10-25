@@ -21,11 +21,13 @@
 /* Classe para aplicar fade-out */
 .svg-map-fade-out {
   animation: fadeOut 1000ms ease-in-out forwards;
+  will-change: opacity;
 }
 
 /* Classe para aplicar fade-in */
 .svg-map-fade-in {
   animation: fadeIn 1000ms ease-in-out forwards;
+  will-change: opacity;
 }
 
 /* Container para transição - ambos os mapas sobrepostos */
@@ -41,11 +43,24 @@
   left: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
+}
+
+/* O layer ativo (z-index mais alto) deve ter pointer-events */
+.svg-transition-layer[style*="z-index: 2"] {
+  pointer-events: auto;
 }
 
 /* Garantir que o SVG ocupe todo o espaço durante transição */
 .svg-transition-layer .svg-map-content {
   width: 100%;
   height: 100%;
+}
+
+/* Otimização de performance para transições suaves */
+.svg-map-container {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
