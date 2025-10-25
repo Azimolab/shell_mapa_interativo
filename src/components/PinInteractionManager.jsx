@@ -10,7 +10,7 @@ import pinsInfo from '../data/pinsInfo.json';
  * Componente responsável por gerenciar as interações com os pins do SVG
  * e abrir os popovers correspondentes
  */
-function PinInteractionManager({ selectedYear, selectedZone }) {
+function PinInteractionManager({ selectedYear, selectedZone, onPopoverStateChange }) {
   const [activePopover, setActivePopover] = useState(null);
   const [popoverData, setPopoverData] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -167,6 +167,7 @@ function PinInteractionManager({ selectedYear, selectedZone }) {
       console.log('📋 Setting activePopover to:', pinData.popoverType);
       setPopoverData(pinData);
       setActivePopover(pinData.popoverType);
+      onPopoverStateChange?.(true);
     } else {
       console.warn('⚠️ No data found for pin:', pinId, 'mapped to:', mappedId);
       console.warn('📦 Available pins:', Object.keys(pinsInfo.pins));
@@ -177,6 +178,7 @@ function PinInteractionManager({ selectedYear, selectedZone }) {
         console.log('🔄 Using generic type:', genericType);
         setPopoverData(genericType);
         setActivePopover(genericType.popoverType);
+        onPopoverStateChange?.(true);
       }
     }
   };
@@ -318,6 +320,7 @@ function PinInteractionManager({ selectedYear, selectedZone }) {
     setActivePopover(null);
     setPopoverData(null);
     setAnchorEl(null);
+    onPopoverStateChange?.(false);
   };
 
   // Debug logs

@@ -118,6 +118,12 @@ function App() {
     }));
   };
 
+  const handlePopoverStateChange = (isOpen) => {
+    if (isOpen) {
+      setIsPlaying(false);
+    }
+  };
+
   return (
     <div className="w-full h-full relative overflow-hidden">
       {/* Background dividido em duas metades */}
@@ -138,6 +144,7 @@ function App() {
         <PinInteractionManager
           selectedZone={selectedZone}
           selectedYear={selectedYear}
+          onPopoverStateChange={handlePopoverStateChange}
         />
 
         {/* Toolbar positioned middle-right */}
