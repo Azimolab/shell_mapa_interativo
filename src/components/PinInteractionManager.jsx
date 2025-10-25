@@ -118,6 +118,9 @@ function PinInteractionManager({ selectedYear, selectedZone, onPopoverStateChang
   const handlePinClick = (event) => {
     event.stopPropagation();
     
+    // Pausar a timeline imediatamente antes de qualquer processamento
+    onPopoverStateChange?.(true);
+    
     const element = event.currentTarget;
     let pinId = element.id || element.getAttribute('data-pin-id');
     const pinClass = element.className?.baseVal || element.className;
@@ -167,7 +170,6 @@ function PinInteractionManager({ selectedYear, selectedZone, onPopoverStateChang
       console.log('📋 Setting activePopover to:', pinData.popoverType);
       setPopoverData(pinData);
       setActivePopover(pinData.popoverType);
-      onPopoverStateChange?.(true);
     } else {
       console.warn('⚠️ No data found for pin:', pinId, 'mapped to:', mappedId);
       console.warn('📦 Available pins:', Object.keys(pinsInfo.pins));
@@ -178,7 +180,9 @@ function PinInteractionManager({ selectedYear, selectedZone, onPopoverStateChang
         console.log('🔄 Using generic type:', genericType);
         setPopoverData(genericType);
         setActivePopover(genericType.popoverType);
-        onPopoverStateChange?.(true);
+      } else {
+        // Se não encontrar nenhum popover para abrir, retomar o estado da timeline
+        onPopoverStateChange?.(false);
       }
     }
   };
