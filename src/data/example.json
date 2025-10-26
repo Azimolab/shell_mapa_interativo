@@ -1,95 +1,157 @@
 {
-    "productionPins": [
-        {
-            "id": "prod1",
-            "svgId": "GreenPin_7-GatoDoMato",
-            "type": "production",
-            "popoverType": "production_type1",
-            "status": {
-                "label": "Em produção",
-                "icon": "production"
-            },
-            "title": "BM-S-11 - Lula",
-            "tags": [
-                "Lula Central",
-                "Lula Alto",
-                "Lula Norte",
-                "Lula Nordeste",
-                "Lula Extremo Sul"
-            ],
-            "operator": {
-                "name": "Petrobras",
-                "description": "Responsável pela administração do campo"
-            },
-            "depth": {
-                "value": "~2.100-2.200m",
-                "description": "Distância da superfície do mar até o fundo"
-            },
-            "companies": [
+    "PRÉ 2013": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [
                 {
-                    "name": "Petrobras",
-                    "percentage": 65,
-                    "isOperator": true
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 50
+                        },
+                        {
+                            "color": "#616161",
+                            "id": "chevron",
+                            "isOperator": false,
+                            "name": "Chevron",
+                            "percentage": 30
+                        },
+                        {
+                            "color": "#616161",
+                            "id": "qatar",
+                            "isOperator": false,
+                            "name": "Qatar Petroleum",
+                            "percentage": 20
+                        }
+                    ],
+                    "depth": "~1.720-2.050m",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp1",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "BM-S-11A - Iara"
                 },
                 {
-                    "name": "Shell",
-                    "percentage": 10,
-                    "isOperator": false
-                },
-                {
-                    "name": "TotalEnergies",
-                    "percentage": 10,
-                    "isOperator": false
-                },
-                {
-                    "name": "CNOOC",
-                    "percentage": 10,
-                    "isOperator": false
-                },
-                {
-                    "name": "Petrogal",
-                    "percentage": 5,
-                    "isOperator": false
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 70
+                        },
+                        {
+                            "color": "#616161",
+                            "id": "ecopetrol",
+                            "isOperator": false,
+                            "name": "Ecopetrol",
+                            "percentage": 30
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp2",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719"
                 }
             ],
-            "infrastructure": {
-                "title": "8 FPSOs em operação",
-                "description": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
-                "items": [
-                    {
-                        "id": 1,
-                        "name": "FPSO Cidade de Angra dos Reis"
+            "productionPins": [
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 80
+                        },
+                        {
+                            "color": "#616161",
+                            "id": "chevron",
+                            "isOperator": false,
+                            "name": "Chevron",
+                            "percentage": 20
+                        }
+                    ],
+                    "depth": "~400-870m",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod1",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "Fluminense",
+                                "number": 1
+                            }
+                        ]
                     },
-                    {
-                        "id": 2,
-                        "name": "FPSO Cidade de Paraty"
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Bijupirá & Salema"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 50
+                        },
+                        {
+                            "color": "#616161",
+                            "id": "ongc",
+                            "isOperator": false,
+                            "name": "ONGC",
+                            "percentage": 27
+                        },
+                        {
+                            "color": "#616161",
+                            "id": "qatar",
+                            "isOperator": false,
+                            "name": "Qatar Petroleum",
+                            "percentage": 23
+                        }
+                    ],
+                    "depth": "~1.780m",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod2",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "Espírito Santo",
+                                "number": 1
+                            }
+                        ]
                     },
-                    {
-                        "id": 3,
-                        "name": "FPSO Cidade de Mangaratiba"
-                    },
-                    {
-                        "id": 4,
-                        "name": "FPSO Cidade de Saquarema"
-                    },
-                    {
-                        "id": 5,
-                        "name": "FPSO Cidade de Maricá"
-                    },
-                    {
-                        "id": 6,
-                        "name": "FPSO Cidade de Itaguaí"
-                    },
-                    {
-                        "id": 7,
-                        "name": "P-66"
-                    },
-                    {
-                        "id": 8,
-                        "name": "P-67"
-                    }
-                ]
-            }
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Parque das Conchas"
+                },
+                {
+                    "id": "prod3",
+                    "number": null
+                }
+            ]
         }
-    ]
+    }
 }
