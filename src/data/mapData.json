@@ -3135,31 +3135,24 @@
           "id": "exp1",
           "number": 26,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia Pelotas",
           "status": "Em exploração",
-          "operator": "Shell",
+          "operator": "Petrobrás",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~1.600-3.500m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 50,
+              "percentage": 30,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
-            },
-            {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 70,
               "color": "#616161",
               "isOperator": false
             }
@@ -3169,24 +3162,31 @@
           "id": "exp2",
           "number": 3,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia Pelotas",
           "status": "Em exploração",
-          "operator": "Shell",
+          "operator": "Petrobrás",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.250-3.250m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
-              "name": "Shell*",
-              "percentage": 70,
+              "name": "Shell",
+              "percentage": 30,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
+              "id": "petrobras",
+              "name": "Petrobrás*",
+              "percentage": 50,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "cnooc",
+              "name": "CNOOC",
+              "percentage": 20,
               "color": "#616161",
               "isOperator": false
             }
@@ -3584,31 +3584,24 @@
           "id": "exp1",
           "number": 26,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia Pelotas",
           "status": "Em exploração",
-          "operator": "Shell",
+          "operator": "Petrobrás",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~1.600-3.500m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 50,
+              "percentage": 30,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
-            },
-            {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 70,
               "color": "#616161",
               "isOperator": false
             }
@@ -3618,24 +3611,31 @@
           "id": "exp2",
           "number": 3,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia Pelotas",
           "status": "Em exploração",
-          "operator": "Shell",
+          "operator": "Petrobrás",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.250-3.250m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
-              "name": "Shell*",
-              "percentage": 70,
+              "name": "Shell",
+              "percentage": 30,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
+              "id": "petrobras",
+              "name": "Petrobrás*",
+              "percentage": 50,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "cnooc",
+              "name": "CNOOC",
+              "percentage": 20,
               "color": "#616161",
               "isOperator": false
             }
