@@ -3,13 +3,38 @@ import RioLocationPopover from './rio/RioLocationPopover';
 import SPLocationPopover from './rio/SPLocationPopover';
 import MacaeLocationPopover from './rio/MacaeLocationPopover';
 import PopoverPins from './popovers/PopoverPins';
-import pinsInfo from '../data/pinsInfo.json';
+import mapData from '../data/mapData.json';
 
 /**
  * Componente responsável por gerenciar as interações com os pins do SVG
  * e abrir os popovers correspondentes
  */
 function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, isPlaying, onPauseTimeline }) {
+  
+  /**
+   * Busca um pin em mapData.json pela estrutura hierárquica ano/zona/tipo
+   * @param {string} pinId - ID do pin a ser buscado (ex: 'exp1', 'prod2')
+   * @param {string} year - Ano selecionado (ex: '2013', '2020')
+   * @param {string} zone - Zona selecionada (ex: 'rio', 'barreirinhas')
+   * @returns {Object|null} - Dados do pin ou null se não encontrado
+   */
+  const findPinInMapData = useCallback((pinId, year, zone) => {
+    if (!mapData[year] || !mapData[year][zone]) return null;
+    
+    const regionData = mapData[year][zone];
+    const pinArrays = [
+      regionData.explorationPins || [],
+      regionData.productionPins || [],
+      regionData.decommissioningPins || []
+    ];
+    
+    for (const array of pinArrays) {
+      const pin = array.find(p => p.id === pinId);
+      if (pin) return pin;
+    }
+    
+    return null;
+  }, []);
   const [activePopover, setActivePopover] = useState(null);
   const [popoverData, setPopoverData] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -41,21 +66,23 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       
       console.log('Mapped ID:', mappedId);
 
-      // Buscar dados do pin no JSON (apenas em pins)
+      // Buscar dados do pin no mapData.json usando a estrutura hierárquica
       let pinData = null;
       
       // Tentar buscar com ID mapeado
-      pinData = pinsInfo.pins[mappedId];
+      pinData = findPinInMapData(mappedId, selectedYear, selectedZone);
       
       // Se não encontrou, tentar com ID original limpo
       if (!pinData) {
         let cleanId = pinId.replace(/^(pin_|pin-|location_|location-)/i, '');
-        pinData = pinsInfo.pins[cleanId];
+        pinData = findPinInMapData(cleanId, selectedYear, selectedZone);
       }
       
       console.log('Search results:', {
         mappedId,
-        foundInPins: !!pinsInfo.pins[mappedId],
+        year: selectedYear,
+        zone: selectedZone,
+        foundPin: !!pinData,
         pinData
       });
       
@@ -66,7 +93,7 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
         setActivePopover(pinData.popoverType);
       } else {
         console.warn('⚠️ No data found for pin:', pinId, 'mapped to:', mappedId);
-        console.warn('📦 Available pins:', Object.keys(pinsInfo.pins));
+        console.warn('📦 Context:', { year: selectedYear, zone: selectedZone });
         
         // Fallback: mostrar popover genérico baseado no tipo
         const genericType = identifyGenericType(pinId, pinClass);
@@ -120,7 +147,7 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       // Timeline já estava pausada, processar imediatamente
       processPin(element);
     }
-  }, [isPlaying, onPauseTimeline]);
+  }, [isPlaying, onPauseTimeline, findPinInMapData, selectedYear, selectedZone]);
 
   const setupPinListeners = useCallback(() => {
     // IMPORTANTE: Há dois .svg-map-content durante a transição (fade-in e fade-out)
