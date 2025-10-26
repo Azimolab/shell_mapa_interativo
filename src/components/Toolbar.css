@@ -16,7 +16,6 @@
 
 /* Main Container */
 .idiom-por {
-  display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: -1px;
@@ -24,7 +23,6 @@
   border: 2.5px solid var(--white-pure);
   background: var(--white-pure);
   box-sizing: border-box;
-  width: 358.5px;
   overflow: hidden;
 }
 

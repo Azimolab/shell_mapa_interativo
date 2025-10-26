@@ -143,31 +143,35 @@ function App() {
           onPauseTimeline={() => setIsPlaying(false)}
         />
 
-        {/* Toolbar positioned middle-right */}
-        <div className="absolute right-[30px] mt-12 mr-[30px] z-10">
-          <Toolbar
-            selectedArea={selectedZone}
-            selectedYear={selectedYear}
-            onAreaSelect={handleAreaSelect}
-            onLegendToggle={handleLegendToggle}
-            activeLegendItems={activeLegendItems}
-            isZoneAvailable={isZoneAvailable}
-          />
-        </div>
+{/* Toolbar responsiva fixada à direita */}
+<div
+  className="absolute top-[3vh] right-[2vw] z-10 h-[85vh] flex flex-col"
+>
+  <Toolbar
+    selectedArea={selectedZone}
+    selectedYear={selectedYear}
+    onAreaSelect={handleAreaSelect}
+    onLegendToggle={handleLegendToggle}
+    activeLegendItems={activeLegendItems}
+    isZoneAvailable={isZoneAvailable}
+  />
+</div>
 
-        {/* Timeline positioned bottom-center */}
-        <div className="absolute bottom-10 right-[-142px] z-10">
-          <Timeline
-            selectedYear={selectedYear}
-            onYearSelect={handleYearSelect}
-            onPlay={handlePlay}
-            isPlaying={isPlaying}
-            speed={playSpeed}
-            onSpeedChange={handleSpeedChange}
-            onLanguageChange={handleLanguageChange}
-            isYearAvailable={isYearAvailable}
-          />
-        </div>
+
+{/* Timeline responsiva fixada no canto inferior direito */}
+<div className="">
+  <Timeline
+    selectedYear={selectedYear}
+    onYearSelect={handleYearSelect}
+    onPlay={handlePlay}
+    isPlaying={isPlaying}
+    speed={playSpeed}
+    onSpeedChange={handleSpeedChange}
+    onLanguageChange={handleLanguageChange}
+    isYearAvailable={isYearAvailable}
+  />
+</div>
+
       </div>
     </div>
   );
