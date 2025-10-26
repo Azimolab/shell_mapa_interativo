@@ -1,0 +1,464 @@
+/* Toolbar.css - Versão 50% do design Figma 4K para 1080p */
+
+/* CSS Variables */
+:root {
+  --white-pure: #FFFFFF;
+  --grey-600: #616161;
+  --grey-400: #919191;
+  --grey-800: #343434;
+  --grey-100: #E0E0E0;
+  --grey-200: #C0C0C0;
+  --ocean-100: #C0E6EC;
+  --grass-x: #BED50F;
+  --ocean-200: #81CCD9;
+  --sky-500: #027FA2;
+}
+
+/* Main Container */
+.idiom-por {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: -1px;
+  border-radius: 8px;
+  border: 2.5px solid var(--white-pure);
+  background: var(--white-pure);
+  box-sizing: border-box;
+  width: 358.5px;
+  overflow: hidden;
+}
+
+/* Map Selector */
+.map-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: -1px;
+  position: relative;
+  width: 100%;
+  margin-bottom: -1px;
+  padding-bottom: 1px;
+}
+
+.header {
+  display: flex;
+  padding: 18px 29px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 8px 8px 0 0;
+  background: var(--white-pure);
+  position: relative;
+  margin-bottom: -1px;
+  padding-bottom: 19px;
+}
+
+.section-title {
+  align-self: stretch;
+  color: var(--grey-600);
+  font-family: 'ShellMedium', sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.menu {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 6px;
+  border: 1px solid var(--grey-400);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--grey-800);
+  font-family: 'ShellBold', sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.btn.active {
+  background: var(--sky-500);
+  color: var(--white-pure);
+  border-color: var(--sky-500);
+}
+
+.btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn:hover:not(.disabled) {
+  opacity: 0.9;
+}
+
+/* Map Selector Content */
+.map-selector-content {
+  background: var(--ocean-100);
+  height: 189.5px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -1px;
+}
+
+.map-vector {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -70px;
+  fill: var(--grass-x);
+  stroke-width: 2.5px;
+  stroke: var(--ocean-200);
+}
+
+.map-title {
+  position: absolute;
+  left: 63px;
+  top: 77.5px;
+  color: var(--grey-800);
+  font-family: 'ShellBold', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.selectors {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.selector {
+  position: absolute;
+  border-radius: 2px;
+  border: 2px solid var(--white-pure);
+  transition: border-color 0.3s ease;
+}
+
+.selector.active {
+  border-color: var(--sky-500);
+}
+
+/* Barreirinhas - S_1 */
+.selector.s-1 {
+  width: 16.5px;
+  height: 14.5px;
+  left: 161px;
+  top: 12px;
+}
+
+/* Potiguar - S_2 */
+.selector.s-2 {
+  width: 16.5px;
+  height: 14.5px;
+  left: 206px;
+  top: 28px;
+}
+
+/* Rio - S_3 */
+.selector.s-3 {
+  width: 66.55px;
+  height: 33.69px;
+  left: 132px;
+  top: 120.19px;
+}
+
+/* Pelotas - S_4 */
+.selector.s-4 {
+  width: 24px;
+  height: 21px;
+  left: 113.5px;
+  top: 162px;
+}
+
+/* Subtitles */
+.subtitles {
+  display: flex;
+  padding: 18px 29px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 0 0 8px 8px;
+  background: var(--white-pure);
+  position: relative;
+  margin-bottom: -1px;
+  padding-bottom: 19px;
+}
+
+/* Blocos Marítimos, Infraestrutura, Informações Adicionais */
+.bloco-maritimo,
+.infraestrutura,
+.informacoes-adicionais {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.filter-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  width: 100%;
+}
+
+/* Menu dentro de Infraestrutura e Informações Adicionais */
+.infraestrutura .menu,
+.informacoes-adicionais .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+/* Legend Items with Toggle Button */
+.exploracao,
+.construcao,
+.producao,
+.descomissionamento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.icon-text {
+  display: flex;
+  flex: 1 0 0;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Icon container para Blocos Marítimos - 36x36px */
+.exploracao .icon-container,
+.construcao .icon-container,
+.producao .icon-container,
+.descomissionamento .icon-container {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--grey-100);
+  flex-shrink: 0;
+}
+
+/* Icon box para Blocos Marítimos - 18x18px dentro do container 36x36px */
+.exploracao .icon-box,
+.construcao .icon-box,
+.producao .icon-box,
+.descomissionamento .icon-box {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.exploracao .icon-box svg,
+.construcao .icon-box svg,
+.producao .icon-box svg,
+.descomissionamento .icon-box svg,
+.exploracao .icon-box img,
+.construcao .icon-box img,
+.producao .icon-box img,
+.descomissionamento .icon-box img {
+  width: 18px;
+  height: 18px;
+  max-width: 18px;
+  max-height: 18px;
+  object-fit: contain;
+  display: block;
+  vertical-align: middle;
+}
+
+.legend-label {
+  color: var(--grey-800);
+  font-family: 'ShellBook', sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.button-default {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-default:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.button-default svg {
+  width: 100%;
+  height: 100%;
+}
+
+.button-default.hidden svg path {
+  fill: #AAAAAA;
+  opacity: 0.5;
+}
+
+/* Simple Legend Items (without toggle) */
+.oleoduto,
+.gasoduto,
+.terceiros,
+.operador,
+.profundidade {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+/* Box icon para Infraestrutura e Informações Adicionais - 36x36px */
+.box-icon {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--grey-100);
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  max-width: 18px;
+  max-height: 18px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+  vertical-align: middle;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  align-self: stretch;
+  background: var(--grey-100);
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  right: 0;
+  bottom: -0.5px;
+  background: var(--grey-200);
+}
+
+/* Estado Desabilitado (quando não há dados) */
+.exploracao.disabled,
+.construcao.disabled,
+.producao.disabled,
+.descomissionamento.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Texto em grey-200 quando desabilitado */
+.exploracao.disabled .legend-label,
+.construcao.disabled .legend-label,
+.producao.disabled .legend-label,
+.descomissionamento.disabled .legend-label {
+  color: var(--grey-200);
+}
+
+/* Ícones em grey-200 quando desabilitado */
+.exploracao.disabled .icon-box img,
+.construcao.disabled .icon-box img,
+.producao.disabled .icon-box img,
+.descomissionamento.disabled .icon-box img {
+  filter: grayscale(100%) brightness(0) opacity(0.3);
+}
+
+/* Borda do container do ícone em grey-200 quando desabilitado */
+.exploracao.disabled .icon-container,
+.construcao.disabled .icon-container,
+.producao.disabled .icon-container,
+.descomissionamento.disabled .icon-container {
+  border-color: var(--grey-200);
+}
+
+/* Botão desabilitado */
+.button-default.disabled {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.5;
+}
+
+.button-default.disabled img {
+  filter: grayscale(100%) brightness(0) opacity(0.3);
+  pointer-events: none !important;
+}
+
+/* Estilo para as imagens dos ícones de olho */
+.button-default img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Timeline from './components/Timeline';
-import Toolbar from './components/ResponsiveToolbar';
+import Toolbar from './components/Toolbar';
 import ShellAllType from './components/ShellAllType';
 import SVGMap from './components/SVGMap';
 import PinInteractionManager from './components/PinInteractionManager';
