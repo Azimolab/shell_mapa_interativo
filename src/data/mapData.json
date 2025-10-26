@@ -181,38 +181,25 @@
   "2016": {
     "barreirinhas": {
       "decommissioningPins": [],
+      "productionPins": [],
       "explorationPins": [
         {
           "id": "exp1",
           "number": 2,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 50,
+              "percentage": 100,
               "color": "#DD1D21",
               "isOperator": true
-            },
-            {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
-            },
-            {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
-              "color": "#616161",
-              "isOperator": false
             }
           ]
         },
@@ -220,26 +207,19 @@
           "id": "exp2",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 70,
+              "percentage": 100,
               "color": "#DD1D21",
               "isOperator": true
-            },
-            {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
             }
           ]
         },
@@ -247,11 +227,11 @@
           "id": "exp3",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1821, S-M-1819, S-M-1914, S-M-1912",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
@@ -263,8 +243,7 @@
             }
           ]
         }
-      ],
-      "productionPins": []
+      ]
     },
     "rio": {
       "decommissioningPins": [],
@@ -463,38 +442,25 @@
   "2017": {
     "barreirinhas": {
       "decommissioningPins": [],
+      "productionPins": [],
       "explorationPins": [
         {
           "id": "exp1",
           "number": 2,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 50,
+              "percentage": 100,
               "color": "#DD1D21",
               "isOperator": true
-            },
-            {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
-            },
-            {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
-              "color": "#616161",
-              "isOperator": false
             }
           ]
         },
@@ -502,26 +468,19 @@
           "id": "exp2",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 70,
+              "percentage": 100,
               "color": "#DD1D21",
               "isOperator": true
-            },
-            {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
             }
           ]
         },
@@ -529,11 +488,11 @@
           "id": "exp3",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1821, S-M-1819, S-M-1914, S-M-1912",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
@@ -545,8 +504,7 @@
             }
           ]
         }
-      ],
-      "productionPins": []
+      ]
     },
     "rio": {
       "decommissioningPins": [],
@@ -749,38 +707,25 @@
   "2018": {
     "barreirinhas": {
       "decommissioningPins": [],
+      "productionPins": [],
       "explorationPins": [
         {
           "id": "exp1",
           "number": 2,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 50,
+              "percentage": 100,
               "color": "#DD1D21",
               "isOperator": true
-            },
-            {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
-            },
-            {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
-              "color": "#616161",
-              "isOperator": false
             }
           ]
         },
@@ -788,26 +733,19 @@
           "id": "exp2",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 70,
+              "percentage": 100,
               "color": "#DD1D21",
               "isOperator": true
-            },
-            {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
             }
           ]
         },
@@ -815,11 +753,11 @@
           "id": "exp3",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1821, S-M-1819, S-M-1914, S-M-1912",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
@@ -831,8 +769,7 @@
             }
           ]
         }
-      ],
-      "productionPins": []
+      ]
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -1110,38 +1047,25 @@
   "2019": {
     "barreirinhas": {
       "decommissioningPins": [],
+      "productionPins": [],
       "explorationPins": [
         {
           "id": "exp1",
           "number": 2,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 50,
+              "percentage": 100,
               "color": "#DD1D21",
               "isOperator": true
-            },
-            {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
-            },
-            {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
-              "color": "#616161",
-              "isOperator": false
             }
           ]
         },
@@ -1149,26 +1073,19 @@
           "id": "exp2",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 70,
+              "percentage": 100,
               "color": "#DD1D21",
               "isOperator": true
-            },
-            {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
             }
           ]
         },
@@ -1176,11 +1093,11 @@
           "id": "exp3",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1821, S-M-1819, S-M-1914, S-M-1912",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
@@ -1192,8 +1109,7 @@
             }
           ]
         }
-      ],
-      "productionPins": []
+      ]
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -1479,16 +1395,17 @@
   "2020": {
     "barreirinhas": {
       "decommissioningPins": [],
+      "productionPins": [],
       "explorationPins": [
         {
           "id": "exp1",
           "number": 2,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
@@ -1499,16 +1416,16 @@
               "isOperator": true
             },
             {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 40,
               "color": "#616161",
               "isOperator": false
             },
             {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
+              "id": "galp",
+              "name": "Galp",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
@@ -1518,24 +1435,31 @@
           "id": "exp2",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 70,
+              "percentage": 50,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 40,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "galp",
+              "name": "Galp",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
@@ -1545,24 +1469,37 @@
           "id": "exp3",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1821, S-M-1819, S-M-1914, S-M-1912",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 100,
+              "percentage": 50,
               "color": "#DD1D21",
               "isOperator": true
+            },
+            {
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 40,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "galp",
+              "name": "Galp",
+              "percentage": 10,
+              "color": "#616161",
+              "isOperator": false
             }
           ]
         }
-      ],
-      "productionPins": []
+      ]
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -1856,16 +1793,17 @@
   "2021": {
     "barreirinhas": {
       "decommissioningPins": [],
+      "productionPins": [],
       "explorationPins": [
         {
           "id": "exp1",
           "number": 2,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
@@ -1876,16 +1814,16 @@
               "isOperator": true
             },
             {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 40,
               "color": "#616161",
               "isOperator": false
             },
             {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
+              "id": "galp",
+              "name": "Galp",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
@@ -1895,24 +1833,31 @@
           "id": "exp2",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 70,
+              "percentage": 50,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 40,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "galp",
+              "name": "Galp",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
@@ -1922,24 +1867,37 @@
           "id": "exp3",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1821, S-M-1819, S-M-1914, S-M-1912",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 100,
+              "percentage": 50,
               "color": "#DD1D21",
               "isOperator": true
+            },
+            {
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 40,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "galp",
+              "name": "Galp",
+              "percentage": 10,
+              "color": "#616161",
+              "isOperator": false
             }
           ]
         }
-      ],
-      "productionPins": []
+      ]
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -2237,16 +2195,17 @@
   "2022": {
     "barreirinhas": {
       "decommissioningPins": [],
+      "productionPins": [],
       "explorationPins": [
         {
           "id": "exp1",
           "number": 2,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
@@ -2257,16 +2216,16 @@
               "isOperator": true
             },
             {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 40,
               "color": "#616161",
               "isOperator": false
             },
             {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
+              "id": "galp",
+              "name": "Galp",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
@@ -2276,24 +2235,31 @@
           "id": "exp2",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 70,
+              "percentage": 50,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 40,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "galp",
+              "name": "Galp",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
@@ -2303,24 +2269,37 @@
           "id": "exp3",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1821, S-M-1819, S-M-1914, S-M-1912",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 100,
+              "percentage": 50,
               "color": "#DD1D21",
               "isOperator": true
+            },
+            {
+              "id": "petrobras",
+              "name": "Petrobrás",
+              "percentage": 40,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "galp",
+              "name": "Galp",
+              "percentage": 10,
+              "color": "#616161",
+              "isOperator": false
             }
           ]
         }
-      ],
-      "productionPins": []
+      ]
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -2622,36 +2601,37 @@
   "2023": {
     "barreirinhas": {
       "decommissioningPins": [],
+      "productionPins": [],
       "explorationPins": [
         {
           "id": "exp1",
           "number": 2,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 50,
+              "percentage": 65,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
+              "id": "pttep",
+              "name": "PTTEP",
+              "percentage": 25,
               "color": "#616161",
               "isOperator": false
             },
             {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
+              "id": "mitsui",
+              "name": "Mitsui",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
@@ -2661,31 +2641,71 @@
           "id": "exp2",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 70,
+              "percentage": 65,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
+              "id": "pttep",
+              "name": "PTTEP",
+              "percentage": 25,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "mitsui",
+              "name": "Mitsui",
+              "percentage": 10,
+              "color": "#616161",
+              "isOperator": false
+            }
+          ]
+        },
+        {
+          "id": "exp3",
+          "number": 4,
+          "popoverType": "exploration_type1",
+          "title": "Bacia de Barreirinhas",
+          "status": "Em exploração",
+          "operator": "Shell",
+          "operatorDescription": "Responsável pela administração do campo",
+          "depth": "~2.500-4.000m",
+          "depthDescription": "Distância da superfície do mar até o fundo",
+          "companies": [
+            {
+              "id": "shell",
+              "name": "Shell*",
+              "percentage": 65,
+              "color": "#DD1D21",
+              "isOperator": true
+            },
+            {
+              "id": "pttep",
+              "name": "PTTEP",
+              "percentage": 25,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "mitsui",
+              "name": "Mitsui",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
           ]
         }
-      ],
-      "productionPins": []
+      ]
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -3063,36 +3083,37 @@
   "2024": {
     "barreirinhas": {
       "decommissioningPins": [],
+      "productionPins": [],
       "explorationPins": [
         {
           "id": "exp1",
           "number": 2,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 50,
+              "percentage": 65,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
+              "id": "pttep",
+              "name": "PTTEP",
+              "percentage": 25,
               "color": "#616161",
               "isOperator": false
             },
             {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
+              "id": "mitsui",
+              "name": "Mitsui",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
@@ -3102,31 +3123,71 @@
           "id": "exp2",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 70,
+              "percentage": 65,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
+              "id": "pttep",
+              "name": "PTTEP",
+              "percentage": 25,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "mitsui",
+              "name": "Mitsui",
+              "percentage": 10,
+              "color": "#616161",
+              "isOperator": false
+            }
+          ]
+        },
+        {
+          "id": "exp3",
+          "number": 4,
+          "popoverType": "exploration_type1",
+          "title": "Bacia de Barreirinhas",
+          "status": "Em exploração",
+          "operator": "Shell",
+          "operatorDescription": "Responsável pela administração do campo",
+          "depth": "~2.500-4.000m",
+          "depthDescription": "Distância da superfície do mar até o fundo",
+          "companies": [
+            {
+              "id": "shell",
+              "name": "Shell*",
+              "percentage": 65,
+              "color": "#DD1D21",
+              "isOperator": true
+            },
+            {
+              "id": "pttep",
+              "name": "PTTEP",
+              "percentage": 25,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "mitsui",
+              "name": "Mitsui",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
           ]
         }
-      ],
-      "productionPins": []
+      ]
     },
     "pelotas": {
       "decommissioningPins": [],
@@ -3512,36 +3573,37 @@
   "2025": {
     "barreirinhas": {
       "decommissioningPins": [],
+      "productionPins": [],
       "explorationPins": [
         {
           "id": "exp1",
           "number": 2,
           "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 50,
+              "percentage": 65,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
+              "id": "pttep",
+              "name": "PTTEP",
+              "percentage": 25,
               "color": "#616161",
               "isOperator": false
             },
             {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
+              "id": "mitsui",
+              "name": "Mitsui",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
@@ -3551,31 +3613,71 @@
           "id": "exp2",
           "number": 4,
           "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
+          "title": "Bacia de Barreirinhas",
           "status": "Em exploração",
           "operator": "Shell",
           "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
+          "depth": "~2.500-4.000m",
           "depthDescription": "Distância da superfície do mar até o fundo",
           "companies": [
             {
               "id": "shell",
               "name": "Shell*",
-              "percentage": 70,
+              "percentage": 65,
               "color": "#DD1D21",
               "isOperator": true
             },
             {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
+              "id": "pttep",
+              "name": "PTTEP",
+              "percentage": 25,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "mitsui",
+              "name": "Mitsui",
+              "percentage": 10,
+              "color": "#616161",
+              "isOperator": false
+            }
+          ]
+        },
+        {
+          "id": "exp3",
+          "number": 4,
+          "popoverType": "exploration_type1",
+          "title": "Bacia de Barreirinhas",
+          "status": "Em exploração",
+          "operator": "Shell",
+          "operatorDescription": "Responsável pela administração do campo",
+          "depth": "~2.500-4.000m",
+          "depthDescription": "Distância da superfície do mar até o fundo",
+          "companies": [
+            {
+              "id": "shell",
+              "name": "Shell*",
+              "percentage": 65,
+              "color": "#DD1D21",
+              "isOperator": true
+            },
+            {
+              "id": "pttep",
+              "name": "PTTEP",
+              "percentage": 25,
+              "color": "#616161",
+              "isOperator": false
+            },
+            {
+              "id": "mitsui",
+              "name": "Mitsui",
+              "percentage": 10,
               "color": "#616161",
               "isOperator": false
             }
           ]
         }
-      ],
-      "productionPins": []
+      ]
     },
     "pelotas": {
       "decommissioningPins": [],
