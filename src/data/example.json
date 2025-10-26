@@ -1,0 +1,95 @@
+{
+    "productionPins": [
+        {
+            "id": "prod1",
+            "svgId": "GreenPin_7-GatoDoMato",
+            "type": "production",
+            "popoverType": "production_type1",
+            "status": {
+                "label": "Em produção",
+                "icon": "production"
+            },
+            "title": "BM-S-11 - Lula",
+            "tags": [
+                "Lula Central",
+                "Lula Alto",
+                "Lula Norte",
+                "Lula Nordeste",
+                "Lula Extremo Sul"
+            ],
+            "operator": {
+                "name": "Petrobras",
+                "description": "Responsável pela administração do campo"
+            },
+            "depth": {
+                "value": "~2.100-2.200m",
+                "description": "Distância da superfície do mar até o fundo"
+            },
+            "companies": [
+                {
+                    "name": "Petrobras",
+                    "percentage": 65,
+                    "isOperator": true
+                },
+                {
+                    "name": "Shell",
+                    "percentage": 10,
+                    "isOperator": false
+                },
+                {
+                    "name": "TotalEnergies",
+                    "percentage": 10,
+                    "isOperator": false
+                },
+                {
+                    "name": "CNOOC",
+                    "percentage": 10,
+                    "isOperator": false
+                },
+                {
+                    "name": "Petrogal",
+                    "percentage": 5,
+                    "isOperator": false
+                }
+            ],
+            "infrastructure": {
+                "title": "8 FPSOs em operação",
+                "description": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                "items": [
+                    {
+                        "id": 1,
+                        "name": "FPSO Cidade de Angra dos Reis"
+                    },
+                    {
+                        "id": 2,
+                        "name": "FPSO Cidade de Paraty"
+                    },
+                    {
+                        "id": 3,
+                        "name": "FPSO Cidade de Mangaratiba"
+                    },
+                    {
+                        "id": 4,
+                        "name": "FPSO Cidade de Saquarema"
+                    },
+                    {
+                        "id": 5,
+                        "name": "FPSO Cidade de Maricá"
+                    },
+                    {
+                        "id": 6,
+                        "name": "FPSO Cidade de Itaguaí"
+                    },
+                    {
+                        "id": 7,
+                        "name": "P-66"
+                    },
+                    {
+                        "id": 8,
+                        "name": "P-67"
+                    }
+                ]
+            }
+        }
+    ]
+}

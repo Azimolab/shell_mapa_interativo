@@ -1,0 +1,53 @@
+/**
+ * Estilos para pins interativos do SVG
+ * Define estados ativos (quando popover está aberto)
+ * Muda cor do rect (fundo) e path Rectangle 2 (triângulo), mantendo ícone intacto
+ */
+
+/* Red Pins - Exploration (vermelho -> #990000) */
+/* Muda o rect (fundo) e o path Rectangle 2 (triângulo), não o Icon */
+g[id*="RedPin"].active rect,
+g[class*="RedPin"].active rect,
+g[id*="RedPin"].active path[id*="Rectangle"],
+g[class*="RedPin"].active path[id*="Rectangle"],
+g[id*="RedPin"].active path[class*="Rectangle"],
+g[class*="RedPin"].active path[class*="Rectangle"] {
+  fill: #990000 !important;
+}
+
+/* Green Pins - Production (verde -> #005531) */
+g[id*="GreenPin"].active rect,
+g[class*="GreenPin"].active rect,
+g[id*="GreenPin"].active path[id*="Rectangle"],
+g[class*="GreenPin"].active path[id*="Rectangle"],
+g[id*="GreenPin"].active path[class*="Rectangle"],
+g[class*="GreenPin"].active path[class*="Rectangle"] {
+  fill: #005531 !important;
+}
+
+/* Purple Pins - Development (roxo -> #50004A) */
+g[id*="PurplePin"].active rect,
+g[class*="PurplePin"].active rect,
+g[id*="PurplePin"].active path[id*="Rectangle"],
+g[class*="PurplePin"].active path[id*="Rectangle"],
+g[id*="PurplePin"].active path[class*="Rectangle"],
+g[class*="PurplePin"].active path[class*="Rectangle"] {
+  fill: #50004A !important;
+}
+
+/* Gray Pins - Decommissioning (cinza -> #343434) */
+g[id*="GrayPin"].active rect,
+g[class*="GrayPin"].active rect,
+g[id*="GrayPin"].active path[id*="Rectangle"],
+g[class*="GrayPin"].active path[id*="Rectangle"],
+g[id*="GrayPin"].active path[class*="Rectangle"],
+g[class*="GrayPin"].active path[class*="Rectangle"] {
+  fill: #343434 !important;
+}
+
+/* Cursor pointer para todos os pins */
+g[id*="Pin"],
+g[class*="Pin"] {
+  cursor: pointer;
+}
+

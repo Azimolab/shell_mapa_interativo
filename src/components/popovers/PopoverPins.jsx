@@ -1,45 +1,253 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import {
   Popover,
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
+import { calculateBestPopoverPosition } from '@/lib/popoverPosition';
 import './PopoverPins.css';
 
+// Importar os ícones de status como URLs
+import IconProducao from '@/assets/icons/popover-producao.svg?url';
+import IconExploracao from '@/assets/icons/popover-exploracao.svg?url';
+import IconDesenvolvimento from '@/assets/icons/popover-desenvolvimento.svg?url';
+import IconDescomissionamento from '@/assets/icons/popover-descomissionamento.svg?url';
+
 /**
- * PopoverPins - Componente de popover para exibição de informações detalhadas de pins
+ * Mapeia o status para o ícone correspondente
+ */
+const getStatusIcon = (status) => {
+  const statusMap = {
+    'Em produção': IconProducao,
+    'Em exploração': IconExploracao,
+    'Em desenvolvimento': IconDesenvolvimento,
+    'Em descomissionamento': IconDescomissionamento,
+  };
+  
+  return statusMap[status] || IconProducao; // Fallback para produção
+};
+
+/**
+ * PopoverPins - Componente de popover UNIVERSAL para exibição de informações de pins
  * Baseado no design do Figma Shell Library
+ * 
+ * Este componente é usado para TODOS os tipos de pins:
+ * - Exploration (Em exploração - RedPin)
+ * - Production (Em produção - GreenPin)
+ * - Development (Em desenvolvimento - PurplePin)
+ * - Decommissioning (Em descomissionamento - GrayPin)
+ * 
+ * O componente se adapta automaticamente aos dados fornecidos.
+ * 
+ * Renderização Condicional (Auto Layout):
+ * - Todos os campos são opcionais exceto title e status
+ * - Seções inteiras são ocultadas se não houver dados
+ * - Dividers aparecem apenas entre seções existentes
  * 
  * @param {boolean} isOpen - Controla a visibilidade do popover
  * @param {Element} anchorEl - Elemento do DOM que serve como âncora para o popover
  * @param {function} onClose - Callback chamado ao fechar o popover
  * @param {object} data - Dados a serem exibidos no popover
- * @param {string} data.status - Status do campo (ex: "Em descomissionamento")
- * @param {string} data.statusIcon - Ícone do status (opcional, usa ícone padrão se não fornecido)
- * @param {string} data.title - Título principal (ex: "BM-S-11A - Iara")
- * @param {array} data.tags - Array de tags (ex: ["Berbigão", "Sururu", "Oeste de Atapú"])
- * @param {string} data.operator - Nome da operadora
- * @param {string} data.operatorDescription - Descrição da operadora
- * @param {string} data.depth - Profundidade (ex: "~400-870m")
- * @param {string} data.depthDescription - Descrição da profundidade
- * @param {array} data.companies - Array de empresas participantes
+ * @param {string|object} data.status - Status do campo
+ * @param {string} [data.status.label] - Label do status (ex: "Em produção", "Em exploração")
+ * @param {string} data.title - Título principal (ex: "BM-S-11 - Lula") [obrigatório]
+ * @param {array} [data.tags] - Array de tags (ex: ["Lula Central", "Lula Alto"])
+ * @param {string|object} [data.operator] - Operadora (string flat ou objeto nested)
+ * @param {string} [data.operator.name] - Nome da operadora
+ * @param {string} [data.operator.description] - Descrição da operadora
+ * @param {string|object} [data.depth] - Profundidade (string flat ou objeto nested)
+ * @param {string} [data.depth.value] - Valor da profundidade (ex: "~2.100-2.200m")
+ * @param {string} [data.depth.description] - Descrição da profundidade
+ * @param {array} [data.companies] - Array de empresas participantes
  * @param {string} data.companies[].name - Nome da empresa
  * @param {number} data.companies[].percentage - Porcentagem de participação
  * @param {boolean} data.companies[].isOperator - Se é a empresa operadora (destaque)
- * @param {string} data.infrastructure - Título da infraestrutura (ex: "2 FPSOs em operação")
- * @param {string} data.infrastructureDescription - Descrição da infraestrutura
- * @param {array} data.infrastructureItems - Array de itens da infraestrutura (ex: ["P68", "P70"])
+ * @param {object} [data.infrastructure] - Infraestrutura associada
+ * @param {string} data.infrastructure.title - Título da infraestrutura (ex: "8 FPSOs em operação")
+ * @param {string} [data.infrastructure.description] - Descrição da infraestrutura
+ * @param {array} [data.infrastructure.items] - Array de itens da infraestrutura
+ * @param {number} data.infrastructure.items[].id - ID do item
+ * @param {string} data.infrastructure.items[].name - Nome do item (ex: "P-74")
  */
 function PopoverPins({ isOpen, anchorEl, onClose, data }) {
   const [triggerPosition, setTriggerPosition] = useState(null);
+  const [popoverPosition, setPopoverPosition] = useState({ side: 'bottom', align: 'center', sideOffset: 27, alignOffset: 0 });
+  const [arrowPosition, setArrowPosition] = useState({ side: 'bottom', offset: '50%' });
+  const popoverRef = useRef(null);
+
+  // Função para calcular a posição da arrow
+  const calculateArrowPosition = (anchorRect, bestPosition, popoverElement) => {
+    if (!popoverElement) return { side: bestPosition.side, offset: '50%' };
+
+    const popoverRect = popoverElement.getBoundingClientRect();
+    const pinCenter = {
+      x: anchorRect.left + anchorRect.width / 2,
+      y: anchorRect.top + anchorRect.height / 2
+    };
+
+    const ARROW_SIZE = 10; // Tamanho da arrow
+    const ARROW_MARGIN = 15; // Margem mínima das bordas do popover
+
+    // DETECTAR AUTOMATICAMENTE qual lado o popover está em relação ao pin
+    const popoverCenter = {
+      x: popoverRect.left + popoverRect.width / 2,
+      y: popoverRect.top + popoverRect.height / 2
+    };
+
+    const distances = {
+      top: pinCenter.y - popoverRect.bottom,
+      bottom: popoverRect.top - pinCenter.y,
+      left: pinCenter.x - popoverRect.right,
+      right: popoverRect.left - pinCenter.x
+    };
+
+    // Encontrar o lado mais próximo (maior valor positivo = lado correto)
+    const actualSide = Object.entries(distances).reduce((max, [side, dist]) => 
+      dist > max.dist ? { side, dist } : max, { side: 'bottom', dist: -Infinity }
+    ).side;
+
+    console.log('🔍 Lado detectado automaticamente:', {
+      bestPositionSide: bestPosition.side,
+      actualSide,
+      distances,
+      pinCenter,
+      popoverRect: {
+        top: popoverRect.top,
+        bottom: popoverRect.bottom,
+        left: popoverRect.left,
+        right: popoverRect.right
+      }
+    });
+
+    let offset = '50%';
+
+    // Calcular offset baseado no lado REAL do popover
+    if (actualSide === 'top' || actualSide === 'bottom') {
+      // Arrow horizontal - calcular offset left/right
+      const popoverLeft = popoverRect.left;
+      const popoverWidth = popoverRect.width;
+      let relativeX = pinCenter.x - popoverLeft;
+      
+      // Aplicar limites SUAVES (apenas para segurança)
+      const minX = ARROW_MARGIN + ARROW_SIZE;
+      const maxX = popoverWidth - ARROW_MARGIN - ARROW_SIZE;
+      const originalX = relativeX;
+      
+      // Se estiver muito fora, limitar, caso contrário deixar apontar para o pin
+      if (relativeX < minX || relativeX > maxX) {
+        relativeX = Math.max(minX, Math.min(maxX, relativeX));
+        console.log('⚠️ Arrow foi limitada (popover pode não estar bem posicionado)');
+      }
+      
+      console.log('🎯 Arrow horizontal:', {
+        originalX,
+        finalX: relativeX,
+        popoverWidth,
+        isPointingToPin: Math.abs(originalX - relativeX) < 1
+      });
+      
+      offset = `${relativeX}px`;
+    } else if (actualSide === 'left' || actualSide === 'right') {
+      // Arrow vertical - calcular offset top/bottom
+      const popoverTop = popoverRect.top;
+      const popoverHeight = popoverRect.height;
+      let relativeY = pinCenter.y - popoverTop;
+      
+      // Aplicar limites SUAVES (apenas para segurança)
+      const minY = ARROW_MARGIN + ARROW_SIZE;
+      const maxY = popoverHeight - ARROW_MARGIN - ARROW_SIZE;
+      const originalY = relativeY;
+      
+      // Se estiver muito fora, limitar, caso contrário deixar apontar para o pin
+      if (relativeY < minY || relativeY > maxY) {
+        relativeY = Math.max(minY, Math.min(maxY, relativeY));
+        console.log('⚠️ Arrow foi limitada (popover pode não estar bem posicionado)');
+      }
+      
+      console.log('🎯 Arrow vertical:', {
+        originalY,
+        finalY: relativeY,
+        popoverHeight,
+        isPointingToPin: Math.abs(originalY - relativeY) < 1
+      });
+      
+      offset = `${relativeY}px`;
+    }
+
+    return {
+      side: actualSide,  // Usar lado detectado automaticamente
+      offset: offset
+    };
+  };
 
   useEffect(() => {
     if (anchorEl && isOpen) {
-      const rect = anchorEl.getBoundingClientRect();
-      setTriggerPosition({
-        left: rect.left + rect.width / 2,
-        top: rect.top + rect.height / 2
+      // Usar RAF para garantir que o elemento está completamente posicionado
+      requestAnimationFrame(() => {
+        const rect = anchorEl.getBoundingClientRect();
+        
+        // Validar se o rect tem valores válidos
+        if (rect.width === 0 && rect.height === 0) {
+          console.warn('⚠️ AnchorEl com dimensões inválidas, tentando novamente...');
+          // Tentar novamente após um pequeno delay
+          setTimeout(() => {
+            const newRect = anchorEl.getBoundingClientRect();
+            setTriggerPosition({
+              left: newRect.left + newRect.width / 2,
+              top: newRect.top + newRect.height / 2
+            });
+            
+            // Calcular melhor posição
+            const bestPosition = calculateBestPopoverPosition(newRect, { width: 500, height: 600 });
+            setPopoverPosition(bestPosition);
+
+            // Calcular posição da arrow após popover estar renderizado
+            // Usar múltiplos timeouts para garantir que o Radix UI terminou de posicionar
+            setTimeout(() => {
+              if (popoverRef.current) {
+                const arrow = calculateArrowPosition(newRect, bestPosition, popoverRef.current);
+                setArrowPosition(arrow);
+                
+                // Recalcular após mais tempo para garantir posição final
+                setTimeout(() => {
+                  if (popoverRef.current) {
+                    const arrow = calculateArrowPosition(newRect, bestPosition, popoverRef.current);
+                    setArrowPosition(arrow);
+                    console.log('🎯 Arrow recalculada após Radix posicionar');
+                  }
+                }, 100);
+              }
+            }, 50);
+          }, 50);
+        } else {
+          setTriggerPosition({
+            left: rect.left + rect.width / 2,
+            top: rect.top + rect.height / 2
+          });
+          
+          // Calcular melhor posição
+          const bestPosition = calculateBestPopoverPosition(rect, { width: 500, height: 600 });
+          setPopoverPosition(bestPosition);
+
+          // Calcular posição da arrow após popover estar renderizado
+          // Usar múltiplos timeouts para garantir que o Radix UI terminou de posicionar
+          setTimeout(() => {
+            if (popoverRef.current) {
+              const arrow = calculateArrowPosition(rect, bestPosition, popoverRef.current);
+              setArrowPosition(arrow);
+              
+              // Recalcular após mais tempo para garantir posição final
+              setTimeout(() => {
+                if (popoverRef.current) {
+                  const arrow = calculateArrowPosition(rect, bestPosition, popoverRef.current);
+                  setArrowPosition(arrow);
+                  console.log('🎯 Arrow recalculada após Radix posicionar');
+                }
+              }, 100);
+            }
+          }, 50);
+        }
       });
     }
   }, [anchorEl, isOpen]);
@@ -47,36 +255,57 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
   if (!isOpen || !data) return null;
   if (!anchorEl || !triggerPosition) return null;
 
-  // Adaptar estrutura de infraestrutura se necessário
-  const adaptedData = { ...data };
-  if (data.infrastructure && typeof data.infrastructure === 'object' && data.infrastructure.fpsoCount) {
-    const infra = data.infrastructure;
-    adaptedData.infrastructure = `${infra.fpsoCount} FPSO${infra.fpsoCount > 1 ? 's' : ''} em operação`;
-    adaptedData.infrastructureDescription = infra.fpsoDescription;
-    adaptedData.infrastructureItems = infra.items?.map(item => item.name);
-  }
+  // Extrair valores da estrutura nested (nova) ou flat (antiga) - retrocompatibilidade
+  const status = data.status?.label || data.status || 'Status não definido';
+  const operatorName = data.operator?.name || data.operator || null;
+  const operatorDescription = data.operator?.description || data.operatorDescription || null;
+  const depthValue = data.depth?.value || data.depth || null;
+  const depthDescription = data.depth?.description || data.depthDescription || null;
+  const infrastructureTitle = data.infrastructure?.title || null;
+  const infrastructureDescription = data.infrastructure?.description || null;
+  const infrastructureItems = data.infrastructure?.items || [];
+  
+  // Determinar o que renderizar (Auto Layout do Figma)
+  const hasSummary = operatorName || depthValue;
+  const hasCompanies = data.companies && data.companies.length > 0;
+  const hasInfrastructure = infrastructureTitle;
+  
+  // Dividers condicionais
+  const shouldShowFirstDivider = hasSummary && hasCompanies;
+  const shouldShowSecondDivider = (hasCompanies || hasSummary) && hasInfrastructure;
 
   const content = (
-    <div className="popover-pins-card">
+    <>
+      {/* Dynamic Arrow - aponta para o centro do pin */}
+      <div 
+        className={`popover-pins-arrow popover-pins-arrow-${arrowPosition.side}`}
+        style={{
+          [arrowPosition.side === 'top' || arrowPosition.side === 'bottom' ? 'left' : 'top']: arrowPosition.offset,
+          transform: arrowPosition.side === 'top' || arrowPosition.side === 'bottom' ? 'translateX(-50%)' : 'translateY(-50%)'
+        }}
+      />
+      <div className="popover-pins-card">
           {/* Header Section */}
           <div className="popover-pins-header">
             <div className="popover-pins-upper-content">
               {/* Status Tag */}
               <div className="popover-pins-status-tag">
                 <div className="popover-pins-status-icon-container">
-                  <svg className="popover-pins-status-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.9996 31.7884C16.1266 31.7884 14.5333 31.1317 13.2198 29.8182C11.9063 28.5047 11.2496 26.9114 11.2496 25.0384C11.2496 23.1654 11.9063 21.5722 13.2198 20.2587C14.5333 18.9452 16.1266 18.2884 17.9996 18.2884C19.8726 18.2884 21.4658 18.9452 22.7793 20.2587C24.0928 21.5722 24.7496 23.1654 24.7496 25.0384C24.7496 26.9114 24.0928 28.5047 22.7793 29.8182C21.4658 31.1317 19.8726 31.7884 17.9996 31.7884ZM10.5285 17.6768L4.0957 11.2155C5.98995 9.4463 8.13233 8.08667 10.5228 7.13667C12.9131 6.18667 15.4053 5.71167 17.9996 5.71167C20.5938 5.71167 23.0861 6.18667 25.4763 7.13667C27.8668 8.08667 30.0092 9.4463 31.9035 11.2155L25.4707 17.6768C24.4362 16.7288 23.2815 15.9975 22.0065 15.483C20.7315 14.9688 19.3958 14.7117 17.9996 14.7117C16.6033 14.7117 15.2677 14.9688 13.9927 15.483C12.7177 15.9975 11.563 16.7288 10.5285 17.6768Z" fill="white"/>
-                  </svg>
+                  <img 
+                    src={getStatusIcon(status)} 
+                    alt={status}
+                    className="popover-pins-status-icon"
+                  />
                 </div>
-                <span className="popover-pins-status-text">{adaptedData.status}</span>
+                <span className="popover-pins-status-text">{status}</span>
               </div>
 
               {/* Title and Tags */}
               <div className="popover-pins-title-section">
-                <h1 className="popover-pins-title">{adaptedData.title}</h1>
-                {adaptedData.tags && adaptedData.tags.length > 0 && (
+                <h1 className="popover-pins-title">{data.title}</h1>
+                {data.tags && data.tags.length > 0 && (
                   <div className="popover-pins-tags">
-                    {adaptedData.tags.map((tag, index) => (
+                    {data.tags.map((tag, index) => (
                       <div key={index} className="popover-pins-tag">
                         {tag}
                       </div>
@@ -86,9 +315,11 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
               </div>
             </div>
 
-            {/* Summary Section */}
+            {/* Summary Section - Renderiza apenas se houver operadora OU profundidade */}
+            {hasSummary && (
             <div className="popover-pins-summary">
-              {/* Operadora */}
+              {/* Operadora - Renderiza apenas se existir */}
+              {operatorName && (
               <div className="popover-pins-info-block">
                 <div className="popover-pins-info-header">
                   <div className="popover-pins-info-icon-container">
@@ -99,12 +330,16 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
                   <span className="popover-pins-info-label">Operadora</span>
                 </div>
                 <div className="popover-pins-info-content">
-                  <div className="popover-pins-info-value">{adaptedData.operator}</div>
-                  <div className="popover-pins-info-description">{adaptedData.operatorDescription}</div>
+                  <div className="popover-pins-info-value">{operatorName}</div>
+                  {operatorDescription && (
+                    <div className="popover-pins-info-description">{operatorDescription}</div>
+                  )}
                 </div>
               </div>
+              )}
 
-              {/* Profundidade */}
+              {/* Profundidade - Renderiza apenas se existir */}
+              {depthValue && (
               <div className="popover-pins-info-block">
                 <div className="popover-pins-info-header">
                   <div className="popover-pins-info-icon-container">
@@ -115,64 +350,72 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
                   <span className="popover-pins-info-label">Profundidade</span>
                 </div>
                 <div className="popover-pins-info-content">
-                  <div className="popover-pins-info-value">{adaptedData.depth}</div>
-                  <div className="popover-pins-info-description">{adaptedData.depthDescription}</div>
+                  <div className="popover-pins-info-value">{depthValue}</div>
+                  {depthDescription && (
+                    <div className="popover-pins-info-description">{depthDescription}</div>
+                  )}
                 </div>
               </div>
+              )}
             </div>
+            )}
           </div>
 
-          {/* Divider */}
-          <div className="popover-pins-divider"></div>
-
-          {/* Shareholders Section */}
-          {adaptedData.companies && adaptedData.companies.length > 0 && (
-            <>
-              <div className="popover-pins-section">
-                <h2 className="popover-pins-section-title">Participação das empresas</h2>
-                <div className="popover-pins-companies">
-                  {adaptedData.companies.map((company, index) => (
-                    <div key={index} className="popover-pins-company">
-                      <div className="popover-pins-company-header">
-                        <span className={`popover-pins-company-name ${company.isOperator ? 'is-operator' : ''}`}>
-                          {company.name}{company.isOperator ? '*' : ''}
-                        </span>
-                        <span className="popover-pins-company-percentage">{company.percentage}%</span>
-                      </div>
-                      <div className="popover-pins-progress-bar">
-                        <div className="popover-pins-progress-bg"></div>
-                        <div 
-                          className={`popover-pins-progress-fill ${company.isOperator ? 'is-operator' : ''}`}
-                          style={{ width: `${company.percentage}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Divider */}
-              <div className="popover-pins-divider"></div>
-            </>
+          {/* Divider 1 - Renderiza apenas se houver summary E companies */}
+          {shouldShowFirstDivider && (
+            <div className="popover-pins-divider"></div>
           )}
 
-          {/* Infrastructure Section */}
-          {adaptedData.infrastructure && (
+          {/* Shareholders Section - Renderiza apenas se houver companies */}
+          {hasCompanies && (
+            <div className="popover-pins-section">
+              <h2 className="popover-pins-section-title">Participação das empresas</h2>
+              <div className="popover-pins-companies">
+                {data.companies.map((company, index) => (
+                  <div key={index} className="popover-pins-company">
+                    <div className="popover-pins-company-header">
+                      <span className={`popover-pins-company-name ${company.isOperator ? 'is-operator' : ''}`}>
+                        {company.name}{company.isOperator ? '*' : ''}
+                      </span>
+                      <span className="popover-pins-company-percentage">{company.percentage}%</span>
+                    </div>
+                    <div className="popover-pins-progress-bar">
+                      <div className="popover-pins-progress-bg"></div>
+                      <div 
+                        className={`popover-pins-progress-fill ${company.isOperator ? 'is-operator' : ''}`}
+                        style={{ width: `${company.percentage}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Divider 2 - Renderiza apenas se houver (companies OU summary) E infrastructure */}
+          {shouldShowSecondDivider && (
+            <div className="popover-pins-divider"></div>
+          )}
+
+          {/* Infrastructure Section - Renderiza apenas se houver infrastructure */}
+          {hasInfrastructure && (
             <div className="popover-pins-section">
               <h2 className="popover-pins-section-title">Infraestrutura associada</h2>
               <div className="popover-pins-infrastructure">
                 <div className="popover-pins-info-content">
-                  <div className="popover-pins-info-value">{adaptedData.infrastructure}</div>
-                  <div className="popover-pins-info-description">{adaptedData.infrastructureDescription}</div>
+                  <div className="popover-pins-info-value">{infrastructureTitle}</div>
+                  {infrastructureDescription && (
+                    <div className="popover-pins-info-description">{infrastructureDescription}</div>
+                  )}
                 </div>
-                {adaptedData.infrastructureItems && adaptedData.infrastructureItems.length > 0 && (
+                {infrastructureItems.length > 0 && (
                   <div className="popover-pins-bullets">
-                    {adaptedData.infrastructureItems.map((item, index) => (
-                      <div key={index} className="popover-pins-bullet">
+                    {infrastructureItems.map((item, index) => (
+                      <div key={item.id || index} className="popover-pins-bullet">
                         <div className="popover-pins-bullet-icon">
-                          <span>{index + 1}</span>
+                          <span>{item.id || index + 1}</span>
                         </div>
-                        <span className="popover-pins-bullet-text">{item}</span>
+                        <span className="popover-pins-bullet-text">{item.name}</span>
                       </div>
                     ))}
                   </div>
@@ -185,7 +428,8 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
       <button className="popover-pins-close-button" onClick={onClose}>
         Fechar
       </button>
-    </div>
+      </div>
+    </>
   );
 
   // Renderiza popover posicionado com Shadcn
@@ -196,7 +440,7 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
           style={{
             position: 'fixed',
             left: `${triggerPosition.left}px`,
-            top: `${triggerPosition.top * 1.08}px`,
+            top: `${triggerPosition.top}px`,
             width: '1px',
             height: '1px',
             pointerEvents: 'none'
@@ -204,11 +448,14 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
         />
       </PopoverTrigger>
       <PopoverContent 
+        ref={popoverRef}
         className="p-0 w-max max-w-[calc(100vw-40px)] border-0 rounded-2xl bg-transparent shadow-none relative"
-        side="bottom"
-        align="center"
-        sideOffset={27}
+        side={popoverPosition.side}
+        align={popoverPosition.align}
+        sideOffset={popoverPosition.sideOffset}
+        alignOffset={popoverPosition.alignOffset || 0}
         onInteractOutside={onClose}
+        collisionPadding={20}
       >
         {content}
       </PopoverContent>
