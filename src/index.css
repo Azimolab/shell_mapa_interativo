@@ -49,9 +49,16 @@
   --color-grey-100: #E0E0E0;
   --color-grey-200: #C0C0C0;
   --color-grey-400: #919191;
+  --color-grey-500: #757575;
   --color-grey-600: #616161;
+  --color-grey-700: #424242;
   --color-grey-800: #343434;
   --color-red-500: #DD1D21;
+  --color-red-700: #A71518;
+  --color-green-500: #4CAF50;
+  --color-green-700: #388E3C;
+  --color-berry-700: #7B1FA2;
+  --color-berry-900: #4A148C;
   
   /* Fontes personalizadas */
   --font-family-shell-light: 'ShellLight';

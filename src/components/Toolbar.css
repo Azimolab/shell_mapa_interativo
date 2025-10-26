@@ -462,3 +462,33 @@
   object-fit: contain;
 }
 
+/* Estado Desabilitado para Infraestrutura (quando não há dados) */
+.oleoduto.disabled,
+.gasoduto.disabled,
+.terceiros.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Texto em grey-200 quando desabilitado */
+.oleoduto.disabled .legend-label,
+.gasoduto.disabled .legend-label,
+.terceiros.disabled .legend-label {
+  color: var(--grey-200);
+}
+
+/* Ícones em grey-200 quando desabilitado */
+.oleoduto.disabled .box-icon,
+.gasoduto.disabled .box-icon,
+.terceiros.disabled .box-icon {
+  border-color: var(--grey-200);
+  opacity: 0.5;
+}
+
+.oleoduto.disabled .icon,
+.gasoduto.disabled .icon,
+.terceiros.disabled .icon {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+

@@ -88,94 +88,140 @@
       "productionPins": [
         {
           "id": "prod1",
-          "number": null,
-          "popoverType": "production_type1",
-          "title": "Bijupirá & Salema",
-          "status": "Em produção",
-          "operator": "Shell",
-          "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~400-870m",
-          "depthDescription": "Distância da superfície do mar até o fundo",
+          "svgId": "GreenPin_7-GatoDoMato",
+          "type": "production",
+          "status": {
+            "label": "Em produção",
+            "icon": "production"
+          },
+          "title": "BM-S-11 - Lula",
+          "tags": [
+            "Lula Central",
+            "Lula Alto",
+            "Lula Norte",
+            "Lula Nordeste",
+            "Lula Extremo Sul"
+          ],
+          "operator": {
+            "name": "Petrobras",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~2.100-2.200m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
           "companies": [
             {
-              "id": "shell",
-              "name": "Shell*",
-              "percentage": 80,
-              "color": "#DD1D21",
+              "name": "Petrobras",
+              "percentage": 65,
               "isOperator": true
             },
             {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 20,
-              "color": "#616161",
+              "name": "Shell",
+              "percentage": 10,
+              "isOperator": false
+            },
+            {
+              "name": "TotalEnergies",
+              "percentage": 10,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 10,
+              "isOperator": false
+            },
+            {
+              "name": "Petrogal",
+              "percentage": 5,
               "isOperator": false
             }
           ],
           "infrastructure": {
-            "fpsoCount": 1,
-            "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+            "title": "8 FPSOs em operação",
+            "description": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
             "items": [
               {
-                "number": 1,
-                "name": "Fluminense"
+                "id": 1,
+                "name": "FPSO Cidade de Angra dos Reis"
+              },
+              {
+                "id": 2,
+                "name": "FPSO Cidade de Paraty"
+              },
+              {
+                "id": 3,
+                "name": "FPSO Cidade de Mangaratiba"
+              },
+              {
+                "id": 4,
+                "name": "FPSO Cidade de Saquarema"
+              },
+              {
+                "id": 5,
+                "name": "FPSO Cidade de Maricá"
+              },
+              {
+                "id": 6,
+                "name": "FPSO Cidade de Itaguaí"
+              },
+              {
+                "id": 7,
+                "name": "P-66"
+              },
+              {
+                "id": 8,
+                "name": "P-67"
               }
             ]
           }
         },
         {
           "id": "prod2",
-          "number": null,
-          "popoverType": "production_type1",
-          "title": "Parque das Conchas",
-          "status": "Em produção",
-          "operator": "Shell",
-          "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.780m",
-          "depthDescription": "Distância da superfície do mar até o fundo",
+          "svgId": "GreenPin_1-Parque das Conchas",
+          "type": "production",
+          "status": {
+            "label": "Em produção",
+            "icon": "production"
+          },
+          "title": "BM-S-9A - Búzios",
+          "tags": [],
+          "operator": {
+            "name": "Petrobras",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~1.900-2.100m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
           "companies": [
             {
-              "id": "shell",
-              "name": "Shell*",
-              "percentage": 50,
-              "color": "#DD1D21",
+              "name": "Petrobras",
+              "percentage": 88.99,
               "isOperator": true
-            },
-            {
-              "id": "ongc",
-              "name": "ONGC",
-              "percentage": 27,
-              "color": "#616161",
-              "isOperator": false
-            },
-            {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 23,
-              "color": "#616161",
-              "isOperator": false
             }
           ],
           "infrastructure": {
-            "fpsoCount": 1,
-            "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+            "title": "6 FPSOs em operação",
+            "description": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
             "items": [
               {
-                "number": 1,
-                "name": "Espírito Santo"
+                "id": 1,
+                "name": "P-74"
+              },
+              {
+                "id": 2,
+                "name": "P-75"
               }
             ]
           }
-        },
-        {
-          "id": "prod3",
-          "number": null
-        },
-        {
-          "id": "prod4",
-          "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2016": {
@@ -436,7 +482,12 @@
           "id": "prod6",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2017": {
@@ -680,28 +731,13 @@
               }
             ]
           }
-        },
-        {
-          "id": "prod3",
-          "number": null
-        },
-        {
-          "id": "prod4",
-          "number": null
-        },
-        {
-          "id": "prod5",
-          "number": null
-        },
-        {
-          "id": "prod6",
-          "number": null
-        },
-        {
-          "id": "prod7",
-          "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2018": {
@@ -836,7 +872,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -1041,7 +1082,12 @@
           "id": "prod8",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2019": {
@@ -1176,7 +1222,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -1389,7 +1440,12 @@
           "id": "prod9",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2020": {
@@ -1566,7 +1622,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -1787,7 +1848,12 @@
           "id": "prod10",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2021": {
@@ -1964,7 +2030,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -2189,7 +2260,12 @@
           "id": "prod11",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2022": {
@@ -2366,7 +2442,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -2595,7 +2676,12 @@
           "id": "prod12",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": true,
+        "terceiros": false
+      }
     }
   },
   "2023": {
@@ -2772,7 +2858,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [
@@ -3010,7 +3101,12 @@
           "id": "prod13",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": true,
+        "terceiros": true
+      }
     },
     "pelotas": {
       "decommissioningPins": [],
@@ -3077,7 +3173,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2024": {
@@ -3254,7 +3355,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": true,
+        "terceiros": false
+      }
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -3321,7 +3427,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [
@@ -3567,7 +3678,12 @@
           "id": "prod14",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": true,
+        "terceiros": true
+      }
     }
   },
   "2025": {
@@ -3744,7 +3860,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": true,
+        "terceiros": false
+      }
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -3811,7 +3932,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [
@@ -4057,7 +4183,12 @@
           "id": "prod14",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": true,
+        "terceiros": true
+      }
     }
   },
   "PRÉ 2013": {
@@ -4212,7 +4343,12 @@
           "id": "prod3",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   }
 }
