@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Timeline from './components/Timeline';
 import Toolbar from './components/Toolbar';
-import ShellAllType from './components/ShellAllType';
 import SVGMap from './components/SVGMap';
 import PinInteractionManager from './components/PinInteractionManager';
 import { isSVGAvailable } from './assets/mapas/index.js';
