@@ -1,0 +1,1263 @@
+{
+    "2013": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [],
+            "productionPins": [
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 80
+                        },
+                        {
+                            "color": "#616161",
+                            "id": "chevron",
+                            "isOperator": false,
+                            "name": "Chevron",
+                            "percentage": 20
+                        }
+                    ],
+                    "depth": "~400-870m",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod1",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "Fluminense",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Bijupirá & Salema"
+                }
+            ]
+        }
+    },
+    "2016": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [],
+            "productionPins": []
+        }
+    },
+    "2017": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [],
+            "productionPins": []
+        }
+    },
+    "2018": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [],
+            "productionPins": [
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod1",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Mero"
+                }
+            ]
+        }
+    },
+    "2019": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [],
+            "productionPins": []
+        }
+    },
+    "2020": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [],
+            "productionPins": []
+        }
+    },
+    "2021": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [],
+            "productionPins": []
+        }
+    },
+    "2022": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [],
+            "productionPins": [
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod1",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Mero"
+                }
+            ]
+        }
+    },
+    "2023": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [],
+            "productionPins": [
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod1",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Mero"
+                }
+            ]
+        }
+    },
+    "2024": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [],
+            "productionPins": [
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod1",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Mero"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod2",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Gato do Mato"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod3",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Sul de Gato do Mato"
+                }
+            ]
+        }
+    },
+    "2025": {
+        "rio": {
+            "decommissioningPins": [],
+            "explorationPins": [
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp1",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1599"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp2",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1601"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp3",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1707"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp4",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1709"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp5",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1713"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp6",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1715"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp7",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1717"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp8",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1719"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp9",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1817"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp10",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1819"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp11",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1821"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp12",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1908"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp13",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1910"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp14",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1912"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "exp15",
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "exploration_type1",
+                    "status": "Em exploração",
+                    "title": "S-M-1914"
+                }
+            ],
+            "productionPins": [
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod1",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Atapu"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod2",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Libra"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod3",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Mero"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod4",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Gato do Mato"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod5",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Sul de Gato do Mato"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod6",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Sagitário"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod7",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Sudoeste de Sagitário"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod8",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "CM-659"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod9",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "CM-713"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod10",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "CM-757"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod11",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Tupi"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod12",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Iracema"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod15",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Lapa"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod13",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Sagitário"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod14",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Sul de Sagitário"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod16",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Sapinhoá"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod17",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Entorno de Sapinhoá"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod18",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Entorno de Sapinhoá 2"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod19",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Entorno de Sapinhoá 3"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod20",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Iara Berbigão"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod21",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Iara Sururu"
+                },
+                {
+                    "companies": [
+                        {
+                            "color": "#DD1D21",
+                            "id": "shell",
+                            "isOperator": true,
+                            "name": "Shell*",
+                            "percentage": 100
+                        }
+                    ],
+                    "depth": "A definir",
+                    "depthDescription": "Distância da superfície do mar até o fundo",
+                    "id": "prod22",
+                    "infrastructure": {
+                        "fpsoCount": 1,
+                        "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+                        "items": [
+                            {
+                                "name": "A definir",
+                                "number": 1
+                            }
+                        ]
+                    },
+                    "number": null,
+                    "operator": "Shell",
+                    "operatorDescription": "Responsável pela administração do campo",
+                    "popoverType": "production_type1",
+                    "status": "Em produção",
+                    "title": "Iara Oeste de Atapu"
+                }
+            ]
+        }
+    }
+}
