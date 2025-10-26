@@ -46,12 +46,37 @@ function Toolbar({
     descomissionamento: true
   };
 
+  // Função para determinar se uma área existe para um determinado ano
+  const isAreaAvailableForYear = (areaId, year) => {
+    // Converter "PRÉ 2013" para número comparável
+    const yearNum = year === 'PRÉ 2013' ? 2012 : parseInt(year);
+    
+    switch (areaId) {
+      case 'barreirinhas':
+        return yearNum >= 2016;
+      case 'potiguar':
+        return yearNum >= 2018;
+      case 'pelotas':
+        return yearNum >= 2024;
+      case 'rio':
+        return true; // Rio sempre existe
+      default:
+        return false;
+    }
+  };
+
+  // Verificar se Pelotas existe no ano atual (para ajustar label do Rio)
+  const pelotasExists = isAreaAvailableForYear('pelotas', selectedYear);
+
   const allAreas = [
     { id: 'barreirinhas', label: 'Barreirinhas' },
     { id: 'potiguar', label: 'Potiguar' },
-    { id: 'rio', label: 'Rio' },
+    { id: 'rio', label: pelotasExists ? 'Rio' : 'Rio de Janeiro' },
     { id: 'pelotas', label: 'Pelotas' }
   ];
+
+  // Filtrar apenas as áreas disponíveis para o ano atual
+  const availableAreas = allAreas.filter(area => isAreaAvailableForYear(area.id, selectedYear));
 
   const handleAreaClick = (areaId) => {
     // Só permite click se zona estiver disponível
@@ -82,7 +107,7 @@ function Toolbar({
         <div className="header" data-name="Header" data-node-id="7:2475">
           <p className="section-title">Clique para alterar a área visualizada</p>
           <div className="menu" data-name="Menu" data-node-id="7:2477">
-            {allAreas.map((area, index) => {
+            {availableAreas.map((area, index) => {
               const isActive = currentArea === area.id;
               const isAvailable = isZoneAvailable(area.id, selectedYear);
               return (
@@ -109,10 +134,18 @@ function Toolbar({
           <p className="map-title" data-node-id="I13:4028;13:3880">Brasil</p>
           
           <div className="selectors" data-name="Selectors" data-node-id="I13:4028;13:3881">
-            <div className={`selector s-1 ${currentArea === 'barreirinhas' ? 'active' : 'inactive'}`} data-name="S_1" data-node-id="I13:4028;13:3891"></div>
-            <div className={`selector s-2 ${currentArea === 'potiguar' ? 'active' : 'inactive'}`} data-name="S_2" data-node-id="I13:4028;13:3889"></div>
-            <div className={`selector s-3 ${currentArea === 'rio' ? 'active' : 'inactive'}`} data-name="S_3" data-node-id="I13:4028;13:3885"></div>
-            <div className={`selector s-4 ${currentArea === 'pelotas' ? 'active' : 'inactive'}`} data-name="S_4" data-node-id="I13:4028;13:3887"></div>
+            {isAreaAvailableForYear('barreirinhas', selectedYear) && (
+              <div className={`selector s-1 ${currentArea === 'barreirinhas' ? 'active' : 'inactive'}`} data-name="S_1" data-node-id="I13:4028;13:3891"></div>
+            )}
+            {isAreaAvailableForYear('potiguar', selectedYear) && (
+              <div className={`selector s-2 ${currentArea === 'potiguar' ? 'active' : 'inactive'}`} data-name="S_2" data-node-id="I13:4028;13:3889"></div>
+            )}
+            {isAreaAvailableForYear('rio', selectedYear) && (
+              <div className={`selector s-3 ${currentArea === 'rio' ? 'active' : 'inactive'}`} data-name="S_3" data-node-id="I13:4028;13:3885"></div>
+            )}
+            {isAreaAvailableForYear('pelotas', selectedYear) && (
+              <div className={`selector s-4 ${currentArea === 'pelotas' ? 'active' : 'inactive'}`} data-name="S_4" data-node-id="I13:4028;13:3887"></div>
+            )}
           </div>
         </div>
       </div>
