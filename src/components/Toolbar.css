@@ -121,22 +121,15 @@
   margin-bottom: -1px;
 }
 
-.map-vector-container {
-  position: relative;
+.map-vector {
   width: 100%;
   height: 100%;
-}
-
-.map-vector {
-  width: 287px;
-  height: 238px;
-  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: -70px;
   fill: var(--grass-x);
   stroke-width: 2.5px;
   stroke: var(--ocean-200);
-  position: absolute;
-  left: -70px;
-  top: -29px;
 }
 
 .map-title {
