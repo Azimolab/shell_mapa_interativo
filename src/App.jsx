@@ -156,7 +156,7 @@ function App() {
         </div>
 
         {/* Timeline positioned bottom-center */}
-        <div className="absolute bottom-5 z-10">
+        <div className="absolute bottom-10 right-[-142px] z-10">
           <Timeline
             selectedYear={selectedYear}
             onYearSelect={handleYearSelect}
