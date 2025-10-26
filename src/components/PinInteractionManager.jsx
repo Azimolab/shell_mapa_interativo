@@ -311,29 +311,42 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     };
   }, [selectedYear, selectedZone, activeLegendItems, setupPinListeners, removePinListeners]);
 
-  // Efeito para adicionar classe 'active' aos pins de localização quando o popover está aberto
+  // Efeito para adicionar classe 'active' aos pins quando o popover está aberto
   useEffect(() => {
     const svgElement = document.querySelector('.svg-map-content svg');
     if (!svgElement) return;
 
-    // Remove classe active de todos os location pins
-    const allLocationPins = svgElement.querySelectorAll('g[id^="Pin_"]');
-    allLocationPins.forEach(pin => {
+    // Remove classe active de TODOS os pins
+    const allPins = svgElement.querySelectorAll('g[id^="Pin_"], g[id*="GreenPin"], g[id*="RedPin"], g[id*="PurplePin"], g[id*="GrayPin"], g[class*="GreenPin"], g[class*="RedPin"], g[class*="PurplePin"], g[class*="GrayPin"]');
+    allPins.forEach(pin => {
       pin.classList.remove('active');
     });
 
-    // Adiciona classe active ao pin correspondente ao popover aberto
-    if (activePopover === 'location_rio') {
-      const rioPin = svgElement.querySelector('g[id="Pin_Rio"]');
-      if (rioPin) rioPin.classList.add('active');
-    } else if (activePopover === 'location_sp') {
-      const spPin = svgElement.querySelector('g[id="Pin_SP"]');
-      if (spPin) spPin.classList.add('active');
-    } else if (activePopover === 'location_macae') {
-      const macaePin = svgElement.querySelector('g[id="Pin_Macae"]');
-      if (macaePin) macaePin.classList.add('active');
+    // Se há um popover aberto e um anchorEl, adicionar classe active
+    if (activePopover && anchorEl) {
+      // Para location pins (identificados pelo activePopover)
+      if (activePopover === 'location_rio') {
+        const rioPin = svgElement.querySelector('g[id="Pin_Rio"]');
+        if (rioPin) rioPin.classList.add('active');
+      } else if (activePopover === 'location_sp') {
+        const spPin = svgElement.querySelector('g[id="Pin_SP"]');
+        if (spPin) spPin.classList.add('active');
+      } else if (activePopover === 'location_macae') {
+        const macaePin = svgElement.querySelector('g[id="Pin_Macae"]');
+        if (macaePin) macaePin.classList.add('active');
+      } else if (activePopover === 'pin_generic') {
+        // Para pins genéricos (exploration, production, etc), usar o anchorEl
+        const pinId = anchorEl.id || anchorEl.getAttribute('data-pin-id');
+        if (pinId) {
+          const activePin = svgElement.querySelector(`#${CSS.escape(pinId)}`);
+          if (activePin) {
+            activePin.classList.add('active');
+            console.log('✨ Pin ativo:', pinId);
+          }
+        }
+      }
     }
-  }, [activePopover]);
+  }, [activePopover, anchorEl]);
 
   const closePopover = useCallback(() => {
     setActivePopover(null);

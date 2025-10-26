@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import {
   Popover,
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
+import { calculateBestPopoverPosition } from '@/lib/popoverPosition';
 
 function LocationPopover({ 
   isOpen, 
@@ -14,6 +15,8 @@ function LocationPopover({
   centered = false
 }) {
   const [triggerPosition, setTriggerPosition] = useState(null);
+  const [popoverPosition, setPopoverPosition] = useState({ side: 'bottom', align: 'center', sideOffset: 27 });
+  const popoverRef = useRef(null);
 
   useEffect(() => {
     if (anchorEl && isOpen && !centered) {
@@ -31,12 +34,20 @@ function LocationPopover({
               left: newRect.left + newRect.width / 2,
               top: newRect.top + newRect.height / 2
             });
+            
+            // Calcular melhor posição
+            const bestPosition = calculateBestPopoverPosition(newRect, { width: 484, height: 500 });
+            setPopoverPosition(bestPosition);
           }, 50);
         } else {
           setTriggerPosition({
             left: rect.left + rect.width / 2,
             top: rect.top + rect.height / 2
           });
+          
+          // Calcular melhor posição
+          const bestPosition = calculateBestPopoverPosition(rect, { width: 484, height: 500 });
+          setPopoverPosition(bestPosition);
         }
       });
     }
@@ -161,7 +172,7 @@ function LocationPopover({
           style={{
             position: 'fixed',
             left: `${triggerPosition.left}px`,
-            top: `${triggerPosition.top * 1.08 }px`,
+            top: `${triggerPosition.top}px`,
             width: '1px',
             height: '1px',
             pointerEvents: 'none'
@@ -169,11 +180,13 @@ function LocationPopover({
         />
       </PopoverTrigger>
       <PopoverContent 
+        ref={popoverRef}
         className="py-5 px-8 w-max max-w-[calc(100vw-40px)] border-grey-100 rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.15)] relative"
-        side="bottom"
-        align="center"
-        sideOffset={27}
+        side={popoverPosition.side}
+        align={popoverPosition.align}
+        sideOffset={popoverPosition.sideOffset}
         onInteractOutside={onClose}
+        collisionPadding={20}
       >
         {content}
       </PopoverContent>

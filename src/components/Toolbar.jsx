@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './Toolbar.css';
+import mapData from '../data/mapData.json';
 
 // Importar ícones SVG
 import ExploracaoIcon from '../assets/icons/Exploracao.svg';
@@ -37,14 +38,48 @@ function Toolbar({
     descomissionamento: activeLegendItems.decommissioning
   };
 
-  // TODO: Implementar lógica para determinar availableLegends baseado nos dados
-  // Por enquanto, todas as legendas estão disponíveis
-  const availableLegends = {
-    exploracao: true,
-    desenvolvimento: true,
-    producao: true,
-    descomissionamento: true
-  };
+  // Verificar disponibilidade de cada categoria baseado nos dados do mapData.json
+  const availableLegends = useMemo(() => {
+    // Se não há dados para o ano/zona selecionados, todas as legendas ficam indisponíveis
+    if (!mapData[selectedYear] || !mapData[selectedYear][selectedArea]) {
+      return {
+        exploracao: false,
+        desenvolvimento: false,
+        producao: false,
+        descomissionamento: false
+      };
+    }
+
+    const regionData = mapData[selectedYear][selectedArea];
+
+    return {
+      exploracao: (regionData.explorationPins && regionData.explorationPins.length > 0) || false,
+      desenvolvimento: (regionData.developmentPins && regionData.developmentPins.length > 0) || false,
+      producao: (regionData.productionPins && regionData.productionPins.length > 0) || false,
+      descomissionamento: (regionData.decommissioningPins && regionData.decommissioningPins.length > 0) || false
+    };
+  }, [selectedYear, selectedArea]);
+
+  // Verificar disponibilidade de infraestrutura baseado nos dados do mapData.json
+  const availableInfrastructure = useMemo(() => {
+    // Se não há dados para o ano/zona selecionados, todas as infraestruturas ficam indisponíveis
+    if (!mapData[selectedYear] || !mapData[selectedYear][selectedArea]) {
+      return {
+        oleoduto: false,
+        gasoduto: false,
+        terceiros: false
+      };
+    }
+
+    const regionData = mapData[selectedYear][selectedArea];
+    const infrastructure = regionData.infrastructure || {};
+
+    return {
+      oleoduto: infrastructure.oleoduto || false,
+      gasoduto: infrastructure.gasoduto || false,
+      terceiros: infrastructure.terceiros || false
+    };
+  }, [selectedYear, selectedArea]);
 
   // Função para determinar se uma área existe para um determinado ano
   const isAreaAvailableForYear = (areaId, year) => {
@@ -268,7 +303,7 @@ function Toolbar({
           <h3 className="section-title">Infraestrutura</h3>
           <div className="menu" data-name="Menu" data-node-id="7:2504">
             {/* Óleoduto */}
-            <div className="oleoduto" data-name="Oleoduto" data-node-id="7:2505">
+            <div className={`oleoduto ${!availableInfrastructure.oleoduto ? 'disabled' : ''}`} data-name="Oleoduto" data-node-id="7:2505">
               <div className="box-icon" data-name="BoxIcon" data-node-id="7:2506">
                 <svg className="icon" width="18" height="18" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19.0392 25.0672C18.6552 25.0672 18.3332 24.9374 18.0732 24.6776C17.8135 24.4176 17.6836 24.0956 17.6836 23.7116V19.125H4.9336C4.61484 19.125 4.3476 19.0171 4.13184 18.8014C3.91634 18.5856 3.8086 18.3184 3.8086 17.9996C3.8086 17.6806 3.91634 17.4135 4.13184 17.1978C4.3476 16.9819 4.61484 16.874 4.9336 16.874H17.6836V14.2884C17.6836 13.9044 17.8135 13.5824 18.0732 13.3224C18.3332 13.0626 18.6552 12.9327 19.0392 12.9327H30.4624C30.8464 12.9327 31.1684 13.0626 31.4284 13.3224C31.6882 13.5824 31.818 13.9044 31.818 14.2884V23.7116C31.818 24.0956 31.6882 24.4176 31.4284 24.6776C31.1684 24.9374 30.8464 25.0672 30.4624 25.0672H19.0392Z" fill="#ED8A00"/>
@@ -278,7 +313,7 @@ function Toolbar({
             </div>
 
             {/* Gasoduto */}
-            <div className="gasoduto" data-name="Gasoduto" data-node-id="7:2510">
+            <div className={`gasoduto ${!availableInfrastructure.gasoduto ? 'disabled' : ''}`} data-name="Gasoduto" data-node-id="7:2510">
               <div className="box-icon" data-name="BoxIcon" data-node-id="7:2511">
                 <svg className="icon" width="18" height="18" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24.5" cy="18" r="7" fill="#003758"/>
@@ -289,7 +324,7 @@ function Toolbar({
             </div>
 
             {/* Infraestrutura de terceiros */}
-            <div className="terceiros" data-name="Terceiros" data-node-id="7:2516">
+            <div className={`terceiros ${!availableInfrastructure.terceiros ? 'disabled' : ''}`} data-name="Terceiros" data-node-id="7:2516">
               <div className="box-icon" data-name="BoxIcon" data-node-id="7:2517">
                 <svg className="icon" width="18" height="18" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 18H31.5" stroke="#343434" strokeWidth="4" strokeLinecap="round" strokeDasharray="8 7"/>

@@ -1,11 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import {
   Popover,
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
+import { calculateBestPopoverPosition } from '@/lib/popoverPosition';
 import './PopoverPins.css';
+
+// Importar os ícones de status como URLs
+import IconProducao from '@/assets/icons/popover-producao.svg?url';
+import IconExploracao from '@/assets/icons/popover-exploracao.svg?url';
+import IconDesenvolvimento from '@/assets/icons/popover-desenvolvimento.svg?url';
+import IconDescomissionamento from '@/assets/icons/popover-descomissionamento.svg?url';
+
+/**
+ * Mapeia o status para o ícone correspondente
+ */
+const getStatusIcon = (status) => {
+  const statusMap = {
+    'Em produção': IconProducao,
+    'Em exploração': IconExploracao,
+    'Em desenvolvimento': IconDesenvolvimento,
+    'Em descomissionamento': IconDescomissionamento,
+  };
+  
+  return statusMap[status] || IconProducao; // Fallback para produção
+};
 
 /**
  * PopoverPins - Componente de popover UNIVERSAL para exibição de informações de pins
@@ -51,6 +72,114 @@ import './PopoverPins.css';
  */
 function PopoverPins({ isOpen, anchorEl, onClose, data }) {
   const [triggerPosition, setTriggerPosition] = useState(null);
+  const [popoverPosition, setPopoverPosition] = useState({ side: 'bottom', align: 'center', sideOffset: 27, alignOffset: 0 });
+  const [arrowPosition, setArrowPosition] = useState({ side: 'bottom', offset: '50%' });
+  const popoverRef = useRef(null);
+
+  // Função para calcular a posição da arrow
+  const calculateArrowPosition = (anchorRect, bestPosition, popoverElement) => {
+    if (!popoverElement) return { side: bestPosition.side, offset: '50%' };
+
+    const popoverRect = popoverElement.getBoundingClientRect();
+    const pinCenter = {
+      x: anchorRect.left + anchorRect.width / 2,
+      y: anchorRect.top + anchorRect.height / 2
+    };
+
+    const ARROW_SIZE = 10; // Tamanho da arrow
+    const ARROW_MARGIN = 15; // Margem mínima das bordas do popover
+
+    // DETECTAR AUTOMATICAMENTE qual lado o popover está em relação ao pin
+    const popoverCenter = {
+      x: popoverRect.left + popoverRect.width / 2,
+      y: popoverRect.top + popoverRect.height / 2
+    };
+
+    const distances = {
+      top: pinCenter.y - popoverRect.bottom,
+      bottom: popoverRect.top - pinCenter.y,
+      left: pinCenter.x - popoverRect.right,
+      right: popoverRect.left - pinCenter.x
+    };
+
+    // Encontrar o lado mais próximo (maior valor positivo = lado correto)
+    const actualSide = Object.entries(distances).reduce((max, [side, dist]) => 
+      dist > max.dist ? { side, dist } : max, { side: 'bottom', dist: -Infinity }
+    ).side;
+
+    console.log('🔍 Lado detectado automaticamente:', {
+      bestPositionSide: bestPosition.side,
+      actualSide,
+      distances,
+      pinCenter,
+      popoverRect: {
+        top: popoverRect.top,
+        bottom: popoverRect.bottom,
+        left: popoverRect.left,
+        right: popoverRect.right
+      }
+    });
+
+    let offset = '50%';
+
+    // Calcular offset baseado no lado REAL do popover
+    if (actualSide === 'top' || actualSide === 'bottom') {
+      // Arrow horizontal - calcular offset left/right
+      const popoverLeft = popoverRect.left;
+      const popoverWidth = popoverRect.width;
+      let relativeX = pinCenter.x - popoverLeft;
+      
+      // Aplicar limites SUAVES (apenas para segurança)
+      const minX = ARROW_MARGIN + ARROW_SIZE;
+      const maxX = popoverWidth - ARROW_MARGIN - ARROW_SIZE;
+      const originalX = relativeX;
+      
+      // Se estiver muito fora, limitar, caso contrário deixar apontar para o pin
+      if (relativeX < minX || relativeX > maxX) {
+        relativeX = Math.max(minX, Math.min(maxX, relativeX));
+        console.log('⚠️ Arrow foi limitada (popover pode não estar bem posicionado)');
+      }
+      
+      console.log('🎯 Arrow horizontal:', {
+        originalX,
+        finalX: relativeX,
+        popoverWidth,
+        isPointingToPin: Math.abs(originalX - relativeX) < 1
+      });
+      
+      offset = `${relativeX}px`;
+    } else if (actualSide === 'left' || actualSide === 'right') {
+      // Arrow vertical - calcular offset top/bottom
+      const popoverTop = popoverRect.top;
+      const popoverHeight = popoverRect.height;
+      let relativeY = pinCenter.y - popoverTop;
+      
+      // Aplicar limites SUAVES (apenas para segurança)
+      const minY = ARROW_MARGIN + ARROW_SIZE;
+      const maxY = popoverHeight - ARROW_MARGIN - ARROW_SIZE;
+      const originalY = relativeY;
+      
+      // Se estiver muito fora, limitar, caso contrário deixar apontar para o pin
+      if (relativeY < minY || relativeY > maxY) {
+        relativeY = Math.max(minY, Math.min(maxY, relativeY));
+        console.log('⚠️ Arrow foi limitada (popover pode não estar bem posicionado)');
+      }
+      
+      console.log('🎯 Arrow vertical:', {
+        originalY,
+        finalY: relativeY,
+        popoverHeight,
+        isPointingToPin: Math.abs(originalY - relativeY) < 1
+      });
+      
+      offset = `${relativeY}px`;
+    }
+
+    return {
+      side: actualSide,  // Usar lado detectado automaticamente
+      offset: offset
+    };
+  };
 
   useEffect(() => {
     if (anchorEl && isOpen) {
@@ -68,12 +197,56 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
               left: newRect.left + newRect.width / 2,
               top: newRect.top + newRect.height / 2
             });
+            
+            // Calcular melhor posição
+            const bestPosition = calculateBestPopoverPosition(newRect, { width: 500, height: 600 });
+            setPopoverPosition(bestPosition);
+
+            // Calcular posição da arrow após popover estar renderizado
+            // Usar múltiplos timeouts para garantir que o Radix UI terminou de posicionar
+            setTimeout(() => {
+              if (popoverRef.current) {
+                const arrow = calculateArrowPosition(newRect, bestPosition, popoverRef.current);
+                setArrowPosition(arrow);
+                
+                // Recalcular após mais tempo para garantir posição final
+                setTimeout(() => {
+                  if (popoverRef.current) {
+                    const arrow = calculateArrowPosition(newRect, bestPosition, popoverRef.current);
+                    setArrowPosition(arrow);
+                    console.log('🎯 Arrow recalculada após Radix posicionar');
+                  }
+                }, 100);
+              }
+            }, 50);
           }, 50);
         } else {
           setTriggerPosition({
             left: rect.left + rect.width / 2,
             top: rect.top + rect.height / 2
           });
+          
+          // Calcular melhor posição
+          const bestPosition = calculateBestPopoverPosition(rect, { width: 500, height: 600 });
+          setPopoverPosition(bestPosition);
+
+          // Calcular posição da arrow após popover estar renderizado
+          // Usar múltiplos timeouts para garantir que o Radix UI terminou de posicionar
+          setTimeout(() => {
+            if (popoverRef.current) {
+              const arrow = calculateArrowPosition(rect, bestPosition, popoverRef.current);
+              setArrowPosition(arrow);
+              
+              // Recalcular após mais tempo para garantir posição final
+              setTimeout(() => {
+                if (popoverRef.current) {
+                  const arrow = calculateArrowPosition(rect, bestPosition, popoverRef.current);
+                  setArrowPosition(arrow);
+                  console.log('🎯 Arrow recalculada após Radix posicionar');
+                }
+              }, 100);
+            }
+          }, 50);
         }
       });
     }
@@ -102,16 +275,27 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
   const shouldShowSecondDivider = (hasCompanies || hasSummary) && hasInfrastructure;
 
   const content = (
-    <div className="popover-pins-card">
+    <>
+      {/* Dynamic Arrow - aponta para o centro do pin */}
+      <div 
+        className={`popover-pins-arrow popover-pins-arrow-${arrowPosition.side}`}
+        style={{
+          [arrowPosition.side === 'top' || arrowPosition.side === 'bottom' ? 'left' : 'top']: arrowPosition.offset,
+          transform: arrowPosition.side === 'top' || arrowPosition.side === 'bottom' ? 'translateX(-50%)' : 'translateY(-50%)'
+        }}
+      />
+      <div className="popover-pins-card">
           {/* Header Section */}
           <div className="popover-pins-header">
             <div className="popover-pins-upper-content">
               {/* Status Tag */}
               <div className="popover-pins-status-tag">
                 <div className="popover-pins-status-icon-container">
-                  <svg className="popover-pins-status-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.9996 31.7884C16.1266 31.7884 14.5333 31.1317 13.2198 29.8182C11.9063 28.5047 11.2496 26.9114 11.2496 25.0384C11.2496 23.1654 11.9063 21.5722 13.2198 20.2587C14.5333 18.9452 16.1266 18.2884 17.9996 18.2884C19.8726 18.2884 21.4658 18.9452 22.7793 20.2587C24.0928 21.5722 24.7496 23.1654 24.7496 25.0384C24.7496 26.9114 24.0928 28.5047 22.7793 29.8182C21.4658 31.1317 19.8726 31.7884 17.9996 31.7884ZM10.5285 17.6768L4.0957 11.2155C5.98995 9.4463 8.13233 8.08667 10.5228 7.13667C12.9131 6.18667 15.4053 5.71167 17.9996 5.71167C20.5938 5.71167 23.0861 6.18667 25.4763 7.13667C27.8668 8.08667 30.0092 9.4463 31.9035 11.2155L25.4707 17.6768C24.4362 16.7288 23.2815 15.9975 22.0065 15.483C20.7315 14.9688 19.3958 14.7117 17.9996 14.7117C16.6033 14.7117 15.2677 14.9688 13.9927 15.483C12.7177 15.9975 11.563 16.7288 10.5285 17.6768Z" fill="white"/>
-                  </svg>
+                  <img 
+                    src={getStatusIcon(status)} 
+                    alt={status}
+                    className="popover-pins-status-icon"
+                  />
                 </div>
                 <span className="popover-pins-status-text">{status}</span>
               </div>
@@ -244,7 +428,8 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
       <button className="popover-pins-close-button" onClick={onClose}>
         Fechar
       </button>
-    </div>
+      </div>
+    </>
   );
 
   // Renderiza popover posicionado com Shadcn
@@ -255,7 +440,7 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
           style={{
             position: 'fixed',
             left: `${triggerPosition.left}px`,
-            top: `${triggerPosition.top * 1.08}px`,
+            top: `${triggerPosition.top}px`,
             width: '1px',
             height: '1px',
             pointerEvents: 'none'
@@ -263,11 +448,14 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
         />
       </PopoverTrigger>
       <PopoverContent 
+        ref={popoverRef}
         className="p-0 w-max max-w-[calc(100vw-40px)] border-0 rounded-2xl bg-transparent shadow-none relative"
-        side="bottom"
-        align="center"
-        sideOffset={27}
+        side={popoverPosition.side}
+        align={popoverPosition.align}
+        sideOffset={popoverPosition.sideOffset}
+        alignOffset={popoverPosition.alignOffset || 0}
         onInteractOutside={onClose}
+        collisionPadding={20}
       >
         {content}
       </PopoverContent>

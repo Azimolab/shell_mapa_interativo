@@ -141,14 +141,38 @@
             "title": "8 FPSOs em operação",
             "description": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
             "items": [
-              { "id": 1, "name": "FPSO Cidade de Angra dos Reis" },
-              { "id": 2, "name": "FPSO Cidade de Paraty" },
-              { "id": 3, "name": "FPSO Cidade de Mangaratiba" },
-              { "id": 4, "name": "FPSO Cidade de Saquarema" },
-              { "id": 5, "name": "FPSO Cidade de Maricá" },
-              { "id": 6, "name": "FPSO Cidade de Itaguaí" },
-              { "id": 7, "name": "P-66" },
-              { "id": 8, "name": "P-67" }
+              {
+                "id": 1,
+                "name": "FPSO Cidade de Angra dos Reis"
+              },
+              {
+                "id": 2,
+                "name": "FPSO Cidade de Paraty"
+              },
+              {
+                "id": 3,
+                "name": "FPSO Cidade de Mangaratiba"
+              },
+              {
+                "id": 4,
+                "name": "FPSO Cidade de Saquarema"
+              },
+              {
+                "id": 5,
+                "name": "FPSO Cidade de Maricá"
+              },
+              {
+                "id": 6,
+                "name": "FPSO Cidade de Itaguaí"
+              },
+              {
+                "id": 7,
+                "name": "P-66"
+              },
+              {
+                "id": 8,
+                "name": "P-67"
+              }
             ]
           }
         },
@@ -161,7 +185,7 @@
             "icon": "production"
           },
           "title": "BM-S-9A - Búzios",
-          "tags": [          ],
+          "tags": [],
           "operator": {
             "name": "Petrobras",
             "description": "Responsável pela administração do campo"
@@ -181,13 +205,23 @@
             "title": "6 FPSOs em operação",
             "description": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
             "items": [
-              { "id": 1, "name": "P-74" },
-              { "id": 2, "name": "P-75" }
-
+              {
+                "id": 1,
+                "name": "P-74"
+              },
+              {
+                "id": 2,
+                "name": "P-75"
+              }
             ]
           }
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2016": {
@@ -276,7 +310,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -469,7 +508,12 @@
           "id": "prod6",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2017": {
@@ -558,7 +602,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -734,28 +783,13 @@
               }
             ]
           }
-        },
-        {
-          "id": "prod3",
-          "number": null
-        },
-        {
-          "id": "prod4",
-          "number": null
-        },
-        {
-          "id": "prod5",
-          "number": null
-        },
-        {
-          "id": "prod6",
-          "number": null
-        },
-        {
-          "id": "prod7",
-          "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2018": {
@@ -844,7 +878,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -911,7 +950,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -1116,7 +1160,12 @@
           "id": "prod8",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2019": {
@@ -1205,7 +1254,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -1272,7 +1326,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -1485,7 +1544,12 @@
           "id": "prod9",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2020": {
@@ -1574,7 +1638,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -1641,7 +1710,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -1862,7 +1936,12 @@
           "id": "prod10",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2021": {
@@ -1951,7 +2030,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -2018,7 +2102,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -2243,7 +2332,12 @@
           "id": "prod11",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2022": {
@@ -2332,7 +2426,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -2399,7 +2498,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [],
@@ -2628,7 +2732,12 @@
           "id": "prod12",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": true,
+        "terceiros": false
+      }
     }
   },
   "2023": {
@@ -2697,7 +2806,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -2764,7 +2878,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [
@@ -3002,7 +3121,12 @@
           "id": "prod13",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": true,
+        "terceiros": true
+      }
     },
     "pelotas": {
       "decommissioningPins": [],
@@ -3069,7 +3193,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   },
   "2024": {
@@ -3138,7 +3267,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "pelotas": {
       "decommissioningPins": [],
@@ -3149,76 +3283,80 @@
           "type": "exploration",
           "popoverType": "exploration",
           "status": {
-              "label": "Em exploração",
-              "icon": "exploration"
+            "label": "Em exploração",
+            "icon": "exploration"
           },
           "title": "Bacia Pelotas",
           "tags": [
-              "Rodada de licitação: OPC4"
+            "Rodada de licitação: OPC4"
           ],
           "operator": {
-              "name": "Petrobrás",
-              "description": "Responsável pela administração do campo"
+            "name": "Petrobrás",
+            "description": "Responsável pela administração do campo"
           },
           "depth": {
-              "value": "~1.600-3.500m",
-              "description": "Distância da superfície do mar até o fundo"
+            "value": "~1.600-3.500m",
+            "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
-              {
-                  "name": "Shell",
-                  "percentage": 30,
-                  "isOperator": false
-              },
-              {
-                  "name": "Petrobrás",
-                  "percentage": 70,
-                  "isOperator": true
-              }
+            {
+              "name": "Shell",
+              "percentage": 30,
+              "isOperator": false
+            },
+            {
+              "name": "Petrobrás",
+              "percentage": 70,
+              "isOperator": true
+            }
           ]
-      },
-      {
+        },
+        {
           "id": "exp2",
           "svgId": "RedPin_2-BaciaPelotas",
           "type": "exploration",
           "popoverType": "exploration",
           "status": {
-              "label": "Em exploração",
-              "icon": "exploration"
+            "label": "Em exploração",
+            "icon": "exploration"
           },
           "title": "Bacia Pelotas",
           "tags": [
-              "Rodada de licitação: OPC4"
+            "Rodada de licitação: OPC4"
           ],
           "operator": {
-              "name": "Petrobrás",
-              "description": "Responsável pela administração do campo"
+            "name": "Petrobrás",
+            "description": "Responsável pela administração do campo"
           },
           "depth": {
-              "value": "~2.250-3.250m",
-              "description": "Distância da superfície do mar até o fundo"
+            "value": "~2.250-3.250m",
+            "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
-              {
-                  "name": "Shell",
-                  "percentage": 30,
-                  "isOperator": false
-              },
-              {
-                  "name": "Petrobrás",
-                  "percentage": 50,
-                  "isOperator": true
-              },
-              {
-                  "name": "CNOOC",
-                  "percentage": 20,
-                  "isOperator": false
-              }
+            {
+              "name": "Shell",
+              "percentage": 30,
+              "isOperator": false
+            },
+            {
+              "name": "Petrobrás",
+              "percentage": 50,
+              "isOperator": true
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
           ]
-      }
-
+        }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": true,
+        "terceiros": false
+      }
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -3285,7 +3423,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [
@@ -3531,7 +3674,12 @@
           "id": "prod14",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": true,
+        "terceiros": true
+      }
     }
   },
   "2025": {
@@ -3600,7 +3748,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "pelotas": {
       "decommissioningPins": [],
@@ -3611,76 +3764,80 @@
           "type": "exploration",
           "popoverType": "exploration",
           "status": {
-              "label": "Em exploração",
-              "icon": "exploration"
+            "label": "Em exploração",
+            "icon": "exploration"
           },
           "title": "Bacia Pelotas",
           "tags": [
-              "Rodada de licitação: OPC4"
+            "Rodada de licitação: OPC4"
           ],
           "operator": {
-              "name": "Petrobrás",
-              "description": "Responsável pela administração do campo"
+            "name": "Petrobrás",
+            "description": "Responsável pela administração do campo"
           },
           "depth": {
-              "value": "~1.600-3.500m",
-              "description": "Distância da superfície do mar até o fundo"
+            "value": "~1.600-3.500m",
+            "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
-              {
-                  "name": "Shell",
-                  "percentage": 30,
-                  "isOperator": false
-              },
-              {
-                  "name": "Petrobrás",
-                  "percentage": 70,
-                  "isOperator": true
-              }
+            {
+              "name": "Shell",
+              "percentage": 30,
+              "isOperator": false
+            },
+            {
+              "name": "Petrobrás",
+              "percentage": 70,
+              "isOperator": true
+            }
           ]
-      },
-      {
+        },
+        {
           "id": "exp2",
           "svgId": "RedPin_2-BaciaPelotas",
           "type": "exploration",
           "popoverType": "exploration",
           "status": {
-              "label": "Em exploração",
-              "icon": "exploration"
+            "label": "Em exploração",
+            "icon": "exploration"
           },
           "title": "Bacia Pelotas",
           "tags": [
-              "Rodada de licitação: OPC4"
+            "Rodada de licitação: OPC4"
           ],
           "operator": {
-              "name": "Petrobrás",
-              "description": "Responsável pela administração do campo"
+            "name": "Petrobrás",
+            "description": "Responsável pela administração do campo"
           },
           "depth": {
-              "value": "~2.250-3.250m",
-              "description": "Distância da superfície do mar até o fundo"
+            "value": "~2.250-3.250m",
+            "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
-              {
-                  "name": "Shell",
-                  "percentage": 30,
-                  "isOperator": false
-              },
-              {
-                  "name": "Petrobrás",
-                  "percentage": 50,
-                  "isOperator": true
-              },
-              {
-                  "name": "CNOOC",
-                  "percentage": 20,
-                  "isOperator": false
-              }
+            {
+              "name": "Shell",
+              "percentage": 30,
+              "isOperator": false
+            },
+            {
+              "name": "Petrobrás",
+              "percentage": 50,
+              "isOperator": true
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
           ]
-      }
-
+        }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": true,
+        "terceiros": false
+      }
     },
     "potiguar": {
       "decommissioningPins": [],
@@ -3747,7 +3904,12 @@
           ]
         }
       ],
-      "productionPins": []
+      "productionPins": [],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     },
     "rio": {
       "decommissioningPins": [
@@ -3993,7 +4155,12 @@
           "id": "prod14",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": true,
+        "gasoduto": true,
+        "terceiros": true
+      }
     }
   },
   "PRÉ 2013": {
@@ -4148,7 +4315,12 @@
           "id": "prod3",
           "number": null
         }
-      ]
+      ],
+      "infrastructure": {
+        "oleoduto": false,
+        "gasoduto": false,
+        "terceiros": false
+      }
     }
   }
 }

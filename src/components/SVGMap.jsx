@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getSVGByZoneAndYear } from '../assets/mapas/index.js';
 import './SVGMap.css';
+import './SVGPins.css';
 
 /**
  * Aplica regras de visibilidade aos pins dentro de um container DOM
