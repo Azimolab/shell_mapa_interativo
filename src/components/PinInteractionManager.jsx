@@ -4,6 +4,7 @@ import SPLocationPopover from './rio/SPLocationPopover';
 import MacaeLocationPopover from './rio/MacaeLocationPopover';
 import PopoverPins from './popovers/PopoverPins';
 import mapData from '../data/mapData.json';
+import locationsData from '../data/locationsData.json';
 
 /**
  * Componente responsável por gerenciar as interações com os pins do SVG
@@ -13,7 +14,7 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
   
   /**
    * Busca um pin em mapData.json pela estrutura hierárquica ano/zona/tipo
-   * @param {string} pinId - ID do pin a ser buscado (ex: 'exp1', 'prod2')
+   * @param {string} pinId - ID do pin a ser buscado (ex: 'exp1', 'prod2', 'GreenPin_7-GatoDoMato')
    * @param {string} year - Ano selecionado (ex: '2013', '2020')
    * @param {string} zone - Zona selecionada (ex: 'rio', 'barreirinhas')
    * @returns {Object|null} - Dados do pin ou null se não encontrado
@@ -29,7 +30,13 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     ];
     
     for (const array of pinArrays) {
-      const pin = array.find(p => p.id === pinId);
+      // Buscar por ID do JSON ou por svgId (mais robusto)
+      const pin = array.find(p => 
+        p.id === pinId || 
+        p.svgId === pinId || 
+        p.id === pinId.toLowerCase() ||
+        p.svgId?.toLowerCase() === pinId.toLowerCase()
+      );
       if (pin) return pin;
     }
     
@@ -56,131 +63,109 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       onPauseTimeline();
     }
 
-    // Função para processar o pin e abrir o popover
-    const processPin = (targetElement) => {
-      // Armazenar o elemento clicado como âncora para o popover
-      setAnchorEl(targetElement);
-      
-      // Tentar mapear ID do SVG para ID do JSON
-      let mappedId = mapSvgIdToJsonId(pinId, pinClass);
-      
-      console.log('Mapped ID:', mappedId);
-
-      // Buscar dados do pin no mapData.json usando a estrutura hierárquica
-      let pinData = null;
-      
-      // Tentar buscar com ID mapeado
-      pinData = findPinInMapData(mappedId, selectedYear, selectedZone);
-      
-      // Se não encontrou, tentar com ID original limpo
-      if (!pinData) {
-        let cleanId = pinId.replace(/^(pin_|pin-|location_|location-)/i, '');
-        pinData = findPinInMapData(cleanId, selectedYear, selectedZone);
-      }
-      
-      console.log('Search results:', {
-        mappedId,
-        year: selectedYear,
-        zone: selectedZone,
-        foundPin: !!pinData,
-        pinData
-      });
-      
-      if (pinData) {
-        console.log('✅ Pin data found:', pinData);
-        console.log('📋 Setting activePopover to:', pinData.popoverType);
-        setPopoverData(pinData);
-        setActivePopover(pinData.popoverType);
-      } else {
-        console.warn('⚠️ No data found for pin:', pinId, 'mapped to:', mappedId);
-        console.warn('📦 Context:', { year: selectedYear, zone: selectedZone });
-        
-        // Fallback: mostrar popover genérico baseado no tipo
-        const genericType = identifyGenericType(pinId, pinClass);
-        if (genericType) {
-          console.log('🔄 Using generic type:', genericType);
-          setPopoverData(genericType);
-          setActivePopover(genericType.popoverType);
-        }
-      }
-    };
-
-    // Se estava tocando, aguardar um pouco para o SVG estabilizar
-    if (wasPlaying) {
-      console.log('⏳ Timeline foi pausada, aguardando SVG estabilizar...');
-      setTimeout(() => {
-        // Re-buscar o elemento pelo ID para garantir que temos a referência correta
-        // Considerar múltiplos containers durante transição
-        const svgContainers = document.querySelectorAll('.svg-map-content');
-        
-        if (svgContainers.length > 0 && pinId) {
-          // Pegar o container correto (z-index 2 se houver múltiplos)
-          let targetContainer = svgContainers[svgContainers.length - 1];
-          if (svgContainers.length > 1) {
-            for (const container of svgContainers) {
-              const parent = container.parentElement;
-              if (parent && getComputedStyle(parent).zIndex === '2') {
-                targetContainer = container;
-                break;
-              }
-            }
-          }
-          
-          const svgElement = targetContainer.querySelector('svg');
+    // Se estava em play, aguardar um frame para garantir que o SVG está estável
+    // e re-buscar o elemento pelo ID para ter a referência correta
+    if (wasPlaying && pinId) {
+      requestAnimationFrame(() => {
+        const svgContainer = document.querySelector('.svg-map-content');
+        if (svgContainer) {
+          const svgElement = svgContainer.querySelector('svg');
           if (svgElement) {
             const freshElement = svgElement.querySelector(`#${CSS.escape(pinId)}`);
             if (freshElement) {
-              console.log('✅ Elemento re-encontrado após pausa da timeline');
-              processPin(freshElement);
+              console.log('✅ Usando elemento atualizado após pausa do play');
+              setAnchorEl(freshElement);
             } else {
               console.warn('⚠️ Elemento não encontrado, usando elemento original');
-              processPin(element);
+              setAnchorEl(element);
             }
           } else {
-            processPin(element);
+            setAnchorEl(element);
           }
         } else {
-          processPin(element);
+          setAnchorEl(element);
         }
-      }, 150); // 1300ms para aguardar a transição do SVGMap (1000ms) + margem
+      });
     } else {
-      // Timeline já estava pausada, processar imediatamente
-      processPin(element);
+      // Timeline não estava em play, usar elemento diretamente
+      setAnchorEl(element);
+    }
+    
+    // Verificar PRIMEIRO se é um pin de location (prioridade alta)
+    const locationId = detectLocationPin(pinId, pinClass);
+    if (locationId && locationsData.locations[locationId]) {
+      console.log('📍 Location pin detected:', locationId);
+      const locationData = locationsData.locations[locationId];
+      setPopoverData({ ...locationData, id: locationId });
+      setActivePopover(`location_${locationId}`);
+      return;
+    }
+    
+    // Se não for location, buscar nos pins de campos (exploration, production, etc)
+    let mappedId = mapSvgIdToJsonId(pinId, pinClass);
+    console.log('Mapped ID:', mappedId);
+
+    // Buscar dados do pin no mapData.json usando a estrutura hierárquica
+    let pinData = null;
+    
+    // 1. Tentar buscar com ID original do SVG (pode ser o svgId no JSON)
+    pinData = findPinInMapData(pinId, selectedYear, selectedZone);
+    
+    // 2. Se não encontrou, tentar com ID mapeado
+    if (!pinData && mappedId) {
+      pinData = findPinInMapData(mappedId, selectedYear, selectedZone);
+    }
+    
+    // 3. Se ainda não encontrou, tentar com ID original limpo
+    if (!pinData) {
+      let cleanId = pinId.replace(/^(pin_|pin-|location_|location-)/i, '');
+      pinData = findPinInMapData(cleanId, selectedYear, selectedZone);
+    }
+    
+    console.log('Search results:', {
+      mappedId,
+      year: selectedYear,
+      zone: selectedZone,
+      foundPin: !!pinData,
+      pinData
+    });
+    
+    if (pinData) {
+      console.log('✅ Pin data found:', pinData);
+      
+      // Para qualquer pin de campo (exploration, production, development, decommissioning)
+      // Usa o componente genérico PopoverPins
+      setPopoverData(pinData);
+      setActivePopover('pin_generic');
+    } else {
+      console.warn('⚠️ No data found for pin:', pinId, 'mapped to:', mappedId);
+      console.warn('📦 Context:', { year: selectedYear, zone: selectedZone });
+      
+      // Fallback: mostrar popover genérico baseado no tipo visual
+      const genericType = identifyGenericType(pinId, pinClass);
+      if (genericType) {
+        console.log('🔄 Using generic fallback');
+        setPopoverData(genericType);
+        setActivePopover('pin_generic');
+      }
     }
   }, [isPlaying, onPauseTimeline, findPinInMapData, selectedYear, selectedZone]);
 
   const setupPinListeners = useCallback(() => {
-    // IMPORTANTE: Há dois .svg-map-content durante a transição (fade-in e fade-out)
-    // Precisamos pegar o SVG correto (z-index 2, o que está fazendo fade-in)
-    const svgContainers = document.querySelectorAll('.svg-map-content');
+    const svgContainer = document.querySelector('.svg-map-content');
     
-    if (svgContainers.length === 0) {
+    if (!svgContainer) {
       console.warn('⚠️ Nenhum container SVG encontrado');
-      return;
+      return false;
     }
     
-    // Se há múltiplos containers (durante transição), pegar o com z-index maior (o novo)
-    let targetContainer = svgContainers[0];
-    if (svgContainers.length > 1) {
-      // Pegar o container cujo pai tem z-index 2
-      for (const container of svgContainers) {
-        const parent = container.parentElement;
-        if (parent && getComputedStyle(parent).zIndex === '2') {
-          targetContainer = container;
-          console.log('🎯 Usando SVG com z-index 2 (novo SVG)');
-          break;
-        }
-      }
-    }
-    
-    const svgElement = targetContainer.querySelector('svg');
+    const svgElement = svgContainer.querySelector('svg');
     if (!svgElement) {
       console.warn('⚠️ SVG element not found for pin listeners.');
-      return;
+      return false;
     }
 
     // Seleção específica: apenas grupos principais de pins
-    // Evita selecionar elementos filhos dentro dos grupos
     const selectors = [
       'g[id^="Pin_"]',           // LocationPins: Pin_Rio, Pin_SP, Pin_Macae etc.
       'g[id^="GreenPin"]',       // Production pins: GreenPin_1, GreenPin_2, etc.
@@ -195,7 +180,12 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     
     const pinElements = svgElement.querySelectorAll(selectors.join(', '));
     
-    console.log(`📍 Found ${pinElements.length} interactive pin elements (containers: ${svgContainers.length})`);
+    if (pinElements.length === 0) {
+      console.warn('⚠️ Nenhum pin encontrado no SVG');
+      return false;
+    }
+    
+    console.log(`📍 Encontrados ${pinElements.length} pins interativos`);
 
     let listenersAdded = 0;
     pinElements.forEach((element) => {
@@ -209,35 +199,22 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       // Adicionar event listener
       element.addEventListener('click', handlePinClick, { passive: false });
       
-      // Marcar como processado para debug
-      element.dataset.listenerAdded = 'true';
-      element.dataset.listenerAddedAt = Date.now();
-      
       listenersAdded++;
     });
     
-    console.log(`✅ ${listenersAdded} listeners adicionados com sucesso em`, new Date().toISOString());
-    
-    // Verificação final: testar se pelo menos um elemento tem o listener
-    if (listenersAdded > 0) {
-      const firstPin = pinElements[0];
-      console.log('🔍 Primeiro pin configurado:', {
-        id: firstPin.id,
-        hasListener: firstPin.dataset.listenerAdded === 'true',
-        cursor: firstPin.style.cursor,
-        pointerEvents: firstPin.style.pointerEvents
-      });
-    }
+    console.log(`✅ ${listenersAdded} listeners adicionados com sucesso`);
+    return true;
   }, [handlePinClick]);
 
   const removePinListeners = useCallback(() => {
-    // Remover listeners de TODOS os containers SVG (pode haver 2 durante transição)
-    const svgContainers = document.querySelectorAll('.svg-map-content');
+    const svgContainer = document.querySelector('.svg-map-content');
     
-    if (svgContainers.length === 0) {
-      console.log('⚠️ removePinListeners: Nenhum container SVG encontrado');
+    if (!svgContainer) {
       return;
     }
+
+    const svgElement = svgContainer.querySelector('svg');
+    if (!svgElement) return;
 
     const selectors = [
       'g[id^="Pin_"]',
@@ -251,28 +228,35 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       'g[class*="GrayPin"]'
     ];
     
-    let totalListenersRemoved = 0;
+    const pinElements = svgElement.querySelectorAll(selectors.join(', '));
     
-    svgContainers.forEach((container, index) => {
-      const svgElement = container.querySelector('svg');
-      if (!svgElement) return;
-      
-      const pinElements = svgElement.querySelectorAll(selectors.join(', '));
-      
-      pinElements.forEach((element) => {
-        if (element.dataset.listenerAdded === 'true') {
-          totalListenersRemoved++;
-        }
-        element.removeEventListener('click', handlePinClick);
-        delete element.dataset.listenerAdded;
-        delete element.dataset.listenerAddedAt;
-      });
+    pinElements.forEach((element) => {
+      element.removeEventListener('click', handlePinClick);
     });
     
-    if (totalListenersRemoved > 0) {
-      console.log(`🗑️ ${totalListenersRemoved} listeners removidos de ${svgContainers.length} container(s)`);
+    if (pinElements.length > 0) {
+      console.log(`🗑️ ${pinElements.length} listeners removidos`);
     }
   }, [handlePinClick]);
+
+  // useEffect para escutar o evento de SVG pronto
+  useEffect(() => {
+    const handleSvgReady = (event) => {
+      const { year, zone } = event.detail;
+      console.log('📥 Evento svgMapReady recebido:', { year, zone });
+      
+      // Adicionar listeners quando o SVG estiver pronto
+      requestAnimationFrame(() => {
+        setupPinListeners();
+      });
+    };
+
+    window.addEventListener('svgMapReady', handleSvgReady);
+
+    return () => {
+      window.removeEventListener('svgMapReady', handleSvgReady);
+    };
+  }, [setupPinListeners]);
 
   // useEffect principal para gerenciar os listeners
   useEffect(() => {
@@ -286,93 +270,46 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     // Limpar listeners existentes imediatamente
     removePinListeners();
 
-    // Função para tentar adicionar os listeners com retry
+    // Sistema de retry mais robusto usando requestAnimationFrame
     let attempts = 0;
-    const maxAttempts = 20; // Aumentado para lidar com transições durante play
-    let timerId = null;
+    const maxAttempts = 20;
+    let rafId = null;
+    let timeoutId = null;
     let isCleanedUp = false;
 
-    const trySetupListeners = () => {
+    const trySetupWithRetry = () => {
       if (isCleanedUp) return;
       
-      // Buscar todos os containers (pode haver 2 durante transição)
-      const svgContainers = document.querySelectorAll('.svg-map-content');
+      attempts++;
+      const success = setupPinListeners();
       
-      if (svgContainers.length === 0) {
-        // Nenhum container encontrado, tentar novamente
-        attempts++;
-        if (attempts < maxAttempts) {
-          console.log('⏳ Tentativa', attempts, 'de', maxAttempts, '- Nenhum container encontrado');
-          timerId = setTimeout(trySetupListeners, 150);
-        } else {
-          console.warn('❌ Não foi possível encontrar o SVG após', maxAttempts, 'tentativas');
-        }
+      if (success) {
+        console.log(`✅ Listeners configurados com sucesso na tentativa ${attempts}`);
         return;
       }
       
-      // Se houver múltiplos, pegar o com z-index 2 (novo)
-      let targetContainer = svgContainers[svgContainers.length - 1]; // Por padrão, o último
-      if (svgContainers.length > 1) {
-        for (const container of svgContainers) {
-          const parent = container.parentElement;
-          if (parent && getComputedStyle(parent).zIndex === '2') {
-            targetContainer = container;
-            break;
-          }
-        }
-      }
-      
-      const svgElement = targetContainer.querySelector('svg');
-      
-      if (svgElement && svgElement.querySelector('g')) {
-        // SVG está pronto e tem elementos dentro
-        console.log('✅ SVG pronto, configurando listeners (tentativa:', attempts + 1, ', containers:', svgContainers.length, ')');
-        
-        // Verificar se os elementos realmente existem antes de adicionar listeners
-        const testSelectors = [
-          'g[id^="Pin_"]',
-          'g[id^="GreenPin"]',
-          'g[id^="RedPin"]',
-          'g[id^="PurplePin"]',
-          'g[id^="GrayPin"]'
-        ];
-        
-        const hasElements = testSelectors.some(selector => 
-          svgElement.querySelector(selector) !== null
-        );
-        
-        if (hasElements) {
-          setupPinListeners();
-        } else {
-          console.log('⚠️ SVG existe mas não tem pins, tentando novamente...');
-          attempts++;
-          if (attempts < maxAttempts) {
-            timerId = setTimeout(trySetupListeners, 100);
-          }
-        }
-      } else if (attempts < maxAttempts) {
-        // Tentar novamente após um delay
-        attempts++;
-        console.log('⏳ Tentativa', attempts, 'de', maxAttempts);
-        timerId = setTimeout(trySetupListeners, 150);
+      if (attempts < maxAttempts) {
+        // Usar requestAnimationFrame para tentar após o próximo repaint
+        rafId = requestAnimationFrame(() => {
+          // Adicionar um pequeno delay adicional após o RAF
+          timeoutId = setTimeout(trySetupWithRetry, 50);
+        });
       } else {
-        console.warn('❌ Não foi possível encontrar o SVG após', maxAttempts, 'tentativas');
+        console.warn(`❌ Não foi possível adicionar listeners após ${maxAttempts} tentativas`);
       }
     };
 
-    // Delay inicial: aguardar a transição do SVGMap terminar (1000ms) + margem de segurança
-    // O SVGMap faz crossfade por 1000ms, então precisamos aguardar isso
-    const initialDelay = 1200; // 1200ms para garantir que a transição terminou
-    const initialTimer = setTimeout(trySetupListeners, initialDelay);
+    // Iniciar o processo de setup com RAF para garantir que o DOM está pronto
+    rafId = requestAnimationFrame(trySetupWithRetry);
 
     return () => {
       console.log('🧹 Cleanup do PinInteractionManager');
       isCleanedUp = true;
-      clearTimeout(initialTimer);
-      if (timerId) clearTimeout(timerId);
+      if (rafId) cancelAnimationFrame(rafId);
+      if (timeoutId) clearTimeout(timeoutId);
       removePinListeners();
     };
-  }, [selectedYear, selectedZone, activeLegendItems, isPlaying, setupPinListeners, removePinListeners]);
+  }, [selectedYear, selectedZone, activeLegendItems, setupPinListeners, removePinListeners]);
 
   // Efeito para adicionar classe 'active' aos pins de localização quando o popover está aberto
   useEffect(() => {
@@ -404,6 +341,40 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     setAnchorEl(null);
   }, []);
 
+  /**
+   * Detecta se o pin é de location (São Paulo, Rio, Macaé)
+   * @param {string} pinId - ID do pin do SVG
+   * @param {string} pinClass - Classe do pin
+   * @returns {string|null} - ID da location ('sp', 'rio', 'macae') ou null
+   */
+  const detectLocationPin = (pinId, pinClass) => {
+    if (!pinId) return null;
+    
+    const id = pinId.toLowerCase();
+    const className = (pinClass || '').toLowerCase();
+    
+    // Detectar pelo padrão Pin_* (mais comum)
+    if (id === 'pin_sp' || id === 'pin-sp') return 'sp';
+    if (id === 'pin_rio' || id === 'pin-rio') return 'rio';
+    if (id === 'pin_macae' || id === 'pin-macae' || id === 'pin_macaé' || id === 'pin-macaé') return 'macae';
+    
+    // Detectar se a classe contém LocationPin e o ID contém o nome da cidade
+    const isLocationPin = className.includes('locationpin') || id.includes('location');
+    
+    if (isLocationPin) {
+      if (id.includes('sp') || id.includes('saopaulo') || id.includes('sao') || id.includes('paulo')) return 'sp';
+      if (id.includes('rio') && !id.includes('barreirinhas')) return 'rio';
+      if (id.includes('macae') || id.includes('macaé')) return 'macae';
+    }
+    
+    // Detectar apenas pelo nome (fallback)
+    if (id === 'sp' || id === 'saopaulo') return 'sp';
+    if (id === 'rio') return 'rio';
+    if (id === 'macae' || id === 'macaé') return 'macae';
+    
+    return null;
+  };
+
   // Efeito para fechar popover quando o play da timeline é ativado
   useEffect(() => {
     if (isPlaying && activePopover) {
@@ -413,22 +384,14 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
   }, [isPlaying, activePopover, closePopover]);
 
   const mapSvgIdToJsonId = (svgId, pinClass) => {
-    // Mapear IDs do SVG para IDs do JSON
-    // Exemplos: GreenPin_3 -> prod3, RedPin_1 -> exp1, Pin_Rio -> rio
+    // Mapear IDs do SVG para IDs do JSON de pins de campos
+    // Exemplos: GreenPin_3 -> prod3, RedPin_1 -> exp1
+    // Nota: Location pins (Pin_Rio, Pin_SP, etc) são tratados separadamente por detectLocationPin()
     
     if (!svgId) return null;
     
     const id = svgId.toLowerCase();
     const className = (pinClass || '').toLowerCase();
-    
-    // LocationPins específicos (prioridade alta)
-    if (id.startsWith('pin_')) {
-      // Pin_Rio -> rio, Pin_SP -> sp, Pin_Macae -> macae
-      const locationName = id.replace('pin_', '');
-      if (locationName === 'rio') return 'rio';
-      if (locationName === 'sp' || locationName === 'saopaulo') return 'sp';
-      if (locationName === 'macae') return 'macae';
-    }
     
     // Green pins = produção
     if (id.includes('greenpin') || className.includes('greenpin')) {
@@ -454,13 +417,6 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       if (number) return `decomm${number}`;
     }
     
-    // Locations genéricas
-    if (id.includes('location') || className.includes('location')) {
-      if (id.includes('sp') || id.includes('saopaulo')) return 'sp';
-      if (id.includes('rio') && !id.includes('barreirinhas')) return 'rio';
-      if (id.includes('macae')) return 'macae';
-    }
-    
     return svgId;
   };
 
@@ -469,143 +425,54 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     const id = (pinId || '').toLowerCase();
     const className = (pinClass || '').toLowerCase();
     
+    // Determinar status baseado no tipo de pin
+    let status = 'Status desconhecido';
+    
     if (id.includes('greenpin') || className.includes('greenpin') || 
         id.includes('production') || className.includes('production')) {
-      return {
-        popoverType: 'production_type1',
-        title: 'Campo de Produção',
-        status: 'Em produção',
-        operator: 'Shell',
-        operatorDescription: 'Responsável pela administração do campo',
-        depth: 'A definir',
-        depthDescription: 'Distância da superfície do mar até o fundo',
-        companies: [
-          {
-            id: 'shell',
-            name: 'Shell*',
-            percentage: 100,
-            color: '#DD1D21',
-            isOperator: true
-          }
-        ]
-      };
-    }
-    
-    if (id.includes('redpin') || className.includes('redpin') || 
+      status = { label: 'Em produção', icon: 'production' };
+    } else if (id.includes('redpin') || className.includes('redpin') || 
         id.includes('exploration') || className.includes('exploration')) {
-      return {
-        popoverType: 'exploration_type1',
-        title: 'Bloco em Exploração',
-        status: 'Em exploração',
-        operator: 'Shell',
-        operatorDescription: 'Responsável pela administração do campo',
-        depth: 'A definir',
-        depthDescription: 'Distância da superfície do mar até o fundo',
-        companies: [
-          {
-            id: 'shell',
-            name: 'Shell*',
-            percentage: 100,
-            color: '#DD1D21',
-            isOperator: true
-          }
-        ]
-      };
-    }
-    
-    if (id.includes('purplepin') || className.includes('purplepin') || 
+      status = { label: 'Em exploração', icon: 'exploration' };
+    } else if (id.includes('purplepin') || className.includes('purplepin') || 
         id.includes('development') || className.includes('development')) {
-      return {
-        popoverType: 'production_type1',
-        title: 'Bloco em Desenvolvimento',
-        status: 'Em desenvolvimento',
-        operator: 'Shell',
-        operatorDescription: 'Responsável pela administração do campo',
-        depth: 'A definir',
-        depthDescription: 'Distância da superfície do mar até o fundo',
-        companies: [
-          {
-            id: 'shell',
-            name: 'Shell*',
-            percentage: 100,
-            color: '#DD1D21',
-            isOperator: true
-          }
-        ]
-      };
-    }
-    
-    if (id.includes('graypin') || className.includes('graypin') || 
+      status = { label: 'Em desenvolvimento', icon: 'development' };
+    } else if (id.includes('graypin') || className.includes('graypin') || 
         id.includes('decommission') || className.includes('decommission')) {
-      return {
-        popoverType: 'production_type1',
-        title: 'Bloco em Descomissionamento',
-        status: 'Em descomissionamento',
-        operator: 'Shell',
-        operatorDescription: 'Responsável pela administração do campo',
-        depth: 'A definir',
-        depthDescription: 'Distância da superfície do mar até o fundo',
-        companies: [
-          {
-            id: 'shell',
-            name: 'Shell*',
-            percentage: 100,
-            color: '#DD1D21',
-            isOperator: true
-          }
-        ]
-      };
+      status = { label: 'Em descomissionamento', icon: 'decommissioning' };
     }
     
-    return null;
-  };
-
-  const identifyPopoverType = (pinId, pinClass) => {
-    // Converter para lowercase para comparação
-    const id = (pinId || '').toLowerCase();
-    const className = (pinClass || '').toLowerCase();
-
-    // Verificar localizações específicas
-    if (id.includes('sp') || id.includes('saopaulo') || id.includes('sao-paulo') ||
-        className.includes('sp') || className.includes('saopaulo')) {
-      return 'sp';
-    }
-
-    if (id.includes('macae') || id.includes('macaé') ||
-        className.includes('macae') || className.includes('macaé')) {
-      return 'macae';
-    }
-
-    if (id.includes('rio') && !id.includes('barreirinhas') ||
-        className.includes('rio') && !className.includes('barreirinhas')) {
-      return 'rio';
-    }
-
-    // Para pins de exploração/produção genéricos, abrir um popover padrão
-    if (id.includes('exploration') || id.includes('exp') || id.includes('red') ||
-        className.includes('exploration') || className.includes('exp') || className.includes('red')) {
-      return 'exploration';
-    }
-
-    if (id.includes('production') || id.includes('prod') || id.includes('green') ||
-        className.includes('production') || className.includes('prod') || className.includes('green')) {
-      return 'production';
-    }
-
-    return null;
+    return {
+      title: 'Informações não disponíveis',
+      status: status,
+      operator: {
+        name: 'Shell',
+        description: 'Responsável pela administração do campo'
+      },
+      depth: {
+        value: 'A definir',
+        description: 'Distância da superfície do mar até o fundo'
+      },
+      companies: [
+        {
+          name: 'Shell',
+          percentage: 100,
+          isOperator: true
+        }
+      ]
+    };
   };
 
   // Debug logs
   console.log('🔍 PinInteractionManager render:', {
     activePopover,
     hasPopoverData: !!popoverData,
-    explorationPopoverOpen: activePopover === 'exploration_type1',
-    productionPopoverOpen: activePopover === 'production_type1'
+    pinGenericPopoverOpen: activePopover === 'pin_generic'
   });
 
   return (
     <>
-      {/* Popovers de localizações específicas com shadcn */}
+      {/* Popovers de localizações específicas (São Paulo, Rio, Macaé) */}
       {activePopover === 'location_sp' && (
         <SPLocationPopover 
           isOpen={true}
@@ -626,12 +493,13 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
         <RioLocationPopover 
           isOpen={true}
           anchorEl={anchorEl}
-          onClose={closePopover} 
+          onClose={closePopover}
+          year={selectedYear}
         />
       )}
       
-      {/* Popovers de pins (exploration e production) */}
-      {(activePopover === 'exploration_type1' || activePopover === 'production_type1') && (
+      {/* Popover genérico para TODOS os pins (exploration, production, development, decommissioning) */}
+      {activePopover === 'pin_generic' && (
         <PopoverPins
           isOpen={true}
           anchorEl={anchorEl}

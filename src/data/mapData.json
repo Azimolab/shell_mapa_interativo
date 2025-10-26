@@ -88,92 +88,104 @@
       "productionPins": [
         {
           "id": "prod1",
-          "number": null,
-          "popoverType": "production_type1",
-          "title": "Bijupirá & Salema",
-          "status": "Em produção",
-          "operator": "Shell",
-          "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~400-870m",
-          "depthDescription": "Distância da superfície do mar até o fundo",
+          "svgId": "GreenPin_7-GatoDoMato",
+          "type": "production",
+          "status": {
+            "label": "Em produção",
+            "icon": "production"
+          },
+          "title": "BM-S-11 - Lula",
+          "tags": [
+            "Lula Central",
+            "Lula Alto",
+            "Lula Norte",
+            "Lula Nordeste",
+            "Lula Extremo Sul"
+          ],
+          "operator": {
+            "name": "Petrobras",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~2.100-2.200m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
           "companies": [
             {
-              "id": "shell",
-              "name": "Shell*",
-              "percentage": 80,
-              "color": "#DD1D21",
+              "name": "Petrobras",
+              "percentage": 65,
               "isOperator": true
             },
             {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 20,
-              "color": "#616161",
+              "name": "Shell",
+              "percentage": 10,
+              "isOperator": false
+            },
+            {
+              "name": "TotalEnergies",
+              "percentage": 10,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 10,
+              "isOperator": false
+            },
+            {
+              "name": "Petrogal",
+              "percentage": 5,
               "isOperator": false
             }
           ],
           "infrastructure": {
-            "fpsoCount": 1,
-            "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+            "title": "8 FPSOs em operação",
+            "description": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
             "items": [
-              {
-                "number": 1,
-                "name": "Fluminense"
-              }
+              { "id": 1, "name": "FPSO Cidade de Angra dos Reis" },
+              { "id": 2, "name": "FPSO Cidade de Paraty" },
+              { "id": 3, "name": "FPSO Cidade de Mangaratiba" },
+              { "id": 4, "name": "FPSO Cidade de Saquarema" },
+              { "id": 5, "name": "FPSO Cidade de Maricá" },
+              { "id": 6, "name": "FPSO Cidade de Itaguaí" },
+              { "id": 7, "name": "P-66" },
+              { "id": 8, "name": "P-67" }
             ]
           }
         },
         {
           "id": "prod2",
-          "number": null,
-          "popoverType": "production_type1",
-          "title": "Parque das Conchas",
-          "status": "Em produção",
-          "operator": "Shell",
-          "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.780m",
-          "depthDescription": "Distância da superfície do mar até o fundo",
+          "svgId": "GreenPin_1-Parque das Conchas",
+          "type": "production",
+          "status": {
+            "label": "Em produção",
+            "icon": "production"
+          },
+          "title": "BM-S-9A - Búzios",
+          "tags": [          ],
+          "operator": {
+            "name": "Petrobras",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~1.900-2.100m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
           "companies": [
             {
-              "id": "shell",
-              "name": "Shell*",
-              "percentage": 50,
-              "color": "#DD1D21",
+              "name": "Petrobras",
+              "percentage": 88.99,
               "isOperator": true
-            },
-            {
-              "id": "ongc",
-              "name": "ONGC",
-              "percentage": 27,
-              "color": "#616161",
-              "isOperator": false
-            },
-            {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 23,
-              "color": "#616161",
-              "isOperator": false
             }
           ],
           "infrastructure": {
-            "fpsoCount": 1,
-            "fpsoDescription": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+            "title": "6 FPSOs em operação",
+            "description": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
             "items": [
-              {
-                "number": 1,
-                "name": "Espírito Santo"
-              }
+              { "id": 1, "name": "P-74" },
+              { "id": 2, "name": "P-75" }
+
             ]
           }
-        },
-        {
-          "id": "prod3",
-          "number": null
-        },
-        {
-          "id": "prod4",
-          "number": null
         }
       ]
     }
@@ -3133,65 +3145,78 @@
       "explorationPins": [
         {
           "id": "exp1",
-          "number": 26,
-          "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
-          "status": "Em exploração",
-          "operator": "Shell",
-          "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
-          "depthDescription": "Distância da superfície do mar até o fundo",
+          "svgId": "RedPin_1-BaciaPelotas",
+          "type": "exploration",
+          "popoverType": "exploration",
+          "status": {
+              "label": "Em exploração",
+              "icon": "exploration"
+          },
+          "title": "Bacia Pelotas",
+          "tags": [
+              "Rodada de licitação: OPC4"
+          ],
+          "operator": {
+              "name": "Petrobrás",
+              "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+              "value": "~1.600-3.500m",
+              "description": "Distância da superfície do mar até o fundo"
+          },
           "companies": [
-            {
-              "id": "shell",
-              "name": "Shell*",
-              "percentage": 50,
-              "color": "#DD1D21",
-              "isOperator": true
-            },
-            {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
-            },
-            {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
-              "color": "#616161",
-              "isOperator": false
-            }
+              {
+                  "name": "Shell",
+                  "percentage": 30,
+                  "isOperator": false
+              },
+              {
+                  "name": "Petrobrás",
+                  "percentage": 70,
+                  "isOperator": true
+              }
           ]
-        },
-        {
+      },
+      {
           "id": "exp2",
-          "number": 3,
-          "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
-          "status": "Em exploração",
-          "operator": "Shell",
-          "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
-          "depthDescription": "Distância da superfície do mar até o fundo",
+          "svgId": "RedPin_2-BaciaPelotas",
+          "type": "exploration",
+          "popoverType": "exploration",
+          "status": {
+              "label": "Em exploração",
+              "icon": "exploration"
+          },
+          "title": "Bacia Pelotas",
+          "tags": [
+              "Rodada de licitação: OPC4"
+          ],
+          "operator": {
+              "name": "Petrobrás",
+              "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+              "value": "~2.250-3.250m",
+              "description": "Distância da superfície do mar até o fundo"
+          },
           "companies": [
-            {
-              "id": "shell",
-              "name": "Shell*",
-              "percentage": 70,
-              "color": "#DD1D21",
-              "isOperator": true
-            },
-            {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
-            }
+              {
+                  "name": "Shell",
+                  "percentage": 30,
+                  "isOperator": false
+              },
+              {
+                  "name": "Petrobrás",
+                  "percentage": 50,
+                  "isOperator": true
+              },
+              {
+                  "name": "CNOOC",
+                  "percentage": 20,
+                  "isOperator": false
+              }
           ]
-        }
+      }
+
       ],
       "productionPins": []
     },
@@ -3582,65 +3607,78 @@
       "explorationPins": [
         {
           "id": "exp1",
-          "number": 26,
-          "popoverType": "exploration_type1",
-          "title": "BM-S-11A - Iara",
-          "status": "Em exploração",
-          "operator": "Shell",
-          "operatorDescription": "Responsável pela administração do campo",
-          "depth": "~1.720-2.050m",
-          "depthDescription": "Distância da superfície do mar até o fundo",
+          "svgId": "RedPin_1-BaciaPelotas",
+          "type": "exploration",
+          "popoverType": "exploration",
+          "status": {
+              "label": "Em exploração",
+              "icon": "exploration"
+          },
+          "title": "Bacia Pelotas",
+          "tags": [
+              "Rodada de licitação: OPC4"
+          ],
+          "operator": {
+              "name": "Petrobrás",
+              "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+              "value": "~1.600-3.500m",
+              "description": "Distância da superfície do mar até o fundo"
+          },
           "companies": [
-            {
-              "id": "shell",
-              "name": "Shell*",
-              "percentage": 50,
-              "color": "#DD1D21",
-              "isOperator": true
-            },
-            {
-              "id": "chevron",
-              "name": "Chevron",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
-            },
-            {
-              "id": "qatar",
-              "name": "Qatar Petroleum",
-              "percentage": 20,
-              "color": "#616161",
-              "isOperator": false
-            }
+              {
+                  "name": "Shell",
+                  "percentage": 30,
+                  "isOperator": false
+              },
+              {
+                  "name": "Petrobrás",
+                  "percentage": 70,
+                  "isOperator": true
+              }
           ]
-        },
-        {
+      },
+      {
           "id": "exp2",
-          "number": 3,
-          "popoverType": "exploration_type1",
-          "title": "S-M-1707, S-M-1709, S-M-1715, S-M-1717, S-M-1719",
-          "status": "Em exploração",
-          "operator": "Shell",
-          "operatorDescription": "Responsável pela administração do campo",
-          "depth": "A definir",
-          "depthDescription": "Distância da superfície do mar até o fundo",
+          "svgId": "RedPin_2-BaciaPelotas",
+          "type": "exploration",
+          "popoverType": "exploration",
+          "status": {
+              "label": "Em exploração",
+              "icon": "exploration"
+          },
+          "title": "Bacia Pelotas",
+          "tags": [
+              "Rodada de licitação: OPC4"
+          ],
+          "operator": {
+              "name": "Petrobrás",
+              "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+              "value": "~2.250-3.250m",
+              "description": "Distância da superfície do mar até o fundo"
+          },
           "companies": [
-            {
-              "id": "shell",
-              "name": "Shell*",
-              "percentage": 70,
-              "color": "#DD1D21",
-              "isOperator": true
-            },
-            {
-              "id": "ecopetrol",
-              "name": "Ecopetrol",
-              "percentage": 30,
-              "color": "#616161",
-              "isOperator": false
-            }
+              {
+                  "name": "Shell",
+                  "percentage": 30,
+                  "isOperator": false
+              },
+              {
+                  "name": "Petrobrás",
+                  "percentage": 50,
+                  "isOperator": true
+              },
+              {
+                  "name": "CNOOC",
+                  "percentage": 20,
+                  "isOperator": false
+              }
           ]
-        }
+      }
+
       ],
       "productionPins": []
     },

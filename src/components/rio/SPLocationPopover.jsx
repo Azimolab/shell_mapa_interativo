@@ -12,10 +12,27 @@ function SPLocationPopover({ isOpen, anchorEl, onClose, centered = false }) {
 
   useEffect(() => {
     if (anchorEl && isOpen && !centered) {
-      const rect = anchorEl.getBoundingClientRect();
-      setTriggerPosition({
-        left: rect.left + rect.width / 2,
-        top: rect.top + rect.height / 2
+      // Usar RAF para garantir que o elemento está completamente posicionado
+      requestAnimationFrame(() => {
+        const rect = anchorEl.getBoundingClientRect();
+        
+        // Validar se o rect tem valores válidos
+        if (rect.width === 0 && rect.height === 0) {
+          console.warn('⚠️ AnchorEl com dimensões inválidas, tentando novamente...');
+          // Tentar novamente após um pequeno delay
+          setTimeout(() => {
+            const newRect = anchorEl.getBoundingClientRect();
+            setTriggerPosition({
+              left: newRect.left + newRect.width / 2,
+              top: newRect.top + newRect.height / 2
+            });
+          }, 50);
+        } else {
+          setTriggerPosition({
+            left: rect.left + rect.width / 2,
+            top: rect.top + rect.height / 2
+          });
+        }
       });
     }
   }, [anchorEl, isOpen, centered]);

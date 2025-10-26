@@ -8,38 +8,73 @@ import {
 import './PopoverPins.css';
 
 /**
- * PopoverPins - Componente de popover para exibição de informações detalhadas de pins
+ * PopoverPins - Componente de popover UNIVERSAL para exibição de informações de pins
  * Baseado no design do Figma Shell Library
+ * 
+ * Este componente é usado para TODOS os tipos de pins:
+ * - Exploration (Em exploração - RedPin)
+ * - Production (Em produção - GreenPin)
+ * - Development (Em desenvolvimento - PurplePin)
+ * - Decommissioning (Em descomissionamento - GrayPin)
+ * 
+ * O componente se adapta automaticamente aos dados fornecidos.
+ * 
+ * Renderização Condicional (Auto Layout):
+ * - Todos os campos são opcionais exceto title e status
+ * - Seções inteiras são ocultadas se não houver dados
+ * - Dividers aparecem apenas entre seções existentes
  * 
  * @param {boolean} isOpen - Controla a visibilidade do popover
  * @param {Element} anchorEl - Elemento do DOM que serve como âncora para o popover
  * @param {function} onClose - Callback chamado ao fechar o popover
  * @param {object} data - Dados a serem exibidos no popover
- * @param {string} data.status - Status do campo (ex: "Em descomissionamento")
- * @param {string} data.statusIcon - Ícone do status (opcional, usa ícone padrão se não fornecido)
- * @param {string} data.title - Título principal (ex: "BM-S-11A - Iara")
- * @param {array} data.tags - Array de tags (ex: ["Berbigão", "Sururu", "Oeste de Atapú"])
- * @param {string} data.operator - Nome da operadora
- * @param {string} data.operatorDescription - Descrição da operadora
- * @param {string} data.depth - Profundidade (ex: "~400-870m")
- * @param {string} data.depthDescription - Descrição da profundidade
- * @param {array} data.companies - Array de empresas participantes
+ * @param {string|object} data.status - Status do campo
+ * @param {string} [data.status.label] - Label do status (ex: "Em produção", "Em exploração")
+ * @param {string} data.title - Título principal (ex: "BM-S-11 - Lula") [obrigatório]
+ * @param {array} [data.tags] - Array de tags (ex: ["Lula Central", "Lula Alto"])
+ * @param {string|object} [data.operator] - Operadora (string flat ou objeto nested)
+ * @param {string} [data.operator.name] - Nome da operadora
+ * @param {string} [data.operator.description] - Descrição da operadora
+ * @param {string|object} [data.depth] - Profundidade (string flat ou objeto nested)
+ * @param {string} [data.depth.value] - Valor da profundidade (ex: "~2.100-2.200m")
+ * @param {string} [data.depth.description] - Descrição da profundidade
+ * @param {array} [data.companies] - Array de empresas participantes
  * @param {string} data.companies[].name - Nome da empresa
  * @param {number} data.companies[].percentage - Porcentagem de participação
  * @param {boolean} data.companies[].isOperator - Se é a empresa operadora (destaque)
- * @param {string} data.infrastructure - Título da infraestrutura (ex: "2 FPSOs em operação")
- * @param {string} data.infrastructureDescription - Descrição da infraestrutura
- * @param {array} data.infrastructureItems - Array de itens da infraestrutura (ex: ["P68", "P70"])
+ * @param {object} [data.infrastructure] - Infraestrutura associada
+ * @param {string} data.infrastructure.title - Título da infraestrutura (ex: "8 FPSOs em operação")
+ * @param {string} [data.infrastructure.description] - Descrição da infraestrutura
+ * @param {array} [data.infrastructure.items] - Array de itens da infraestrutura
+ * @param {number} data.infrastructure.items[].id - ID do item
+ * @param {string} data.infrastructure.items[].name - Nome do item (ex: "P-74")
  */
 function PopoverPins({ isOpen, anchorEl, onClose, data }) {
   const [triggerPosition, setTriggerPosition] = useState(null);
 
   useEffect(() => {
     if (anchorEl && isOpen) {
-      const rect = anchorEl.getBoundingClientRect();
-      setTriggerPosition({
-        left: rect.left + rect.width / 2,
-        top: rect.top + rect.height / 2
+      // Usar RAF para garantir que o elemento está completamente posicionado
+      requestAnimationFrame(() => {
+        const rect = anchorEl.getBoundingClientRect();
+        
+        // Validar se o rect tem valores válidos
+        if (rect.width === 0 && rect.height === 0) {
+          console.warn('⚠️ AnchorEl com dimensões inválidas, tentando novamente...');
+          // Tentar novamente após um pequeno delay
+          setTimeout(() => {
+            const newRect = anchorEl.getBoundingClientRect();
+            setTriggerPosition({
+              left: newRect.left + newRect.width / 2,
+              top: newRect.top + newRect.height / 2
+            });
+          }, 50);
+        } else {
+          setTriggerPosition({
+            left: rect.left + rect.width / 2,
+            top: rect.top + rect.height / 2
+          });
+        }
       });
     }
   }, [anchorEl, isOpen]);
@@ -47,14 +82,24 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
   if (!isOpen || !data) return null;
   if (!anchorEl || !triggerPosition) return null;
 
-  // Adaptar estrutura de infraestrutura se necessário
-  const adaptedData = { ...data };
-  if (data.infrastructure && typeof data.infrastructure === 'object' && data.infrastructure.fpsoCount) {
-    const infra = data.infrastructure;
-    adaptedData.infrastructure = `${infra.fpsoCount} FPSO${infra.fpsoCount > 1 ? 's' : ''} em operação`;
-    adaptedData.infrastructureDescription = infra.fpsoDescription;
-    adaptedData.infrastructureItems = infra.items?.map(item => item.name);
-  }
+  // Extrair valores da estrutura nested (nova) ou flat (antiga) - retrocompatibilidade
+  const status = data.status?.label || data.status || 'Status não definido';
+  const operatorName = data.operator?.name || data.operator || null;
+  const operatorDescription = data.operator?.description || data.operatorDescription || null;
+  const depthValue = data.depth?.value || data.depth || null;
+  const depthDescription = data.depth?.description || data.depthDescription || null;
+  const infrastructureTitle = data.infrastructure?.title || null;
+  const infrastructureDescription = data.infrastructure?.description || null;
+  const infrastructureItems = data.infrastructure?.items || [];
+  
+  // Determinar o que renderizar (Auto Layout do Figma)
+  const hasSummary = operatorName || depthValue;
+  const hasCompanies = data.companies && data.companies.length > 0;
+  const hasInfrastructure = infrastructureTitle;
+  
+  // Dividers condicionais
+  const shouldShowFirstDivider = hasSummary && hasCompanies;
+  const shouldShowSecondDivider = (hasCompanies || hasSummary) && hasInfrastructure;
 
   const content = (
     <div className="popover-pins-card">
@@ -68,15 +113,15 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
                     <path d="M17.9996 31.7884C16.1266 31.7884 14.5333 31.1317 13.2198 29.8182C11.9063 28.5047 11.2496 26.9114 11.2496 25.0384C11.2496 23.1654 11.9063 21.5722 13.2198 20.2587C14.5333 18.9452 16.1266 18.2884 17.9996 18.2884C19.8726 18.2884 21.4658 18.9452 22.7793 20.2587C24.0928 21.5722 24.7496 23.1654 24.7496 25.0384C24.7496 26.9114 24.0928 28.5047 22.7793 29.8182C21.4658 31.1317 19.8726 31.7884 17.9996 31.7884ZM10.5285 17.6768L4.0957 11.2155C5.98995 9.4463 8.13233 8.08667 10.5228 7.13667C12.9131 6.18667 15.4053 5.71167 17.9996 5.71167C20.5938 5.71167 23.0861 6.18667 25.4763 7.13667C27.8668 8.08667 30.0092 9.4463 31.9035 11.2155L25.4707 17.6768C24.4362 16.7288 23.2815 15.9975 22.0065 15.483C20.7315 14.9688 19.3958 14.7117 17.9996 14.7117C16.6033 14.7117 15.2677 14.9688 13.9927 15.483C12.7177 15.9975 11.563 16.7288 10.5285 17.6768Z" fill="white"/>
                   </svg>
                 </div>
-                <span className="popover-pins-status-text">{adaptedData.status}</span>
+                <span className="popover-pins-status-text">{status}</span>
               </div>
 
               {/* Title and Tags */}
               <div className="popover-pins-title-section">
-                <h1 className="popover-pins-title">{adaptedData.title}</h1>
-                {adaptedData.tags && adaptedData.tags.length > 0 && (
+                <h1 className="popover-pins-title">{data.title}</h1>
+                {data.tags && data.tags.length > 0 && (
                   <div className="popover-pins-tags">
-                    {adaptedData.tags.map((tag, index) => (
+                    {data.tags.map((tag, index) => (
                       <div key={index} className="popover-pins-tag">
                         {tag}
                       </div>
@@ -86,9 +131,11 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
               </div>
             </div>
 
-            {/* Summary Section */}
+            {/* Summary Section - Renderiza apenas se houver operadora OU profundidade */}
+            {hasSummary && (
             <div className="popover-pins-summary">
-              {/* Operadora */}
+              {/* Operadora - Renderiza apenas se existir */}
+              {operatorName && (
               <div className="popover-pins-info-block">
                 <div className="popover-pins-info-header">
                   <div className="popover-pins-info-icon-container">
@@ -99,12 +146,16 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
                   <span className="popover-pins-info-label">Operadora</span>
                 </div>
                 <div className="popover-pins-info-content">
-                  <div className="popover-pins-info-value">{adaptedData.operator}</div>
-                  <div className="popover-pins-info-description">{adaptedData.operatorDescription}</div>
+                  <div className="popover-pins-info-value">{operatorName}</div>
+                  {operatorDescription && (
+                    <div className="popover-pins-info-description">{operatorDescription}</div>
+                  )}
                 </div>
               </div>
+              )}
 
-              {/* Profundidade */}
+              {/* Profundidade - Renderiza apenas se existir */}
+              {depthValue && (
               <div className="popover-pins-info-block">
                 <div className="popover-pins-info-header">
                   <div className="popover-pins-info-icon-container">
@@ -115,64 +166,72 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
                   <span className="popover-pins-info-label">Profundidade</span>
                 </div>
                 <div className="popover-pins-info-content">
-                  <div className="popover-pins-info-value">{adaptedData.depth}</div>
-                  <div className="popover-pins-info-description">{adaptedData.depthDescription}</div>
+                  <div className="popover-pins-info-value">{depthValue}</div>
+                  {depthDescription && (
+                    <div className="popover-pins-info-description">{depthDescription}</div>
+                  )}
                 </div>
               </div>
+              )}
             </div>
+            )}
           </div>
 
-          {/* Divider */}
-          <div className="popover-pins-divider"></div>
-
-          {/* Shareholders Section */}
-          {adaptedData.companies && adaptedData.companies.length > 0 && (
-            <>
-              <div className="popover-pins-section">
-                <h2 className="popover-pins-section-title">Participação das empresas</h2>
-                <div className="popover-pins-companies">
-                  {adaptedData.companies.map((company, index) => (
-                    <div key={index} className="popover-pins-company">
-                      <div className="popover-pins-company-header">
-                        <span className={`popover-pins-company-name ${company.isOperator ? 'is-operator' : ''}`}>
-                          {company.name}{company.isOperator ? '*' : ''}
-                        </span>
-                        <span className="popover-pins-company-percentage">{company.percentage}%</span>
-                      </div>
-                      <div className="popover-pins-progress-bar">
-                        <div className="popover-pins-progress-bg"></div>
-                        <div 
-                          className={`popover-pins-progress-fill ${company.isOperator ? 'is-operator' : ''}`}
-                          style={{ width: `${company.percentage}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Divider */}
-              <div className="popover-pins-divider"></div>
-            </>
+          {/* Divider 1 - Renderiza apenas se houver summary E companies */}
+          {shouldShowFirstDivider && (
+            <div className="popover-pins-divider"></div>
           )}
 
-          {/* Infrastructure Section */}
-          {adaptedData.infrastructure && (
+          {/* Shareholders Section - Renderiza apenas se houver companies */}
+          {hasCompanies && (
+            <div className="popover-pins-section">
+              <h2 className="popover-pins-section-title">Participação das empresas</h2>
+              <div className="popover-pins-companies">
+                {data.companies.map((company, index) => (
+                  <div key={index} className="popover-pins-company">
+                    <div className="popover-pins-company-header">
+                      <span className={`popover-pins-company-name ${company.isOperator ? 'is-operator' : ''}`}>
+                        {company.name}{company.isOperator ? '*' : ''}
+                      </span>
+                      <span className="popover-pins-company-percentage">{company.percentage}%</span>
+                    </div>
+                    <div className="popover-pins-progress-bar">
+                      <div className="popover-pins-progress-bg"></div>
+                      <div 
+                        className={`popover-pins-progress-fill ${company.isOperator ? 'is-operator' : ''}`}
+                        style={{ width: `${company.percentage}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Divider 2 - Renderiza apenas se houver (companies OU summary) E infrastructure */}
+          {shouldShowSecondDivider && (
+            <div className="popover-pins-divider"></div>
+          )}
+
+          {/* Infrastructure Section - Renderiza apenas se houver infrastructure */}
+          {hasInfrastructure && (
             <div className="popover-pins-section">
               <h2 className="popover-pins-section-title">Infraestrutura associada</h2>
               <div className="popover-pins-infrastructure">
                 <div className="popover-pins-info-content">
-                  <div className="popover-pins-info-value">{adaptedData.infrastructure}</div>
-                  <div className="popover-pins-info-description">{adaptedData.infrastructureDescription}</div>
+                  <div className="popover-pins-info-value">{infrastructureTitle}</div>
+                  {infrastructureDescription && (
+                    <div className="popover-pins-info-description">{infrastructureDescription}</div>
+                  )}
                 </div>
-                {adaptedData.infrastructureItems && adaptedData.infrastructureItems.length > 0 && (
+                {infrastructureItems.length > 0 && (
                   <div className="popover-pins-bullets">
-                    {adaptedData.infrastructureItems.map((item, index) => (
-                      <div key={index} className="popover-pins-bullet">
+                    {infrastructureItems.map((item, index) => (
+                      <div key={item.id || index} className="popover-pins-bullet">
                         <div className="popover-pins-bullet-icon">
-                          <span>{index + 1}</span>
+                          <span>{item.id || index + 1}</span>
                         </div>
-                        <span className="popover-pins-bullet-text">{item}</span>
+                        <span className="popover-pins-bullet-text">{item.name}</span>
                       </div>
                     ))}
                   </div>

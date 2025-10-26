@@ -61,6 +61,13 @@
         "name": "Raízen JV Lubricants",
         "business": "Planta de Mistura de Óleos Lubrificantes",
         "ownership": "50% Shell"
+      },
+      "yearSpecificData": {
+        "2025": {
+          "image": "/rio-popover-image.png",
+          "imageAlt": "Nova instalação no Rio de Janeiro em 2025",
+          "venture": null
+        }
       }
     },
     "macae": {
