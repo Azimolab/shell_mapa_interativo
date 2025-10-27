@@ -1021,6 +1021,45 @@
             }
           ],
           "infrastructure": {}
+        },{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "In exploration",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsible for managing the field"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distance from sea surface to seabed"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
+          }
         },
         {
           "id": "RedPin_5-Sagitario",
@@ -1839,6 +1878,45 @@
                 "name": "Fluminense"
               }
             ]
+          }
+        },{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "In exploration",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsible for managing the field"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distance from sea surface to seabed"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
           }
         },
         {
@@ -3104,6 +3182,45 @@
                 "name": "Fluminense"
               }
             ]
+          }
+        },{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "In exploration",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsible for managing the field"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distance from sea surface to seabed"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
           }
         },
         {
@@ -4509,6 +4626,45 @@
               }
             ]
           }
+        },{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "In exploration",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsible for managing the field"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distance from sea surface to seabed"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
+          }
         },
         {
           "id": "RedPin_3-CM757",
@@ -5912,6 +6068,45 @@
                 "name": "Fluminense"
               }
             ]
+          }
+        },{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "In exploration",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsible for managing the field"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distance from sea surface to seabed"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
           }
         },
         {
@@ -7466,6 +7661,45 @@
                 "name": "Fluminense"
               }
             ]
+          }
+        },{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "In exploration",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsible for managing the field"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distance from sea surface to seabed"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
           }
         },
         {
@@ -9208,6 +9442,45 @@
             }
           ],
           "infrastructure": {}
+        },{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "In exploration",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsible for managing the field"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distance from sea surface to seabed"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
+          }
         },
         {
           "id": "RedPin_2-CM713",
@@ -11673,8 +11946,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_E1-Iracema_2",
-          "svgId": "GreenPin_E1-Iracema_2",
+          "id": "GreenPin_E1-Iracema",
+          "svgId": "GreenPin_E1-Iracema",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -11720,6 +11993,45 @@
                 "name": "Cidade de Itaguaí"
               }
             ]
+          }
+        },{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "In exploration",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsible for managing the field"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distance from sea surface to seabed"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
           }
         }
       ],

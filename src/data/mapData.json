@@ -992,7 +992,46 @@
     "rio": {
       "developmentPins": [],
       "decommissioningPins": [],
-      "explorationPins": [
+      "explorationPins": [{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "Em exploração",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
+          }
+        },
         {
           "id": "RedPin_3-CM757",
           "svgId": "RedPin_3-CM757",
@@ -1799,7 +1838,46 @@
     "rio": {
       "developmentPins": [],
       "decommissioningPins": [],
-      "explorationPins": [
+      "explorationPins": [{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "Em exploração",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
+          }
+        },
         {
           "id": "GreenPin_2-BijupiraSalema",
           "svgId": "GreenPin_2-BijupiraSalema",
@@ -3064,7 +3142,46 @@
     "rio": {
       "developmentPins": [],
       "decommissioningPins": [],
-      "explorationPins": [
+      "explorationPins": [{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "Em exploração",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
+          }
+        },
         {
           "id": "GreenPin_2-BijupiraSalema",
           "svgId": "GreenPin_2-BijupiraSalema",
@@ -4468,7 +4585,46 @@
     "rio": {
       "developmentPins": [],
       "decommissioningPins": [],
-      "explorationPins": [
+      "explorationPins": [{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "Em exploração",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
+          }
+        },
         {
           "id": "GreenPin_2-BijupiraSalema",
           "svgId": "GreenPin_2-BijupiraSalema",
@@ -5872,7 +6028,46 @@
     "rio": {
       "developmentPins": [],
       "decommissioningPins": [],
-      "explorationPins": [
+      "explorationPins": [{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "Em exploração",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
+          }
+        },
         {
           "id": "GreenPin_2-BijupiraSalema",
           "svgId": "GreenPin_2-BijupiraSalema",
@@ -7426,7 +7621,46 @@
     "rio": {
       "developmentPins": [],
       "decommissioningPins": [],
-      "explorationPins": [
+      "explorationPins": [{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "Em exploração",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
+          }
+        },
         {
           "id": "GreenPin_2-BijupiraSalema",
           "svgId": "GreenPin_2-BijupiraSalema",
@@ -9179,7 +9413,46 @@
     "rio": {
       "developmentPins": [],
       "decommissioningPins": [],
-      "explorationPins": [
+      "explorationPins": [{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
+          "status": {
+            "label": "Em exploração",
+            "icon": "exploration"
+          },
+          "title": "Alto de Cabo Frio Oeste",
+          "tags": [],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~1.500-2.100m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
+              "percentage": 25,
+              "isOperator": false
+            },
+            {
+              "name": "CNOOC",
+              "percentage": 20,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {
+  
+            
+          }
+        },
         {
           "id": "RedPin_3-CM757",
           "svgId": "RedPin_3-CM757",
@@ -11671,55 +11944,44 @@
             }
           ],
           "infrastructure": {}
-        },
-        {
-          "id": "GreenPin_E1-Iracema_2",
-          "svgId": "GreenPin_E1-Iracema_2",
-          "type": "production",
+        },{
+          "id": "RedPin_E1-Alto",
+          "svgId": "RedPin_E1-Iracema",
+          "type": "exploration",
           "status": {
-            "label": "Em produção",
-            "icon": "production"
+            "label": "Em exploração",
+            "icon": "exploration"
           },
-          "title": "BM-S-11A: Iracema",
+          "title": "Alto de Cabo Frio Oeste",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Shell",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "~2.120m",
+            "value": "~1.500-2.100m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
             {
               "name": "Shell",
+              "percentage": 55,
+              "isOperator": true
+            },
+            {
+              "name": "Qatar Petroleum",
               "percentage": 25,
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
-              "percentage": 65,
-              "isOperator": true
-            },
-            {
-              "name": "Galp",
-              "percentage": 10,
+              "name": "CNOOC",
+              "percentage": 20,
               "isOperator": false
             }
           ],
           "infrastructure": {
-            "title": "2 FPSOs em operação",
-            "description": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
-            "items": [
-              {
-                "id": 1,
-                "name": "Cidade de Mangaratiba"
-              },
-              {
-                "id": 2,
-                "name": "Cidade de Itaguaí"
-              }
-            ]
+  
+            
           }
         }
       ],
