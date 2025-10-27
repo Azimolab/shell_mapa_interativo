@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import './Toolbar.css';
-// 🔁 JSON por idioma
 import mapDataBR from '../data/mapData.json';
 import mapDataUS from '../data/mapDataUs.json';
 

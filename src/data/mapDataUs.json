@@ -156,7 +156,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -749,7 +749,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -1263,7 +1263,7 @@
           "companies": [
             {
               "name": "Shell",
-              "percentage": 70,
+              "percentage": 50,
               "isOperator": true
             },
             {
@@ -1481,8 +1481,8 @@
           }
         },
         {
-          "id": "GreenPin_14-BMS9-Sapinhoa",
-          "svgId": "GreenPin_14-BMS9-Sapinhoa",
+          "id": "GreenPin_12-EntornoSapinhoa",
+          "svgId": "GreenPin_12-EntornoSapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -1595,7 +1595,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -2150,7 +2150,7 @@
           "companies": [
             {
               "name": "Shell",
-              "percentage": 70,
+              "percentage": 50,
               "isOperator": true
             },
             {
@@ -2665,8 +2665,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_14-BMS9-Sapinhoa",
-          "svgId": "GreenPin_14-BMS9-Sapinhoa",
+          "id": "GreenPin_12-EntornoSapinhoa",
+          "svgId": "GreenPin_12-EntornoSapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -2704,8 +2704,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_12-EntornoSapinhoa",
-          "svgId": "GreenPin_12-EntornoSapinhoa",
+          "id": "GreenPin_14-BMS9-Sapinhoa",
+          "svgId": "GreenPin_14-BMS9-Sapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -2829,7 +2829,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -3567,7 +3567,7 @@
           "companies": [
             {
               "name": "Shell",
-              "percentage": 70,
+              "percentage": 50,
               "isOperator": true
             },
             {
@@ -4104,8 +4104,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_14-BMS9-Sapinhoa",
-          "svgId": "GreenPin_14-BMS9-Sapinhoa",
+          "id": "GreenPin_12-EntornoSapinhoa",
+          "svgId": "GreenPin_12-EntornoSapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -4143,8 +4143,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_12-EntornoSapinhoa",
-          "svgId": "GreenPin_12-EntornoSapinhoa",
+          "id": "GreenPin_14-BMS9-Sapinhoa",
+          "svgId": "GreenPin_14-BMS9-Sapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -4268,7 +4268,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -5010,7 +5010,7 @@
           "companies": [
             {
               "name": "Shell",
-              "percentage": 70,
+              "percentage": 50,
               "isOperator": true
             },
             {
@@ -5547,8 +5547,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_14-BMS9-Sapinhoa",
-          "svgId": "GreenPin_14-BMS9-Sapinhoa",
+          "id": "GreenPin_12-EntornoSapinhoa",
+          "svgId": "GreenPin_12-EntornoSapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -5586,8 +5586,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_12-EntornoSapinhoa",
-          "svgId": "GreenPin_12-EntornoSapinhoa",
+          "id": "GreenPin_14-BMS9-Sapinhoa",
+          "svgId": "GreenPin_14-BMS9-Sapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -5711,7 +5711,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -6555,7 +6555,7 @@
           "companies": [
             {
               "name": "Shell",
-              "percentage": 70,
+              "percentage": 50,
               "isOperator": true
             },
             {
@@ -7140,8 +7140,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_14-BMS9-Sapinhoa",
-          "svgId": "GreenPin_14-BMS9-Sapinhoa",
+          "id": "GreenPin_12-EntornoSapinhoa",
+          "svgId": "GreenPin_12-EntornoSapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -7179,8 +7179,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_12-EntornoSapinhoa",
-          "svgId": "GreenPin_12-EntornoSapinhoa",
+          "id": "GreenPin_14-BMS9-Sapinhoa",
+          "svgId": "GreenPin_14-BMS9-Sapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -7304,7 +7304,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -8352,7 +8352,7 @@
           "companies": [
             {
               "name": "Shell",
-              "percentage": 70,
+              "percentage": 50,
               "isOperator": true
             },
             {
@@ -8937,8 +8937,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_14-BMS9-Sapinhoa",
-          "svgId": "GreenPin_14-BMS9-Sapinhoa",
+          "id": "GreenPin_12-EntornoSapinhoa",
+          "svgId": "GreenPin_12-EntornoSapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -8976,8 +8976,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_12-EntornoSapinhoa",
-          "svgId": "GreenPin_12-EntornoSapinhoa",
+          "id": "GreenPin_14-BMS9-Sapinhoa",
+          "svgId": "GreenPin_14-BMS9-Sapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -9096,7 +9096,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -10098,7 +10098,7 @@
           "companies": [
             {
               "name": "Shell",
-              "percentage": 70,
+              "percentage": 50,
               "isOperator": true
             },
             {
@@ -10724,8 +10724,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_14-BMS9-Sapinhoa",
-          "svgId": "GreenPin_14-BMS9-Sapinhoa",
+          "id": "GreenPin_12-EntornoSapinhoa",
+          "svgId": "GreenPin_12-EntornoSapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -10763,8 +10763,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_12-EntornoSapinhoa",
-          "svgId": "GreenPin_12-EntornoSapinhoa",
+          "id": "GreenPin_14-BMS9-Sapinhoa",
+          "svgId": "GreenPin_14-BMS9-Sapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -10883,7 +10883,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -11892,7 +11892,7 @@
           "companies": [
             {
               "name": "Shell",
-              "percentage": 70,
+              "percentage": 50,
               "isOperator": true
             },
             {
@@ -12440,8 +12440,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_14-BMS9-Sapinhoa",
-          "svgId": "GreenPin_14-BMS9-Sapinhoa",
+          "id": "GreenPin_12-EntornoSapinhoa",
+          "svgId": "GreenPin_12-EntornoSapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -12479,8 +12479,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_12-EntornoSapinhoa",
-          "svgId": "GreenPin_12-EntornoSapinhoa",
+          "id": "GreenPin_14-BMS9-Sapinhoa",
+          "svgId": "GreenPin_14-BMS9-Sapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -12599,7 +12599,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -12949,7 +12949,7 @@
           "companies": [
             {
               "name": "Shell",
-              "percentage": 70,
+              "percentage": 50,
               "isOperator": true
             },
             {
@@ -14199,8 +14199,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_14-BMS9-Sapinhoa",
-          "svgId": "GreenPin_14-BMS9-Sapinhoa",
+          "id": "GreenPin_12-EntornoSapinhoa",
+          "svgId": "GreenPin_12-EntornoSapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -14238,8 +14238,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_12-EntornoSapinhoa",
-          "svgId": "GreenPin_12-EntornoSapinhoa",
+          "id": "GreenPin_14-BMS9-Sapinhoa",
+          "svgId": "GreenPin_14-BMS9-Sapinhoa",
           "type": "production",
           "status": {
             "label": "On-stream",
@@ -14359,7 +14359,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
@@ -14833,7 +14833,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "ONGC",
               "percentage": 27,
               "isOperator": true
             },
