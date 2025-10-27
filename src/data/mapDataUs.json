@@ -281,7 +281,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -318,7 +318,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.160",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -1037,7 +1037,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -1074,7 +1074,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.160",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -1885,7 +1885,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -1922,7 +1922,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.160",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -3212,8 +3212,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_E4",
-          "svgId": "GreenPin_E4",
+          "id": "RedPin_E4",
+          "svgId": "RedPin_E4",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -3226,7 +3226,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.500",
+            "value": "~2.500m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -3263,7 +3263,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -3300,7 +3300,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.160",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -4616,8 +4616,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_E4",
-          "svgId": "GreenPin_E4",
+          "id": "RedPin_E4",
+          "svgId": "RedPin_E4",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -4630,7 +4630,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.500",
+            "value": "~2.500m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -4667,7 +4667,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -4704,7 +4704,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.160",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -6020,8 +6020,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_E4",
-          "svgId": "GreenPin_E4",
+          "id": "RedPin_E4",
+          "svgId": "RedPin_E4",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -6034,7 +6034,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.500",
+            "value": "~2.500m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -6071,7 +6071,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -6108,7 +6108,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.160",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -7574,8 +7574,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_E4",
-          "svgId": "GreenPin_E4",
+          "id": "RedPin_E4",
+          "svgId": "RedPin_E4",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -7588,7 +7588,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.500",
+            "value": "~2.500m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -7625,7 +7625,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -7662,7 +7662,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.160",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -9300,7 +9300,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -9332,7 +9332,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -9369,7 +9369,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.160",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -11162,7 +11162,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -11194,7 +11194,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -11231,7 +11231,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.160",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -12890,7 +12890,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -12922,7 +12922,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.800",
+            "value": "~1.800m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -12959,7 +12959,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~2.160",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
