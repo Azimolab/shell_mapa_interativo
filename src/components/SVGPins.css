@@ -11,7 +11,11 @@ g[class*="RedPin"].active rect,
 g[id*="RedPin"].active path[id*="Rectangle"],
 g[class*="RedPin"].active path[id*="Rectangle"],
 g[id*="RedPin"].active path[class*="Rectangle"],
-g[class*="RedPin"].active path[class*="Rectangle"] {
+g[class*="RedPin"].active path[class*="Rectangle"],
+g[id*="RedPin"].active path[id="pin"],
+g[class*="RedPin"].active path[id="pin"],
+g[id*="RedPin"].active path[class="pin"],
+g[class*="RedPin"].active path[class="pin"] {
   fill: #990000 !important;
 }
 
@@ -21,7 +25,11 @@ g[class*="GreenPin"].active rect,
 g[id*="GreenPin"].active path[id*="Rectangle"],
 g[class*="GreenPin"].active path[id*="Rectangle"],
 g[id*="GreenPin"].active path[class*="Rectangle"],
-g[class*="GreenPin"].active path[class*="Rectangle"] {
+g[class*="GreenPin"].active path[class*="Rectangle"],
+g[id*="GreenPin"].active path[id="pin"],
+g[class*="GreenPin"].active path[id="pin"],
+g[id*="GreenPin"].active path[class="pin"],
+g[class*="GreenPin"].active path[class="pin"] {
   fill: #005531 !important;
 }
 
@@ -31,7 +39,11 @@ g[class*="PurplePin"].active rect,
 g[id*="PurplePin"].active path[id*="Rectangle"],
 g[class*="PurplePin"].active path[id*="Rectangle"],
 g[id*="PurplePin"].active path[class*="Rectangle"],
-g[class*="PurplePin"].active path[class*="Rectangle"] {
+g[class*="PurplePin"].active path[class*="Rectangle"],
+g[id*="PurplePin"].active path[id="pin"],
+g[class*="PurplePin"].active path[id="pin"],
+g[id*="PurplePin"].active path[class="pin"],
+g[class*="PurplePin"].active path[class="pin"] {
   fill: #50004A !important;
 }
 
@@ -41,7 +53,11 @@ g[class*="GrayPin"].active rect,
 g[id*="GrayPin"].active path[id*="Rectangle"],
 g[class*="GrayPin"].active path[id*="Rectangle"],
 g[id*="GrayPin"].active path[class*="Rectangle"],
-g[class*="GrayPin"].active path[class*="Rectangle"] {
+g[class*="GrayPin"].active path[class*="Rectangle"],
+g[id*="GrayPin"].active path[id="pin"],
+g[class*="GrayPin"].active path[id="pin"],
+g[id*="GrayPin"].active path[class="pin"],
+g[class*="GrayPin"].active path[class="pin"] {
   fill: #343434 !important;
 }
 

@@ -123,7 +123,7 @@
 }
 
 .popover-pins-status-icon {
-  width: 2.125rem; /* 34px - ajustado para manter proporção do SVG 68x79 */
+  width: 2.150rem; /* 34px - ajustado para manter proporção do SVG 68x79 */
   height: auto; /* Mantém proporção do SVG */
   flex-shrink: 0;
 }

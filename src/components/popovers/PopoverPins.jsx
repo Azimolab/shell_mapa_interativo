@@ -8,24 +8,44 @@ import {
 import { calculateBestPopoverPosition } from '@/lib/popoverPosition';
 import './PopoverPins.css';
 
-// Importar os ícones de status como URLs
+// Importar o componente Pin
+import Pin from '@/components/Pin';
+
+// Importar os ícones de status como URLs (para o tag de status)
 import IconProducao from '@/assets/icons/popover-producao.svg?url';
 import IconExploracao from '@/assets/icons/popover-exploracao.svg?url';
 import IconDesenvolvimento from '@/assets/icons/popover-desenvolvimento.svg?url';
 import IconDescomissionamento from '@/assets/icons/popover-descomissionamento.svg?url';
 
 /**
- * Mapeia o status para o ícone correspondente
+ * Mapeia o type para o ícone correspondente (para o tag de status)
  */
-const getStatusIcon = (status) => {
-  const statusMap = {
-    'Em produção': IconProducao,
-    'Em exploração': IconExploracao,
-    'Em desenvolvimento': IconDesenvolvimento,
-    'Em descomissionamento': IconDescomissionamento,
-  };
+const getIconByType = (type) => {
+  // Normalizar para lowercase
+  const typeValue = (type || '').toLowerCase();
   
-  return statusMap[status] || IconProducao; // Fallback para produção
+  // Exploration
+  if (typeValue === 'exploration' || typeValue.includes('explora')) {
+    return IconExploracao;
+  }
+  
+  // Production
+  if (typeValue === 'production' || typeValue.includes('produ')) {
+    return IconProducao;
+  }
+  
+  // Decommissioning
+  if (typeValue === 'decommissioning' || typeValue.includes('descomission')) {
+    return IconDescomissionamento;
+  }
+  
+  // Development
+  if (typeValue === 'development' || typeValue.includes('desenvolv')) {
+    return IconDesenvolvimento;
+  }
+  
+  // Fallback padrão
+  return IconProducao;
 };
 
 /**
@@ -288,16 +308,32 @@ function PopoverPins({ isOpen, anchorEl, onClose, data }) {
           {/* Header Section */}
           <div className="popover-pins-header">
             <div className="popover-pins-upper-content">
-              {/* Status Tag */}
+              {/* Status Tag - Mostra Pin com número ou ícone padrão, sempre com texto do status */}
               <div className="popover-pins-status-tag">
-                <div className="popover-pins-status-icon-container">
-                  <img 
-                    src={getStatusIcon(status)} 
-                    alt={status}
-                    className="popover-pins-status-icon"
-                  />
-                </div>
-                <span className="popover-pins-status-text">{status}</span>
+                {data.number ? (
+                  // Renderizar componente Pin se tiver número
+                  <>
+                    <Pin
+                      type={data.type}
+                      number={data.number}
+                      isActive={false}
+                      onClick={() => {}}
+                    />
+                    <span className="popover-pins-status-text">{status}</span>
+                  </>
+                ) : (
+                  // Renderizar ícone padrão se não tiver número
+                  <>
+                    <div className="popover-pins-status-icon-container">
+                      <img 
+                        src={getIconByType(data.type)} 
+                        alt={status}
+                        className="popover-pins-status-icon"
+                      />
+                    </div>
+                    <span className="popover-pins-status-text">{status}</span>
+                  </>
+                )}
               </div>
 
               {/* Title and Tags */}
