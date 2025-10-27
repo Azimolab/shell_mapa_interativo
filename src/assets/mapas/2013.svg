@@ -24,8 +24,6 @@
         </g>
         <path id="Rectangle 2" fill="#DD1D21" d="M1086.5 561.985h2.57c1.92 0 2.74 2.428 1.22 3.589l-2.58 1.968c-.71.548-1.71.548-2.42 0l-2.58-1.968c-1.52-1.161-.7-3.589 1.22-3.589h2.57Z" class="Rectangle 2"/>
       </g>
-    </g>
-    <g id="GreenPins" class="GreenPins">
       <g id="RedPin_7-GatoDoMato" class="RedPin_7-GatoDoMato">
         <g id="Frame 2_2" class="Frame 2">
           <rect width="34" height="34" x="856" y="589.234" fill="#DD1D21" rx="8"/>
@@ -35,6 +33,9 @@
         </g>
         <path id="Rectangle 2_2" fill="#DD1D21" d="M873 620.22h2.575c1.913 0 2.734 2.427 1.214 3.589l-2.575 1.968a1.998 1.998 0 0 1-2.428 0l-2.575-1.968c-1.52-1.162-.699-3.589 1.214-3.589H873Z" class="Rectangle 2"/>
       </g>
+    </g>
+    <g id="GreenPins" class="GreenPins">
+      
       <g id="GreenPin_1-Parque das Conchas" class="GreenPin_1-Parque das Conchas">
         <g id="Frame 2_3" class="Frame 2">
           <rect width="34" height="34" x="1284.5" y="72" fill="#008557" rx="8"/>

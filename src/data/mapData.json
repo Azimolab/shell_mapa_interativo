@@ -11205,8 +11205,8 @@
       "developmentPins": [],
       "decommissioningPins": [
         {
-          "id": "GreenPin_2-BijupiraSalema",
-          "svgId": "GreenPin_2-BijupiraSalema",
+          "id": "GrayPin_2-BijupiraSalema",
+          "svgId": "GrayPin_2-BijupiraSalema",
           "type": "decommission",
           "status": {
             "label": "Em descomissionamento",
