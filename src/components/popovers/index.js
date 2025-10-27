@@ -7,4 +7,5 @@ export { default as PopoverPins } from './PopoverPins';
 // ⚠️ Componentes depreciados (mantidos para compatibilidade)
 export { default as ExplorationPopover } from './ExplorationPopover';
 export { default as ProductionPopover } from './ProductionPopover';
+export { default as DecommissionPopover } from './DecommissionPopover';
 

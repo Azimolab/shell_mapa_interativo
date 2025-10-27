@@ -1,0 +1,423 @@
+/* decommission-popover Component Styles */
+.decommission-popover-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.decommission-popover-container {
+  position: relative;
+  max-width: 650px;
+  width: 100%;
+}
+
+.decommission-popover-arrow {
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 14px solid #FFF;
+  z-index: 1001;
+}
+
+.decommission-popover-card {
+  background: #FFF;
+  border-radius: 16px;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-height: 75vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.decommission-popover-content {
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.decommission-popover-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.decommission-popover-status-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.decommission-popover-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.decommission-popover-status-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #DD1D21;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.decommission-popover-status-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.decommission-popover-status-text {
+  color: #343434;
+  font-family: 'ShellBook';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.decommission-popover-title {
+  color: #343434;
+  font-family: 'ShellBold';
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.decommission-popover-info-grid {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.decommission-popover-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.decommission-popover-info-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.decommission-popover-info-icon {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid #E0E0E0;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.decommission-popover-info-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.decommission-popover-info-label-text {
+  color: #343434;
+  font-family: 'ShellBook';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.decommission-popover-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.decommission-popover-info-value {
+  color: #343434;
+  font-family: 'ShellBold';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.decommission-popover-info-description {
+  color: #616161;
+  font-family: 'ShellBook';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.decommission-popover-participation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.decommission-popover-participation-title {
+  color: #616161;
+  font-family: 'ShellMedium';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.decommission-popover-companies {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.decommission-popover-company {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.decommission-popover-company-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.decommission-popover-company-name {
+  color: #343434;
+  font-family: 'ShellBook';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  flex: 1;
+}
+
+.decommission-popover-company-name.operator {
+  font-family: 'ShellHeavy';
+  font-weight: 600;
+}
+
+.decommission-popover-company-percentage {
+  color: #343434;
+  font-family: 'ShellMedium';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: right;
+}
+
+.decommission-popover-progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #E0E0E0;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.decommission-popover-progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.decommission-popover-close-button {
+  display: flex;
+  width: 100%;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid #919191;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #343434;
+  font-family: 'ShellBold';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.decommission-popover-close-button:hover {
+  background: #f5f5f5;
+  border-color: #616161;
+}
+
+.decommission-popover-close-button:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .decommission-popover-overlay {
+    padding: 10px;
+  }
+  
+  .decommission-popover-content {
+    padding: 24px 30px;
+    gap: 24px;
+  }
+  
+  .decommission-popover-title {
+    font-size: 36px;
+  }
+  
+  .decommission-popover-status-text,
+  .decommission-popover-info-label-text,
+  .decommission-popover-info-value,
+  .decommission-popover-participation-title,
+  .decommission-popover-company-name,
+  .decommission-popover-company-percentage {
+    font-size: 20px;
+  }
+  
+  .decommission-popover-info-description {
+    font-size: 18px;
+  }
+  
+  .decommission-popover-close-button {
+    font-size: 28px;
+    padding: 20px;
+  }
+  
+  .decommission-popover-status-icon {
+    width: 56px;
+    height: 56px;
+    padding: 12px;
+  }
+  
+  .decommission-popover-status-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .decommission-popover-info-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .decommission-popover-info-icon {
+    padding: 10px;
+  }
+  
+  .decommission-popover-info-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .decommission-popover-content {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .decommission-popover-title {
+    font-size: 28px;
+  }
+  
+  .decommission-popover-status-text,
+  .decommission-popover-info-label-text,
+  .decommission-popover-participation-title {
+    font-size: 18px;
+  }
+  
+  .decommission-popover-info-value,
+  .decommission-popover-company-name,
+  .decommission-popover-company-percentage {
+    font-size: 18px;
+  }
+  
+  .decommission-popover-info-description {
+    font-size: 16px;
+  }
+  
+  .decommission-popover-close-button {
+    font-size: 24px;
+    padding: 16px;
+  }
+  
+  .decommission-popover-status-badge {
+    gap: 12px;
+  }
+  
+  .decommission-popover-status-icon {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+  }
+  
+  .decommission-popover-status-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .decommission-popover-info-label {
+    gap: 12px;
+  }
+  
+  .decommission-popover-info-icon {
+    padding: 8px;
+  }
+  
+  .decommission-popover-info-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .decommission-popover-progress-bar {
+    height: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .decommission-popover-content {
+    padding: 16px;
+  }
+  
+  .decommission-popover-title {
+    font-size: 24px;
+  }
+  
+  .decommission-popover-status-text,
+  .decommission-popover-info-label-text,
+  .decommission-popover-participation-title {
+    font-size: 16px;
+  }
+  
+  .decommission-popover-info-value,
+  .decommission-popover-company-name,
+  .decommission-popover-company-percentage {
+    font-size: 16px;
+  }
+  
+  .decommission-popover-info-description {
+    font-size: 14px;
+  }
+  
+  .decommission-popover-close-button {
+    font-size: 20px;
+    padding: 14px;
+  }
+}

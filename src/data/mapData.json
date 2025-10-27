@@ -10934,10 +10934,10 @@
         {
           "id": "GreenPin_2-BijupiraSalema",
           "svgId": "GreenPin_2-BijupiraSalema",
-          "type": "decomission",
+          "type": "decommission",
           "status": {
             "label": "Em descomissionamento",
-            "icon": "decomission"
+            "icon": "decommission"
           },
           "title": "Bijupirá & Salema",
           "tags": [],
@@ -12617,11 +12617,11 @@
         {
           "id": "GrayPin_1-BijupiraSalema",
           "svgId": "GrayPin_1-BijupiraSalema",
-          "type": "decomission",
+          "type": "decommission",
           "number": 2,
           "status": {
             "label": "Em descomissionamento",
-            "icon": "decomission"
+            "icon": "decommission"
           },
           "title": "Bijupirá & Salema",
           "tags": [],

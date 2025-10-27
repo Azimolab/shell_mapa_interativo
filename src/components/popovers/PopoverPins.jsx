@@ -35,7 +35,7 @@ const getIconByType = (type) => {
   }
   
   // Decommissioning
-  if (typeValue === 'decommissioning' || typeValue.includes('descomission')) {
+  if (typeValue === 'decommissioning' || typeValue.includes('descommission')) {
     return IconDescomissionamento;
   }
   

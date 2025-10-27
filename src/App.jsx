@@ -5,6 +5,9 @@ import SVGMap from './components/SVGMap';
 import PinInteractionManager from './components/PinInteractionManager';
 import { isSVGAvailable } from './assets/mapas/index.js';
 
+import ShellAllTypeBR from './assets/ShellAllTypeBR.svg';
+
+
 function App() {
   const [selectedZone, setSelectedZone] = useState('rio');
   const [selectedYear, setSelectedYear] = useState('2025');
@@ -33,18 +36,18 @@ function App() {
   useEffect(() => {
     if (isPlaying) {
       const currentIndex = years.indexOf(selectedYear);
-      
+
       playIntervalRef.current = setInterval(() => {
         setSelectedYear((prevYear) => {
           const prevIndex = years.indexOf(prevYear);
           const nextIndex = (prevIndex + 1) % years.length;
           const nextYear = years[nextIndex];
-          
+
           // Check if we need to switch zones
           if (!isZoneAvailable(selectedZone, nextYear)) {
             setSelectedZone('rio');
           }
-          
+
           return nextYear;
         });
       }, speedToMs[playSpeed]);
@@ -119,20 +122,32 @@ function App() {
   };
 
   return (
-    <div className="w-full h-full relative overflow-hidden">
+
+    <div className="relative w-screen h-screen overflow-hidden" style={{ backgroundColor: '#C0E6EC' }}>
+
       {/* Background dividido em duas metades */}
       {/* <div className="absolute inset-0 flex">
         <div className="w-1/2 bg-grass"></div>
         <div className="w-1/2 bg-ocean-100"></div>
       </div> */}
-      
+
       <div className="relative w-screen h-screen overflow-hidden">
+
         {/* SVG Map - ocupa toda a tela */}
         <SVGMap
           selectedYear={selectedYear}
           selectedZone={selectedZone}
           activeLegendItems={activeLegendItems}
         />
+
+        {/* Logo Shell fixo e responsivo no canto superior esquerdo */}
+        <div className="absolute top-[2vh] left-[2vw] z-20">
+          <img
+            src={ShellAllTypeBR}
+            alt="Shell Logo"
+            className="w-[30vw]"
+          />
+        </div>
 
         {/* Gerenciador de interações com pins do SVG */}
         <PinInteractionManager
@@ -143,34 +158,34 @@ function App() {
           onPauseTimeline={() => setIsPlaying(false)}
         />
 
-{/* Toolbar responsiva fixada à direita */}
-<div
-  className="absolute top-[3vh] right-[2vw] z-10 h-[85vh] flex flex-col"
->
-  <Toolbar
-    selectedArea={selectedZone}
-    selectedYear={selectedYear}
-    onAreaSelect={handleAreaSelect}
-    onLegendToggle={handleLegendToggle}
-    activeLegendItems={activeLegendItems}
-    isZoneAvailable={isZoneAvailable}
-  />
-</div>
+        {/* Toolbar responsiva fixada à direita */}
+        <div
+          className="absolute top-[3vh] right-[2vw] z-10 h-[85vh] flex flex-col"
+        >
+          <Toolbar
+            selectedArea={selectedZone}
+            selectedYear={selectedYear}
+            onAreaSelect={handleAreaSelect}
+            onLegendToggle={handleLegendToggle}
+            activeLegendItems={activeLegendItems}
+            isZoneAvailable={isZoneAvailable}
+          />
+        </div>
 
 
-{/* Timeline responsiva fixada no canto inferior direito */}
-<div className="">
-  <Timeline
-    selectedYear={selectedYear}
-    onYearSelect={handleYearSelect}
-    onPlay={handlePlay}
-    isPlaying={isPlaying}
-    speed={playSpeed}
-    onSpeedChange={handleSpeedChange}
-    onLanguageChange={handleLanguageChange}
-    isYearAvailable={isYearAvailable}
-  />
-</div>
+        {/* Timeline responsiva fixada no canto inferior direito */}
+        <div className="">
+          <Timeline
+            selectedYear={selectedYear}
+            onYearSelect={handleYearSelect}
+            onPlay={handlePlay}
+            isPlaying={isPlaying}
+            speed={playSpeed}
+            onSpeedChange={handleSpeedChange}
+            onLanguageChange={handleLanguageChange}
+            isYearAvailable={isYearAvailable}
+          />
+        </div>
 
       </div>
     </div>
