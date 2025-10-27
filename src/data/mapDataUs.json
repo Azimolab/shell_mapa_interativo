@@ -358,7 +358,7 @@
             "label": "In exploration",
             "icon": "exploration"
           },
-          "title": "S-M-1713",
+          "title": "S-M-1715",
           "tags": [
             "17ª Rodada de Licitação ANP"
           ],
@@ -1114,7 +1114,7 @@
             "label": "In exploration",
             "icon": "exploration"
           },
-          "title": "S-M-1713",
+          "title": "S-M-1715",
           "tags": [
             "17ª Rodada de Licitação ANP"
           ],
@@ -1962,7 +1962,7 @@
             "label": "In exploration",
             "icon": "exploration"
           },
-          "title": "S-M-1713",
+          "title": "S-M-1715",
           "tags": [
             "17ª Rodada de Licitação ANP"
           ],
@@ -3340,7 +3340,7 @@
             "label": "In exploration",
             "icon": "exploration"
           },
-          "title": "S-M-1713",
+          "title": "S-M-1715",
           "tags": [
             "17ª Rodada de Licitação ANP"
           ],
@@ -4744,7 +4744,7 @@
             "label": "In exploration",
             "icon": "exploration"
           },
-          "title": "S-M-1713",
+          "title": "S-M-1715",
           "tags": [
             "17ª Rodada de Licitação ANP"
           ],
@@ -6216,7 +6216,7 @@
             "label": "In exploration",
             "icon": "exploration"
           },
-          "title": "S-M-1713",
+          "title": "S-M-1715",
           "tags": [
             "17ª Rodada de Licitação ANP"
           ],
@@ -7872,7 +7872,7 @@
             "label": "In exploration",
             "icon": "exploration"
           },
-          "title": "S-M-1713",
+          "title": "S-M-1715",
           "tags": [
             "17ª Rodada de Licitação ANP"
           ],
@@ -9579,7 +9579,7 @@
             "label": "In exploration",
             "icon": "exploration"
           },
-          "title": "S-M-1713",
+          "title": "S-M-1715",
           "tags": [
             "17ª Rodada de Licitação ANP"
           ],
@@ -10974,6 +10974,74 @@
         }
       ],
       "explorationPins": [
+        {
+          "id": "RedPin_9-SM1715",
+          "svgId": "RedPin_9-SM1715",
+          "type": "exploration",
+          "status": {
+            "label": "Em exploração",
+            "icon": "exploration"
+          },
+          "title": "S-M-1715",
+          "tags": [
+            "17ª Rodada de Licitação ANP"
+          ],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~2.030-2.550m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 70,
+              "isOperator": true
+            },
+            {
+              "name": "Ecopetrol",
+              "percentage": 30,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {}
+        },
+        {
+          "id": "RedPin_8-SM1717",
+          "svgId": "RedPin_8-SM1717",
+          "type": "exploration",
+          "status": {
+            "label": "Em exploração",
+            "icon": "exploration"
+          },
+          "title": "S-M-1717",
+          "tags": [
+            "17ª Rodada de Licitação ANP"
+          ],
+          "operator": {
+            "name": "Shell",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~2.030-2.550m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
+          "companies": [
+            {
+              "name": "Shell",
+              "percentage": 70,
+              "isOperator": true
+            },
+            {
+              "name": "Ecopetrol",
+              "percentage": 30,
+              "isOperator": false
+            }
+          ],
+          "infrastructure": {}
+        },
         {
           "id": "RedPin_3-CM757",
           "svgId": "RedPin_3-CM757",
@@ -13101,7 +13169,7 @@
             "label": "In exploration",
             "icon": "exploration"
           },
-          "title": "S-M-1713",
+          "title": "S-M-1715",
           "tags": [
             "17ª Rodada de Licitação ANP"
           ],
