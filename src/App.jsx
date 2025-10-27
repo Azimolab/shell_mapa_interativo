@@ -6,7 +6,7 @@ import PinInteractionManager from './components/PinInteractionManager';
 import { isSVGAvailable } from './assets/mapas/index.js';
 
 import ShellAllTypeBR from './assets/ShellAllTypeBR.svg';
-
+import ShellAllTypeEN from './assets/ShellAllTypeEN.svg';
 
 function App() {
   const [selectedZone, setSelectedZone] = useState('rio');
@@ -21,10 +21,11 @@ function App() {
   const [playSpeed, setPlaySpeed] = useState('0.5x');
   const playIntervalRef = useRef(null);
 
-  // Available years
+  // ✅ Estado do idioma
+  const [language, setLanguage] = useState("POR");
+
   const years = ['PRÉ 2013', '2013', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'];
 
-  // Map speed to milliseconds
   const speedToMs = {
     '0.5x': 4000,
     '1x': 2000,
@@ -32,89 +33,58 @@ function App() {
     '2x': 1000
   };
 
-  // Auto-play effect
   useEffect(() => {
     if (isPlaying) {
-      const currentIndex = years.indexOf(selectedYear);
-
       playIntervalRef.current = setInterval(() => {
-        setSelectedYear((prevYear) => {
-          const prevIndex = years.indexOf(prevYear);
-          const nextIndex = (prevIndex + 1) % years.length;
+        setSelectedYear(prevYear => {
+          const nextIndex = (years.indexOf(prevYear) + 1) % years.length;
           const nextYear = years[nextIndex];
 
-          // Check if we need to switch zones
           if (!isZoneAvailable(selectedZone, nextYear)) {
             setSelectedZone('rio');
           }
-
           return nextYear;
         });
       }, speedToMs[playSpeed]);
 
-      return () => {
-        if (playIntervalRef.current) {
-          clearInterval(playIntervalRef.current);
-        }
-      };
-    } else {
-      if (playIntervalRef.current) {
-        clearInterval(playIntervalRef.current);
-      }
+      return () => clearInterval(playIntervalRef.current);
     }
+    clearInterval(playIntervalRef.current);
   }, [isPlaying, playSpeed, selectedZone]);
 
-  // Function to check if a zone is available based on year
-  const isZoneAvailable = (zone, year) => {
-    return isSVGAvailable(zone, year);
-  };
-
-  // Function to check if a year is available based on current zone
-  const isYearAvailable = (year) => {
-    return isSVGAvailable(selectedZone, year);
-  };
+  const isZoneAvailable = (zone, year) => isSVGAvailable(zone, year);
+  const isYearAvailable = (year) => isSVGAvailable(selectedZone, year);
 
   const handleYearSelect = (year) => {
-    console.log('Selected year:', year);
     setSelectedYear(year);
-    // Pause when manually selecting a year
     setIsPlaying(false);
-
-    // If current zone is not available in the selected year, switch to Rio
     if (!isZoneAvailable(selectedZone, year)) {
       setSelectedZone('rio');
     }
   };
 
-  const handlePlay = () => {
-    console.log('Play button clicked');
-    setIsPlaying((prev) => !prev);
-  };
+  const handlePlay = () => setIsPlaying(prev => !prev);
 
   const handleSpeedChange = () => {
-    console.log('Speed changed');
     const speeds = ['0.5x', '1x', '1.5x', '2x'];
-    const currentIndex = speeds.indexOf(playSpeed);
-    const nextIndex = (currentIndex + 1) % speeds.length;
+    const nextIndex = (speeds.indexOf(playSpeed) + 1) % speeds.length;
     setPlaySpeed(speeds[nextIndex]);
   };
 
-  const handleLanguageChange = (language) => {
-    console.log('Language changed:', language);
+  // ✅ Alternar idioma com clique
+  const handleLanguageChange = () => {
+    setLanguage(prev => prev === "POR" ? "ENG" : "POR");
+    setIsPlaying(false);
   };
 
   const handleAreaSelect = (area) => {
-    console.log('Area selected:', area);
     const zone = area.toLowerCase();
-
-    // Only allow selection if zone is available in current year
     if (isZoneAvailable(zone, selectedYear)) {
       setSelectedZone(zone);
     }
   };
 
   const handleLegendToggle = (itemId) => {
-    console.log('Legend item toggled:', itemId);
     setActiveLegendItems(prev => ({
       ...prev,
       [itemId]: !prev[itemId]
@@ -122,46 +92,33 @@ function App() {
   };
 
   return (
-
     <div className="relative w-screen h-screen overflow-hidden" style={{ backgroundColor: '#C0E6EC' }}>
-
-      {/* Background dividido em duas metades */}
-      {/* <div className="absolute inset-0 flex">
-        <div className="w-1/2 bg-grass"></div>
-        <div className="w-1/2 bg-ocean-100"></div>
-      </div> */}
-
       <div className="relative w-screen h-screen overflow-hidden">
 
-        {/* SVG Map - ocupa toda a tela */}
         <SVGMap
           selectedYear={selectedYear}
           selectedZone={selectedZone}
           activeLegendItems={activeLegendItems}
+          language={language} // ✅ enviado
         />
 
-        {/* Logo Shell fixo e responsivo no canto superior esquerdo */}
         <div className="absolute top-[2vh] left-[2vw] z-20">
-          <img
-            src={ShellAllTypeBR}
-            alt="Shell Logo"
-            className="w-[30vw]"
-          />
+         <img
+  src={language === "ENG" ? ShellAllTypeEN : ShellAllTypeBR}
+  className="h-[20vh] w-auto object-contain"
+/>
         </div>
 
-        {/* Gerenciador de interações com pins do SVG */}
         <PinInteractionManager
           selectedZone={selectedZone}
           selectedYear={selectedYear}
           activeLegendItems={activeLegendItems}
           isPlaying={isPlaying}
           onPauseTimeline={() => setIsPlaying(false)}
+          language={language} // ✅ enviado
         />
 
-        {/* Toolbar responsiva fixada à direita */}
-        <div
-          className="absolute top-[3vh] right-[2vw] z-10 h-[85vh] flex flex-col"
-        >
+        <div className="absolute top-[3vh] right-[2vw] z-10 h-[85vh] flex flex-col">
           <Toolbar
             selectedArea={selectedZone}
             selectedYear={selectedYear}
@@ -169,23 +126,21 @@ function App() {
             onLegendToggle={handleLegendToggle}
             activeLegendItems={activeLegendItems}
             isZoneAvailable={isZoneAvailable}
+            language={language} // ✅ enviado
           />
         </div>
 
-
-        {/* Timeline responsiva fixada no canto inferior direito */}
-        <div className="">
-          <Timeline
-            selectedYear={selectedYear}
-            onYearSelect={handleYearSelect}
-            onPlay={handlePlay}
-            isPlaying={isPlaying}
-            speed={playSpeed}
-            onSpeedChange={handleSpeedChange}
-            onLanguageChange={handleLanguageChange}
-            isYearAvailable={isYearAvailable}
-          />
-        </div>
+        <Timeline
+          selectedYear={selectedYear}
+          onYearSelect={handleYearSelect}
+          onPlay={handlePlay}
+          isPlaying={isPlaying}
+          speed={playSpeed}
+          onSpeedChange={handleSpeedChange}
+          language={language} // ✅ enviado
+          onLanguageChange={handleLanguageChange} // ✅ alterna idioma
+          isYearAvailable={isYearAvailable}
+        />
 
       </div>
     </div>

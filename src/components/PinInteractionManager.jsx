@@ -3,15 +3,22 @@ import RioLocationPopover from './rio/RioLocationPopover';
 import SPLocationPopover from './rio/SPLocationPopover';
 import MacaeLocationPopover from './rio/MacaeLocationPopover';
 import PopoverPins from './popovers/PopoverPins';
-import mapData from '../data/mapData.json';
+import mapDataBR from '../data/mapData.json';
+import mapDataUS from '../data/mapDataUs.json';
 import locationsData from '../data/locationsData.json';
 
 /**
  * Componente responsável por gerenciar as interações com os pins do SVG
  * e abrir os popovers correspondentes
  */
-function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, isPlaying, onPauseTimeline }) {
-  
+function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, isPlaying, onPauseTimeline, language }) {
+
+  const mapData = language === "ENG" ? mapDataUS : mapDataBR;
+
+  console.log("🔤 PinInteractionManager recebeu language:", language);
+
+   console.log("🔤 PinInteractionManager recebeu mapa:", mapData);
+
   /**
    * Busca um pin em mapData.json pela estrutura hierárquica ano/zona/tipo
    * @param {string} pinId - ID do pin a ser buscado (ex: 'exp1', 'prod2', 'GreenPin_7-GatoDoMato')
@@ -23,11 +30,13 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     if (!mapData[year] || !mapData[year][zone]) return null;
     
     const regionData = mapData[year][zone];
+
     const pinArrays = [
       regionData.explorationPins || [],
       regionData.productionPins || [],
+      regionData.developmentPins || [],
       regionData.decommissioningPins || []
-    ];
+    ];
     
     for (const array of pinArrays) {
       // Buscar por ID do JSON ou por svgId (mais robusto)
@@ -41,7 +50,8 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     }
     
     return null;
-  }, []);
+  }, [mapData]);
+
   const [activePopover, setActivePopover] = useState(null);
   const [popoverData, setPopoverData] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -415,6 +425,8 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     setAnchorEl(null);
   }, []);
 
+  
+
   /**
    * Detecta se o pin é de location (São Paulo, Rio, Macaé)
    * @param {string} pinId - ID do pin do SVG
@@ -579,6 +591,7 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
           anchorEl={anchorEl}
           onClose={closePopover}
           data={popoverData}
+          language={language}
         />
       )}
     </>
