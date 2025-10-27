@@ -1204,8 +1204,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_8-SuldeGatodoMato",
-          "svgId": "GreenPin_8-SuldeGatodoMato",
+          "id": "RedPin_8-SuldeGatodoMato",
+          "svgId": "RedPin_8-SuldeGatodoMato",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -2052,8 +2052,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_8-SuldeGatodoMato",
-          "svgId": "GreenPin_8-SuldeGatodoMato",
+          "id": "RedPin_8-SuldeGatodoMato",
+          "svgId": "RedPin_8-SuldeGatodoMato",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -2176,8 +2176,8 @@
           }
         },
         {
-          "id": "GreenPin_E3",
-          "svgId": "GreenPin_E3",
+          "id": "RedPin_E3",
+          "svgId": "RedPin_E3",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -3430,8 +3430,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_8-SuldeGatodoMato",
-          "svgId": "GreenPin_8-SuldeGatodoMato",
+          "id": "RedPin_8-SuldeGatodoMato",
+          "svgId": "RedPin_8-SuldeGatodoMato",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -3554,8 +3554,8 @@
           }
         },
         {
-          "id": "GreenPin_E3",
-          "svgId": "GreenPin_E3",
+          "id": "RedPin_E3",
+          "svgId": "RedPin_E3",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -4834,8 +4834,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_8-SuldeGatodoMato",
-          "svgId": "GreenPin_8-SuldeGatodoMato",
+          "id": "RedPin_8-SuldeGatodoMato",
+          "svgId": "RedPin_8-SuldeGatodoMato",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -4958,8 +4958,8 @@
           }
         },
         {
-          "id": "GreenPin_E3",
-          "svgId": "GreenPin_E3",
+          "id": "RedPin_E3",
+          "svgId": "RedPin_E3",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -6340,8 +6340,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_8-SuldeGatodoMato",
-          "svgId": "GreenPin_8-SuldeGatodoMato",
+          "id": "RedPin_8-SuldeGatodoMato",
+          "svgId": "RedPin_8-SuldeGatodoMato",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -6464,8 +6464,8 @@
           }
         },
         {
-          "id": "GreenPin_E3",
-          "svgId": "GreenPin_E3",
+          "id": "RedPin_E3",
+          "svgId": "RedPin_E3",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -8098,8 +8098,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_8-SuldeGatodoMato",
-          "svgId": "GreenPin_8-SuldeGatodoMato",
+          "id": "RedPin_8-SuldeGatodoMato",
+          "svgId": "RedPin_8-SuldeGatodoMato",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -8222,8 +8222,8 @@
           }
         },
         {
-          "id": "GreenPin_E3",
-          "svgId": "GreenPin_E3",
+          "id": "RedPin_E3",
+          "svgId": "RedPin_E3",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -9805,8 +9805,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_8-SuldeGatodoMato",
-          "svgId": "GreenPin_8-SuldeGatodoMato",
+          "id": "RedPin_8-SuldeGatodoMato",
+          "svgId": "RedPin_8-SuldeGatodoMato",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -9929,8 +9929,8 @@
           }
         },
         {
-          "id": "GreenPin_E3",
-          "svgId": "GreenPin_E3",
+          "id": "RedPin_E3",
+          "svgId": "RedPin_E3",
           "type": "exploration",
           "status": {
             "label": "In exploration",
@@ -11531,8 +11531,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_8-SuldeGatodoMato",
-          "svgId": "GreenPin_8-SuldeGatodoMato",
+          "id": "RedPin_8-SuldeGatodoMato",
+          "svgId": "RedPin_8-SuldeGatodoMato",
           "type": "exploration",
           "status": {
             "label": "In exploration",

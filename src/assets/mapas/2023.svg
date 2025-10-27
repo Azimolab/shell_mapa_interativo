@@ -251,7 +251,7 @@
         </g>
         <path id="Rectangle 2_17" fill="#DD1D21" d="M1395 379.985h2.57c1.92 0 2.74 2.428 1.22 3.589l-2.58 1.968c-.71.548-1.71.548-2.42 0l-2.58-1.968c-1.52-1.161-.7-3.589 1.22-3.589h2.57Z" class="Rectangle 2"/>
       </g>
-      <g id="GreenPin_E3" class="GreenPin_E3">
+      <g id="RedPin_E3" class="RedPin_E3">
         <g id="Frame 2_18" class="Frame 2">
           <rect width="34" height="34" x="1289.5" y="524.727" fill="#DD1D21" rx="8"/>
           <g id="IconBox_18" class="IconBox">
@@ -298,7 +298,7 @@
         </g>
         <path id="Rectangle 2_22" fill="#008557" d="M908 699.22h2.575c1.913 0 2.734 2.427 1.214 3.589l-2.575 1.968a1.998 1.998 0 0 1-2.428 0l-2.575-1.968c-1.52-1.162-.699-3.589 1.214-3.589H908Z" class="Rectangle 2"/>
       </g>
-      <g id="GreenPin_8-SuldeGatodoMato" class="GreenPin_8-SuldeGatodoMato">
+      <g id="RedPin_8-SuldeGatodoMato" class="RedPin_8-SuldeGatodoMato">
         <g id="Frame 2_23" class="Frame 2">
           <rect width="34" height="34" x="866" y="629.234" fill="#DD1D21" rx="8"/>
           <g id="IconBox_23" class="IconBox">
