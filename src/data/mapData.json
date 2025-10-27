@@ -52,8 +52,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
@@ -448,8 +448,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
@@ -1241,8 +1241,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
@@ -2089,8 +2089,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
@@ -2988,7 +2988,7 @@
         "gasoduto": false,
         "terceiros": false
       }
-    }, 
+    },
     "potiguar": {
       "explorationPins": [
         {
@@ -3467,8 +3467,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
@@ -4871,8 +4871,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
@@ -5684,7 +5684,6 @@
         "terceiros": true
       }
     },
-
     "barreirinhas": {
       "explorationPins": [
         {
@@ -6378,8 +6377,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
@@ -7239,7 +7238,6 @@
         "terceiros": true
       }
     },
-
     "barreirinhas": {
       "explorationPins": [
         {
@@ -8137,8 +8135,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
@@ -8993,7 +8991,6 @@
         "terceiros": true
       }
     },
-  
     "barreirinhas": {
       "explorationPins": [
         {
@@ -9845,8 +9842,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
@@ -11571,8 +11568,8 @@
           "infrastructure": {}
         },
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
@@ -12330,7 +12327,9 @@
             "icon": "exploration"
           },
           "title": "Bacia Pelotas",
-          "tags": ["Rodada de licitação: OPC4"],
+          "tags": [
+            "Rodada de licitação: OPC4"
+          ],
           "operator": {
             "name": "Petrobrás",
             "description": "Responsável pela administração do campo"
@@ -12344,11 +12343,13 @@
               "name": "Shell",
               "percentage": 30,
               "isOperator": false
-            }, {
+            },
+            {
               "name": "Petrobrás",
               "percentage": 50,
               "isOperator": true
-            }, {
+            },
+            {
               "name": "CNOOC",
               "percentage": 30,
               "isOperator": false
@@ -12366,7 +12367,9 @@
             "icon": "exploration"
           },
           "title": "Bacia Pelotas",
-          "tags": ["Rodada de licitação: OPC4"],
+          "tags": [
+            "Rodada de licitação: OPC4"
+          ],
           "operator": {
             "name": "Petrobrás",
             "description": "Responsável pela administração do campo"
@@ -12380,7 +12383,8 @@
               "name": "Shell",
               "percentage": 30,
               "isOperator": false
-            }, {
+            },
+            {
               "name": "Petrobrás",
               "percentage": 70,
               "isOperator": true
@@ -12637,7 +12641,7 @@
             },
             {
               "name": "Petrobrás",
-              "percentage": "65a20",
+              "percentage": 20,
               "isOperator": false
             }
           ],
@@ -13242,7 +13246,7 @@
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "~690-1.340m",
+            "value": "~2.000-2.250m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
@@ -13271,7 +13275,7 @@
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "A definir",
+            "value": "~2.100-2.400",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
@@ -14083,7 +14087,9 @@
             "icon": "exploration"
           },
           "title": "Bacia Pelotas",
-          "tags": ["Rodada de licitação: OPC4"],
+          "tags": [
+            "Rodada de licitação: OPC4"
+          ],
           "operator": {
             "name": "Petrobrás",
             "description": "Responsável pela administração do campo"
@@ -14097,11 +14103,13 @@
               "name": "Shell",
               "percentage": 30,
               "isOperator": false
-            }, {
+            },
+            {
               "name": "Petrobrás",
               "percentage": 50,
               "isOperator": true
-            }, {
+            },
+            {
               "name": "CNOOC",
               "percentage": 30,
               "isOperator": false
@@ -14119,7 +14127,9 @@
             "icon": "exploration"
           },
           "title": "Bacia Pelotas",
-          "tags": ["Rodada de licitação: OPC4"],
+          "tags": [
+            "Rodada de licitação: OPC4"
+          ],
           "operator": {
             "name": "Petrobrás",
             "description": "Responsável pela administração do campo"
@@ -14133,7 +14143,8 @@
               "name": "Shell",
               "percentage": 30,
               "isOperator": false
-            }, {
+            },
+            {
               "name": "Petrobrás",
               "percentage": 70,
               "isOperator": true
@@ -14338,8 +14349,8 @@
       "decommissioningPins": [],
       "explorationPins": [
         {
-          "id": "GreenPin_7-GatoDoMato",
-          "svgId": "GreenPin_7-GatoDoMato",
+          "id": "RedPin_7-GatoDoMato",
+          "svgId": "RedPin_7-GatoDoMato",
           "type": "exploration",
           "status": {
             "label": "Em exploração",
