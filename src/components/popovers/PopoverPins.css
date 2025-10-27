@@ -313,7 +313,7 @@
   transition: width 0.3s ease;
 }
 
-.popover-pins-progress-fill.is-operator {
+.popover-pins-progress-fill.is-shell {
   background-color: #DD1D21;
 }
 

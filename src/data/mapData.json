@@ -153,12 +153,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -796,12 +796,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -1692,12 +1692,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -2926,12 +2926,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -4365,12 +4365,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -5808,12 +5808,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -7401,12 +7401,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -9193,12 +9193,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -10980,12 +10980,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -12646,7 +12646,7 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
@@ -14406,15 +14406,15 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
-              "name": "Qatar Petroleum",
+              "name": "Brava Energia",
               "percentage": 23,
               "isOperator": false
             }
@@ -14880,12 +14880,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
