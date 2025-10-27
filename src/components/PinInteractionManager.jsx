@@ -239,6 +239,35 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     }
   }, [handlePinClick]);
 
+  /**
+   * Extrai o identificador base do pin para encontrar o cluster correspondente
+   * Exemplos:
+   * - "GreenPin_1-Parque das Conchas" -> "GreenPin_1"
+   * - "GrayPin_1-BijupiraSalema" -> "GrayPin_1"
+   * - "RedPin_2-Campo X" -> "RedPin_2"
+   * @param {string} pinId - ID completo do pin
+   * @returns {string} - Identificador base do pin
+   */
+  const extractPinBaseId = useCallback((pinId) => {
+    if (!pinId) return null;
+    
+    // Padrão: TipoPin_Número-NomeDetalhado
+    // Queremos extrair: TipoPin_Número
+    const match = pinId.match(/^([A-Za-z]+Pin_\d+)/);
+    if (match) {
+      return match[1];
+    }
+    
+    // Fallback: retornar até o primeiro hífen (se existir)
+    const hyphenIndex = pinId.indexOf('-');
+    if (hyphenIndex > 0) {
+      return pinId.substring(0, hyphenIndex);
+    }
+    
+    // Se não tem hífen, retornar o ID completo
+    return pinId;
+  }, []);
+
   // useEffect para escutar o evento de SVG pronto
   useEffect(() => {
     const handleSvgReady = (event) => {
@@ -322,6 +351,12 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       pin.classList.remove('active');
     });
 
+    // Ocultar todos os Cluster_Active por padrão
+    const allClusters = svgElement.querySelectorAll('g[id*="Cluster_"], g[class*="Cluster_Active"]');
+    allClusters.forEach(cluster => {
+      cluster.style.display = 'none';
+    });
+
     // Se há um popover aberto e um anchorEl, adicionar classe active
     if (activePopover && anchorEl) {
       // Para location pins (identificados pelo activePopover)
@@ -342,11 +377,37 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
           if (activePin) {
             activePin.classList.add('active');
             console.log('✨ Pin ativo:', pinId);
+
+            // Verificar se este pin tem "number" (é um cluster)
+            if (popoverData && popoverData.number) {
+              console.log('🎯 Pin com number detectado:', pinId);
+              
+              // Extrair o identificador base do pin (ex: "GreenPin_1" de "GreenPin_1-Parque das Conchas")
+              const pinBaseId = extractPinBaseId(pinId);
+              console.log('📌 ID base extraído:', pinBaseId);
+              
+              // Procurar pelo cluster com o padrão: Cluster_Active-{baseId}
+              const clusterActiveId = `Cluster_Active-${pinBaseId}`;
+              const clusterActive = svgElement.querySelector(`g[id="${CSS.escape(clusterActiveId)}"]`);
+              
+              console.log('🔍 Procurando cluster:', clusterActiveId);
+              
+              if (clusterActive) {
+                // Tornar visível
+                clusterActive.style.display = 'block';
+                console.log('✅ Cluster_Active exibido:', clusterActiveId);
+              } else {
+                console.warn('⚠️ Cluster_Active não encontrado:', clusterActiveId);
+                // Debug: listar clusters disponíveis
+                const availableClusters = svgElement.querySelectorAll('g[id*="Cluster_Active"]');
+                console.log('📋 Clusters disponíveis:', Array.from(availableClusters).map(c => c.id));
+              }
+            }
           }
         }
       }
     }
-  }, [activePopover, anchorEl]);
+  }, [activePopover, anchorEl, popoverData, extractPinBaseId]);
 
   const closePopover = useCallback(() => {
     setActivePopover(null);

@@ -5,3 +5,9 @@
   perspective: 1000px;
 }
 
+/* Ocultar Cluster_Active por padrão - só aparece quando um pin com number está ativo */
+.svg-map-content svg g[id*="Cluster_"],
+.svg-map-content svg g[class*="Cluster_Active"] {
+  pointer-events: none; /* Não interceptar eventos de clique */
+}
+

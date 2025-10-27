@@ -84,6 +84,21 @@
   transform: scale(0.97);
 }
 
+.timeline-year-button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  color: var(--grey-200);
+}
+
+.timeline-year-button.disabled:hover {
+  background: none;
+  transform: none;
+}
+
+.timeline-year-button.disabled:active {
+  transform: none;
+}
+
 
 /* --- PLAY SECTION --- */
 .timeline-play-section {

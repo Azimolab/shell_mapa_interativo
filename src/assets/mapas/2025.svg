@@ -1,4 +1,4 @@
-<svg fill="none" viewBox="0 0 1920 1080">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1920 1080">
   <g id="2025" class="2025" clip-path="url(#clip0_11175_45962)">
     <path fill="#C0E6EC" d="M0 0h1920v1080H0z"/>
     <g id="BG" class="BG">
@@ -13,6 +13,14 @@
       <path id="Bg_gasoduto" stroke="#95C8DC" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" d="M1326.25 100c1.13.516 3.87 1.715 5.37 3.883 1.43 2.063 2.97 6.159 3.66 8.219.06.198.1.403.1.612v10.911" class="Bg_gasoduto"/>
       <path id="Line_gasoduto" stroke="#003758" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1264.38 101.625 6.69-9.155c.39-.53 1.01-.835 1.67-.819l30.61.767c.2.004.4.04.59.102l22.44 7.505" class="Line_gasoduto"/>
       <path id="Line_oleoduto" stroke="#ED8A00" stroke-linejoin="round" stroke-width="2" d="M1326.25 100c1.13.516 3.87 1.715 5.37 3.883 1.43 2.063 2.97 6.159 3.66 8.219.06.198.1.403.1.612v10.911" class="Line_oleoduto"/>
+    </g>
+    <g id="Cluster_Active-GreenPin_1" class="Cluster_Active-GreenPin">
+      <circle id="Ellipse 54" cx="1307" cy="89.5" r="64" fill="#fff" fill-opacity=".4" stroke="#fff" stroke-width="2" class="Ellipse 54" opacity=".2"/>
+      <circle id="Ellipse 55" cx="1307" cy="89.5" r="47" fill="#fff" fill-opacity=".5" stroke="#fff" stroke-width="2" class="Ellipse 55"/>
+    </g>
+    <g id="Cluster_Active-GrayPin_1" class="Cluster_Active-GrayPin">
+      <circle id="Ellipse 54_2" cx="1265" cy="259.5" r="64" fill="#fff" fill-opacity=".4" stroke="#fff" stroke-width="2" class="Ellipse 54" opacity=".2"/>
+      <circle id="Ellipse 55_2" cx="1265" cy="259.5" r="47" fill="#fff" fill-opacity=".5" stroke="#fff" stroke-width="2" class="Ellipse 55"/>
     </g>
     <g id="PipelineLine" class="PipelineLine">
       <g id="BG_Gasoduto" class="BG_Gasoduto">
@@ -288,7 +296,6 @@
         <path id="Rectangle 2_21" fill="#DD1D21" d="M1395 379.985h2.57c1.92 0 2.74 2.428 1.22 3.589l-2.58 1.968c-.71.548-1.71.548-2.42 0l-2.58-1.968c-1.52-1.161-.7-3.589 1.22-3.589h2.57Z" class="Rectangle 2"/>
       </g>
     </g>
-    <g>
     <g id="PurplePins" class="PurplePins">
       <g id="PurplePin_8-SuldeGatodoMato" class="PurplePin_8-SuldeGatodoMato">
         <g id="Frame 2_29" class="Frame 2">
@@ -308,7 +315,6 @@
         </g>
         <path id="Rectangle 2_30" fill="#86207C" d="M873 620.22h2.575c1.913 0 2.734 2.427 1.214 3.589l-2.575 1.968a1.998 1.998 0 0 1-2.428 0l-2.575-1.968c-1.52-1.162-.699-3.589 1.214-3.589H873Z" class="Rectangle 2"/>
       </g>
-    </g>
     </g>
     <g id="GreenPins" class="GreenPins">
       <g id="GreenPin_14-BMS9-Sapinhoa" class="GreenPin_14-BMS9-Sapinhoa">
@@ -374,8 +380,7 @@
         </g>
         <path id="Rectangle 2_28" fill="#008557" d="M908 699.22h2.575c1.913 0 2.734 2.427 1.214 3.589l-2.575 1.968a1.998 1.998 0 0 1-2.428 0l-2.575-1.968c-1.52-1.162-.699-3.589 1.214-3.589H908Z" class="Rectangle 2"/>
       </g>
-
-      <g id="GreenPin_6-IaraBerbigÃ£o" class="GreenPin_6-IaraBerbigÃ£o">
+      <g id="GreenPin_6-IaraBerbigao" class="GreenPin_6-IaraBerbigao">
         <g id="Frame 2_31" class="Frame 2">
           <rect width="34" height="34" x="929" y="621" fill="#008557" rx="8"/>
           <g id="IconBox_31" class="IconBox">

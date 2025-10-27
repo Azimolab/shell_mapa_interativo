@@ -61,6 +61,25 @@ g[class*="GrayPin"].active path[class="pin"] {
   fill: #343434 !important;
 }
 
+/* Location Pins - São Paulo, Rio de Janeiro, Macaé (cinza -> #343434) */
+g[id="Pin_SP"].active rect,
+g[id="Pin_Rio"].active rect,
+g[id="Pin_Macae"].active rect,
+g[id="Pin_SP"].active path[id*="Rectangle"],
+g[id="Pin_Rio"].active path[id*="Rectangle"],
+g[id="Pin_Macae"].active path[id*="Rectangle"],
+g[id="Pin_SP"].active path[class*="Rectangle"],
+g[id="Pin_Rio"].active path[class*="Rectangle"],
+g[id="Pin_Macae"].active path[class*="Rectangle"],
+g[id="Pin_SP"].active path[id="pin"],
+g[id="Pin_Rio"].active path[id="pin"],
+g[id="Pin_Macae"].active path[id="pin"],
+g[id="Pin_SP"].active path[class="pin"],
+g[id="Pin_Rio"].active path[class="pin"],
+g[id="Pin_Macae"].active path[class="pin"] {
+  fill: #343434 !important;
+}
+
 /* Cursor pointer para todos os pins */
 g[id*="Pin"],
 g[class*="Pin"] {

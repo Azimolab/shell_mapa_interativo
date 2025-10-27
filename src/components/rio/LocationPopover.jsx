@@ -82,13 +82,23 @@ function LocationPopover({
           <div className="text-grey-800 font-[ShellBook,'-apple-system',Roboto,Helvetica,sans-serif] text-[10px] md:text-[16px] max-[480px]:text-[14px] max-[360px]:text-xs font-normal leading-normal whitespace-nowrap">{badge}</div>
         </div>
         <h1 className="text-grey-800 font-[ShellBold,'-apple-system',Roboto,Helvetica,sans-serif] text-lg md:text-3xl max-[480px]:text-2xl max-[360px]:text-xl font-bold leading-normal m-0 whitespace-nowrap">{title}</h1>
-        {image && (
-          <img 
-            className="w-full h-[110px] object-cover rounded-md" 
-            src={image} 
-            alt={imageAlt || `Instalação industrial em ${title}`} 
-          />
-        )}
+         {image && (
+           <img 
+             className="w-full h-[110px] object-cover rounded-md" 
+             src={image} 
+             alt={imageAlt || `Instalação industrial em ${title}`} 
+             style={image.includes('Rio2025.jpg') ? { 
+               objectPosition: '50% 50%',
+               width: '459px',
+               height: '110px',
+               objectFit: 'cover',
+               minWidth: '459px',
+               minHeight: '110px',
+               maxWidth: '459px',
+               maxHeight: '110px'
+             } : {}}
+           />
+         )}
       </div>
 
       {/* Joint Ventures - Só renderiza se venture existir */}

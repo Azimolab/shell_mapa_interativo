@@ -3943,8 +3943,45 @@
     "rio": {
       "decommissioningPins": [
         {
-          "id": "decomm1",
-          "number": null
+          "id": "prod2",
+          "svgId": "GrayPin_1-BijupiraSalema",
+          "type": "decommissioning",
+          "number": 3,
+          "status": {
+            "label": "Em descomissionamento",
+            "icon": "decommissioning"
+          },
+          "title": "BM-S-9A - Búziosss",
+          "tags": [],
+          "operator": {
+            "name": "Petrobras",
+            "description": "Responsável pela administração do campo"
+          },
+          "depth": {
+            "value": "~1.900-2.100m",
+            "description": "Distância da superfície do mar até o fundo"
+          },
+          "companies": [
+            {
+              "name": "Petrobras",
+              "percentage": 88.99,
+              "isOperator": true
+            }
+          ],
+          "infrastructure": {
+            "title": "6 FPSOs em operação",
+            "description": "Unidade flutuante de produção, armazenamento e transferência de petróleo",
+            "items": [
+              {
+                "id": 1,
+                "name": "P-74"
+              },
+              {
+                "id": 2,
+                "name": "P-75"
+              }
+            ]
+          }
         },
         {
           "id": "decomm2",

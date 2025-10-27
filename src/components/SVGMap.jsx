@@ -139,6 +139,12 @@ function SVGMap({ selectedYear = '2025', selectedZone = 'rio', activeLegendItems
       // Aplicar regras de visibilidade ANTES de exibir
       applyPinVisibilityRules(tempDiv, activeLegendItems);
       
+      // Ocultar Cluster_Active por padrão (só aparece quando um pin com number está ativo)
+      const clusterElements = tempDiv.querySelectorAll('g[id*="Cluster_"], g[class*="Cluster_Active"]');
+      clusterElements.forEach(cluster => {
+        cluster.style.display = 'none';
+      });
+      
       // Capturar o HTML processado
       const processedSvg = tempDiv.innerHTML;
       
