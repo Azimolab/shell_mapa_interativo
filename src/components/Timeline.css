@@ -151,6 +151,7 @@
 }
 
 /* --- SPEED BUTTON --- */
+/* --- SPEED BUTTON --- */
 .timeline-speed-button {
   display: flex;
   align-items: center;
@@ -159,13 +160,19 @@
   border-radius: 3vw;
   cursor: pointer;
   transition: all 0.2s ease;
-  height: clamp(4.5vh, 5vh, 5.5vh);  /* menor que a seção, centralizado */
-  padding: 0 clamp(0.8vw, 1vw, 1.2vw);
+
+  height: clamp(4.5vh, 5vh, 5.5vh);
+  width: clamp(3vw, 4vw, 5vw); /* <<< largura fixa e responsiva */
+
+  padding: 0 clamp(0.6vw, 0.8vw, 1vw); /* padding apenas lateral */
   font-family: 'ShellBook', sans-serif;
   font-size: clamp(0.9vw, 1vw, 1.1vw);
   color: var(--sky-500);
   background: none;
+
+  box-sizing: border-box; /* evita estourar a largura */
 }
+
 
 
 .timeline-speed-button:hover {

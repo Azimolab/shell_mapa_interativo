@@ -70,7 +70,7 @@
   align-items: flex-start;
   gap: 6px;
   flex-wrap: nowrap;
-  width: vw;
+  width: 350px;
 }
 
 .btn {
