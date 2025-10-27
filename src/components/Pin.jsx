@@ -50,7 +50,7 @@ function Pin({ type, number, isActive = false, onClick }) {
     
   return (
     <div 
-      className={`flex justify-center items-center gap-1.5 px-2 py-2 rounded-lg`}
+      className={`flex justify-center items-center gap-1.5 px-2 py-2 rounded-lg outline-none focus:outline-none`}
       style={{ backgroundColor: config.bgColor }}
       onClick={onClick}
       role="button"
