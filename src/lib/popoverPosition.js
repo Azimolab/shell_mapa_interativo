@@ -44,11 +44,14 @@ export function calculateBestPopoverPosition(anchorRect, popoverDimensions = { w
   const toolbarRestricted = TOOLBAR_WIDTH + TOOLBAR_MARGIN_RIGHT;
 
   // Calcular espaço disponível em cada direção, considerando áreas restritas
+  // aplicar penalização extra no left/right se o pin estiver muito próximo do topo
+  const extraTopPenalty = anchorRect.top < TOOLBAR_MARGIN_TOP ? TOOLBAR_MARGIN_TOP : 0;
+
   const space = {
     top: anchorRect.top - MARGIN - TOOLBAR_MARGIN_TOP,
-    right: viewportWidth - anchorRect.right - MARGIN - toolbarRestricted,
+    right: viewportWidth - anchorRect.right - MARGIN - toolbarRestricted - extraTopPenalty,
     bottom: viewportHeight - anchorRect.bottom - MARGIN - timelineRestricted,
-    left: anchorRect.left - MARGIN
+    left: anchorRect.left - MARGIN - extraTopPenalty
   };
 
   console.log('📐 Espaço disponível (com restrições):', space);
@@ -98,8 +101,11 @@ export function calculateBestPopoverPosition(anchorRect, popoverDimensions = { w
 
   if (bestPosition.side === 'top' || bestPosition.side === 'bottom') {
     const popoverHalfWidth = popoverDimensions.width / 2;
-    const leftSpace = pinCenter.x - MARGIN;
-    const rightSpace = viewportWidth - pinCenter.x - MARGIN - toolbarRestricted;
+    // Calcular espaço lateral real considerando penalização reduzida do toolbar
+    // Se o popover pode caber acima do toolbar, reduzir um pouco a penalização da toolbar
+    const toolbarPenaltyReduced = fits.top ? Math.max(0, toolbarRestricted - Math.round(TOOLBAR_MARGIN_TOP * 0.6)) : toolbarRestricted;
+    const leftSpace = pinCenter.x - MARGIN - (anchorRect.top < TOOLBAR_MARGIN_TOP ? TOOLBAR_MARGIN_TOP : 0);
+    const rightSpace = viewportWidth - pinCenter.x - MARGIN - toolbarPenaltyReduced - (anchorRect.top < TOOLBAR_MARGIN_TOP ? TOOLBAR_MARGIN_TOP : 0);
 
     // Calcular onde o popover ficaria com cada alinhamento
     const centerLeft = pinCenter.x - popoverHalfWidth;
@@ -110,8 +116,14 @@ export function calculateBestPopoverPosition(anchorRect, popoverDimensions = { w
       pinCenter.x >= (centerLeft + ARROW_MARGIN) && 
       pinCenter.x <= (centerRight - ARROW_MARGIN);
 
-    if (canUseCenterAlign && leftSpace >= popoverHalfWidth && rightSpace >= popoverHalfWidth) {
-      // Pode usar center com segurança
+    // Tornar center-align mais permissivo: calcular um centro permitido (clamped)
+    const allowedCenterMinX = MARGIN + popoverHalfWidth;
+    const allowedCenterMaxX = Math.max(allowedCenterMinX, viewportWidth - MARGIN - toolbarPenaltyReduced - popoverHalfWidth);
+    const popoverCenterCandidateX = Math.max(allowedCenterMinX, Math.min(allowedCenterMaxX, pinCenter.x));
+    const centerShiftX = Math.abs(popoverCenterCandidateX - pinCenter.x);
+
+    // se a troca de centro necessária couber dentro da área útil para a arrow, permitir center
+    if ((canUseCenterAlign || centerShiftX <= (popoverHalfWidth - ARROW_MARGIN))) {
       bestPosition.align = 'center';
     } else if (leftSpace < popoverHalfWidth) {
       // Muito próximo da borda esquerda
@@ -134,9 +146,28 @@ export function calculateBestPopoverPosition(anchorRect, popoverDimensions = { w
     }
   }
 
+  // Caso especial: se o popover previsto invadir a toolbar à direita, forçar abrir à esquerda
+  try {
+    const allowedRightEdge = viewportWidth - MARGIN - TOOLBAR_MARGIN_RIGHT;
+    // calcular previsão do popover em top/bottom com center (ou candidate center)
+    const predictedCenterX = (bestPosition.align === 'center') ? popoverCenterCandidateX : Math.max(allowedCenterMinX, Math.min(allowedCenterMaxX, pinCenter.x));
+    const predictedLeft = predictedCenterX - popoverHalfWidth;
+    const predictedRight = predictedLeft + popoverDimensions.width;
+
+    if (predictedRight > allowedRightEdge) {
+      console.log('⚠️ Popover previsivelmente invade toolbar à direita — forçando abertura à esquerda');
+      // Forçar esquerda com alinhamento center quando possível
+      bestPosition.side = 'left';
+      bestPosition.align = 'center';
+    }
+  } catch (e) {
+    // noop
+  }
+
   if (bestPosition.side === 'left' || bestPosition.side === 'right') {
     const popoverHalfHeight = popoverDimensions.height / 2;
-    const topSpace = pinCenter.y - MARGIN - TOOLBAR_MARGIN_TOP;
+    // Calcular espaços verticais reais; incluir penalização do toolbar se o pin estiver alto
+    const topSpace = pinCenter.y - MARGIN - (anchorRect.top < TOOLBAR_MARGIN_TOP ? TOOLBAR_MARGIN_TOP : TOOLBAR_MARGIN_TOP);
     const bottomSpace = viewportHeight - pinCenter.y - MARGIN - timelineRestricted;
 
     // Calcular onde o popover ficaria com cada alinhamento
@@ -148,8 +179,14 @@ export function calculateBestPopoverPosition(anchorRect, popoverDimensions = { w
       pinCenter.y >= (centerTop + ARROW_MARGIN) && 
       pinCenter.y <= (centerBottom - ARROW_MARGIN);
 
-    if (canUseCenterAlign && topSpace >= popoverHalfHeight && bottomSpace >= popoverHalfHeight) {
-      // Pode usar center com segurança
+    // Permitir center-align mais generoso verticalmente: calcular centro permitido e shift
+    const allowedCenterMinY = MARGIN + popoverHalfHeight;
+    const allowedCenterMaxY = Math.max(allowedCenterMinY, viewportHeight - MARGIN - timelineRestricted - popoverHalfHeight);
+    const popoverCenterCandidateY = Math.max(allowedCenterMinY, Math.min(allowedCenterMaxY, pinCenter.y));
+    const centerShiftY = Math.abs(popoverCenterCandidateY - pinCenter.y);
+
+    if (canUseCenterAlign || centerShiftY <= (popoverHalfHeight - ARROW_MARGIN)) {
+      // Pode usar center com segurança ou com pequeno deslocamento que ainda permite a seta
       bestPosition.align = 'center';
     } else if (topSpace < popoverHalfHeight) {
       // Muito próximo do topo
@@ -172,58 +209,67 @@ export function calculateBestPopoverPosition(anchorRect, popoverDimensions = { w
   }
 
   // Selecionar o offset dinâmico apropriado para o lado escolhido
-  const finalOffset = dynamicOffsets[bestPosition.side];
+  // Determinar se o lado foi forçado (não cabia originalmente)
+  const sideWasForced = !fits[bestPosition.side];
+
+  // calcular penalização reduzida do toolbar para uso no cálculo de alignOffset
+  const toolbarPenaltyReducedGlobal = fits.top ? Math.max(0, toolbarRestricted - Math.round(TOOLBAR_MARGIN_TOP * 0.6)) : toolbarRestricted;
+
+  let finalOffset = dynamicOffsets[bestPosition.side];
+
+  // Se o lado foi forçado, reduzir um pouco a margem (dar alguns pixels críticos)
+  if (sideWasForced) {
+    const REDUCTION = 12; // reduzir margem quando forçado
+    if (bestPosition.side === 'left' || bestPosition.side === 'right') {
+      const minSafe = Math.ceil(anchorRect.width / 2) + 12;
+      finalOffset = Math.max(minSafe, dynamicOffsets[bestPosition.side] - REDUCTION);
+    } else {
+      const minSafe = Math.ceil(anchorRect.height / 2) + 12;
+      finalOffset = Math.max(minSafe, dynamicOffsets[bestPosition.side] - REDUCTION);
+    }
+  }
 
   // Calcular alignOffset para mover o popover e garantir que arrow aponte para o pin
   let alignOffset = 0;
   
   if (bestPosition.side === 'top' || bestPosition.side === 'bottom') {
     // Para popovers horizontais, calcular deslocamento horizontal necessário
-    if (bestPosition.align === 'start') {
-      alignOffset = -ARROW_MARGIN;
-      console.log('📍 Align START horizontal: movendo popover para esquerda', alignOffset);
-    } else if (bestPosition.align === 'end') {
-      alignOffset = ARROW_MARGIN;
-      console.log('📍 Align END horizontal: movendo popover para direita', alignOffset);
+    const popoverHalfWidth = popoverDimensions.width / 2;
+
+    // calcular centro possível do popover (limitado pelas margens e penalty do toolbar)
+    const allowedCenterMinX = MARGIN + popoverHalfWidth;
+    const allowedCenterMaxX = Math.max(allowedCenterMinX, viewportWidth - MARGIN - toolbarPenaltyReducedGlobal - popoverHalfWidth);
+    const popoverCenterX = Math.max(allowedCenterMinX, Math.min(allowedCenterMaxX, pinCenter.x));
+
+    const maxDelta = Math.max(0, popoverHalfWidth - ARROW_MARGIN);
+    const deltaX = pinCenter.x - popoverCenterX;
+
+    if (bestPosition.align === 'center') {
+      // alinhar ao centro do pin (ou ao centro permitido)
+      alignOffset = 0;
+    } else {
+      // quando start/end, alinhar o popover em direção ao pin com clamp baseado no tamanho
+      alignOffset = Math.max(-maxDelta, Math.min(maxDelta, deltaX));
+      console.log('📍 Align horizontal (clamped delta):', { align: bestPosition.align, alignOffset, deltaX, maxDelta });
     }
   } else if (bestPosition.side === 'left' || bestPosition.side === 'right') {
     // Para popovers verticais, calcular deslocamento vertical necessário
     // IMPORTANTE: Precisamos calcular onde a arrow REALMENTE vai ficar para ajustar corretamente
-    
-    if (bestPosition.align === 'start') {
-      // Com align: start, a borda SUPERIOR do popover se alinha ao CENTRO do pin
-      // Isso significa que a arrow (que está na borda esquerda/direita do popover) 
-      // ficaria na posição Y = 0 (topo do popover)
-      // Mas queremos que a arrow aponte para o centro do pin!
-      // Então precisamos mover o popover para BAIXO para arrow ficar no centro do pin
-      
-      // A arrow deveria estar a ARROW_MARGIN do topo
-      // Mas também não pode ultrapassar o centro do popover se o pin estiver muito abaixo
-      const idealArrowOffset = ARROW_MARGIN;
-      
-      // Se o popover for muito pequeno verticalmente, ajustar
-      const maxOffset = Math.min(popoverDimensions.height / 3, ARROW_MARGIN * 2);
-      
-      alignOffset = Math.min(idealArrowOffset, maxOffset);
-      console.log('📍 Align START vertical: movendo popover para BAIXO', alignOffset, {
-        popoverHeight: popoverDimensions.height,
-        maxOffset
-      });
-      
-    } else if (bestPosition.align === 'end') {
-      // Com align: end, a borda INFERIOR do popover se alinha ao CENTRO do pin
-      // Isso significa que a arrow ficaria na posição Y = height (fundo do popover)
-      // Mas queremos que a arrow aponte para o centro do pin!
-      // Então precisamos mover o popover para CIMA para arrow ficar no centro do pin
-      
-      const idealArrowOffset = -ARROW_MARGIN;
-      const maxOffset = -Math.min(popoverDimensions.height / 3, ARROW_MARGIN * 2);
-      
-      alignOffset = Math.max(idealArrowOffset, maxOffset);
-      console.log('📍 Align END vertical: movendo popover para CIMA', alignOffset, {
-        popoverHeight: popoverDimensions.height,
-        maxOffset
-      });
+    const popoverHalfHeight = popoverDimensions.height / 2;
+
+    // centro permitido do popover verticalmente
+    const allowedCenterMinY = MARGIN + popoverHalfHeight;
+    const allowedCenterMaxY = Math.max(allowedCenterMinY, viewportHeight - MARGIN - timelineRestricted - popoverHalfHeight);
+    const popoverCenterY = Math.max(allowedCenterMinY, Math.min(allowedCenterMaxY, pinCenter.y));
+
+    const maxDeltaY = Math.max(0, popoverHalfHeight - ARROW_MARGIN);
+    const deltaY = pinCenter.y - popoverCenterY;
+
+    if (bestPosition.align === 'center') {
+      alignOffset = 0;
+    } else {
+      alignOffset = Math.max(-maxDeltaY, Math.min(maxDeltaY, deltaY));
+      console.log('📍 Align vertical (clamped delta):', { align: bestPosition.align, alignOffset, deltaY, maxDeltaY });
     }
   }
 
