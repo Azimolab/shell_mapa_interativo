@@ -1,0 +1,86 @@
+{
+  "locations": {
+    "sp": {
+      "name": "São Paulo",
+      "badge": "Shell Branch",
+      "subsidiaries": [
+        {
+          "id": "shell-trading",
+          "name": "Shell Trading Brazil",
+          "logo": "/shell-trading.png",
+          "business": "Domestic Crude Oil Trading",
+          "ownership": "100% Shell"
+        },
+        {
+          "id": "sebg",
+          "name": "Shell Energy Brazil Gas (SEBG)",
+          "logo": "/sebg.png",
+          "business": "Gas and Liquids Trading",
+          "ownership": "100% Shell"
+        },
+        {
+          "id": "seb",
+          "name": "Shell Energy Brazil (SEB)",
+          "logo": "/seb.png",
+          "business": "Electric Power Trading",
+          "ownership": "100% Shell"
+        },
+        {
+          "id": "prime-energy",
+          "name": "Prime Energy",
+          "logo": "/prime-energy.png",
+          "business": "Energy Market",
+          "ownership": "100% Shell"
+        },
+        {
+          "id": "carbonext",
+          "name": "Carbonext",
+          "logo": "/carbonext.png",
+          "business": "Nature-Based Solutions",
+          "ownership": "100% Shell"
+        }
+      ],
+      "jointVentures": [
+        {
+          "id": "raizen-jv",
+          "name": "Raízen JV",
+          "logo": "/raizen-jv.png",
+          "business": "Biofuels and Retail",
+          "ownership": "44% Shell"
+        }
+      ]
+    },
+    "rio": {
+      "name": "Rio de Janeiro",
+      "badge": "Headquarter",
+      "image": "/Rio2025.jpg",
+      "imageAlt": "New Rio de Janeiro facility in 2025",
+      "width": "484px",
+      "venture": {
+        "logo": "/rio-popover-venture-logo.png",
+        "name": "Raízen JV Lubricants",
+        "business": "Lubricating Oil Blending Plant",
+        "ownership": "50% Shell"
+      },
+      "yearSpecificData": {
+        "2025": {
+          "venture": null
+        }
+      }
+    },
+    "macae": {
+      "name": "Macaé",
+      "badge": "Shell Branch",
+      "image": "/macae-popover-image.png",
+      "imageAlt": "Industrial facility in Macaé",
+      "width": "475px",
+      "venture": {
+        "logo": "/macae-popover-venture-logo.png",
+        "name": "Arke Energia",
+        "business": "Thermoelectric Power Plant",
+        "ownership": "29.9% Shell"
+      },
+      "partnershipText": "In partnership with Pátria Investimentos and Mitsubishi Power"
+    }
+  }
+}
