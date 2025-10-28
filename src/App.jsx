@@ -49,7 +49,7 @@ function App() {
 
   useEffect(() => {
     const checkScreen = () => {
-      setIsSmallScreen(window.innerWidth < 100);
+      setIsSmallScreen(window.innerWidth < 1200);
     };
 
     checkScreen();
@@ -177,8 +177,6 @@ function App() {
       style={{ backgroundColor: "#C0E6EC" }}
     >
       <div className="relative w-screen h-screen overflow-hidden">
-        
-        
         <SVGMap
           selectedYear={selectedYear}
           selectedZone={selectedZone}

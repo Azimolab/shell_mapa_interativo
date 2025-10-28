@@ -393,57 +393,6 @@
   box-shadow: none !important;
   ring: none !important;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .popover-pins-card {
-    padding: 0.75rem; /* 12px - 50% de 24px */
-    gap: 0.75rem; /* 12px - 50% de 24px */
-  }
-
-  .popover-pins-title {
-    font-size: 1.125rem; /* 18px - 50% de 36px */
-  }
-
-  .popover-pins-status-text,
-  .popover-pins-tag,
-  .popover-pins-info-label,
-  .popover-pins-info-value,
-  .popover-pins-section-title,
-  .popover-pins-company-name,
-  .popover-pins-company-percentage,
-  .popover-pins-bullet-text {
-    font-size: 0.625rem; /* 10px - 50% de 20px */
-  }
-
-  .popover-pins-info-description {
-    font-size: 0.5625rem; /* 9px - 50% de 18px */
-  }
-
-  .popover-pins-close-button {
-    font-size: 0.875rem; /* 14px - 50% de 28px */
-    padding: 0.5625rem; /* 9px - 50% de 18px */
-  }
-
-  .popover-pins-summary {
-    grid-template-columns: 1fr;
-  }
-
-  .popover-pins-bullets {
-    grid-template-columns: 1fr;
-  }
-
-  .popover-pins-status-icon {
-    width: 1.75rem; /* 28px - tamanho reduzido para mobile */
-    height: auto;
-  }
-
-  .popover-pins-info-icon {
-    width: 0.875rem; /* 14px - 50% de 28px */
-    height: 0.875rem; /* 14px - 50% de 28px */
-  }
-}
-
 /* Barra/base do progresso */
 .popover-pins-progress-bar {
   position: relative;
@@ -476,5 +425,3 @@
   transition: width 2.6s cubic-bezier(0.25, 0.8, 0.25, 1);
   will-change: width;
 }
-
-
