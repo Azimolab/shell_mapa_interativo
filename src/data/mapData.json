@@ -13047,11 +13047,11 @@
         {
           "id": "GrayPin_1-BijupiraSalema",
           "svgId": "GrayPin_1-BijupiraSalema",
-          "type": "decommission",
+          "type": "decommissioning",
           "number": 2,
           "status": {
             "label": "Em descomissionamento",
-            "icon": "decommission"
+            "icon": "decommissioning"
           },
           "title": "Bijupirá & Salema",
           "tags": [],

@@ -64,6 +64,12 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     let pinId = element.id || element.getAttribute('data-pin-id');
     const pinClass = element.className?.baseVal || element.className;
     
+    // Verificar se é um Cluster_Active - se for, não processar o clique
+    if (pinId && (pinId.includes('Cluster_Active') || pinId.includes('Cluster_') || pinClass?.includes('Cluster_Active'))) {
+      console.log('🚫 Cluster_Active clicado - ignorando:', { pinId, pinClass });
+      return;
+    }
+    
     console.log('🔴 PIN CLICKED:', { pinId, pinClass, element });
     
     // Se a timeline está tocando, pausá-la quando um pin for clicado
@@ -175,7 +181,7 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
       return false;
     }
 
-    // Seleção específica: apenas grupos principais de pins
+    // Seleção específica: apenas grupos principais de pins (excluindo Cluster_Active)
     const selectors = [
       'g[id^="Pin_"]',           // LocationPins: Pin_Rio, Pin_SP, Pin_Macae etc.
       'g[id^="GreenPin"]',       // Production pins: GreenPin_1, GreenPin_2, etc.
@@ -355,10 +361,15 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
     const svgElement = document.querySelector('.svg-map-content svg');
     if (!svgElement) return;
 
-    // Remove classe active de TODOS os pins
+    // Remove classe active de TODOS os pins (excluindo Cluster_Active)
     const allPins = svgElement.querySelectorAll('g[id^="Pin_"], g[id*="GreenPin"], g[id*="RedPin"], g[id*="PurplePin"], g[id*="GrayPin"], g[class*="GreenPin"], g[class*="RedPin"], g[class*="PurplePin"], g[class*="GrayPin"]');
     allPins.forEach(pin => {
-      pin.classList.remove('active');
+      // Verificar se não é um Cluster_Active antes de remover a classe active
+      const pinId = pin.id || '';
+      const pinClass = pin.className?.baseVal || pin.className || '';
+      if (!pinId.includes('Cluster_Active') && !pinId.includes('Cluster_') && !pinClass.includes('Cluster_Active')) {
+        pin.classList.remove('active');
+      }
     });
 
     // Ocultar todos os Cluster_Active por padrão

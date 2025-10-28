@@ -53,8 +53,8 @@
     "rio": {
       "name": "Rio de Janeiro",
       "badge": "Headquarter",
-      "image": "/rio-popover-image.png",
-      "imageAlt": "Instalação industrial no Rio de Janeiro",
+      "image": "/Rio2025.jpg",
+      "imageAlt": "Nova instalação no Rio de Janeiro em 2025",
       "width": "484px",
       "venture": {
         "logo": "/rio-popover-venture-logo.png",
@@ -64,8 +64,6 @@
       },
       "yearSpecificData": {
         "2025": {
-          "image": "/Rio2025.jpg",
-          "imageAlt": "Nova instalação no Rio de Janeiro em 2025",
           "venture": null
         }
       }
