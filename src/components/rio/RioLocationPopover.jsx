@@ -12,8 +12,8 @@ function RioLocationPopover({ isOpen, anchorEl, onClose, year }) {
   const locationData = {
     title: rioData.name,
     badge: rioData.badge,
-    image: yearSpecific?.image || rioData.image,
-    imageAlt: yearSpecific?.imageAlt || rioData.imageAlt,
+    image: rioData.image, // Sempre usa a imagem padrão (Rio2025.jpg)
+    imageAlt: rioData.imageAlt, // Sempre usa o alt padrão
     width: rioData.width,
     // Se yearSpecific.venture é explicitamente null, não mostrar venture
     // Caso contrário, usar o venture padrão
