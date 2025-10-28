@@ -1,23 +1,32 @@
 import React from 'react';
 import LocationPopover from './LocationPopover';
-import locationsData from '@/data/locationsData.json';
 
-function RioLocationPopover({ isOpen, anchorEl, onClose, year }) {
-  const rioData = locationsData.locations.rio;
-  
-  // Verificar se há dados específicos para o ano
-  const yearSpecific = year && rioData.yearSpecificData && rioData.yearSpecificData[year];
-  
-  // Montar dados do popover, usando dados específicos do ano quando disponíveis
+import locationsDataBR from '@/data/locationsData.json';
+import locationsDataUS from '@/data/locationsDataUs.json';
+
+function RioLocationPopover({ isOpen, anchorEl, onClose, year, language = "POR" }) {
+
+  // ✅ Seleciona o JSON conforme idioma
+  const dataSource = language === "ENG" ? locationsDataUS : locationsDataBR;
+  const rioData = dataSource.locations.rio;
+
+  // ✅ Mantém a lógica original de ano específico
+  const yearSpecific =
+    year &&
+    rioData.yearSpecificData &&
+    rioData.yearSpecificData[year];
+
   const locationData = {
     title: rioData.name,
     badge: rioData.badge,
-    image: rioData.image, // Sempre usa a imagem padrão (Rio2025.jpg)
-    imageAlt: rioData.imageAlt, // Sempre usa o alt padrão
+    image: rioData.image,
+    imageAlt: rioData.imageAlt,
     width: rioData.width,
-    // Se yearSpecific.venture é explicitamente null, não mostrar venture
-    // Caso contrário, usar o venture padrão
-    venture: yearSpecific ? yearSpecific.venture : rioData.venture
+    // ✅ Se ano tiver venture diferente, usa ele
+    venture:
+      yearSpecific && yearSpecific.venture !== undefined
+        ? yearSpecific.venture
+        : rioData.venture
   };
 
   return (
@@ -26,9 +35,9 @@ function RioLocationPopover({ isOpen, anchorEl, onClose, year }) {
       anchorEl={anchorEl}
       onClose={onClose}
       location={locationData}
+      language={language} // ✅ Passe adiante também
     />
   );
 }
 
 export default RioLocationPopover;
-

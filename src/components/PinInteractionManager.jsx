@@ -584,6 +584,7 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
           isOpen={true}
           anchorEl={anchorEl}
           onClose={closePopover} 
+          language={language}
         />
       )}
       
@@ -593,6 +594,7 @@ function PinInteractionManager({ selectedYear, selectedZone, activeLegendItems, 
           anchorEl={anchorEl}
           onClose={closePopover}
           year={selectedYear}
+          language={language}
         />
       )}
       
