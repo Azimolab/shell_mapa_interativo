@@ -385,6 +385,14 @@
   transform: scale(0.98);
 }
 
+.popover-pins-close-button:focus,
+.popover-pins-close-button:focus-visible {
+  outline: none !important;
+  border-color: #919191 !important;
+  box-shadow: none !important;
+  ring: none !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .popover-pins-card {
