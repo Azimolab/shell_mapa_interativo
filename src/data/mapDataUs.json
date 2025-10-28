@@ -19,7 +19,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.900-2.160m",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -205,7 +205,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "~1.900-2.160m",
+            "value": "~2.160m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -435,7 +435,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "A definir",
+            "value": "~2.200-2.400m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -6805,8 +6805,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -8602,8 +8602,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -10348,8 +10348,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -12068,8 +12068,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -13046,7 +13046,7 @@
             "5º Ciclo da Oferta Permanente de Concessão (em assinatura ANP)"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Shell",
             "description": "Responsible for managing the platform"
           },
           "depth": {
@@ -13056,28 +13056,8 @@
           "companies": [
             {
               "name": "Shell",
-              "percentage": 10,
+              "percentage": 100,
               "isOperator": true
-            },
-            {
-              "name": "Petrobrás",
-              "percentage": 65,
-              "isOperator": false
-            },
-            {
-              "name": "TotalEnergies",
-              "percentage": 10,
-              "isOperator": false
-            },
-            {
-              "name": "CNOOC",
-              "percentage": 10,
-              "isOperator": false
-            },
-            {
-              "name": "Petrogal",
-              "percentage": 5,
-              "isOperator": false
             }
           ],
           "infrastructure": {}
@@ -13752,36 +13732,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "A definir",
-            "description": "Distance from sea surface to seabed"
-          },
-          "companies": [
-            {
-              "name": "Shell",
-              "percentage": 100,
-              "isOperator": true
-            }
-          ],
-          "infrastructure": {}
-        },
-        {
-          "id": "RedPin_12-SM1914",
-          "svgId": "RedPin_12-SM1914",
-          "type": "exploration",
-          "status": {
-            "label": "In exploration",
-            "icon": "exploration"
-          },
-          "title": "S-M-1914",
-          "tags": [
-            "5º Ciclo da Oferta Permanente de Concessão (em assinatura ANP)"
-          ],
-          "operator": {
-            "name": "Shell",
-            "description": "Responsible for managing the platform"
-          },
-          "depth": {
-            "value": "A definir",
+            "value": "2.100-2.400m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [
@@ -13827,8 +13778,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],

@@ -19,7 +19,7 @@
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "~1.900-2.160m",
+            "value": "~2.160m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
@@ -205,7 +205,7 @@
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "~1.900-2.160m",
+            "value": "~2.160m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
@@ -6905,8 +6905,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -8702,8 +8702,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -10448,8 +10448,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -12118,8 +12118,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -13096,38 +13096,18 @@
             "5º Ciclo da Oferta Permanente de Concessão (em assinatura ANP)"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Shell",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "~2.100-2.200m",
+            "value": "~2.100-2.400m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
             {
               "name": "Shell",
-              "percentage": 10,
+              "percentage": 100,
               "isOperator": true
-            },
-            {
-              "name": "Petrobrás",
-              "percentage": 65,
-              "isOperator": false
-            },
-            {
-              "name": "TotalEnergies",
-              "percentage": 10,
-              "isOperator": false
-            },
-            {
-              "name": "CNOOC",
-              "percentage": 10,
-              "isOperator": false
-            },
-            {
-              "name": "Petrogal",
-              "percentage": 5,
-              "isOperator": false
             }
           ],
           "infrastructure": {}
@@ -13802,7 +13782,7 @@
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "A definir",
+            "value": "~2.100-2.400m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
@@ -13877,8 +13857,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
