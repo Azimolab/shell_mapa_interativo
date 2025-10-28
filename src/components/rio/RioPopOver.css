@@ -205,6 +205,14 @@
   transform: scale(0.98);
 }
 
+.rio-popover-close-button:focus,
+.rio-popover-close-button:focus-visible {
+  outline: none !important;
+  border-color: #919191 !important;
+  box-shadow: none !important;
+  ring: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .rio-popover-overlay {

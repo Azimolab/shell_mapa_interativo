@@ -392,11 +392,12 @@ function PopoverPins({ isOpen, anchorEl, onClose, data, language }) {
             <div className="popover-pins-companies">
               {data.companies.map((company, index) => {
                 const isShell = company.name.toLowerCase().includes("shell");
+                const isOperator = company.isOperator === true;
                 return (
                   <div key={index} className="popover-pins-company">
                     <div className="popover-pins-company-header">
-                      <span className={`popover-pins-company-name ${isShell ? 'is-operator' : ''}`}>
-                        {company.name}{isShell ? '*' : ''}
+                      <span className={`popover-pins-company-name ${isOperator ? 'is-operator' : ''}`}>
+                        {company.name}{isOperator ? '*' : ''}
                       </span>
                       <span className="popover-pins-company-percentage">
                         {company.percentage}%
@@ -406,7 +407,7 @@ function PopoverPins({ isOpen, anchorEl, onClose, data, language }) {
                     <div className="popover-pins-progress-bar">
                       <div className="popover-pins-progress-bg"></div>
                       <div
-                        className={`popover-pins-progress-fill ${isShell ? 'is-operator' : ''}`}
+                        className={`popover-pins-progress-fill ${isShell ? 'is-shell' : ''}`}
                         style={{ width: `${company.percentage}%` }}
                       ></div>
                     </div>

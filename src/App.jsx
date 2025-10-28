@@ -9,6 +9,7 @@ import ShellAllTypeBR from './assets/ShellAllTypeBR.svg';
 import ShellAllTypeEN from './assets/ShellAllTypeEN.svg';
 
 function App() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [selectedZone, setSelectedZone] = useState('rio');
   const [selectedYear, setSelectedYear] = useState('2025');
   const [activeLegendItems, setActiveLegendItems] = useState({
@@ -33,6 +34,19 @@ function App() {
     '2x': 1000
   };
 
+useEffect(() => {
+  const checkScreen = () => {
+    setIsSmallScreen(window.innerWidth < 1200);
+   };
+
+  checkScreen();
+  window.addEventListener('resize', checkScreen);
+   return () => window.removeEventListener('resize', checkScreen);
+ }, []);
+
+
+ 
+
   useEffect(() => {
     if (isPlaying) {
       playIntervalRef.current = setInterval(() => {
@@ -51,6 +65,7 @@ function App() {
     }
     clearInterval(playIntervalRef.current);
   }, [isPlaying, playSpeed, selectedZone]);
+  
 
   const isZoneAvailable = (zone, year) => isSVGAvailable(zone, year);
   const isYearAvailable = (year) => isSVGAvailable(selectedZone, year);
@@ -90,6 +105,51 @@ function App() {
       [itemId]: !prev[itemId]
     }));
   };
+
+  if (isSmallScreen) {
+  return (
+    <div style={{
+      width: "100vw",
+      height: "100vh",
+      background: "#FFC600", // ✅ Amarelo Shell oficial
+      color: "#343434",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      fontFamily: "'ShellMedium', sans-serif",
+      textAlign: "center",
+      padding: "20px",
+    }}>
+      <svg
+        width="80"
+        height="80"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ marginBottom: "20px" }}
+      >
+        <circle cx="24" cy="24" r="22" stroke="#343434" strokeWidth="4" fill="none" />
+        <path
+          d="M24 14V26"
+          stroke="#343434"
+          strokeWidth="4"
+          strokeLinecap="round"
+        />
+        <circle cx="24" cy="33" r="2.5" fill="#343434" />
+      </svg>
+
+      <div style={{
+        fontSize: "22px",
+        fontWeight: "bold",
+        maxWidth: "480px",
+      }}>
+        Acesse esta aplicação em uma tela com resolução maior (Recomendado 1920x1080p).
+      </div>
+    </div>
+  );
+}
+
 
   return (
     <div className="relative w-screen h-screen overflow-hidden" style={{ backgroundColor: '#C0E6EC' }}>

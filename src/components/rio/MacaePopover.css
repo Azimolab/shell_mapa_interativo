@@ -220,6 +220,14 @@
   transform: scale(0.98);
 }
 
+.macae-popover-close-button:focus,
+.macae-popover-close-button:focus-visible {
+  outline: none !important;
+  border-color: #919191 !important;
+  box-shadow: none !important;
+  ring: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .macae-popover-overlay {

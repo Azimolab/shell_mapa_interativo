@@ -92,6 +92,7 @@
   overflow-y: auto;
   max-height: 90vh;
   box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.15);
+  max-width: 475px;
 }
 
 /* Header */
@@ -313,7 +314,7 @@
   transition: width 0.3s ease;
 }
 
-.popover-pins-progress-fill.is-operator {
+.popover-pins-progress-fill.is-shell {
   background-color: #DD1D21;
 }
 
@@ -383,6 +384,14 @@
 
 .popover-pins-close-button:active {
   transform: scale(0.98);
+}
+
+.popover-pins-close-button:focus,
+.popover-pins-close-button:focus-visible {
+  outline: none !important;
+  border-color: #919191 !important;
+  box-shadow: none !important;
+  ring: none !important;
 }
 
 /* Responsive */

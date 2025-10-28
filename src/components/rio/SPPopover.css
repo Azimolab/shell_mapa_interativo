@@ -212,6 +212,14 @@
   transform: scale(0.98);
 }
 
+.sp-popover-close-button:focus,
+.sp-popover-close-button:focus-visible {
+  outline: none !important;
+  border-color: #919191 !important;
+  box-shadow: none !important;
+  ring: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .sp-popover-overlay {

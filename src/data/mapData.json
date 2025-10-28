@@ -19,7 +19,7 @@
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "~1.900-2.160m",
+            "value": "~2.160m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
@@ -153,12 +153,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -205,7 +205,7 @@
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "~1.900-2.160m",
+            "value": "~2.160m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
@@ -796,12 +796,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -1692,12 +1692,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -2926,12 +2926,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -4365,12 +4365,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -5808,12 +5808,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -6905,8 +6905,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -7401,12 +7401,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -8702,8 +8702,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -9193,12 +9193,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -10448,8 +10448,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -10980,12 +10980,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",
@@ -12118,8 +12118,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -12646,7 +12646,7 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
@@ -13047,11 +13047,11 @@
         {
           "id": "GrayPin_1-BijupiraSalema",
           "svgId": "GrayPin_1-BijupiraSalema",
-          "type": "decommission",
+          "type": "decommissioning",
           "number": 2,
           "status": {
             "label": "Em descomissionamento",
-            "icon": "decommission"
+            "icon": "decommissioning"
           },
           "title": "Bijupirá & Salema",
           "tags": [],
@@ -13096,38 +13096,18 @@
             "5º Ciclo da Oferta Permanente de Concessão (em assinatura ANP)"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Shell",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "~2.100-2.200m",
+            "value": "~2.100-2.400m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
             {
               "name": "Shell",
-              "percentage": 10,
+              "percentage": 100,
               "isOperator": true
-            },
-            {
-              "name": "Petrobrás",
-              "percentage": 65,
-              "isOperator": false
-            },
-            {
-              "name": "TotalEnergies",
-              "percentage": 10,
-              "isOperator": false
-            },
-            {
-              "name": "CNOOC",
-              "percentage": 10,
-              "isOperator": false
-            },
-            {
-              "name": "Petrogal",
-              "percentage": 5,
-              "isOperator": false
             }
           ],
           "infrastructure": {}
@@ -13802,7 +13782,7 @@
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "A definir",
+            "value": "~1.600-2.250m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
@@ -13877,8 +13857,8 @@
               "isOperator": true
             },
             {
-              "name": "Qatar Petroleum",
-              "percentage": 10,
+              "name": "Total",
+              "percentage": 22.5,
               "isOperator": false
             }
           ],
@@ -14406,15 +14386,15 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
-              "name": "Qatar Petroleum",
+              "name": "Brava Energia",
               "percentage": 23,
               "isOperator": false
             }
@@ -14880,12 +14860,12 @@
             {
               "name": "Shell",
               "percentage": 50,
-              "isOperator": false
+              "isOperator": true
             },
             {
               "name": "ONGC",
               "percentage": 27,
-              "isOperator": true
+              "isOperator": false
             },
             {
               "name": "Qatar Petroleum",

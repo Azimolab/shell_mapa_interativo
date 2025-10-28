@@ -2,42 +2,42 @@
   "locations": {
     "sp": {
       "name": "São Paulo",
-      "badge": "Filial Shell",
+      "badge": "Shell Branch",
       "subsidiaries": [
         {
           "id": "shell-trading",
-          "name": "Shell Trading Brasil",
+          "name": "Shell Trading Brazil",
           "logo": "/shell-trading.png",
-          "business": "Comércio de Petróleo Cru Doméstico",
+          "business": "Domestic Crude Oil Trading",
           "ownership": "100% Shell"
         },
         {
           "id": "sebg",
-          "name": "Shell Energy Brasil Gás (SEBG)",
+          "name": "Shell Energy Brazil Gas (SEBG)",
           "logo": "/sebg.png",
-          "business": "Comércio de Gás e Líquidos",
+          "business": "Gas and Liquids Trading",
           "ownership": "100% Shell"
         },
         {
           "id": "seb",
-          "name": "Shell Energy Brasil (SEB)",
+          "name": "Shell Energy Brazil (SEB)",
           "logo": "/seb.png",
-          "business": "Comércio de Energia Elétrica",
+          "business": "Electric Power Trading",
           "ownership": "100% Shell"
         },
         {
           "id": "prime-energy",
           "name": "Prime Energy",
           "logo": "/prime-energy.png",
-          "business": "Mercado de Energia",
+          "business": "Energy Market",
           "ownership": "100% Shell"
         },
         {
           "id": "carbonext",
           "name": "Carbonext",
           "logo": "/carbonext.png",
-          "business": "Soluções baseadas na Natureza",
-          "ownership": "Aporte Shell"
+          "business": "Nature-Based Solutions",
+          "ownership": "Injection Shell"
         }
       ],
       "jointVentures": [
@@ -45,7 +45,7 @@
           "id": "raizen-jv",
           "name": "Raízen JV",
           "logo": "/raizen-jv.png",
-          "business": "Biocombustíveis e Varejo",
+          "business": "Biofuels and Retail",
           "ownership": "44% Shell"
         }
       ]
@@ -54,12 +54,12 @@
       "name": "Rio de Janeiro",
       "badge": "Headquarter",
       "image": "/Rio2025.jpg",
-      "imageAlt": "Nova instalação no Rio de Janeiro em 2025",
+      "imageAlt": "New Rio de Janeiro facility in 2025",
       "width": "484px",
       "venture": {
         "logo": "/rio-popover-venture-logo.png",
         "name": "Raízen JV Lubricants",
-        "business": "Planta de Mistura de Óleos Lubrificantes",
+        "business": "Lubricating Oil Blending Plant",
         "ownership": "50% Shell"
       },
       "yearSpecificData": {
@@ -70,18 +70,17 @@
     },
     "macae": {
       "name": "Macaé",
-      "badge": "Filial Shell",
+      "badge": "Shell Branch",
       "image": "/macae-popover-image.png",
-      "imageAlt": "Instalação industrial em Macaé",
+      "imageAlt": "Industrial facility in Macaé",
       "width": "475px",
       "venture": {
         "logo": "/macae-popover-venture-logo.png",
         "name": "Arke Energia",
-        "business": "Usina Termelétrica",
-        "ownership": "29,9% Shell"
+        "business": "Thermoelectric Power Plant",
+        "ownership": "29.9% Shell"
       },
-      "partnershipText": "Em parceria com a Pátria Investimentos e Mitsubishi Power"
+      "partnershipText": "In partnership with Pátria Investimentos and Mitsubishi Power"
     }
   }
 }
-
