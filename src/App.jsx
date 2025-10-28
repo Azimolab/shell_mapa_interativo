@@ -1,61 +1,71 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Timeline from './components/Timeline';
-import Toolbar from './components/Toolbar';
-import SVGMap from './components/SVGMap';
-import PinInteractionManager from './components/PinInteractionManager';
-import { isSVGAvailable } from './assets/mapas/index.js';
+import React, { useState, useEffect, useRef } from "react";
+import Timeline from "./components/Timeline";
+import Toolbar from "./components/Toolbar";
+import SVGMap from "./components/SVGMap";
+import PinInteractionManager from "./components/PinInteractionManager";
+import { isSVGAvailable } from "./assets/mapas/index.js";
 
-import ShellAllTypeBR from './assets/ShellAllTypeBR.svg';
-import ShellAllTypeEN from './assets/ShellAllTypeEN.svg';
+import ShellAllTypeBR from "./assets/ShellAllTypeBR.svg";
+import ShellAllTypeEN from "./assets/ShellAllTypeEN.svg";
 
 function App() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-  const [selectedZone, setSelectedZone] = useState('rio');
-  const [selectedYear, setSelectedYear] = useState('2025');
+  const [selectedZone, setSelectedZone] = useState("rio");
+  const [selectedYear, setSelectedYear] = useState("2025");
   const [activeLegendItems, setActiveLegendItems] = useState({
     exploration: true,
     production: true,
     development: true,
-    decommissioning: true
+    decommissioning: true,
   });
   const [isPlaying, setIsPlaying] = useState(false);
-  const [playSpeed, setPlaySpeed] = useState('0.5x');
+  const [playSpeed, setPlaySpeed] = useState("0.5x");
   const playIntervalRef = useRef(null);
 
   // ✅ Estado do idioma
   const [language, setLanguage] = useState("POR");
 
-  const years = ['PRÉ 2013', '2013', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+  const years = [
+    "PRÉ 2013",
+    "2013",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+  ];
 
   const speedToMs = {
-    '0.5x': 4000,
-    '1x': 2000,
-    '1.5x': 1333,
-    '2x': 1000
+    "0.5x": 4000,
+    "1x": 2000,
+    "1.5x": 1333,
+    "2x": 1000,
   };
 
-useEffect(() => {
-  const checkScreen = () => {
-    setIsSmallScreen(window.innerWidth < 1200);
-   };
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsSmallScreen(window.innerWidth < 100);
+    };
 
-  checkScreen();
-  window.addEventListener('resize', checkScreen);
-   return () => window.removeEventListener('resize', checkScreen);
- }, []);
-
-
- 
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
 
   useEffect(() => {
     if (isPlaying) {
       playIntervalRef.current = setInterval(() => {
-        setSelectedYear(prevYear => {
+        setSelectedYear((prevYear) => {
           const nextIndex = (years.indexOf(prevYear) + 1) % years.length;
           const nextYear = years[nextIndex];
 
           if (!isZoneAvailable(selectedZone, nextYear)) {
-            setSelectedZone('rio');
+            setSelectedZone("rio");
           }
           return nextYear;
         });
@@ -65,7 +75,6 @@ useEffect(() => {
     }
     clearInterval(playIntervalRef.current);
   }, [isPlaying, playSpeed, selectedZone]);
-  
 
   const isZoneAvailable = (zone, year) => isSVGAvailable(zone, year);
   const isYearAvailable = (year) => isSVGAvailable(selectedZone, year);
@@ -74,21 +83,21 @@ useEffect(() => {
     setSelectedYear(year);
     setIsPlaying(false);
     if (!isZoneAvailable(selectedZone, year)) {
-      setSelectedZone('rio');
+      setSelectedZone("rio");
     }
   };
 
-  const handlePlay = () => setIsPlaying(prev => !prev);
+  const handlePlay = () => setIsPlaying((prev) => !prev);
 
   const handleSpeedChange = () => {
-    const speeds = ['0.5x', '1x', '1.5x', '2x'];
+    const speeds = ["0.5x", "1x", "1.5x", "2x"];
     const nextIndex = (speeds.indexOf(playSpeed) + 1) % speeds.length;
     setPlaySpeed(speeds[nextIndex]);
   };
 
   // ✅ Alternar idioma com clique
   const handleLanguageChange = () => {
-    setLanguage(prev => prev === "POR" ? "ENG" : "POR");
+    setLanguage((prev) => (prev === "POR" ? "ENG" : "POR"));
     setIsPlaying(false);
   };
 
@@ -100,61 +109,76 @@ useEffect(() => {
   };
 
   const handleLegendToggle = (itemId) => {
-    setActiveLegendItems(prev => ({
+    setActiveLegendItems((prev) => ({
       ...prev,
-      [itemId]: !prev[itemId]
+      [itemId]: !prev[itemId],
     }));
   };
 
   if (isSmallScreen) {
-  return (
-    <div style={{
-      width: "100vw",
-      height: "100vh",
-      background: "#FFC600", // ✅ Amarelo Shell oficial
-      color: "#343434",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      fontFamily: "'ShellMedium', sans-serif",
-      textAlign: "center",
-      padding: "20px",
-    }}>
-      <svg
-        width="80"
-        height="80"
-        viewBox="0 0 48 48"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ marginBottom: "20px" }}
+    return (
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          background: "#FFC600", // ✅ Amarelo Shell oficial
+          color: "#343434",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          fontFamily: "'ShellMedium', sans-serif",
+          textAlign: "center",
+          padding: "20px",
+        }}
       >
-        <circle cx="24" cy="24" r="22" stroke="#343434" strokeWidth="4" fill="none" />
-        <path
-          d="M24 14V26"
-          stroke="#343434"
-          strokeWidth="4"
-          strokeLinecap="round"
-        />
-        <circle cx="24" cy="33" r="2.5" fill="#343434" />
-      </svg>
+        <svg
+          width="80"
+          height="80"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ marginBottom: "20px" }}
+        >
+          <circle
+            cx="24"
+            cy="24"
+            r="22"
+            stroke="#343434"
+            strokeWidth="4"
+            fill="none"
+          />
+          <path
+            d="M24 14V26"
+            stroke="#343434"
+            strokeWidth="4"
+            strokeLinecap="round"
+          />
+          <circle cx="24" cy="33" r="2.5" fill="#343434" />
+        </svg>
 
-      <div style={{
-        fontSize: "22px",
-        fontWeight: "bold",
-        maxWidth: "480px",
-      }}>
-        Acesse esta aplicação em uma tela com resolução maior (Recomendado 1920x1080p).
+        <div
+          style={{
+            fontSize: "22px",
+            fontWeight: "bold",
+            maxWidth: "480px",
+          }}
+        >
+          Acesse esta aplicação em uma tela com resolução maior (Recomendado
+          1920x1080p).
+        </div>
       </div>
-    </div>
-  );
-}
-
+    );
+  }
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden" style={{ backgroundColor: '#C0E6EC' }}>
+    <div
+      className="relative w-screen h-screen overflow-hidden"
+      style={{ backgroundColor: "#C0E6EC" }}
+    >
       <div className="relative w-screen h-screen overflow-hidden">
-
+        
+        
         <SVGMap
           selectedYear={selectedYear}
           selectedZone={selectedZone}
@@ -163,10 +187,10 @@ useEffect(() => {
         />
 
         <div className="absolute top-[2vh] left-[2vw] z-20">
-         <img
-  src={language === "ENG" ? ShellAllTypeEN : ShellAllTypeBR}
-  className="h-[20vh] w-auto object-contain"
-/>
+          <img
+            src={language === "ENG" ? ShellAllTypeEN : ShellAllTypeBR}
+            className="h-[20vh] w-auto object-contain"
+          />
         </div>
 
         <PinInteractionManager
@@ -178,7 +202,7 @@ useEffect(() => {
           language={language} // ✅ enviado
         />
 
-        <div className="absolute top-[3vh] right-[2vw] z-10 h-[85vh] flex flex-col">
+        <div className="absolute top-[3vh] right-[2vw] z-10 w-[19vw] h-[85vh] flex flex-col">
           <Toolbar
             selectedArea={selectedZone}
             selectedYear={selectedYear}
@@ -201,7 +225,6 @@ useEffect(() => {
           onLanguageChange={handleLanguageChange} // ✅ alterna idioma
           isYearAvailable={isYearAvailable}
         />
-
       </div>
     </div>
   );

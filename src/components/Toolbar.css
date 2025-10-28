@@ -75,7 +75,7 @@
   align-items: flex-start;
   gap: 6px;
   flex-wrap: nowrap;
-  width: 350px;
+  width: 100%;
   box-sizing: border-box;
 }
 
