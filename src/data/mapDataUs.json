@@ -13732,7 +13732,7 @@
             "description": "Responsible for managing the platform"
           },
           "depth": {
-            "value": "2.100-2.400m",
+            "value": "~1.600-2.250m",
             "description": "Distance from sea surface to seabed"
           },
           "companies": [

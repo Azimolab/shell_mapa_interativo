@@ -13782,7 +13782,7 @@
             "description": "Responsável pela administração do campo"
           },
           "depth": {
-            "value": "~2.100-2.400m",
+            "value": "~1.600-2.250m",
             "description": "Distância da superfície do mar até o fundo"
           },
           "companies": [
