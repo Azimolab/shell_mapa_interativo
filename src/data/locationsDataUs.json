@@ -31,13 +31,6 @@
           "logo": "/prime-energy.png",
           "business": "Energy Market",
           "ownership": "100% Shell"
-        },
-        {
-          "id": "carbonext",
-          "name": "Carbonext",
-          "logo": "/carbonext.png",
-          "business": "Nature-Based Solutions",
-          "ownership": "Injection Shell"
         }
       ],
       "jointVentures": [
@@ -47,6 +40,13 @@
           "logo": "/raizen-jv.png",
           "business": "Biofuels and Retail",
           "ownership": "44% Shell"
+        },
+        {
+          "id": "carbonext",
+          "name": "Carbonext",
+          "logo": "/carbonext.png",
+          "business": "Nature-Based Solutions",
+          "ownership": "Injection Shell"
         }
       ]
     },

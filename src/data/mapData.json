@@ -15,7 +15,7 @@
           "title": "Libra / Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -29,7 +29,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -115,7 +115,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -201,7 +201,7 @@
           "title": "Libra / Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -215,7 +215,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -277,7 +277,7 @@
           "title": "BM-S-50: Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -291,7 +291,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             },
@@ -314,7 +314,7 @@
           "title": "Libra",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -328,7 +328,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -495,7 +495,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -509,7 +509,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -561,7 +561,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -588,7 +588,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -602,7 +602,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -638,7 +638,7 @@
           "title": "BM-S-11: Tupi",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -652,7 +652,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -698,7 +698,7 @@
             "Sudoeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -712,7 +712,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -735,7 +735,7 @@
           "title": "BM-S-9: Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -749,7 +749,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -831,7 +831,7 @@
           "title": "Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -845,7 +845,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -901,7 +901,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -980,7 +980,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": false
             },
@@ -1122,7 +1122,7 @@
           "title": "BM-S-50: Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -1136,7 +1136,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             },
@@ -1159,7 +1159,7 @@
           "title": "Libra",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -1173,7 +1173,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -1377,7 +1377,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -1391,7 +1391,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -1429,7 +1429,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -1443,7 +1443,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -1479,7 +1479,7 @@
           "title": "BM-S-9: Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -1493,7 +1493,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -1529,7 +1529,7 @@
           "title": "BM-S-11: Tupi",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -1543,7 +1543,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -1593,7 +1593,7 @@
             "Sudoeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -1607,7 +1607,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -1644,7 +1644,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 10,
               "isOperator": false
             },
@@ -1727,7 +1727,7 @@
           "title": "Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -1741,7 +1741,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -1797,7 +1797,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -1876,7 +1876,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": false
             },
@@ -2003,7 +2003,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -2059,7 +2059,7 @@
           "title": "BM-S-50: Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2073,7 +2073,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             },
@@ -2096,7 +2096,7 @@
           "title": "Libra",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2110,7 +2110,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -2314,7 +2314,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2328,7 +2328,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -2403,7 +2403,7 @@
             "Rodada de licitação PSC4"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2417,7 +2417,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 30,
               "isOperator": true
             },
@@ -2442,7 +2442,7 @@
           "title": "Entorno de Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2456,7 +2456,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -2481,7 +2481,7 @@
             "Oeste de Atapu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2495,7 +2495,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -2525,7 +2525,7 @@
             "Sururu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2539,7 +2539,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -2569,7 +2569,7 @@
             "Berbigão"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2583,7 +2583,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -2620,7 +2620,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2634,7 +2634,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -2670,7 +2670,7 @@
           "title": "BM-S-11: Tupi",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2684,7 +2684,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -2738,7 +2738,7 @@
             "Nordeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2752,7 +2752,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -2777,7 +2777,7 @@
             "Sudoeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2791,7 +2791,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -2814,7 +2814,7 @@
           "title": "BM-S-9: Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2828,7 +2828,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -2878,7 +2878,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 10,
               "isOperator": false
             },
@@ -2961,7 +2961,7 @@
           "title": "Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -2975,7 +2975,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -3031,7 +3031,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -3110,7 +3110,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": false
             },
@@ -3209,7 +3209,7 @@
           "title": "Bacia de Potiguar",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -3223,7 +3223,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -3307,7 +3307,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -3439,7 +3439,7 @@
           "title": "Saturno",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -3453,7 +3453,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": false
             },
@@ -3476,7 +3476,7 @@
           "title": "BM-S-50: Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -3490,7 +3490,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             },
@@ -3513,7 +3513,7 @@
           "title": "Libra",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -3527,7 +3527,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -3731,7 +3731,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -3745,7 +3745,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -3820,7 +3820,7 @@
             "Rodada de licitação PSC4"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -3834,7 +3834,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 30,
               "isOperator": true
             },
@@ -3859,7 +3859,7 @@
           "title": "Entorno de Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -3873,7 +3873,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -3898,7 +3898,7 @@
             "Oeste de Atapu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -3912,7 +3912,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -3951,7 +3951,7 @@
             "Sururu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -3965,7 +3965,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -4004,7 +4004,7 @@
             "Berbigão"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4018,7 +4018,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -4055,7 +4055,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4069,7 +4069,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -4105,7 +4105,7 @@
           "title": "BM-S-11: Tupi",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4119,7 +4119,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -4177,7 +4177,7 @@
             "Nordeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4191,7 +4191,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -4216,7 +4216,7 @@
             "Sudoeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4230,7 +4230,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -4253,7 +4253,7 @@
           "title": "BM-S-9: Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4267,7 +4267,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -4317,7 +4317,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 10,
               "isOperator": false
             },
@@ -4400,7 +4400,7 @@
           "title": "Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4414,7 +4414,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -4474,7 +4474,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -4553,7 +4553,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": false
             },
@@ -4652,7 +4652,7 @@
           "title": "Bacia de Potiguar",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4666,7 +4666,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -4750,7 +4750,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -4882,7 +4882,7 @@
           "title": "Saturno",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4896,7 +4896,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": false
             },
@@ -4919,7 +4919,7 @@
           "title": "BM-S-50: Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4933,7 +4933,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             },
@@ -4956,7 +4956,7 @@
           "title": "Libra",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -4970,7 +4970,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -5174,7 +5174,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5188,7 +5188,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -5263,7 +5263,7 @@
             "Rodada de licitação PSC4"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5277,7 +5277,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 30,
               "isOperator": true
             },
@@ -5302,7 +5302,7 @@
           "title": "Entorno de Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5316,7 +5316,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -5341,7 +5341,7 @@
             "Oeste de Atapu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5355,7 +5355,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -5394,7 +5394,7 @@
             "Sururu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5408,7 +5408,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -5447,7 +5447,7 @@
             "Berbigão"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5461,7 +5461,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -5498,7 +5498,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5512,7 +5512,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -5548,7 +5548,7 @@
           "title": "BM-S-11: Tupi",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5562,7 +5562,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -5620,7 +5620,7 @@
             "Nordeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5634,7 +5634,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -5659,7 +5659,7 @@
             "Sudoeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5673,7 +5673,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -5696,7 +5696,7 @@
           "title": "BM-S-9: Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5710,7 +5710,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -5760,7 +5760,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 10,
               "isOperator": false
             },
@@ -5843,7 +5843,7 @@
           "title": "Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -5857,7 +5857,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -5917,7 +5917,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -5996,7 +5996,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": false
             },
@@ -6095,7 +6095,7 @@
           "title": "Bacia de Potiguar",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -6109,7 +6109,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -6193,7 +6193,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -6325,7 +6325,7 @@
           "title": "Saturno",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -6339,7 +6339,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": false
             },
@@ -6362,7 +6362,7 @@
           "title": "BM-S-50: Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -6376,7 +6376,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             },
@@ -6399,7 +6399,7 @@
           "title": "Libra",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -6413,7 +6413,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -6719,7 +6719,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -6733,7 +6733,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -6808,7 +6808,7 @@
             "Rodada de licitação PSC4"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -6822,7 +6822,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 30,
               "isOperator": true
             },
@@ -6847,7 +6847,7 @@
           "title": "Entorno de Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -6861,7 +6861,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -6886,7 +6886,7 @@
             "Rodada de Cessão Onerosa 2"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -6900,7 +6900,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 52.5,
               "isOperator": true
             },
@@ -6934,7 +6934,7 @@
             "Oeste de Atapu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -6948,7 +6948,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -6987,7 +6987,7 @@
             "Sururu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7001,7 +7001,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -7040,7 +7040,7 @@
             "Berbigão"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7054,7 +7054,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -7091,7 +7091,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7105,7 +7105,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -7141,7 +7141,7 @@
           "title": "BM-S-11: Tupi",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7155,7 +7155,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -7213,7 +7213,7 @@
             "Nordeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7227,7 +7227,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -7252,7 +7252,7 @@
             "Sudoeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7266,7 +7266,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -7289,7 +7289,7 @@
           "title": "BM-S-9: Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7303,7 +7303,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -7353,7 +7353,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 10,
               "isOperator": false
             },
@@ -7436,7 +7436,7 @@
           "title": "Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7450,7 +7450,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -7510,7 +7510,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -7589,7 +7589,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": false
             },
@@ -7688,7 +7688,7 @@
           "title": "Bacia de Potiguar",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7702,7 +7702,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -7786,7 +7786,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -7918,7 +7918,7 @@
           "title": "Saturno",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7932,7 +7932,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": false
             },
@@ -7955,7 +7955,7 @@
           "title": "BM-S-50: Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -7969,7 +7969,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             },
@@ -7992,7 +7992,7 @@
           "title": "Libra",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -8006,7 +8006,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -8516,7 +8516,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -8530,7 +8530,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -8605,7 +8605,7 @@
             "Rodada de licitação PSC4"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -8619,7 +8619,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 30,
               "isOperator": true
             },
@@ -8644,7 +8644,7 @@
           "title": "Entorno de Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -8658,7 +8658,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -8683,7 +8683,7 @@
             "Rodada de Cessão Onerosa 2"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -8697,7 +8697,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 52.5,
               "isOperator": true
             },
@@ -8731,7 +8731,7 @@
             "Oeste de Atapu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -8745,7 +8745,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -8784,7 +8784,7 @@
             "Sururu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -8798,7 +8798,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -8837,7 +8837,7 @@
             "Berbigão"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -8851,7 +8851,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -8888,7 +8888,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -8902,7 +8902,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -8938,7 +8938,7 @@
           "title": "BM-S-11: Tupi",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -8952,7 +8952,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -9010,7 +9010,7 @@
             "Nordeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -9024,7 +9024,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -9049,7 +9049,7 @@
             "Sudoeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -9063,7 +9063,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -9086,7 +9086,7 @@
           "title": "BM-S-9: Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -9100,7 +9100,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -9228,7 +9228,7 @@
           "title": "Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -9242,7 +9242,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -9302,7 +9302,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -9381,7 +9381,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": false
             },
@@ -9480,7 +9480,7 @@
           "title": "Bacia de Potiguar",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -9494,7 +9494,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -9669,7 +9669,7 @@
           "title": "BM-S-50: Sudoeste de Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -9683,7 +9683,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -9701,7 +9701,7 @@
           "title": "BM-S-50: Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -9715,7 +9715,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             },
@@ -9738,7 +9738,7 @@
           "title": "Libra",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -9752,7 +9752,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -10262,7 +10262,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10276,7 +10276,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -10351,7 +10351,7 @@
             "Rodada de licitação PSC4"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10365,7 +10365,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 30,
               "isOperator": true
             },
@@ -10390,7 +10390,7 @@
           "title": "Entorno de Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10404,7 +10404,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -10429,7 +10429,7 @@
             "Rodada de Cessão Onerosa 2"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10443,7 +10443,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 52.5,
               "isOperator": true
             },
@@ -10489,7 +10489,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -10518,7 +10518,7 @@
             "Oeste de Atapu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10532,7 +10532,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -10571,7 +10571,7 @@
             "Sururu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10585,7 +10585,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -10624,7 +10624,7 @@
             "Berbigão"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10638,7 +10638,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -10675,7 +10675,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10689,7 +10689,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -10725,7 +10725,7 @@
           "title": "BM-S-11: Tupi",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10739,7 +10739,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -10797,7 +10797,7 @@
             "Nordeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10811,7 +10811,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -10836,7 +10836,7 @@
             "Sudoeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10850,7 +10850,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -10873,7 +10873,7 @@
           "title": "BM-S-9: Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -10887,7 +10887,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -11015,7 +11015,7 @@
           "title": "Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -11029,7 +11029,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -11093,7 +11093,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -11172,7 +11172,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": false
             },
@@ -11271,7 +11271,7 @@
           "title": "Bacia de Potiguar",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -11285,7 +11285,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -11329,7 +11329,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -11531,7 +11531,7 @@
           "title": "BM-S-50: Sudoeste de Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -11545,7 +11545,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -11563,7 +11563,7 @@
           "title": "BM-S-50: Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -11577,7 +11577,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             },
@@ -11600,7 +11600,7 @@
           "title": "Libra",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -11614,7 +11614,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -12099,7 +12099,7 @@
             "Rodada de Cessão Onerosa 2"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12113,7 +12113,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 52.5,
               "isOperator": true
             },
@@ -12147,7 +12147,7 @@
             "Oeste de Atapu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12161,7 +12161,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -12200,7 +12200,7 @@
             "Sururu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12214,7 +12214,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -12253,7 +12253,7 @@
             "Berbigão"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12267,7 +12267,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -12304,7 +12304,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12318,7 +12318,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -12354,7 +12354,7 @@
           "title": "BM-S-11: Tupi",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12368,7 +12368,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -12426,7 +12426,7 @@
             "Nordeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12440,7 +12440,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -12463,7 +12463,7 @@
           "title": "Entorno de Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12477,7 +12477,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -12502,7 +12502,7 @@
             "Sudoeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12516,7 +12516,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -12539,7 +12539,7 @@
           "title": "BM-S-9: Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12553,7 +12553,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -12681,7 +12681,7 @@
           "title": "Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12695,7 +12695,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -12761,7 +12761,7 @@
             "Rodada de licitação: OPC4"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12775,7 +12775,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 50,
               "isOperator": true
             },
@@ -12801,7 +12801,7 @@
             "Rodada de licitação: OPC4"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12815,7 +12815,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 70,
               "isOperator": true
             }
@@ -12885,7 +12885,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": false
             },
@@ -12946,7 +12946,7 @@
           "title": "Bacia de Potiguar",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -12960,7 +12960,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -13070,7 +13070,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }
@@ -13228,7 +13228,7 @@
           "title": "BM-S-50: Sudoeste de Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -13242,7 +13242,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -13260,7 +13260,7 @@
           "title": "BM-S-50: Sagitário",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -13274,7 +13274,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             },
@@ -13297,7 +13297,7 @@
           "title": "Libra",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -13311,7 +13311,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -13838,7 +13838,7 @@
             "Rodada de Cessão Onerosa 2"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -13852,7 +13852,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 52.5,
               "isOperator": true
             },
@@ -13886,7 +13886,7 @@
             "Oeste de Atapu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -13900,7 +13900,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -13939,7 +13939,7 @@
             "Sururu"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -13953,7 +13953,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -13992,7 +13992,7 @@
             "Berbigão"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14006,7 +14006,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 42.5,
               "isOperator": true
             },
@@ -14043,7 +14043,7 @@
           "title": "BM-S-11A: Iracema",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14057,7 +14057,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -14093,7 +14093,7 @@
           "title": "BM-S-11: Tupi",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14107,7 +14107,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 65,
               "isOperator": true
             },
@@ -14165,7 +14165,7 @@
             "Nordeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14179,7 +14179,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -14202,7 +14202,7 @@
           "title": "Entorno de Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14216,7 +14216,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -14241,7 +14241,7 @@
             "Sudoeste de Sapinhoá"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14255,7 +14255,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -14278,7 +14278,7 @@
           "title": "BM-S-9: Sapinhoá",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14292,7 +14292,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 45,
               "isOperator": true
             },
@@ -14421,7 +14421,7 @@
           "title": "Mero",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14435,7 +14435,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": true
             },
@@ -14501,7 +14501,7 @@
             "Rodada de licitação: OPC4"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14515,7 +14515,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 50,
               "isOperator": true
             },
@@ -14541,7 +14541,7 @@
             "Rodada de licitação: OPC4"
           ],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14555,7 +14555,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 70,
               "isOperator": true
             }
@@ -14625,7 +14625,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 40,
               "isOperator": false
             },
@@ -14724,7 +14724,7 @@
           "title": "Bacia de Potiguar",
           "tags": [],
           "operator": {
-            "name": "Petrobrás",
+            "name": "Petrobras",
             "description": "Responsável pela administração do campo"
           },
           "depth": {
@@ -14738,7 +14738,7 @@
               "isOperator": false
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 60,
               "isOperator": true
             }
@@ -14822,7 +14822,7 @@
               "isOperator": true
             },
             {
-              "name": "Petrobrás",
+              "name": "Petrobras",
               "percentage": 20,
               "isOperator": false
             }

@@ -79,6 +79,16 @@
   box-sizing: border-box;
 }
 
+/* Header menu - allow buttons to wrap into two rows */
+.header .menu {
+  flex-wrap: wrap;
+}
+
+.header .menu .btn {
+  flex: 1 1 calc(50% - 3px);
+  min-width: fit-content;
+}
+
 .btn {
   display: flex;
   padding: 12px;

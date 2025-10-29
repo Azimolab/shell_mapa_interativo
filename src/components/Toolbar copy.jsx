@@ -53,7 +53,7 @@ function Toolbar({
         areas: {
           barreirinhas: 'Barreirinhas',
           potiguar: 'Potiguar',
-          rio: 'Rio de Janeiro',
+          rio: 'Campos/Santos',
           pelotas: 'Pelotas',
         },
       };
@@ -79,7 +79,7 @@ function Toolbar({
       areas: {
         barreirinhas: 'Barreirinhas',
         potiguar: 'Potiguar',
-        rio: 'Rio de Janeiro',
+        rio: 'Campos/Santos',
         pelotas: 'Pelotas',
       },
     };
@@ -144,7 +144,7 @@ function Toolbar({
   const allAreas = [
     { id: 'barreirinhas', label: t.areas.barreirinhas },
     { id: 'potiguar', label: t.areas.potiguar },
-    { id: 'rio', label: pelotasExists ? 'Rio' : t.areas.rio },
+    { id: 'rio', label: t.areas.rio },
     { id: 'pelotas', label: t.areas.pelotas }
   ];
   const availableAreas = allAreas.filter(area => isAreaAvailableForYear(area.id, selectedYear));
